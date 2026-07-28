@@ -1,0 +1,25 @@
+{
+  "name": "Thesis Dev Environment (LLVM 18)",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-vscode.cmake-tools",
+        "rust-lang.rust-analyzer",
+        "golang.go",
+        "james-yu.latex-workshop"
+      ],
+      "settings": {
+        "clangd.path": "/usr/bin/clangd-18",
+        "clangd.arguments": [
+          "--compile-commands-dir=${workspaceFolder}/build"
+        ],
+        "cmake.buildDirectory": "${workspaceFolder}/build"
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

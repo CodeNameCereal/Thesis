@@ -1,0 +1,31 @@
+# Build directories and outputs
+/build/
+/out/
+*.o
+*.so
+*.dylib
+*.a
+*.bc
+*.ll
+
+# Rust target directory
+/target/
+benchmarks/rust/target/
+
+# LaTeX auxiliary files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.toc
+*.synctex.gz
+*.bbl
+*.blg
+
+# System and Editor files
+.DS_Store
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
