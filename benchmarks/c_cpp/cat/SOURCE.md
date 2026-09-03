@@ -1,0 +1,6 @@
+- Upstream repo: https://github.com/coreutils/coreutils
+- File path: src/cat.c
+- Commit hash: 1ee46ac2c990a6a3b10737d59d8cb358b59af5df
+- Permalink: https://github.com/coreutils/coreutils/blob/1ee46ac2c990a6a3b10737d59d8cb358b59af5df/src/cat.c
+- Retrieved: 03/09/2026
+- Method: GitHub 'y' permalink
