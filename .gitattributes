@@ -1,0 +1,2 @@
+benchmarks/**/*.ll filter=lfs diff=lfs merge=lfs -text
+benchmarks/**/*.bc filter=lfs diff=lfs merge=lfs -text
