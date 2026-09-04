@@ -1,9 +1,9 @@
-# SOURCE.md — nl (Rust)
+# SOURCE.md -- nl (Rust)
 
-- Upstream repo:
-- File path:
-- Commit hash:
-- Commit date:
-- Permalink:
-- Retrieved:
-- Method:
+- Upstream repo: https://github.com/uutils/coreutils
+- File path: src/uu/nl
+- Commit hash: a8447f9cf7c12722777a42ddf683621abd7a1b42
+- Commit date: 2026-08-22T12:11:04+02:00
+- Permalink: https://github.com/uutils/coreutils/blob/a8447f9cf7c12722777a42ddf683621abd7a1b42/src/uu/nl
+- Retrieved: 2026-09-04
+- Method: cargo rustc --bin nl -- --emit=llvm-ir, debug+release (see README.md, generate_benchmarks.sh)

@@ -1,5 +1,6 @@
 # Build directories and outputs
 /build/
+/.build/
 /out/
 *.o
 *.so
@@ -7,6 +8,8 @@
 *.a
 *.bc
 *.ll
+!benchmarks/**/*.ll
+!benchmarks/**/*.bc
 
 # Rust target directory
 /target/
@@ -18,7 +21,6 @@ benchmarks/rust/target/
 *.fls
 *.log
 *.out
-*.pdf
 *.toc
 *.synctex.gz
 *.bbl

@@ -11,7 +11,7 @@
 # point -- rerun after a toolchain change to regenerate).
 #
 # Requires: .build/coreutils and .build/uutils-coreutils to already exist
-# and be built (see BUILD.md). This script does NOT bootstrap/configure/
+# and be built (see README.md). This script does NOT bootstrap/configure/
 # clone for you on first use -- do that once manually, then run this.
 
 set -euo pipefail
@@ -23,18 +23,17 @@ TOOLS=(sum expand echo fold tee mkdir comm paste nl shuf)
 
 C_BUILD_DIR="$REPO_ROOT/.build/coreutils"
 RUST_BUILD_DIR="$REPO_ROOT/.build/uutils-coreutils"
-
-C_INCLUDE_FLAGS="-I. -I./lib -Ilib -I./lib -Isrc -I./src"
+C_BUILD_LOG="$C_BUILD_DIR/build_verbose.log"
 
 # ---------------------------------------------------------------------------
 # Sanity checks
 # ---------------------------------------------------------------------------
 if [ ! -d "$C_BUILD_DIR" ]; then
-  echo "ERROR: $C_BUILD_DIR not found. Clone+bootstrap+configure+make coreutils first (see BUILD.md)." >&2
+  echo "ERROR: $C_BUILD_DIR not found. Clone+bootstrap+configure+make coreutils first (see README.md)." >&2
   exit 1
 fi
 if [ ! -d "$RUST_BUILD_DIR" ]; then
-  echo "ERROR: $RUST_BUILD_DIR not found. Clone uutils/coreutils first (see BUILD.md)." >&2
+  echo "ERROR: $RUST_BUILD_DIR not found. Clone uutils/coreutils first (see README.md)." >&2
   exit 1
 fi
 command -v clang-22 >/dev/null || { echo "ERROR: clang-22 not found in PATH" >&2; exit 1; }
@@ -52,7 +51,7 @@ scaffold_tool() {
 
   if [ ! -f "$base/SOURCE.md" ]; then
     cat > "$base/SOURCE.md" << EOF
-# SOURCE.md — $tool ($lang_label)
+# SOURCE.md -- $tool ($lang_label)
 
 - Upstream repo:
 - File path:
@@ -66,10 +65,24 @@ EOF
 
   if [ ! -f "$base/NOTES.md" ]; then
     cat > "$base/NOTES.md" << EOF
-# NOTES.md — $tool ($lang_label)
+# NOTES.md -- $tool ($lang_label)
 
 No modifications.
 EOF
+  fi
+}
+
+# Capture a full verbose build log once, so per-tool compile flags can be
+# extracted from it instead of guessing a fixed -I set (different tools
+# pull in different gnulib headers/flags).
+ensure_c_build_log() {
+  if [ ! -f "$C_BUILD_LOG" ]; then
+    echo "Capturing verbose build log (one-time, may take a few minutes)..."
+    ( cd "$C_BUILD_DIR" && make clean && make V=1 > "$C_BUILD_LOG" 2>&1 ) || true
+    if [ ! -s "$C_BUILD_LOG" ]; then
+      echo "ERROR: build log capture failed or is empty. Check $C_BUILD_DIR builds cleanly." >&2
+      exit 1
+    fi
   fi
 }
 
@@ -86,14 +99,42 @@ build_c_tool() {
     return
   fi
 
+  local raw_cmd
+  # Simple case: tool compiles to its own standalone object, src/<tool>.o
+  # NOTE: "|| true" is required on both lookups below -- with pipefail (set
+  # at the top of this script), a grep that finds nothing makes the whole
+  # pipeline "fail", which set -e would treat as fatal and silently kill
+  # the script right here. || true lets us fall through to the empty-check
+  # below instead, which is the actual intended handling.
+  raw_cmd=$(grep -E "\-c -o[[:space:]]*src/${tool}\.o[[:space:]]" "$C_BUILD_LOG" | head -1 || true)
+  if [ -z "$raw_cmd" ]; then
+    # Multicall/digest-family case (sum, cksum, md5sum, etc. share cksum.c's
+    # driver): object is named src/<tool>-<tool>.o, and the line must also
+    # end with src/<tool>.c -- this disambiguates from other multicall
+    # variants that also compile src/<tool>.c under a different -D flag
+    # (e.g. sum.c is compiled once for "sum" and once for "cksum").
+    raw_cmd=$(grep -E "\-o[[:space:]]*src/${tool}-${tool}\.o" "$C_BUILD_LOG" | grep "src/${tool}\.c\$" | head -1 || true)
+  fi
+  if [ -z "$raw_cmd" ]; then
+    echo "  [c/$tool] WARNING: could not find compile command in build log, skipping" >&2
+    return
+  fi
+
+  # Keep only the flags between "gcc" and the first "-MT" -- everything
+  # after -MT is dependency-tracking / object-target / source-file
+  # boilerplate we don't want, regardless of how it's shaped for this
+  # particular tool (simple or multicall).
+  local flags
+  flags=$(echo "$raw_cmd" | sed -E 's/^gcc[[:space:]]*//; s/-MT.*$//')
+
   echo "  [c/$tool] compiling IR..."
-  clang-22 $C_INCLUDE_FLAGS -O0 -S -emit-llvm "$src_file" -o "$dest/ir/${tool}_O0.ll"
-  clang-22 $C_INCLUDE_FLAGS -O2 -S -emit-llvm "$src_file" -o "$dest/ir/${tool}_O2.ll"
+  ( cd "$C_BUILD_DIR" && clang-22 $flags -O0 -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O0.ll" ) \
+    || { echo "  [c/$tool] WARNING: O0 compile failed" >&2; }
+  ( cd "$C_BUILD_DIR" && clang-22 $flags -O2 -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O2.ll" ) \
+    || { echo "  [c/$tool] WARNING: O2 compile failed" >&2; }
 
   cp "$src_file" "$dest/src/${tool}.c"
 
-  # Record commit hash for whoever fills in SOURCE.md next -- printed, not
-  # auto-written, since SOURCE.md deliberately isn't auto-overwritten.
   local hash
   hash=$(git -C "$C_BUILD_DIR" log -1 --format="%H" -- "src/${tool}.c" 2>/dev/null || echo "unknown")
   echo "  [c/$tool] done. Commit hash for SOURCE.md: $hash"
@@ -114,12 +155,12 @@ build_rust_tool() {
   fi
 
   echo "  [rust/$tool] compiling IR (debug)..."
-  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" -- --emit=llvm-ir) || {
+  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" -- --emit=llvm-ir) || {
     echo "  [rust/$tool] WARNING: debug build failed, skipping IR for this tool" >&2
     return
   }
   echo "  [rust/$tool] compiling IR (release)..."
-  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --release -- --emit=llvm-ir) || {
+  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" --release -- --emit=llvm-ir) || {
     echo "  [rust/$tool] WARNING: release build failed, skipping IR for this tool" >&2
     return
   }
@@ -153,6 +194,7 @@ done
 
 echo ""
 echo "Building C tools..."
+ensure_c_build_log
 for tool in "${TOOLS[@]}"; do
   build_c_tool "$tool"
 done
