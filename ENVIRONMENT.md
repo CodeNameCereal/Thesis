@@ -1,12 +1,12 @@
 # ENVIRONMENT.md
-Generated: 2026-09-04T10:54:12Z
+Generated: 2026-09-04T14:46:23Z
 Regenerate with: ./scripts/dump_environment.sh (run inside devcontainer)
 ## Container
-- Dockerfile hash: 1a07131a80d910084e353d9eec559e119a4fa6d0599e9decb77ea208edff0ddb
+- Dockerfile hash: 1aa9ac7d16c1ede6033592439ab04852df153fcbd349b4d7e0423868d45be45f
 - Base image: FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 ## OS / Arch
 ```
-Linux faaab5408d7a 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+Linux c885d8dd05f2 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
 ```
 ## clang / clangd
 ```
