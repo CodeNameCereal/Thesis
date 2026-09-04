@@ -2,13 +2,14 @@ FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# 1. Install base build toolchain, C++, Go, LaTeX, and gnulib/coreutils
-#    bootstrap prerequisites
+# 1. Install base build toolchain, C++, Go, LaTeX, Git LFS, and
+#    gnulib/coreutils bootstrap prerequisites
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
     ninja-build \
     git \
+    git-lfs \
     curl \
     wget \
     gnupg \
@@ -35,7 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. Install LLVM 22 & Clang 22 via official APT script
-RUN wget https://apt.llvm.org/llvm.sh \
+RUN wget --timeout=30 --tries=3 https://apt.llvm.org/llvm.sh \
     && chmod +x llvm.sh \
     && ./llvm.sh 22 \
     && rm llvm.sh \
@@ -51,8 +52,9 @@ RUN update-alternatives --install /usr/bin/clang clang /usr/bin/clang-22 100 \
     && update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-22 100 \
     && update-alternatives --install /usr/bin/llvm-config llvm-config /usr/bin/llvm-config-22 100
 
-# 3. Install Rust toolchain via rustup — latest stable (currently bundles LLVM 22.x,
-#    matching clang-22 above). Re-check this parity if either toolchain is updated later.
+# 3. Install Rust toolchain via rustup — latest stable (currently bundles
+#    LLVM 22.x, matching clang-22 above). Re-check this parity if either
+#    toolchain is updated later -- see README.md's Toolchain section.
 ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH
