@@ -10,7 +10,8 @@
         "ms-vscode.cmake-tools",
         "rust-lang.rust-analyzer",
         "golang.go",
-        "james-yu.latex-workshop"
+        "james-yu.latex-workshop",
+        "anthropic.claude-code"
       ],
       "settings": {
         "clangd.path": "/usr/bin/clangd-22",
