@@ -1,0 +1,8 @@
+/workspaces/Thesis/pass/src/build/CMakeFiles/intrinsics_gen.dir
+/workspaces/Thesis/pass/src/build/CMakeFiles/vt_gen.dir
+/workspaces/Thesis/pass/src/build/CMakeFiles/omp_gen.dir
+/workspaces/Thesis/pass/src/build/CMakeFiles/acc_gen.dir
+/workspaces/Thesis/pass/src/build/CMakeFiles/target_parser_gen.dir
+/workspaces/Thesis/pass/src/build/CMakeFiles/LoopFinderPass.dir
+/workspaces/Thesis/pass/src/build/CMakeFiles/edit_cache.dir
+/workspaces/Thesis/pass/src/build/CMakeFiles/rebuild_cache.dir
