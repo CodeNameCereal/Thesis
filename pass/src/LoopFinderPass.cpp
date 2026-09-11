@@ -1,3 +1,5 @@
+#include "llvm/Analysis/LoopInfo.h"
+#include "llvm/Demangle/Demangle.h"
 #include "llvm/IR/Function.h"
 #include "llvm/IR/PassManager.h"
 #include "llvm/Passes/PassBuilder.h"
@@ -6,78 +8,86 @@
 
 using namespace llvm;
 
-// 1. The pass itself.
-//    - PassInfoMixin<LoopFinderPass> is boilerplate LLVM's new pass
-//      manager wants every pass to inherit from -- it gives LLVM a way
-//      to identify/name the pass generically without us writing that
-//      machinery ourselves.
-//    - The run() signature (Function &F, FunctionAnalysisManager &AM)
-//      is what marks this as a FUNCTION-level pass: LLVM will call
-//      run() once for every function in the module being processed.
-//      (A module pass would instead take (Module &M, ModuleAnalysisManager
-//      &AM); a loop pass takes (Loop &L, ...). The signature is how LLVM
-//      tells passes apart -- there's no separate "I am a function pass"
-//      declaration anywhere else.)
+namespace {
+
+// llvm::demangle() tries the demangling schemes LLVM knows about (Itanium
+// C++, Rust's v0 mangling, MSVC, etc.) against whatever name you hand it.
+// If the name doesn't match any known mangling scheme -- which is exactly
+// the case for your plain C functions like "for_loop", since C doesn't
+// mangle names at all -- it just returns the input unchanged. So it's
+// safe to call on every function name regardless of source language;
+// there's no need to detect "is this Rust" ourselves first.
+std::string demangledName(StringRef RawName) {
+  return demangle(RawName.str());
+}
+
+// Recursively print one loop and all loops nested inside it. Unchanged
+// from before except that both the raw and demangled function name are
+// now threaded through and included in the JSON output.
+void printLoopRecursive(const Loop *L, StringRef RawFuncName,
+                         const std::string &DemangledFuncName) {
+  StringRef HeaderName = L->getHeader()->getName();
+  unsigned Depth = L->getLoopDepth();
+
+  SmallVector<BasicBlock *, 4> Latches;
+  L->getLoopLatches(Latches);
+
+  unsigned SubLoopCount = L->getSubLoops().size();
+
+  // Both names are included so downstream tooling (a future filtering
+  // script, e.g.) can match against the readable demangled form, while
+  // the raw mangled name is preserved too -- useful as a stable,
+  // unambiguous key, since two different generic instantiations can
+  // sometimes demangle to very similar-looking readable strings.
+  errs() << "{"
+         << "\"function\": \"" << RawFuncName << "\", "
+         << "\"function_demangled\": \"" << DemangledFuncName << "\", "
+         << "\"header\": \"" << HeaderName << "\", "
+         << "\"depth\": " << Depth << ", "
+         << "\"latch_count\": " << Latches.size() << ", "
+         << "\"subloop_count\": " << SubLoopCount << "}\n";
+
+  for (const Loop *Sub : L->getSubLoops()) {
+    printLoopRecursive(Sub, RawFuncName, DemangledFuncName);
+  }
+}
+
+} // end anonymous namespace
+
 struct LoopFinderPass : PassInfoMixin<LoopFinderPass> {
   PreservedAnalyses run(Function &F, FunctionAnalysisManager &AM) {
+    if (F.isDeclaration())
+      return PreservedAnalyses::all();
 
-    // errs() is LLVM's wrapper around stderr -- the conventional place
-    // for a pass's own diagnostic/debug output (as opposed to modifying
-    // the IR itself, which is the pass's "real" output).
-    // F.getName() returns the function's name as it appears in the .ll
-    // file (e.g. "for_loop", "while_loop", etc. from your toy corpus).
-    errs() << "visiting function: " << F.getName() << "\n";
+    StringRef RawName = F.getName();
+    std::string Demangled = demangledName(RawName);
 
-    // This pass doesn't modify the IR or compute anything downstream
-    // passes might care about yet, so we tell LLVM "nothing changed" --
-    // any analysis results already computed and cached (like a LoopInfo
-    // from a previous pass in the pipeline) remain valid and don't need
-    // to be recomputed. Once we start USING LoopInfo in the next stage,
-    // this return value doesn't need to change, since we still won't be
-    // modifying the IR -- only reading from analyses.
+    // The FUNCTION marker line now shows both forms too -- this is the
+    // line you'll actually be scanning by eye when eyeballing opt's
+    // output directly, so this is where readability matters most.
+    errs() << "FUNCTION " << RawName << " (" << Demangled << ")\n";
+
+    LoopInfo &LI = AM.getResult<LoopAnalysis>(F);
+
+    for (const Loop *L : LI) {
+      printLoopRecursive(L, RawName, Demangled);
+    }
+
     return PreservedAnalyses::all();
   }
 };
 
-// 2. The plugin entry point.
-//    opt calls dlopen() on your .so, then looks up a symbol with this
-//    EXACT name. extern "C" disables C++ name mangling so the symbol in
-//    the compiled .so is literally "llvmGetPassPluginInfo", not some
-//    mangled C++ signature opt wouldn't know how to search for.
-//    LLVM_ATTRIBUTE_WEAK lets multiple plugins coexist without a linker
-//    clash if this symbol shows up more than once across loaded plugins.
 extern "C" ::llvm::PassPluginLibraryInfo LLVM_ATTRIBUTE_WEAK
 llvmGetPassPluginInfo() {
-  return {LLVM_PLUGIN_API_VERSION,   // API version -- must match the LLVM
-                                     // that will load this plugin, which
-                                     // the macro handles for us.
-          "LoopFinderPass",         // Display name for this plugin (shows
-                                     // up in some opt diagnostics/listings).
-          LLVM_VERSION_STRING,       // LLVM version this was built against.
+  return {LLVM_PLUGIN_API_VERSION, "LoopFinderPass", LLVM_VERSION_STRING,
           [](PassBuilder &PB) {
-            // 3. This lambda runs once, at plugin-load time, and its job
-            //    is to register OUR OWN callback with PassBuilder. That
-            //    inner callback is what actually gets consulted every
-            //    time PassBuilder parses a -passes=... string and hits a
-            //    name it doesn't already recognize as a built-in pass.
             PB.registerPipelineParsingCallback(
                 [](StringRef Name, FunctionPassManager &FPM,
                    ArrayRef<PassBuilder::PipelineElement>) {
-                  // Name is whatever text appeared in -passes=<text>.
-                  // We only react to the exact string "loop-finder";
-                  // this is the string you'll type after -passes= on
-                  // the opt command line.
                   if (Name == "loop-finder") {
-                    // Add an instance of our pass to the function pass
-                    // pipeline opt is currently assembling.
                     FPM.addPass(LoopFinderPass());
-                    // true tells PassBuilder "yes, I recognized and
-                    // handled this name -- stop looking elsewhere."
                     return true;
                   }
-                  // false tells PassBuilder "not mine, keep searching"
-                  // (e.g. against built-in LLVM pass names, or other
-                  // plugins that might also be loaded).
                   return false;
                 });
           }};

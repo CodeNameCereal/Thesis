@@ -1,0 +1,224 @@
+GROUND TRUTH: loops.c / loops.rs
+==================================
+
+Expected output from LoopFinderPass, for diffing against actual pass
+runs. Both cases previously marked VERIFY have now been confirmed by
+actually running the pass -- this file is fully validated as of this
+revision.
+
+
+loops.c
+-------
+(compiled with: clang -O0 -Xclang -disable-O0-optnone -S -emit-llvm
+-fno-discard-value-names loops.c -o loops.ll)
+
+for_loop
+  loops: 1
+  header: for.cond
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+while_loop
+  loops: 1
+  header: while.cond
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+do_while_loop
+  loops: 1
+  header: do.body
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+goto_loop
+  loops: 1
+  header: loop_start
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+infinite_for
+  loops: 1
+  header: for.cond
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+infinite_while
+  loops: 1
+  header: while.body
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+nested_loop -- outer
+  header: for.cond
+  depth: 1
+  latches: 1
+  subloops: 1
+  status: confirmed
+
+nested_loop -- inner
+  header: for.cond1
+  depth: 2
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+loop_with_continue
+  loops: 1
+  header: for.cond
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+loop_multiple_exits
+  loops: 1
+  header: while.body
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+duffs_device
+  loops: 0
+  status: CONFIRMED 0 LOOPS (previously the VERIFY case)
+  why: the switch statement jumps directly into sw.bb2..sw.bb20, blocks
+  that sit between do.body and do.cond -- meaning do.body does NOT
+  dominate do.cond on every path (you can enter mid-loop-body, skipping
+  the presumed header entirely). LLVM's LoopInfo is strictly
+  dominance-based, so the do.cond -> do.body back edge doesn't qualify
+  as a natural loop despite the do-while syntax and the visible cycle in
+  the CFG. Actual pass output: zero loop lines for this function, only
+  the FUNCTION marker. This is a real, citable limitation of
+  dominance-based loop detection on CFGs with multiple entry points into
+  what a human would call "the loop body."
+
+recursive_sum
+  loops: 0
+  status: confirmed (recursion is a call-graph cycle, not a CFG loop)
+
+main
+  loops: 0
+  status: confirmed
+
+
+loops.rs
+--------
+(compiled with: rustc -C opt-level=0 -C debug-assertions=on
+-C overflow-checks=on -C debuginfo=2 --emit=llvm-ir loops.rs -o loops.ll)
+
+loop_expr
+  loops: 1
+  header: bb1
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+while_loop
+  loops: 1
+  header: bb1
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+while_let_loop
+  loops: 1
+  header: bb1
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+for_range_loop
+  loops: 1
+  header: bb2
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+for_vec_loop
+  loops: 1
+  header: bb5
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+loop_break_value
+  loops: 1
+  header: bb1
+  depth: 1
+  latches: 1
+  subloops: 0
+  status: confirmed
+
+labeled_nested_loop -- outer
+  header: bb2
+  depth: 1
+  latches: 2
+  subloops: 1
+  status: CONFIRMED 2 LATCHES (previously the VERIFY case)
+  why: both bb9 (inner iterator exhausted -> fall through to next outer
+  iteration) and bb10 (explicit `continue 'outer`) branch directly back
+  to bb2, and LLVM's LoopInfo attributes BOTH edges to the outer loop as
+  separate back edges/latches, not just one. Worth noting in the thesis:
+  a single labeled-continue construct in the source can produce more
+  than one physical back edge in the IR.
+
+labeled_nested_loop -- inner
+  header: bb8
+  depth: 2
+  latches: 1
+  subloops: 0
+  status: confirmed -- only bb13 (normal end of inner body) branches
+  back to bb8
+
+recursive_sum
+  loops: 0
+  status: confirmed (same reasoning as the C version)
+
+main
+  loops: 0
+  status: confirmed (not in the original table -- main just calls the
+  other functions in sequence, no loop of its own)
+
+
+STATUS: STAGE 5 COMPLETE
+=========================
+Both toy corpora (C and Rust) have been run through the pass and every
+entry above matches actual pass output, including both previously
+unverified edge cases. Safe to proceed to Stage 6 (running the pass
+across the full benchmarks/ corpus via run_pass_on_all.sh).
+
+
+CAVEAT CARRIED FORWARD INTO STAGE 6
+=====================================
+Rust debug-build IR pulls in a large number of std/core/alloc functions
+that have nothing to do with the tool's own logic (drop glue, RawVec
+internals, iterator adapter plumbing, etc.) -- confirmed directly in the
+loops.rs run, where roughly 40 std-library functions appeared alongside
+the ~9 functions actually written in loops.rs, with only one of those
+~40 (a monomorphized Range::fold instantiation) containing an actual
+loop. This ratio is expected to be similar or worse across the real
+20-tool corpus. Comparing raw loop counts between C and Rust IR without
+accounting for this will conflate "the tool's own algorithm" with "how
+much of the standard library got inlined into this particular crate's
+debug build" -- a filtering step (by function name, likely via the
+demangled name already added to the pass output) is needed before any
+cross-language loop-count comparison is methodologically sound. Not yet
+implemented -- decide and implement before drawing any conclusions from
+Stage 6 output.

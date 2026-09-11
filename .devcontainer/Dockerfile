@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     software-properties-common \
     gdb \
     golang-go \
+    jq \
     texlive-latex-extra \
     texlive-fonts-recommended \
     latexmk \

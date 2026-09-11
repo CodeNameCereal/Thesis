@@ -1,7 +1,9 @@
 CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /workspaces/Thesis/pass/src/LoopFinderPass.cpp \
- /usr/include/stdc-predef.h /usr/lib/llvm-22/include/llvm/IR/Function.h \
- /usr/lib/llvm-22/include/llvm/ADT/DenseSet.h \
+ /usr/include/stdc-predef.h \
+ /usr/lib/llvm-22/include/llvm/Analysis/LoopInfo.h \
+ /usr/lib/llvm-22/include/llvm/ADT/GraphTraits.h \
+ /usr/lib/llvm-22/include/llvm/ADT/STLExtras.h \
  /usr/lib/llvm-22/include/llvm/ADT/ADL.h /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -139,27 +141,19 @@ CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
  /usr/include/c++/11/bits/streambuf.tcc /usr/include/c++/11/utility \
  /usr/include/c++/11/bits/stl_relops.h \
- /usr/lib/llvm-22/include/llvm/ADT/DenseMap.h \
- /usr/lib/llvm-22/include/llvm/ADT/DenseMapInfo.h \
- /usr/include/c++/11/cassert /usr/include/assert.h \
- /usr/include/c++/11/cstddef /usr/include/c++/11/limits \
- /usr/include/c++/11/optional \
- /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/tuple /usr/include/c++/11/array \
- /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h \
- /usr/lib/llvm-22/include/llvm/ADT/EpochTracker.h \
+ /usr/lib/llvm-22/include/llvm/ADT/Hashing.h \
  /usr/lib/llvm-22/include/llvm/Config/abi-breaking.h \
  /usr/lib/llvm-22/include/llvm/Config/llvm-config.h \
- /usr/lib/llvm-22/include/llvm/ADT/STLExtras.h \
- /usr/lib/llvm-22/include/llvm/ADT/Hashing.h \
  /usr/lib/llvm-22/include/llvm/Support/DataTypes.h \
  /usr/lib/llvm-22/include/llvm-c/DataTypes.h /usr/include/inttypes.h \
  /usr/lib/llvm-22/include/llvm/Support/ErrorHandling.h \
  /usr/lib/llvm-22/include/llvm/Support/Compiler.h \
  /usr/lib/llvm-22/include/llvm/Support/SwapByteOrder.h \
  /usr/lib/llvm-22/include/llvm/ADT/STLForwardCompat.h \
- /usr/lib/llvm-22/include/llvm/ADT/bit.h \
+ /usr/include/c++/11/optional \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/lib/llvm-22/include/llvm/ADT/bit.h /usr/include/c++/11/cstddef \
+ /usr/include/c++/11/limits \
  /usr/lib/llvm-22/include/llvm/Support/type_traits.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
@@ -167,7 +161,9 @@ CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
- /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/tuple \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/ext/aligned_buffer.h \
@@ -180,8 +176,9 @@ CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/cstring \
- /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/cassert \
+ /usr/include/assert.h /usr/include/c++/11/cstring /usr/include/string.h \
+ /usr/include/strings.h \
  /usr/lib/llvm-22/include/llvm/ADT/STLFunctionalExtras.h \
  /usr/lib/llvm-22/include/llvm/ADT/iterator.h \
  /usr/lib/llvm-22/include/llvm/ADT/iterator_range.h \
@@ -200,8 +197,11 @@ CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /usr/include/c++/11/pstl/glue_memory_defs.h /usr/include/c++/11/numeric \
  /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /usr/lib/llvm-22/include/llvm/Support/AlignOf.h \
- /usr/lib/llvm-22/include/llvm/Support/MathExtras.h \
+ /usr/lib/llvm-22/include/llvm/IR/Instructions.h \
+ /usr/lib/llvm-22/include/llvm/ADT/ArrayRef.h \
+ /usr/lib/llvm-22/include/llvm/ADT/SmallVector.h \
+ /usr/lib/llvm-22/include/llvm/ADT/DenseMapInfo.h \
+ /usr/lib/llvm-22/include/llvm/ADT/Bitfields.h \
  /usr/include/c++/11/climits \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -211,55 +211,60 @@ CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/lib/llvm-22/include/llvm/Support/MathExtras.h \
+ /usr/lib/llvm-22/include/llvm/ADT/MapVector.h \
+ /usr/lib/llvm-22/include/llvm/ADT/DenseMap.h \
+ /usr/lib/llvm-22/include/llvm/ADT/EpochTracker.h \
+ /usr/lib/llvm-22/include/llvm/Support/AlignOf.h \
  /usr/lib/llvm-22/include/llvm/Support/MemAlloc.h \
  /usr/lib/llvm-22/include/llvm/Support/ReverseIteration.h \
  /usr/lib/llvm-22/include/llvm/Support/PointerLikeTypeTraits.h \
- /usr/lib/llvm-22/include/llvm/ADT/StringRef.h \
  /usr/lib/llvm-22/include/llvm/ADT/Twine.h \
- /usr/lib/llvm-22/include/llvm/ADT/SmallVector.h \
- /usr/lib/llvm-22/include/llvm/ADT/ilist_node.h \
- /usr/lib/llvm-22/include/llvm/ADT/ilist_node_base.h \
- /usr/lib/llvm-22/include/llvm/ADT/PointerIntPair.h \
- /usr/lib/llvm-22/include/llvm/ADT/ilist_node_options.h \
- /usr/lib/llvm-22/include/llvm/IR/Argument.h \
- /usr/lib/llvm-22/include/llvm/IR/Attributes.h \
+ /usr/lib/llvm-22/include/llvm/ADT/StringRef.h \
+ /usr/lib/llvm-22/include/llvm/IR/CFG.h \
+ /usr/lib/llvm-22/include/llvm/IR/BasicBlock.h \
  /usr/lib/llvm-22/include/llvm-c/Types.h \
  /usr/lib/llvm-22/include/llvm-c/ExternC.h \
- /usr/lib/llvm-22/include/llvm/ADT/ArrayRef.h \
- /usr/lib/llvm-22/include/llvm/ADT/BitmaskEnum.h \
- /usr/lib/llvm-22/include/llvm/Support/Alignment.h \
- /usr/lib/llvm-22/include/llvm/Support/CodeGen.h \
- /usr/lib/llvm-22/include/llvm/Support/ModRef.h \
- /usr/lib/llvm-22/include/llvm/ADT/Sequence.h \
- /usr/lib/llvm-22/include/llvm/Support/raw_ostream.h \
- /usr/lib/llvm-22/include/llvm/IR/Attributes.inc \
- /usr/lib/llvm-22/include/llvm/IR/Value.h \
- /usr/lib/llvm-22/include/llvm/IR/Use.h \
- /usr/lib/llvm-22/include/llvm/Support/CBindingWrapping.h \
- /usr/lib/llvm-22/include/llvm/Support/Casting.h \
- /usr/lib/llvm-22/include/llvm/IR/Value.def \
- /usr/lib/llvm-22/include/llvm/IR/BasicBlock.h \
  /usr/lib/llvm-22/include/llvm/ADT/ilist.h \
  /usr/lib/llvm-22/include/llvm/ADT/simple_ilist.h \
  /usr/lib/llvm-22/include/llvm/ADT/ilist_base.h \
+ /usr/lib/llvm-22/include/llvm/ADT/ilist_node_base.h \
+ /usr/lib/llvm-22/include/llvm/ADT/PointerIntPair.h \
  /usr/lib/llvm-22/include/llvm/ADT/ilist_iterator.h \
+ /usr/lib/llvm-22/include/llvm/ADT/ilist_node.h \
+ /usr/lib/llvm-22/include/llvm/ADT/ilist_node_options.h \
  /usr/lib/llvm-22/include/llvm/IR/DebugProgramInstruction.h \
  /usr/lib/llvm-22/include/llvm/IR/DbgVariableFragmentInfo.h \
  /usr/lib/llvm-22/include/llvm/IR/DebugLoc.h \
  /usr/lib/llvm-22/include/llvm/IR/TrackingMDRef.h \
  /usr/lib/llvm-22/include/llvm/IR/Metadata.h \
  /usr/lib/llvm-22/include/llvm/ADT/PointerUnion.h \
+ /usr/lib/llvm-22/include/llvm/Support/Casting.h \
  /usr/lib/llvm-22/include/llvm/IR/Constant.h \
  /usr/lib/llvm-22/include/llvm/IR/User.h \
+ /usr/lib/llvm-22/include/llvm/IR/Use.h \
+ /usr/lib/llvm-22/include/llvm/Support/CBindingWrapping.h \
+ /usr/lib/llvm-22/include/llvm/IR/Value.h \
+ /usr/lib/llvm-22/include/llvm/Support/Alignment.h \
+ /usr/lib/llvm-22/include/llvm/IR/Value.def \
  /usr/lib/llvm-22/include/llvm/IR/LLVMContext.h \
  /usr/lib/llvm-22/include/llvm/IR/DiagnosticHandler.h \
  /usr/lib/llvm-22/include/llvm/IR/FixedMetadataKinds.def \
  /usr/lib/llvm-22/include/llvm/IR/Metadata.def \
  /usr/lib/llvm-22/include/llvm/IR/Instruction.h \
- /usr/lib/llvm-22/include/llvm/ADT/Bitfields.h \
  /usr/lib/llvm-22/include/llvm/IR/SymbolTableListTraits.h \
  /usr/lib/llvm-22/include/llvm/Support/AtomicOrdering.h \
  /usr/lib/llvm-22/include/llvm/IR/Instruction.def \
+ /usr/lib/llvm-22/include/llvm/IR/Function.h \
+ /usr/lib/llvm-22/include/llvm/ADT/DenseSet.h \
+ /usr/lib/llvm-22/include/llvm/IR/Argument.h \
+ /usr/lib/llvm-22/include/llvm/IR/Attributes.h \
+ /usr/lib/llvm-22/include/llvm/ADT/BitmaskEnum.h \
+ /usr/lib/llvm-22/include/llvm/Support/CodeGen.h \
+ /usr/lib/llvm-22/include/llvm/Support/ModRef.h \
+ /usr/lib/llvm-22/include/llvm/ADT/Sequence.h \
+ /usr/lib/llvm-22/include/llvm/Support/raw_ostream.h \
+ /usr/lib/llvm-22/include/llvm/IR/Attributes.inc \
  /usr/lib/llvm-22/include/llvm/IR/CallingConv.h \
  /usr/lib/llvm-22/include/llvm/IR/DerivedTypes.h \
  /usr/lib/llvm-22/include/llvm/IR/Type.h \
@@ -267,6 +272,16 @@ CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /usr/lib/llvm-22/include/llvm/IR/GlobalObject.h \
  /usr/lib/llvm-22/include/llvm/IR/GlobalValue.h \
  /usr/lib/llvm-22/include/llvm/IR/OperandTraits.h \
+ /usr/lib/llvm-22/include/llvm/IR/CmpPredicate.h \
+ /usr/lib/llvm-22/include/llvm/IR/InstrTypes.h \
+ /usr/lib/llvm-22/include/llvm/ADT/StringMap.h \
+ /usr/lib/llvm-22/include/llvm/ADT/StringMapEntry.h \
+ /usr/lib/llvm-22/include/llvm/Support/AllocatorBase.h \
+ /usr/lib/llvm-22/include/llvm/IR/FMF.h \
+ /usr/lib/llvm-22/include/llvm/IR/GEPNoWrapFlags.h \
+ /usr/lib/llvm-22/include/llvm/IR/Intrinsics.h \
+ /usr/lib/llvm-22/include/llvm/IR/IntrinsicEnums.inc \
+ /usr/lib/llvm-22/include/llvm/IR/ProfDataUtils.h \
  /usr/lib/llvm-22/include/llvm/IR/PassManager.h \
  /usr/lib/llvm-22/include/llvm/ADT/StringExtras.h \
  /usr/lib/llvm-22/include/llvm/ADT/APSInt.h \
@@ -279,40 +294,7 @@ CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /usr/lib/llvm-22/include/llvm/IR/PassManagerInternal.h \
  /usr/lib/llvm-22/include/llvm/Support/TypeName.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
- /usr/include/c++/11/bits/list.tcc \
- /usr/lib/llvm-22/include/llvm/Passes/PassBuilder.h \
- /usr/lib/llvm-22/include/llvm/Analysis/CGSCCPassManager.h \
- /usr/lib/llvm-22/include/llvm/ADT/MapVector.h \
- /usr/lib/llvm-22/include/llvm/Analysis/LazyCallGraph.h \
- /usr/lib/llvm-22/include/llvm/ADT/Any.h \
- /usr/lib/llvm-22/include/llvm/ADT/SetVector.h \
- /usr/lib/llvm-22/include/llvm/Analysis/TargetLibraryInfo.h \
- /usr/lib/llvm-22/include/llvm/ADT/StringTable.h \
- /usr/lib/llvm-22/include/llvm/IR/Constants.h \
- /usr/lib/llvm-22/include/llvm/ADT/APFloat.h \
- /usr/lib/llvm-22/include/llvm/ADT/FloatingPointMode.h \
- /usr/lib/llvm-22/include/llvm/ADT/StringSwitch.h \
- /usr/lib/llvm-22/include/llvm/IR/ConstantRange.h \
- /usr/lib/llvm-22/include/llvm/IR/InstrTypes.h \
- /usr/lib/llvm-22/include/llvm/ADT/StringMap.h \
- /usr/lib/llvm-22/include/llvm/ADT/StringMapEntry.h \
- /usr/lib/llvm-22/include/llvm/Support/AllocatorBase.h \
- /usr/lib/llvm-22/include/llvm/IR/FMF.h \
- /usr/lib/llvm-22/include/llvm/IR/GEPNoWrapFlags.h \
- /usr/lib/llvm-22/include/llvm/IR/Intrinsics.h \
- /usr/lib/llvm-22/include/llvm/IR/IntrinsicEnums.inc \
- /usr/lib/llvm-22/include/llvm/IR/Module.h \
- /usr/lib/llvm-22/include/llvm/IR/Comdat.h \
- /usr/lib/llvm-22/include/llvm/IR/DataLayout.h \
- /usr/lib/llvm-22/include/llvm/Support/TrailingObjects.h \
- /usr/lib/llvm-22/include/llvm/IR/GlobalAlias.h \
- /usr/lib/llvm-22/include/llvm/IR/GlobalIFunc.h \
- /usr/lib/llvm-22/include/llvm/IR/GlobalVariable.h \
- /usr/lib/llvm-22/include/llvm/IR/ProfileSummary.h \
- /usr/lib/llvm-22/include/llvm/TargetParser/Triple.h \
- /usr/lib/llvm-22/include/llvm/Support/VersionTuple.h \
- /usr/lib/llvm-22/include/llvm/IR/SystemLibraries.h \
- /usr/lib/llvm-22/include/llvm/Pass.h \
+ /usr/include/c++/11/bits/list.tcc /usr/lib/llvm-22/include/llvm/Pass.h \
  /usr/lib/llvm-22/include/llvm/PassAnalysisSupport.h \
  /usr/lib/llvm-22/include/llvm/PassSupport.h \
  /usr/lib/llvm-22/include/llvm/PassInfo.h \
@@ -330,14 +312,49 @@ CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /usr/lib/llvm-22/include/llvm/Support/Debug.h \
  /usr/lib/llvm-22/include/llvm/Support/ErrorOr.h \
  /usr/lib/llvm-22/include/llvm/Support/Format.h \
+ /usr/lib/llvm-22/include/llvm/Support/GenericLoopInfoImpl.h \
+ /usr/lib/llvm-22/include/llvm/ADT/DepthFirstIterator.h \
+ /usr/lib/llvm-22/include/llvm/ADT/PostOrderIterator.h \
+ /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/c++/11/bits/stl_set.h \
+ /usr/include/c++/11/bits/stl_multiset.h \
+ /usr/lib/llvm-22/include/llvm/ADT/SetOperations.h \
+ /usr/lib/llvm-22/include/llvm/Support/GenericLoopInfo.h \
+ /usr/lib/llvm-22/include/llvm/Support/Allocator.h \
+ /usr/lib/llvm-22/include/llvm/Support/GenericDomTree.h \
+ /usr/lib/llvm-22/include/llvm/Support/CFGDiff.h \
+ /usr/lib/llvm-22/include/llvm/Support/CFGUpdate.h \
+ /usr/lib/llvm-22/include/llvm/Demangle/Demangle.h \
+ /usr/lib/llvm-22/include/llvm/Demangle/DemangleConfig.h \
+ /usr/lib/llvm-22/include/llvm/Passes/PassBuilder.h \
+ /usr/lib/llvm-22/include/llvm/Analysis/CGSCCPassManager.h \
+ /usr/lib/llvm-22/include/llvm/Analysis/LazyCallGraph.h \
+ /usr/lib/llvm-22/include/llvm/ADT/Any.h \
+ /usr/lib/llvm-22/include/llvm/ADT/SetVector.h \
+ /usr/lib/llvm-22/include/llvm/Analysis/TargetLibraryInfo.h \
+ /usr/lib/llvm-22/include/llvm/ADT/StringTable.h \
+ /usr/lib/llvm-22/include/llvm/IR/Constants.h \
+ /usr/lib/llvm-22/include/llvm/ADT/APFloat.h \
+ /usr/lib/llvm-22/include/llvm/ADT/FloatingPointMode.h \
+ /usr/lib/llvm-22/include/llvm/ADT/StringSwitch.h \
+ /usr/lib/llvm-22/include/llvm/IR/ConstantRange.h \
+ /usr/lib/llvm-22/include/llvm/IR/Module.h \
+ /usr/lib/llvm-22/include/llvm/IR/Comdat.h \
+ /usr/lib/llvm-22/include/llvm/IR/DataLayout.h \
+ /usr/lib/llvm-22/include/llvm/Support/TrailingObjects.h \
+ /usr/lib/llvm-22/include/llvm/IR/GlobalAlias.h \
+ /usr/lib/llvm-22/include/llvm/IR/GlobalIFunc.h \
+ /usr/lib/llvm-22/include/llvm/IR/GlobalVariable.h \
+ /usr/lib/llvm-22/include/llvm/IR/ProfileSummary.h \
+ /usr/lib/llvm-22/include/llvm/TargetParser/Triple.h \
+ /usr/lib/llvm-22/include/llvm/Support/VersionTuple.h \
+ /usr/lib/llvm-22/include/llvm/IR/SystemLibraries.h \
  /usr/include/c++/11/bitset \
  /usr/lib/llvm-22/include/llvm/Analysis/TargetLibraryInfo.inc \
- /usr/lib/llvm-22/include/llvm/Support/Allocator.h \
  /usr/lib/llvm-22/include/llvm/IR/ValueHandle.h \
  /usr/lib/llvm-22/include/llvm/CodeGen/MachinePassManager.h \
  /usr/lib/llvm-22/include/llvm/ADT/FunctionExtras.h \
  /usr/lib/llvm-22/include/llvm/CodeGen/MachineFunction.h \
- /usr/lib/llvm-22/include/llvm/ADT/GraphTraits.h \
  /usr/lib/llvm-22/include/llvm/CodeGen/MachineBasicBlock.h \
  /usr/lib/llvm-22/include/llvm/ADT/SparseBitVector.h \
  /usr/lib/llvm-22/include/llvm/CodeGen/MachineFunctionAnalysisManager.h \
@@ -406,22 +423,6 @@ CMakeFiles/LoopFinderPass.dir/LoopFinderPass.cpp.o: \
  /usr/lib/llvm-22/include/llvm/Transforms/Scalar/LoopPassManager.h \
  /usr/lib/llvm-22/include/llvm/ADT/PriorityWorklist.h \
  /usr/lib/llvm-22/include/llvm/Analysis/LoopAnalysisManager.h \
- /usr/lib/llvm-22/include/llvm/Analysis/LoopInfo.h \
- /usr/lib/llvm-22/include/llvm/IR/Instructions.h \
- /usr/lib/llvm-22/include/llvm/IR/CFG.h \
- /usr/lib/llvm-22/include/llvm/IR/CmpPredicate.h \
- /usr/lib/llvm-22/include/llvm/IR/ProfDataUtils.h \
- /usr/lib/llvm-22/include/llvm/Support/GenericLoopInfoImpl.h \
- /usr/lib/llvm-22/include/llvm/ADT/DepthFirstIterator.h \
- /usr/lib/llvm-22/include/llvm/ADT/PostOrderIterator.h \
- /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
- /usr/include/c++/11/bits/stl_set.h \
- /usr/include/c++/11/bits/stl_multiset.h \
- /usr/lib/llvm-22/include/llvm/ADT/SetOperations.h \
- /usr/lib/llvm-22/include/llvm/Support/GenericLoopInfo.h \
- /usr/lib/llvm-22/include/llvm/Support/GenericDomTree.h \
- /usr/lib/llvm-22/include/llvm/Support/CFGDiff.h \
- /usr/lib/llvm-22/include/llvm/Support/CFGUpdate.h \
  /usr/lib/llvm-22/include/llvm/Analysis/LoopNestAnalysis.h \
  /usr/lib/llvm-22/include/llvm/IR/PassInstrumentation.h \
  /usr/lib/llvm-22/include/llvm/Transforms/Utils/LCSSA.h \

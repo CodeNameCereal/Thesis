@@ -128,7 +128,16 @@ build_c_tool() {
   flags=$(echo "$raw_cmd" | sed -E 's/^gcc[[:space:]]*//; s/-MT.*$//')
 
   echo "  [c/$tool] compiling IR..."
-  ( cd "$C_BUILD_DIR" && clang-22 $flags -O0 -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O0.ll" ) \
+  # -Xclang -disable-O0-optnone: clang normally tags every function with
+  # the "optnone" attribute at -O0, which blocks ALL FunctionPasses from
+  # running on it -- including read-only analysis passes like ours, not
+  # just IR-transforming ones. This flag suppresses that tag without
+  # actually enabling any optimizations, so -O0's structure (unmerged
+  # blocks, no inlining, etc.) is still preserved. Without this flag,
+  # LoopFinderPass silently produces zero output against every _O0.ll
+  # file this script generates -- see pass/ground_truth.txt for how this
+  # was originally debugged against the toy corpus.
+  ( cd "$C_BUILD_DIR" && clang-22 $flags -O0 -Xclang -disable-O0-optnone -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O0.ll" ) \
     || { echo "  [c/$tool] WARNING: O0 compile failed" >&2; }
   ( cd "$C_BUILD_DIR" && clang-22 $flags -O2 -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O2.ll" ) \
     || { echo "  [c/$tool] WARNING: O2 compile failed" >&2; }
