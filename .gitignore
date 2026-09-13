@@ -30,4 +30,5 @@ benchmarks/rust/target/
 .DS_Store
 .vscode/*
 !.vscode/settings.json
-!.vscode/tasks.jsonpass/src/build/
+!.vscode/tasks.json
+pass/src/build/

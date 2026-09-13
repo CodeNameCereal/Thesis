@@ -3,16 +3,16 @@
 # run_pass_on_all.sh
 #
 # Walks every benchmarks/<language>/<tool>/ir/*.ll file, runs the
-# loop-finder pass on it, and writes the pass's JSON-lines output as a
-# proper JSON array into pass/results/, mirroring the benchmarks/
-# directory structure.
+# loop-finder pass on it, and writes TWO JSON files per input:
+#   <name>.json           -- every loop found, unfiltered
+#   <name>.filtered.json  -- with std/core/alloc-internal functions
+#                            excluded (see explanation below)
 #
 # Usage (run from repo root):
 #   ./pass/scripts/run_pass_on_all.sh
 
 set -euo pipefail
 
-# Adjust this if your build directory ends up somewhere else.
 PLUGIN="./pass/src/build/libLoopFinderPass.so"
 OPT_BIN="opt-22"
 
@@ -21,9 +21,6 @@ if [ ! -f "$PLUGIN" ]; then
   exit 1
 fi
 
-# jq assembles our JSON-lines pass output into a real JSON array. If it's
-# not installed, fail loudly with the fix rather than silently producing
-# broken output.
 if ! command -v jq >/dev/null 2>&1; then
   echo "error: this script needs jq to assemble JSON output." >&2
   echo "       install it with: sudo apt install jq" >&2
@@ -32,43 +29,49 @@ fi
 
 mkdir -p pass/results
 
-# Find every .ll file under any benchmarks/<language>/<tool>/ir/ folder.
 find benchmarks -type f -path "*/ir/*.ll" | while read -r ll_file; do
 
-  # Reconstruct the same relative path under pass/results/, swapping the
-  # ir/ segment out and .ll for .json. Example:
-  #   benchmarks/c_cpp/comm/ir/comm_O0.ll
-  #     -> pass/results/c_cpp/comm/comm_O0.json
-  rel_path="${ll_file#benchmarks/}"       # c_cpp/comm/ir/comm_O0.ll
-  rel_path="${rel_path/\/ir\//\/}"        # c_cpp/comm/comm_O0.ll
+  rel_path="${ll_file#benchmarks/}"
+  rel_path="${rel_path/\/ir\//\/}"
   out_file="pass/results/${rel_path%.ll}.json"
+  filtered_out_file="pass/results/${rel_path%.ll}.filtered.json"
   mkdir -p "$(dirname "$out_file")"
 
   echo "Running pass on $ll_file ..."
 
-  # -disable-output: we don't want opt printing the (unmodified) IR back
-  # out -- only our pass's own errs() text matters. errs() writes to
-  # stderr, so we redirect stderr into the captured output too (2>&1).
   raw_output="$("$OPT_BIN" -load-pass-plugin="$PLUGIN" -passes=loop-finder \
                 -disable-output "$ll_file" 2>&1)"
 
-  # Keep only the JSON-object lines (the per-loop data). The "FUNCTION
-  # <name>" marker lines the pass also prints aren't JSON and get
-  # filtered out here -- they exist for readability when you eyeball
-  # opt's output directly, not for this script's parsing.
   loop_lines="$(echo "$raw_output" | grep '^{' || true)"
 
   if [ -z "$loop_lines" ]; then
-    # No loops anywhere in this file -- write a valid empty JSON array
-    # rather than nothing, so nothing downstream needs a special case
-    # for "zero loops found."
     echo "[]" > "$out_file"
+    echo "[]" > "$filtered_out_file"
   else
-    # jq -s ("slurp"): reads however many separate JSON objects arrive on
-    # stdin (one per line here) and combines them into one JSON array,
-    # written to out_file.
+    # Unfiltered: every loop found, exactly as the pass reported it.
+    # This stays around because "how much of this crate's IR is actually
+    # standard-library plumbing" is itself a number worth reporting, not
+    # just something to throw away.
     echo "$loop_lines" | jq -s '.' > "$out_file"
+
+    # Filtered: drop any loop whose containing function's DEMANGLED name
+    # starts with core::, alloc::, or std:: -- these are Rust
+    # standard-library/runtime internals (drop glue, RawVec internals,
+    # iterator adapter plumbing, etc.), not code the tool's author wrote.
+    #
+    # This is a name-prefix heuristic, not a perfect crate-membership
+    # check -- it filters based on which function DEFINES the loop, not
+    # on what that function calls. A tool function that merely CALLS
+    # something in core:: is untouched; only loops physically located
+    # inside a core::/alloc::/std:: function itself get excluded. For
+    # plain C functions, function_demangled is identical to the raw
+    # name (see LoopFinderPass.cpp's demangle() fallback behavior), and
+    # C function names never start with these prefixes, so this filter
+    # has no effect on the C side of the corpus -- exactly as intended.
+    echo "$loop_lines" \
+      | jq -s '[.[] | select(.function_demangled | test("^(core|alloc|std)::") | not)]' \
+      > "$filtered_out_file"
   fi
 done
 
-echo "Done. Results written under pass/results/"
+echo "Done. Results written under pass/results/ (both raw and .filtered.json per file)"
