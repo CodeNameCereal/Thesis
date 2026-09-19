@@ -81,14 +81,22 @@ std::string classifyOrigin(Value *Ptr) {
 
 // Cheap syntactic proxy for "this access looks bounds-checked": true if
 // some value equal to Idx feeds an icmp whose block both ends in a
-// conditional branch and dominates the access. Not a proof -- just a
-// heuristic worth flagging as such, same spirit as documenting the
-// duffs_device/labeled_nested_loop edge cases instead of glossing over
-// them.
-bool dominatedByCheckOnIndex(Value *Idx, BasicBlock *AccessBB,
+// conditional branch, AND that check provably runs before the access --
+// either the check's block strictly dominates the access's block, or
+// they're the SAME block and the comparison instruction comes before the
+// access instruction in program order. The plain dominance check alone
+// isn't enough: DominatorTree::dominates() treats a block as trivially
+// dominating itself, which says nothing about instruction ORDER within
+// that one block -- without the comesBefore() check, a comparison that
+// runs AFTER the access (and so could never have guarded it) would be
+// wrongly counted as a check. Not a proof either way -- just a heuristic,
+// same spirit as documenting the duffs_device/labeled_nested_loop edge
+// cases instead of glossing over them.
+bool dominatedByCheckOnIndex(Value *Idx, Instruction &AccessInst,
                               DominatorTree &DT) {
   if (!Idx)
     return false;
+  BasicBlock *AccessBB = AccessInst.getParent();
   for (User *U : Idx->users()) {
     auto *Cmp = dyn_cast<ICmpInst>(U);
     if (!Cmp)
@@ -97,7 +105,16 @@ bool dominatedByCheckOnIndex(Value *Idx, BasicBlock *AccessBB,
     auto *BI = dyn_cast<BranchInst>(CmpBB->getTerminator());
     if (!BI || !BI->isConditional() || BI->getCondition() != Cmp)
       continue;
-    if (CmpBB == AccessBB || DT.dominates(CmpBB, AccessBB))
+
+    if (CmpBB == AccessBB) {
+      // Same block: dominance is trivially true here, but that alone
+      // doesn't mean the check ran first -- verify actual order.
+      if (Cmp->comesBefore(&AccessInst))
+        return true;
+      continue;
+    }
+
+    if (DT.dominates(CmpBB, AccessBB))
       return true;
   }
   return false;
@@ -122,8 +139,7 @@ void printBufferAccess(Instruction &I, Value *PtrOperand,
       (Variable && VarIndex && VarIndex->hasName()) ? VarIndex->getName().str() : "";
   std::string Origin = classifyOrigin(GEP->getPointerOperand());
   bool InsideLoop = LI.getLoopFor(I.getParent()) != nullptr;
-  bool DominatedByCheck =
-      Variable && dominatedByCheckOnIndex(VarIndex, I.getParent(), DT);
+  bool DominatedByCheck = Variable && dominatedByCheckOnIndex(VarIndex, I, DT);
 
   errs() << "{"
          << "\"function\": \"" << RawFuncName << "\", "
