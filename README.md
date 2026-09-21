@@ -39,18 +39,28 @@ difference worth noting in the methodology section.
   corpus alone pulled in ~40 std/core/alloc functions vs. ~9
   hand-written, only 1 of the 40 containing a loop. Raw + demangled
   names are already in pass output to support this later.
-- **`BufferAccessPass.cpp`** -- [IN PROGRESS] Written, not yet
-  built/run. Finds `load`/`store` instructions mediated by a
-  `getelementptr` (buffer access). Classifies each as constant- vs.
-  variable-index, traces the buffer's origin (`alloca` / `global` /
-  `param` / `heap` / `unknown`), tags whether it's inside a loop
-  (reuses `LoopInfo`), and flags whether a dominating `icmp` on the
-  same index looks like a guard. Toy corpus + ground truth written
-  (`pass/toy_examples/buffer_access.{c,rs}`,
-  `pass/ground_truth_buffer_access.txt`) but not yet compiled or
-  validated.
+- **`BufferAccessPass.cpp`** -- [DONE] Built and validated against C +
+  Rust toy corpora. Finds `load`/`store` mediated by a `getelementptr`,
+  classifies constant vs. variable index, traces buffer origin (`alloca`
+  / `global` / `param` / `heap` / `unknown`, following through -O0 stack
+  spills), flags loop membership, and heuristically flags whether the
+  index looks bounds-checked beforehand. Two known limitations, see
+  below.
 - **Phase 2 (bounds checks) / Phase 3 (cast/init)** -- [NOT DONE] Not
   started -- after phase 1 runs end-to-end on the real corpus.
+
+**Known limitations of `BufferAccessPass` (not bugs -- understood, documented, open):**
+- `dominated_by_check` is unreliable on C: at `-O0`, clang reloads a
+  variable from its stack slot separately per use, so the check and the
+  access end up as different SSA values with no traceable link even when
+  a real check guards the access. Works correctly on at least one Rust
+  case where rustc didn't reload. Fix needs comparing by underlying
+  alloca, not SSA identity -- deferred, not started.
+- Buffer accesses split across a function-call boundary (GEP in one
+  function, load in the caller) are invisible to the pass -- it only
+  looks one instruction back, never into a callee. Confirmed via Rust's
+  `get_unchecked`. Would need real interprocedural analysis to fix --
+  not started, no decision yet on scope.
 
 **Toy-corpus edge cases (validated, worth restating):**
 - `duffs_device` (C) -> **0 loops, confirmed.** `switch` jumps directly into
@@ -78,10 +88,9 @@ pass/
                       buffer-access idiom (guarded/unguarded, alloca/param/
                       heap origin, constant vs. variable index)
   ground_truth.txt              expected LoopFinderPass output, validated
-  ground_truth_buffer_access.txt  expected BufferAccessPass output, NOT yet validated
-  src/                LoopFinderPass.cpp + CMakeLists.txt (done), build/ (gitignored)
-                      BufferAccessPass.cpp (written, not yet added to
-                      CMakeLists.txt or built)
+  ground_truth_buffer_access.txt  expected BufferAccessPass output, validated
+  src/                LoopFinderPass.cpp + BufferAccessPass.cpp +
+                      CMakeLists.txt (both built), build/ (gitignored)
   scripts/
     benchmarks.sh         scaffolds + compiles IR, both languages, all 10 tools.
                           Safe to rerun. -O0 C compile includes -Xclang -disable-O0-optnone.
@@ -172,14 +181,6 @@ chmod +x pass/scripts/run_pass_on_all.sh  # if needed
 Then: sanity-check a few results, decide + implement std-library
 filtering, only then draw cross-language conclusions.
 
-**Buffer access pass (phase 2, in progress):** `BufferAccessPass.cpp` is
-written but not yet wired up. To validate:
-```bash
-# add an add_library(BufferAccessPass MODULE BufferAccessPass.cpp) target
-# to pass/src/CMakeLists.txt, next to LoopFinderPass, then rebuild.
-opt-22 -load-pass-plugin=./libBufferAccessPass.so -passes=buffer-access-pass \
-       -disable-output <toy .ll file>
-# compare stderr output against pass/ground_truth_buffer_access.txt
-```
-Only after that passes should it be run against the real corpus, same as
-`LoopFinderPass`.
+**Buffer access pass:** built, validated on toy corpus (see Known
+limitations above). Next: run against the real corpus, same as
+`LoopFinderPass`, once that's done.

@@ -30,7 +30,7 @@ std::string demangledName(StringRef RawName) {
 // the variable index Value* via VarIndexOut so callers can trace it
 // further (see dominatedByCheckOnIndex below).
 bool gepHasVariableIndex(const GetElementPtrInst *GEP, Value **VarIndexOut) {
-  for (Use &U : GEP->indices()) {
+  for (const Use &U : GEP->indices()) {
     if (!isa<ConstantInt>(U.get())) {
       if (VarIndexOut)
         *VarIndexOut = U.get();
@@ -47,8 +47,34 @@ bool gepHasVariableIndex(const GetElementPtrInst *GEP, Value **VarIndexOut) {
 std::string classifyOrigin(Value *Ptr) {
   Value *V = Ptr;
   for (unsigned Hop = 0; Hop < 6 && V; ++Hop) {
-    if (isa<AllocaInst>(V))
-      return "alloca";
+    if (auto *AI = dyn_cast<AllocaInst>(V)) {
+      // At -O0, clang spills EVERY value -- parameters, malloc results,
+      // etc. -- into a stack slot before use, and every use loads it back.
+      // An alloca of an array/struct type genuinely IS the buffer (a real
+      // local array). An alloca of a plain pointer type is just a parking
+      // spot for an address computed elsewhere -- look through it to
+      // what was actually stored there, instead of stopping here and
+      // misreporting everything as "alloca".
+      Type *AllocatedTy = AI->getAllocatedType();
+      if (AllocatedTy->isArrayTy() || AllocatedTy->isStructTy())
+        return "alloca";
+
+      StoreInst *TheStore = nullptr;
+      bool Ambiguous = false;
+      for (User *U : AI->users()) {
+        if (auto *SI = dyn_cast<StoreInst>(U)) {
+          if (SI->getPointerOperand() == AI) {
+            if (TheStore) { Ambiguous = true; break; } // >1 store -- unclear
+            TheStore = SI;
+          }
+        }
+      }
+      if (TheStore && !Ambiguous) {
+        V = TheStore->getValueOperand();
+        continue;
+      }
+      return "alloca"; // no single clear store to look through -- give up honestly
+    }
     if (isa<GlobalVariable>(V))
       return "global";
     if (isa<Argument>(V))
@@ -120,6 +146,20 @@ bool dominatedByCheckOnIndex(Value *Idx, Instruction &AccessInst,
   return false;
 }
 
+// rustc (even at -O0) spills fat-pointer components (a slice's data
+// pointer + length, &str, etc.) into small byte-array allocas purely so
+// the debugger can display the variable's value -- named "<var>.dbg.spill"
+// in the IR. A GEP+store into one of these is syntactically identical to
+// a real buffer access but isn't one -- skip it rather than report
+// compiler bookkeeping as a finding. Only catches the direct, 1-hop case
+// (GEP's base is the spill alloca itself) -- same as everything else
+// here, a heuristic, not exhaustive.
+bool isDebugSpillAccess(const GetElementPtrInst *GEP) {
+  if (auto *AI = dyn_cast<AllocaInst>(GEP->getPointerOperand()))
+    return AI->hasName() && AI->getName().contains(".dbg.spill");
+  return false;
+}
+
 // Print one buffer access as a single JSON line -- same flat, one-line-
 // per-finding convention as LoopFinderPass's printLoopRecursive.
 void printBufferAccess(Instruction &I, Value *PtrOperand,
@@ -129,6 +169,8 @@ void printBufferAccess(Instruction &I, Value *PtrOperand,
   auto *GEP = dyn_cast<GetElementPtrInst>(PtrOperand);
   if (!GEP)
     return; // not GEP-mediated -- not a buffer access
+  if (isDebugSpillAccess(GEP))
+    return; // debug-info bookkeeping, not a real access
 
   Value *VarIndex = nullptr;
   bool Variable = gepHasVariableIndex(GEP, &VarIndex);
