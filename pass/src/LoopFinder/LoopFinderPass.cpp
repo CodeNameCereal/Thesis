@@ -1,9 +1,11 @@
 #include "llvm/Analysis/LoopInfo.h"
 #include "llvm/Demangle/Demangle.h"
+#include "llvm/IR/DebugInfoMetadata.h"
 #include "llvm/IR/Function.h"
 #include "llvm/IR/PassManager.h"
 #include "llvm/Passes/PassBuilder.h"
 #include "llvm/Plugins/PassPlugin.h"
+#include "llvm/Support/JSON.h"
 #include "llvm/Support/raw_ostream.h"
 
 using namespace llvm;
@@ -19,6 +21,37 @@ namespace {
 // there's no need to detect "is this Rust" ourselves first.
 std::string demangledName(StringRef RawName) {
   return demangle(RawName.str());
+}
+
+// Where in the source code this loop comes from, as the JSON fragment
+//   , "src_loc": [{"dir", "file", "line", "col"}, ...]
+// read by pass/scripts/label_loops.py to find the loop's kind (for, while...).
+// C: clang stores the exact start of each loop statement in the loop's
+// metadata. Rust: no such metadata, so we use the header's branch (the loop
+// condition). The list goes innermost-first through inlining: [where the
+// code is, the call site it was inlined into, ...]. Empty list = the IR was
+// compiled without line tables (-gline-tables-only / -C debuginfo=line-tables-only).
+std::string loopSrcLoc(const Loop &L) {
+  const DILocation *D = nullptr;
+  if (MDNode *ID = L.getLoopID())
+    for (unsigned I = 1; I < ID->getNumOperands() && !D; ++I)
+      D = dyn_cast_or_null<DILocation>(ID->getOperand(I));
+  auto Try = [&](const Instruction &I) {
+    if (!D && I.getDebugLoc() && I.getDebugLoc().getLine())
+      D = I.getDebugLoc().get();
+  };
+  Try(*L.getHeader()->getTerminator());
+  for (const Instruction &I : *L.getHeader())
+    Try(I);
+  json::Array Chain;
+  for (; D; D = D->getInlinedAt())
+    Chain.push_back(json::Object{{"dir", D->getDirectory()},
+                                 {"file", D->getFilename()},
+                                 {"line", D->getLine()},
+                                 {"col", D->getColumn()}});
+  std::string S;
+  raw_string_ostream(S) << ", \"src_loc\": " << json::Value(std::move(Chain));
+  return S;
 }
 
 // Recursively print one loop and all loops nested inside it. Unchanged
@@ -45,7 +78,8 @@ void printLoopRecursive(const Loop *L, StringRef RawFuncName,
          << "\"header\": \"" << HeaderName << "\", "
          << "\"depth\": " << Depth << ", "
          << "\"latch_count\": " << Latches.size() << ", "
-         << "\"subloop_count\": " << SubLoopCount << "}\n";
+         << "\"subloop_count\": " << SubLoopCount
+         << loopSrcLoc(*L) << "}\n";
 
   for (const Loop *Sub : L->getSubLoops()) {
     printLoopRecursive(Sub, RawFuncName, DemangledFuncName);

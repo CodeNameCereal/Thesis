@@ -3,10 +3,19 @@
 # run_pass_on_all.sh
 #
 # Walks every benchmarks/<language>/<tool>/ir/*.ll file, runs the
-# loop-finder pass on it, and writes TWO JSON files per input:
-#   <name>.json           -- every loop found, unfiltered
-#   <name>.filtered.json  -- with std/core/alloc-internal functions
-#                            excluded (see explanation below)
+# loop-finder pass on it, and writes one JSON file per input:
+#   pass/results/<language>/<tool>/<name>.json   -- every loop found
+#
+# Then runs label_loops.py, which adds each loop's source kind and writes:
+#   <name>.labeled.json              -- same loops + "loop_kind"
+#   pass/results/loop_kinds.tsv      -- counts per language/tool/level/kind
+#
+# Standard-library loops are NOT filtered out here. label_loops.py marks
+# them loop_kind "library", based on the source FILE the loop's code comes
+# from (std/core/alloc, ~/.cargo dependencies, /usr headers). This replaces
+# the old demangled-name filter, which missed trait impls such as
+# "<alloc::vec::Vec<T> as core::ops::drop::Drop>::drop" (they start with
+# "<", not "core::"). Filter with: jq '[.[] | select(.loop_kind != "library")]'
 #
 # Usage (run from repo root):
 #   ./pass/scripts/run_pass_on_all.sh
@@ -34,7 +43,6 @@ find benchmarks -type f -path "*/ir/*.ll" | while read -r ll_file; do
   rel_path="${ll_file#benchmarks/}"
   rel_path="${rel_path/\/ir\//\/}"
   out_file="pass/results/${rel_path%.ll}.json"
-  filtered_out_file="pass/results/${rel_path%.ll}.filtered.json"
   mkdir -p "$(dirname "$out_file")"
 
   echo "Running pass on $ll_file ..."
@@ -46,32 +54,12 @@ find benchmarks -type f -path "*/ir/*.ll" | while read -r ll_file; do
 
   if [ -z "$loop_lines" ]; then
     echo "[]" > "$out_file"
-    echo "[]" > "$filtered_out_file"
   else
-    # Unfiltered: every loop found, exactly as the pass reported it.
-    # This stays around because "how much of this crate's IR is actually
-    # standard-library plumbing" is itself a number worth reporting, not
-    # just something to throw away.
     echo "$loop_lines" | jq -s '.' > "$out_file"
-
-    # Filtered: drop any loop whose containing function's DEMANGLED name
-    # starts with core::, alloc::, or std:: -- these are Rust
-    # standard-library/runtime internals (drop glue, RawVec internals,
-    # iterator adapter plumbing, etc.), not code the tool's author wrote.
-    #
-    # This is a name-prefix heuristic, not a perfect crate-membership
-    # check -- it filters based on which function DEFINES the loop, not
-    # on what that function calls. A tool function that merely CALLS
-    # something in core:: is untouched; only loops physically located
-    # inside a core::/alloc::/std:: function itself get excluded. For
-    # plain C functions, function_demangled is identical to the raw
-    # name (see LoopFinderPass.cpp's demangle() fallback behavior), and
-    # C function names never start with these prefixes, so this filter
-    # has no effect on the C side of the corpus -- exactly as intended.
-    echo "$loop_lines" \
-      | jq -s '[.[] | select(.function_demangled | test("^(core|alloc|std)::") | not)]' \
-      > "$filtered_out_file"
   fi
 done
 
-echo "Done. Results written under pass/results/ (both raw and .filtered.json per file)"
+echo "Labeling loops..."
+python3 pass/scripts/label_loops.py
+
+echo "Done. Results under pass/results/ (<name>.json, <name>.labeled.json, loop_kinds.tsv)"

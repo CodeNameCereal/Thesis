@@ -6,6 +6,10 @@
 # 10-tool corpus, compiles LLVM IR at O0/O2 (C) and debug/release (Rust),
 # and copies everything into place.
 #
+# All IR is compiled with line tables (debug info mapping each instruction
+# to its source file/line/column). LoopFinderPass records these locations and
+# pass/scripts/label_loops.py uses them to label loops (for, while, ...).
+#
 # Safe to re-run: existing SOURCE.md/NOTES.md are never overwritten, only
 # created if missing. IR/src files ARE overwritten each run (that's the
 # point -- rerun after a toolchain change to regenerate).
@@ -137,9 +141,15 @@ build_c_tool() {
   # LoopFinderPass silently produces zero output against every _O0.ll
   # file this script generates -- see pass/ground_truth.txt for how this
   # was originally debugged against the toy corpus.
-  ( cd "$C_BUILD_DIR" && clang-22 $flags -O0 -Xclang -disable-O0-optnone -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O0.ll" ) \
+  #
+  # -gline-tables-only: source locations only (no variable/type info), so
+  # loops can be traced back to source. Placed AFTER $flags on purpose:
+  # the build log's flags usually contain autotools' default "-g -O2", and
+  # clang uses the LAST -g*/-O* option given, so ours win. Same setting as
+  # the Rust side (-C debuginfo=line-tables-only), keeping both symmetric.
+  ( cd "$C_BUILD_DIR" && clang-22 $flags -O0 -Xclang -disable-O0-optnone -gline-tables-only -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O0.ll" ) \
     || { echo "  [c/$tool] WARNING: O0 compile failed" >&2; }
-  ( cd "$C_BUILD_DIR" && clang-22 $flags -O2 -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O2.ll" ) \
+  ( cd "$C_BUILD_DIR" && clang-22 $flags -O2 -gline-tables-only -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O2.ll" ) \
     || { echo "  [c/$tool] WARNING: O2 compile failed" >&2; }
 
   cp "$src_file" "$dest/src/${tool}.c"
@@ -163,13 +173,16 @@ build_rust_tool() {
     return
   fi
 
+  # -C debuginfo=line-tables-only: source locations only, for both profiles.
+  # Debug builds default to full debuginfo and release builds to none;
+  # passing it explicitly makes both levels (and both languages) identical.
   echo "  [rust/$tool] compiling IR (debug)..."
-  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" -- --emit=llvm-ir) || {
+  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" -- --emit=llvm-ir -C debuginfo=line-tables-only) || {
     echo "  [rust/$tool] WARNING: debug build failed, skipping IR for this tool" >&2
     return
   }
   echo "  [rust/$tool] compiling IR (release)..."
-  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" --release -- --emit=llvm-ir) || {
+  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" --release -- --emit=llvm-ir -C debuginfo=line-tables-only) || {
     echo "  [rust/$tool] WARNING: release build failed, skipping IR for this tool" >&2
     return
   }

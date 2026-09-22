@@ -26,8 +26,8 @@ endif()
 
 # MODULE (not SHARED): meant for dlopen() via opt's -load-pass-plugin,
 # not build-time linking.
-add_library(LoopFinderPass MODULE LoopFinderPass.cpp)
-add_library(BufferAccessPass MODULE BufferAccessPass.cpp)
+add_library(LoopFinderPass MODULE LoopFinder/LoopFinderPass.cpp)
+add_library(BufferAccessPass MODULE BufferAccess/BufferAccessPass.cpp)
 
 # No target_link_libraries against LLVM for either target: opt already
 # has every LLVM symbol loaded when it dlopen()s us, so our undefined
