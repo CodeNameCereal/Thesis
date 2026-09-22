@@ -13,22 +13,14 @@ using namespace llvm;
 
 namespace {
 
-// Same rationale as LoopFinderPass: safe to call unconditionally on every
-// function name, C included -- unmangled names just pass through unchanged.
 std::string demangledName(StringRef RawName) {
   return demangle(RawName.str());
 }
 
-// A buffer access is a load/store whose pointer operand is a
-// getelementptr (GEP) -- LLVM's dedicated "compute an address inside
-// something" instruction. `arr[i]` is always GEP-then-load/store; a plain
-// `load %x` with no GEP in front is just a simple variable read, not a
-// buffer access, so those are skipped entirely.
+// arr[i] compiles to GEP + load/store. GEP computes the address,
+// load/store does the actual access.
 
-// A GEP index is "variable" if it's anything other than a compile-time
-// ConstantInt -- e.g. arr[i] (variable) vs. arr[3] (constant). Returns
-// the variable index Value* via VarIndexOut so callers can trace it
-// further (see dominatedByCheckOnIndex below).
+// arr[i] -> variable index, arr[3] -> constant index.
 bool gepHasVariableIndex(const GetElementPtrInst *GEP, Value **VarIndexOut) {
   for (const Use &U : GEP->indices()) {
     if (!isa<ConstantInt>(U.get())) {
@@ -40,21 +32,15 @@ bool gepHasVariableIndex(const GetElementPtrInst *GEP, Value **VarIndexOut) {
   return false;
 }
 
-// Walks back from the GEP's pointer operand, through casts/nested GEPs/
-// loads, a bounded number of hops, to classify where the accessed memory
-// actually came from. Bounded so a long, unresolved chain just falls
-// through to "unknown" instead of looping or misattributing.
+// Traces a pointer back to find where the memory came from. Bounded so
+// it can't loop forever or misattribute on a weird chain.
 std::string classifyOrigin(Value *Ptr) {
   Value *V = Ptr;
   for (unsigned Hop = 0; Hop < 6 && V; ++Hop) {
     if (auto *AI = dyn_cast<AllocaInst>(V)) {
-      // At -O0, clang spills EVERY value -- parameters, malloc results,
-      // etc. -- into a stack slot before use, and every use loads it back.
-      // An alloca of an array/struct type genuinely IS the buffer (a real
-      // local array). An alloca of a plain pointer type is just a parking
-      // spot for an address computed elsewhere -- look through it to
-      // what was actually stored there, instead of stopping here and
-      // misreporting everything as "alloca".
+      // -O0 spills everything to the stack first (params, malloc results,
+      // etc). Array/struct alloca = real local buffer. Pointer alloca =
+      // just a parking spot, look through it.
       Type *AllocatedTy = AI->getAllocatedType();
       if (AllocatedTy->isArrayTy() || AllocatedTy->isStructTy())
         return "alloca";
@@ -64,7 +50,7 @@ std::string classifyOrigin(Value *Ptr) {
       for (User *U : AI->users()) {
         if (auto *SI = dyn_cast<StoreInst>(U)) {
           if (SI->getPointerOperand() == AI) {
-            if (TheStore) { Ambiguous = true; break; } // >1 store -- unclear
+            if (TheStore) { Ambiguous = true; break; }
             TheStore = SI;
           }
         }
@@ -73,7 +59,7 @@ std::string classifyOrigin(Value *Ptr) {
         V = TheStore->getValueOperand();
         continue;
       }
-      return "alloca"; // no single clear store to look through -- give up honestly
+      return "alloca";
     }
     if (isa<GlobalVariable>(V))
       return "global";
@@ -105,19 +91,11 @@ std::string classifyOrigin(Value *Ptr) {
   return "unknown";
 }
 
-// Cheap syntactic proxy for "this access looks bounds-checked": true if
-// some value equal to Idx feeds an icmp whose block both ends in a
-// conditional branch, AND that check provably runs before the access --
-// either the check's block strictly dominates the access's block, or
-// they're the SAME block and the comparison instruction comes before the
-// access instruction in program order. The plain dominance check alone
-// isn't enough: DominatorTree::dominates() treats a block as trivially
-// dominating itself, which says nothing about instruction ORDER within
-// that one block -- without the comesBefore() check, a comparison that
-// runs AFTER the access (and so could never have guarded it) would be
-// wrongly counted as a check. Not a proof either way -- just a heuristic,
-// same spirit as documenting the duffs_device/labeled_nested_loop edge
-// cases instead of glossing over them.
+// Rough check for "looks bounds-checked": index feeds an icmp, that icmp
+// drives a branch, and the branch runs before the access -- either a
+// dominating earlier block, or same block with the check coming first.
+// Same-block needs the order check since a block trivially dominates
+// itself. Heuristic, not a proof.
 bool dominatedByCheckOnIndex(Value *Idx, Instruction &AccessInst,
                               DominatorTree &DT) {
   if (!Idx)
@@ -133,8 +111,6 @@ bool dominatedByCheckOnIndex(Value *Idx, Instruction &AccessInst,
       continue;
 
     if (CmpBB == AccessBB) {
-      // Same block: dominance is trivially true here, but that alone
-      // doesn't mean the check ran first -- verify actual order.
       if (Cmp->comesBefore(&AccessInst))
         return true;
       continue;
@@ -146,39 +122,42 @@ bool dominatedByCheckOnIndex(Value *Idx, Instruction &AccessInst,
   return false;
 }
 
-// rustc (even at -O0) spills fat-pointer components (a slice's data
-// pointer + length, &str, etc.) into small byte-array allocas purely so
-// the debugger can display the variable's value -- named "<var>.dbg.spill"
-// in the IR. A GEP+store into one of these is syntactically identical to
-// a real buffer access but isn't one -- skip it rather than report
-// compiler bookkeeping as a finding. Only catches the direct, 1-hop case
-// (GEP's base is the spill alloca itself) -- same as everything else
-// here, a heuristic, not exhaustive.
+// rustc spills fat-pointer pieces into named stack slots just for the
+// debugger. Looks like a real access, isn't one.
 bool isDebugSpillAccess(const GetElementPtrInst *GEP) {
   if (auto *AI = dyn_cast<AllocaInst>(GEP->getPointerOperand()))
     return AI->hasName() && AI->getName().contains(".dbg.spill");
   return false;
 }
 
-// Print one buffer access as a single JSON line -- same flat, one-line-
-// per-finding convention as LoopFinderPass's printLoopRecursive.
+// Real name if it has one, else its register id (%7). Unnamed values
+// have no stored name -- the printer numbers them on the fly -- so this
+// asks the printer for it instead of just checking hasName().
+std::string valueDisplayName(Value *V) {
+  if (V->hasName())
+    return V->getName().str();
+  std::string Tmp;
+  raw_string_ostream OS(Tmp);
+  V->printAsOperand(OS, /*PrintType=*/false);
+  return Tmp;
+}
+
 void printBufferAccess(Instruction &I, Value *PtrOperand,
                         StringRef AccessKind, LoopInfo &LI,
                         DominatorTree &DT, StringRef RawFuncName,
                         const std::string &DemangledFuncName) {
   auto *GEP = dyn_cast<GetElementPtrInst>(PtrOperand);
   if (!GEP)
-    return; // not GEP-mediated -- not a buffer access
+    return;
   if (isDebugSpillAccess(GEP))
-    return; // debug-info bookkeeping, not a real access
+    return;
 
   Value *VarIndex = nullptr;
   bool Variable = gepHasVariableIndex(GEP, &VarIndex);
 
   unsigned Line = I.getDebugLoc() ? I.getDebugLoc().getLine() : 0;
   std::string IndexKind = Variable ? "variable" : "constant";
-  std::string IndexName =
-      (Variable && VarIndex && VarIndex->hasName()) ? VarIndex->getName().str() : "";
+  std::string IndexName = (Variable && VarIndex) ? valueDisplayName(VarIndex) : "";
   std::string Origin = classifyOrigin(GEP->getPointerOperand());
   bool InsideLoop = LI.getLoopFor(I.getParent()) != nullptr;
   bool DominatedByCheck = Variable && dominatedByCheckOnIndex(VarIndex, I, DT);
