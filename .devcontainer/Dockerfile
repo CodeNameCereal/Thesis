@@ -46,12 +46,18 @@ RUN wget --timeout=30 --tries=3 https://apt.llvm.org/llvm.sh \
        libclang-22-dev \
        clang-tools-22 \
        clangd-22 \
+       python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
 # Set default Clang/LLVM binaries to version 22
 RUN update-alternatives --install /usr/bin/clang clang /usr/bin/clang-22 100 \
     && update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-22 100 \
     && update-alternatives --install /usr/bin/llvm-config llvm-config /usr/bin/llvm-config-22 100
+
+# Python bindings for libclang, used by pass/scripts/label_loops.py to parse
+# C source and find loop statements. Pinned to match libclang-22-dev above --
+# re-check this pin if the LLVM version in step 2 is ever bumped.
+RUN pip3 install --no-cache-dir libclang
 
 # 3. Install Rust toolchain via rustup — latest stable (currently bundles
 #    LLVM 22.x, matching clang-22 above). Re-check this parity if either
