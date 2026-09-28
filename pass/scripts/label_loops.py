@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Label every IR loop in pass/results/ with its source loop kind.
 
-    python3 pass/scripts/label_loops.py   ->  X.labeled.json per result file + loop_kinds.tsv
+    python3 pass/scripts/label_loops.py   ->  X_O0.labeled.json per result file + loop_kinds.tsv
 
-Rule: take the loop's debug location (src_loc, from LoopSrcLoc.h), find the source
+Only -O0 results are labeled: at -O0 nothing is inlined, so each loop's src_loc has
+one entry, pointing at the loop in the source.
+
+Rule: take the loop's debug location (src_loc, from LoopFinderPass), find the source
 loops containing it (libclang for C, syn for Rust), pick the one at the same nesting
 depth as the IR loop. Kinds: for / while / do-while / while-let / loop, plus
   goto       C loop built from a backward goto (no loop statement)
-  implicit   loop inlined from a library with no source loop, e.g. Rust .sum()
   library    code lives in std/core/alloc/a dependency -> exclude from tool stats
   unmatched  check by hand;   no-debug-info: IR built without line tables
 """
@@ -54,29 +56,21 @@ def label(loop):
     chain = loop.get("src_loc")
     if not chain:
         return "no-debug-info"
-    paths = [os.path.normpath(os.path.join(f["dir"], f["file"])) for f in chain]
-    user = [i for i, p in enumerate(paths) if not LIBRARY.search(p)]
-    lib = [i for i, p in enumerate(paths) if LIBRARY.search(p)]
-    if not user:
+    loc = chain[0]  # where the loop's code is written
+    path = os.path.normpath(os.path.join(loc["dir"], loc["file"]))
+    if LIBRARY.search(path):
         return "library"
-    i = user[0]
-    if i == 0 and lib:  # user closure run by library code: use the call site after it
-        i = next((j for j in user if j > lib[0]), 0)
-    if not os.path.exists(paths[i]):
+    if not os.path.exists(path):
         return "unmatched"
-    pos = [chain[i]["line"], chain[i]["col"]]
-    containing = [L for L in source_loops(paths[i]) if L["start"] <= pos <= L["end"]]
+    pos = [loc["line"], loc["col"]]
+    containing = [L for L in source_loops(path) if L["start"] <= pos <= L["end"]]
     for L in containing:
-        if paths[i].endswith(".c") and L["start"] == pos:  # clang: exact loop start
+        if path.endswith(".c") and L["start"] == pos:  # clang: exact loop start
             return L["kind"]
     for L in containing:
         if L["depth"] == loop.get("depth"):
             return L["kind"]
-    if i > 0:
-        return "implicit"
-    if containing:  # depth changed by optimization: take the innermost
-        return max(containing, key=lambda L: L["start"])["kind"]
-    return "goto" if paths[i].endswith(".c") else "unmatched"
+    return "goto" if path.endswith(".c") else "unmatched"
 
 
 def entries(node):  # every dict with a src_loc, wherever it sits in the JSON
@@ -91,7 +85,7 @@ def entries(node):  # every dict with a src_loc, wherever it sits in the JSON
 
 results = os.path.join(ROOT, "pass", "results")
 rows = ["lang\ttool\tlevel\tkind\tcount\n"]
-for f in sorted(glob.glob(f"{results}/*/*/*_O[02].json")):  # not .labeled/.filtered
+for f in sorted(glob.glob(f"{results}/*/*/*_O0.json")):  # -O0 only; not .labeled/.filtered
     data = json.load(open(f))
     counts = Counter()
     for loop in entries(data):
