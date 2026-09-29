@@ -1,0 +1,138 @@
+[
+ {
+  "function": "bsd_sum_stream",
+  "function_demangled": "bsd_sum_stream",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/sum.c",
+    "line": 86
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "bsd_sum_stream",
+  "function_demangled": "bsd_sum_stream",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/sum.c",
+    "line": 47
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "bsd_sum_stream",
+  "function_demangled": "bsd_sum_stream",
+  "header": "",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 5,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/sum.c",
+    "line": 52
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "bsd_sum_stream",
+  "function_demangled": "bsd_sum_stream",
+  "header": "",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 5,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/sum.c",
+    "line": 71
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "sysv_sum_stream",
+  "function_demangled": "sysv_sum_stream",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/sum.c",
+    "line": 161
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "sysv_sum_stream",
+  "function_demangled": "sysv_sum_stream",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/sum.c",
+    "line": 125
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "sysv_sum_stream",
+  "function_demangled": "sysv_sum_stream",
+  "header": "",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 5,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/sum.c",
+    "line": 130
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "sysv_sum_stream",
+  "function_demangled": "sysv_sum_stream",
+  "header": "",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 5,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/sum.c",
+    "line": 149
+   }
+  ],
+  "loop_kind": "for"
+ }
+]

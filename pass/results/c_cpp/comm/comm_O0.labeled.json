@@ -1,0 +1,155 @@
+[
+ {
+  "function": "oputs_",
+  "function_demangled": "oputs_",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 645
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "oputs_",
+  "function_demangled": "oputs_",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 7,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 629
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "emit_ancillary_info",
+  "function_demangled": "emit_ancillary_info",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 870
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "main",
+  "function_demangled": "main",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/comm.c",
+    "line": 439
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "compare_files",
+  "function_demangled": "compare_files",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/comm.c",
+    "line": 393
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "compare_files",
+  "function_demangled": "compare_files",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/comm.c",
+    "line": 307
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "compare_files",
+  "function_demangled": "compare_files",
+  "header": "",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 7,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/comm.c",
+    "line": 363
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "compare_files",
+  "function_demangled": "compare_files",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/comm.c",
+    "line": 285
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "compare_files",
+  "function_demangled": "compare_files",
+  "header": "",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 7,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/comm.c",
+    "line": 287
+   }
+  ],
+  "loop_kind": "for"
+ }
+]

@@ -1,0 +1,14 @@
+FUNCTION usage (usage)
+FUNCTION oputs_ (oputs_)
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":645}]}
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":629}]}
+FUNCTION emit_ancillary_info (emit_ancillary_info)
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":870}]}
+FUNCTION main (main)
+{"function": "main", "function_demangled": "main", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 1, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/echo.c","line":208}]}
+{"function": "main", "function_demangled": "main", "header": "", "depth": 2, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":11,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/echo.c","line":213}]}
+{"function": "main", "function_demangled": "main", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/echo.c","line":273}]}
+{"function": "main", "function_demangled": "main", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 2, "src_loc": [{"col":5,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/echo.c","line":161}]}
+{"function": "main", "function_demangled": "main", "header": "", "depth": 2, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":9,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/echo.c","line":170}]}
+{"function": "main", "function_demangled": "main", "header": "", "depth": 2, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":9,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/echo.c","line":184}]}
+FUNCTION hextobin (hextobin)

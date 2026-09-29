@@ -1,0 +1,189 @@
+[
+ {
+  "function": "_RINvCsgYgdrYvFmtB_7uu_echo12filter_flagsINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters5chain5ChainINtNtNtBJ_7sources4once4OnceNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringEINtNtBH_8peekable8PeekableINtNtBH_4skip4SkipINtNtBH_6cloned6ClonedINtNtNtBL_5slice4iter4IterB1W_EEEEEECse9L1s2fseyi_4echo",
+  "function_demangled": "uu_echo::filter_flags::<core::iter::adapters::chain::Chain<core::iter::sources::once::Once<std::ffi::os_str::OsString>, core::iter::adapters::peekable::Peekable<core::iter::adapters::skip::Skip<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>>>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 32,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/echo/src/echo.rs",
+    "line": 107
+   }
+  ],
+  "loop_kind": "while-let"
+ },
+ {
+  "function": "_RINvCsgYgdrYvFmtB_7uu_echo12filter_flagsINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters8peekable8PeekableINtNtBH_4skip4SkipINtNtBH_6cloned6ClonedINtNtNtBL_5slice4iter4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringEEEEECse9L1s2fseyi_4echo",
+  "function_demangled": "uu_echo::filter_flags::<core::iter::adapters::peekable::Peekable<core::iter::adapters::skip::Skip<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 32,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/echo/src/echo.rs",
+    "line": 107
+   }
+  ],
+  "loop_kind": "while-let"
+ },
+ {
+  "function": "_RINvCsgYgdrYvFmtB_7uu_echo7executeINtNtCs6i54tJFfzR_5alloc5boxed3BoxDNtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iteratorp4ItemNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringEL_EECse9L1s2fseyi_4echo",
+  "function_demangled": "uu_echo::execute::<alloc::boxed::Box<dyn core::iter::traits::iterator::Iterator<Item = std::ffi::os_str::OsString>>>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/echo/src/echo.rs",
+    "line": 232
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvCsgYgdrYvFmtB_7uu_echo7executeINtNtCs6i54tJFfzR_5alloc5boxed3BoxDNtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iteratorp4ItemNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringEL_EECse9L1s2fseyi_4echo",
+  "function_demangled": "uu_echo::execute::<alloc::boxed::Box<dyn core::iter::traits::iterator::Iterator<Item = std::ffi::os_str::OsString>>>",
+  "header": "bb22",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/echo/src/echo.rs",
+    "line": 241
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtBa_4iter6traits8iterator8Iterator8try_foldINtNtNtBa_3num7nonzero7NonZerojENCINvNtNtB1y_8adapters6cloned14clone_try_foldBJ_B2g_INtNtBa_6option6OptionB2g_ENCNvXs_NvB1s_10advance_byINtB2R_6ClonedB3_ENtB4a_13SpecAdvanceBy15spec_advance_by0E0B3C_ECse9L1s2fseyi_4echo",
+  "function_demangled": "<core::slice::iter::Iter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, core::iter::adapters::cloned::clone_try_fold<std::ffi::os_str::OsString, core::num::nonzero::NonZero<usize>, core::option::Option<core::num::nonzero::NonZero<usize>>, <core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>> as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}>::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtBa_4iter6traits8iterator8Iterator8try_foldINtNtNtBa_3num7nonzero7NonZerojENCINvNtNtB1y_8adapters6cloned14clone_try_foldBJ_B2g_INtNtBa_6option6OptionB2g_ENCNvXs_NvB1s_10advance_byINtNtB2T_8peekable8PeekableIB4t_INtNtB2T_4skip4SkipINtB2R_6ClonedB3_EEEENtB4a_13SpecAdvanceBy15spec_advance_by0E0B3C_ECse9L1s2fseyi_4echo",
+  "function_demangled": "<core::slice::iter::Iter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, core::iter::adapters::cloned::clone_try_fold<std::ffi::os_str::OsString, core::num::nonzero::NonZero<usize>, core::option::Option<core::num::nonzero::NonZero<usize>>, <core::iter::adapters::peekable::Peekable<core::iter::adapters::peekable::Peekable<core::iter::adapters::skip::Skip<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>>> as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}>::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtBa_4iter6traits8iterator8Iterator8try_foldINtNtNtBa_3num7nonzero7NonZerojENCINvNtNtB1y_8adapters6cloned14clone_try_foldBJ_B2g_INtNtBa_6option6OptionB2g_ENCNvXs_NvB1s_10advance_byINtNtB2T_8peekable8PeekableINtNtB2T_4skip4SkipINtB2R_6ClonedB3_EEENtB4a_13SpecAdvanceBy15spec_advance_by0E0B3C_ECse9L1s2fseyi_4echo",
+  "function_demangled": "<core::slice::iter::Iter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, core::iter::adapters::cloned::clone_try_fold<std::ffi::os_str::OsString, core::num::nonzero::NonZero<usize>, core::option::Option<core::num::nonzero::NonZero<usize>>, <core::iter::adapters::peekable::Peekable<core::iter::adapters::skip::Skip<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>> as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}>::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtNtCsgxBkk5gSRhY_4core4iter7sources4once4OnceNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtBa_6traits8iterator8Iterator8try_foldINtNtNtBc_3num7nonzero7NonZerojENCNvXs_NvB1B_10advance_byB3_NtB2V_13SpecAdvanceBy15spec_advance_by0INtNtBc_6option6OptionB2i_EECse9L1s2fseyi_4echo",
+  "function_demangled": "<core::iter::sources::once::Once<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, <core::iter::sources::once::Once<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtNtCsgxBkk5gSRhY_4core4iter7sources4once4OnceNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtBa_6traits8iterator8Iterator8try_foldINtNtNtBc_3num7nonzero7NonZerojEQNCNvXs_NvB1B_10advance_byINtNtNtBa_8adapters8peekable8PeekableINtNtB3j_5chain5ChainB3_IB3f_INtNtB3j_4skip4SkipINtNtB3j_6cloned6ClonedINtNtNtBc_5slice4iter4IterBS_EEEEEENtB2W_13SpecAdvanceBy15spec_advance_by0INtNtBc_6option6OptionB2i_EECse9L1s2fseyi_4echo",
+  "function_demangled": "<core::iter::sources::once::Once<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, &mut <core::iter::adapters::peekable::Peekable<core::iter::adapters::chain::Chain<core::iter::sources::once::Once<std::ffi::os_str::OsString>, core::iter::adapters::peekable::Peekable<core::iter::adapters::skip::Skip<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>>>> as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtBa_4iter6traits8iterator8Iterator8try_foldINtNtNtBa_3num7nonzero7NonZerojENCINvNtNtB1y_8adapters6cloned14clone_try_foldBJ_B2g_INtNtBa_6option6OptionB2g_ENCNvXs_NvB1s_10advance_byINtNtB2T_8peekable8PeekableINtNtB2T_5chain5ChainINtNtNtB1y_7sources4once4OnceBJ_EIB4t_INtNtB2T_4skip4SkipINtB2R_6ClonedB3_EEEEENtB4a_13SpecAdvanceBy15spec_advance_by0E0B3C_ECse9L1s2fseyi_4echo",
+  "function_demangled": "<core::slice::iter::Iter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, core::iter::adapters::cloned::clone_try_fold<std::ffi::os_str::OsString, core::num::nonzero::NonZero<usize>, core::option::Option<core::num::nonzero::NonZero<usize>>, <core::iter::adapters::peekable::Peekable<core::iter::adapters::chain::Chain<core::iter::sources::once::Once<std::ffi::os_str::OsString>, core::iter::adapters::peekable::Peekable<core::iter::adapters::skip::Skip<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>>>> as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}>::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvCsgYgdrYvFmtB_7uu_echo7is_flag",
+  "function_demangled": "uu_echo::is_flag",
+  "header": "bb10",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/echo/src/echo.rs",
+    "line": 74
+   }
+  ],
+  "loop_kind": "for"
+ }
+]

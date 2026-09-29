@@ -1,0 +1,82 @@
+[
+  {
+    "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtBb_4iter6traits8iterator8Iterator4folduNCINvNtNtB1F_8adapters3map8map_foldRBQ_BQ_uNvYBQ_NtNtBb_5clone5Clone5cloneNCINvNvB1z_8for_each4callBQ_NCINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB47_3VecBQ_E14extend_trustedINtNtB2r_6cloned6ClonedBF_EE0E0E0ECseR2933zdZOW_5mkdir",
+    "function_demangled": "<core::slice::iter::Iter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::fold::<(), core::iter::adapters::map::map_fold<&std::ffi::os_str::OsString, std::ffi::os_str::OsString, (), <std::ffi::os_str::OsString as core::clone::Clone>::clone, core::iter::traits::iterator::Iterator::for_each::call<std::ffi::os_str::OsString, <alloc::vec::Vec<std::ffi::os_str::OsString>>::extend_trusted<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>::{closure#0}>::{closure#0}>::{closure#0}>",
+    "header": "bb8",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 27,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/slice/iter/macros.rs",
+        "line": 279
+      }
+    ]
+  },
+  {
+    "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCshDr2IgNMp2p_12clap_builder4util9any_value10AnyValueIdENtNtNtNtBa_4iter6traits8iterator8Iterator8try_folduNCINvNvXs_NtNtB1P_8adapters9enumerateINtB2I_9EnumeratepEB1J_8try_fold9enumerateRBJ_uINtNtNtBa_3ops12control_flow11ControlFlowjENCINvNvB1J_8find_map5checkTjB3P_EjNCINvMNtBN_8flat_mapINtB5f_7FlatMapBJ_NtBL_8AnyValueE12remove_entryBJ_E0E0E0B3U_ECsaYz2MbOuB8t_8uu_mkdir",
+    "function_demangled": "<core::slice::iter::Iter<clap_builder::util::any_value::AnyValueId> as core::iter::traits::iterator::Iterator>::try_fold::<(), <core::iter::adapters::enumerate::Enumerate<_> as core::iter::traits::iterator::Iterator>::try_fold::enumerate<&clap_builder::util::any_value::AnyValueId, (), core::ops::control_flow::ControlFlow<usize>, core::iter::traits::iterator::Iterator::find_map::check<(usize, &clap_builder::util::any_value::AnyValueId), usize, <clap_builder::util::flat_map::FlatMap<clap_builder::util::any_value::AnyValueId, clap_builder::util::any_value::AnyValue>>::remove_entry<clap_builder::util::any_value::AnyValueId>::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<usize>>",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 34,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/iter/traits/iterator.rs",
+        "line": 2493
+      }
+    ]
+  },
+  {
+    "function": "_RNvCsaYz2MbOuB8t_8uu_mkdir4exec",
+    "function_demangled": "uu_mkdir::exec",
+    "header": "bb2",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 16,
+        "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+        "file": "src/uu/mkdir/src/mkdir.rs",
+        "line": 173
+      }
+    ]
+  },
+  {
+    "function": "_RNvCsaYz2MbOuB8t_8uu_mkdir10create_dir",
+    "function_demangled": "uu_mkdir::create_dir",
+    "header": "bb42",
+    "depth": 1,
+    "latch_count": 2,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 20,
+        "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+        "file": "src/uu/mkdir/src/mkdir.rs",
+        "line": 241
+      }
+    ]
+  },
+  {
+    "function": "_RNvCsaYz2MbOuB8t_8uu_mkdir10create_dir",
+    "function_demangled": "uu_mkdir::create_dir",
+    "header": "bb30",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 42,
+        "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+        "file": "src/uu/mkdir/src/mkdir.rs",
+        "line": 231
+      }
+    ]
+  }
+]

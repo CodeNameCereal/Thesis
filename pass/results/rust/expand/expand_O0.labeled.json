@@ -1,0 +1,486 @@
+[
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtBb_4iter6traits8iterator8Iterator4folduNCINvNtNtB1F_8adapters3map8map_foldRBQ_BQ_uNvYBQ_NtNtBb_5clone5Clone5cloneNCINvNvB1z_8for_each4callBQ_NCINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB47_3VecBQ_E14extend_trustedINtNtB2r_6cloned6ClonedBF_EE0E0E0ECsijQg9cG8cSH_6expand",
+  "function_demangled": "<core::slice::iter::Iter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::fold::<(), core::iter::adapters::map::map_fold<&std::ffi::os_str::OsString, std::ffi::os_str::OsString, (), <std::ffi::os_str::OsString as core::clone::Clone>::clone, core::iter::traits::iterator::Iterator::for_each::call<std::ffi::os_str::OsString, <alloc::vec::Vec<std::ffi::os_str::OsString>>::extend_trusted<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYINtNtNtCsgxBkk5gSRhY_4core3str7pattern19MultiCharEqSearcherAcj3_ENtB5_8Searcher11next_rejectCsdTd832gKU3b_9uu_expand",
+  "function_demangled": "<core::str::pattern::MultiCharEqSearcher<[char; 3]> as core::str::pattern::Searcher>::next_reject",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/str/pattern.rs",
+    "line": 267
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXsL_NtNtCsgxBkk5gSRhY_4core5slice3cmpcNtB5_13SliceContains14slice_containsCsdTd832gKU3b_9uu_expand",
+  "function_demangled": "<char as core::slice::cmp::SliceContains>::slice_contains",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/mod.rs",
+    "line": 2157
+   },
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter.rs",
+    "line": 1895
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 4241
+   },
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/cmp.rs",
+    "line": 425
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYINtNtNtCsgxBkk5gSRhY_4core3str7pattern19MultiCharEqSearcherNvMNtNtB9_4char7methodsc10is_numericENtB5_8Searcher11next_rejectCsdTd832gKU3b_9uu_expand",
+  "function_demangled": "<core::str::pattern::MultiCharEqSearcher<<char>::is_numeric> as core::str::pattern::Searcher>::next_reject",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/str/pattern.rs",
+    "line": 267
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCs4VqSFjx4n5U_12clap_builder4util9any_value10AnyValueIdENtNtNtNtBa_4iter6traits8iterator8Iterator8try_folduNCINvNvXs_NtNtB1P_8adapters9enumerateINtB2I_9EnumeratepEB1J_8try_fold9enumerateRBJ_uINtNtNtBa_3ops12control_flow11ControlFlowjENCINvNvB1J_8find_map5checkTjB3P_EjNCINvMNtBN_8flat_mapINtB5f_7FlatMapBJ_NtBL_8AnyValueE12remove_entryBJ_E0E0E0B3U_ECsdTd832gKU3b_9uu_expand",
+  "function_demangled": "<core::slice::iter::Iter<clap_builder::util::any_value::AnyValueId> as core::iter::traits::iterator::Iterator>::try_fold::<(), <core::iter::adapters::enumerate::Enumerate<_> as core::iter::traits::iterator::Iterator>::try_fold::enumerate<&clap_builder::util::any_value::AnyValueId, (), core::ops::control_flow::ControlFlow<usize>, core::iter::traits::iterator::Iterator::find_map::check<(usize, &clap_builder::util::any_value::AnyValueId), usize, <clap_builder::util::flat_map::FlatMap<clap_builder::util::any_value::AnyValueId, clap_builder::util::any_value::AnyValue>>::remove_entry<clap_builder::util::any_value::AnyValueId>::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs_NtNtCsgxBkk5gSRhY_4core3ops11index_rangeNtB5_10IndexRangeNtNtNtNtB9_4iter6traits8iterator8Iterator8try_folduNCINvMs8_NtNtNtB9_5array4iter10iter_innerINtB1Y_15PolymorphicIterSINtNtNtB9_3mem12maybe_uninit11MaybeUninitNtNtNtCs4VqSFjx4n5U_12clap_builder7builder6os_str5OsStrEE8try_folduNCINvMNtB7_9try_traitINtB4J_17NeverShortCircuituE10wrap_mut_2uB3y_NCINvNtNtB16_8adapters3map8map_foldB3y_B3y_uNCINvMs_NtB3C_3argNtB6x_3Arg14default_valuesB3y_AB3y_j1_E0NCINvNvB10_8for_each4callB3y_NCINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB7X_3VecB3y_E14extend_trustedINtB5M_3MapINtB20_8IntoIterB3y_KB7g_EB6p_EE0E0E0E0B4Y_E0B4Y_ECsdTd832gKU3b_9uu_expand",
+  "function_demangled": "<core::ops::index_range::IndexRange as core::iter::traits::iterator::Iterator>::try_fold::<(), <core::array::iter::iter_inner::PolymorphicIter<[core::mem::maybe_uninit::MaybeUninit<clap_builder::builder::os_str::OsStr>]>>::try_fold<(), <core::ops::try_trait::NeverShortCircuit<()>>::wrap_mut_2<(), clap_builder::builder::os_str::OsStr, core::iter::adapters::map::map_fold<clap_builder::builder::os_str::OsStr, clap_builder::builder::os_str::OsStr, (), <clap_builder::builder::arg::Arg>::default_values<clap_builder::builder::os_str::OsStr, [clap_builder::builder::os_str::OsStr; 1]>::{closure#0}, core::iter::traits::iterator::Iterator::for_each::call<clap_builder::builder::os_str::OsStr, <alloc::vec::Vec<clap_builder::builder::os_str::OsStr>>::extend_trusted<core::iter::adapters::map::Map<core::array::iter::IntoIter<clap_builder::builder::os_str::OsStr, 1>, <clap_builder::builder::arg::Arg>::default_values<clap_builder::builder::os_str::OsStr, [clap_builder::builder::os_str::OsStr; 1]>::{closure#0}>>::{closure#0}>::{closure#0}>::{closure#0}>::{closure#0}, core::ops::try_trait::NeverShortCircuit<()>>::{closure#0}, core::ops::try_trait::NeverShortCircuit<()>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ops/index_range.rs",
+    "line": 167
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB6_3VecNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringE16extend_desugaredINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters6cloned6ClonedINtNtNtNtCs4VqSFjx4n5U_12clap_builder6parser7matches11arg_matches9ValuesRefBF_EEECsdTd832gKU3b_9uu_expand",
+  "function_demangled": "<alloc::vec::Vec<std::ffi::os_str::OsString>>::extend_desugared::<core::iter::adapters::cloned::Cloned<clap_builder::parser::matches::arg_matches::ValuesRef<std::ffi::os_str::OsString>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 44,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 4045
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB6_3VecReE16extend_desugaredINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3map3MapINtNtNtNtCs4VqSFjx4n5U_12clap_builder6parser7matches11arg_matches9ValuesRefNtNtB8_6string6StringENvMB33_B31_6as_strEECsdTd832gKU3b_9uu_expand",
+  "function_demangled": "<alloc::vec::Vec<&str>>::extend_desugared::<core::iter::adapters::map::Map<clap_builder::parser::matches::arg_matches::ValuesRef<alloc::string::String>, <alloc::string::String>::as_str>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 44,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 4045
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCs9k3SxhrAWiO_3std2io18default_read_exactNtNtB4_2fs4FileECsdTd832gKU3b_9uu_expand",
+  "function_demangled": "std::io::default_read_exact::<std::fs::File>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 560
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCs9k3SxhrAWiO_3std2io22default_read_buf_exactNtNtB4_2fs4FileECsdTd832gKU3b_9uu_expand",
+  "function_demangled": "std::io::default_read_buf_exact::<std::fs::File>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 586
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs_NtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriterINtB4_9BufWriterNtNtB8_5stdio6StdoutE9flush_bufCsdTd832gKU3b_9uu_expand",
+  "function_demangled": "<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>::flush_buf",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/buffered/bufwriter.rs",
+    "line": 247
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core3str4iter5SplitcENtNtNtNtBa_4iter6traits8iterator8Iterator4folduNCINvNtNtBQ_8adapters6filter11filter_foldReuNCNvCsdTd832gKU3b_9uu_expand16expand_shortcuts0NCINvNvBK_8for_each4callB2a_NCB2f_s_0E0E0EB2h_",
+  "function_demangled": "<core::str::iter::Split<char> as core::iter::traits::iterator::Iterator>::fold::<(), core::iter::adapters::filter::filter_fold<&str, (), uu_expand::expand_shortcuts::{closure#0}, core::iter::traits::iterator::Iterator::for_each::call<&str, uu_expand::expand_shortcuts::{closure#1}>::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2670
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator3anyNCNvCsdTd832gKU3b_9uu_expand10expand_buf0EB1F_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::any::<uu_expand::expand_buf::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 331
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator9rpositionNCNvCsdTd832gKU3b_9uu_expand10expand_bufs_0EB1L_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::rposition::<uu_expand::expand_buf::{closure#1}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 405
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterjENtNtNtNtBb_4iter6traits8iterator8Iterator4findNCNvCsdTd832gKU3b_9uu_expand12next_tabstop0EB1G_",
+  "function_demangled": "<core::slice::iter::Iter<usize> as core::iter::traits::iterator::Iterator>::find::<uu_expand::next_tabstop::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 348
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterjENtNtNtNtBb_4iter6traits8iterator8Iterator4findNCNvCsdTd832gKU3b_9uu_expand12next_tabstops0_0EB1G_",
+  "function_demangled": "<core::slice::iter::Iter<usize> as core::iter::traits::iterator::Iterator>::find::<uu_expand::next_tabstop::{closure#2}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 348
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterjENtNtNtNtBb_4iter6traits8iterator8Iterator4findNCNvCsdTd832gKU3b_9uu_expand12next_tabstops_0EB1G_",
+  "function_demangled": "<core::slice::iter::Iter<usize> as core::iter::traits::iterator::Iterator>::find::<uu_expand::next_tabstop::{closure#1}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 348
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYNtNtNtCsgxBkk5gSRhY_4core3str4iter5CharsNtNtNtNtB9_4iter6traits8iterator8Iterator8try_folduNCINvNvBH_3all5checkcNvCsdTd832gKU3b_9uu_expand17is_digit_or_commaE0INtNtNtB9_3ops12control_flow11ControlFlowuEEB1T_",
+  "function_demangled": "<core::str::iter::Chars as core::iter::traits::iterator::Iterator>::try_fold::<(), core::iter::traits::iterator::Iterator::all::check<char, uu_expand::is_digit_or_comma>::{closure#0}, core::ops::control_flow::ControlFlow<()>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvCsdTd832gKU3b_9uu_expand16expand_shortcuts",
+  "function_demangled": "uu_expand::expand_shortcuts",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/expand/src/expand.rs",
+    "line": 192
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvCsdTd832gKU3b_9uu_expand6expand",
+  "function_demangled": "uu_expand::expand",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 17,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/expand/src/expand.rs",
+    "line": 468
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvCsdTd832gKU3b_9uu_expand11expand_file",
+  "function_demangled": "uu_expand::expand_file",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/expand/src/expand.rs",
+    "line": 453
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvCsdTd832gKU3b_9uu_expand10expand_buf",
+  "function_demangled": "uu_expand::expand_buf",
+  "header": "bb16",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/expand/src/expand.rs",
+    "line": 391
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvCsdTd832gKU3b_9uu_expand12write_spacesINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBL_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_expand::write_spaces::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/expand/src/expand.rs",
+    "line": 356
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvCsdTd832gKU3b_9uu_expand14tabstops_parse",
+  "function_demangled": "uu_expand::tabstops_parse",
+  "header": "bb10",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 17,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/expand/src/expand.rs",
+    "line": 84
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvCsdTd832gKU3b_9uu_expand14tabstops_parse",
+  "function_demangled": "uu_expand::tabstops_parse",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/expand/src/expand.rs",
+    "line": 86
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvYINtNtNtCsgxBkk5gSRhY_4core3str7pattern19MultiCharEqSearcherAcj3_ENtB5_8Searcher10next_matchCsdTd832gKU3b_9uu_expand",
+  "function_demangled": "<core::str::pattern::MultiCharEqSearcher<[char; 3]> as core::str::pattern::Searcher>::next_match",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/str/pattern.rs",
+    "line": 251
+   }
+  ],
+  "loop_kind": "library"
+ }
+]

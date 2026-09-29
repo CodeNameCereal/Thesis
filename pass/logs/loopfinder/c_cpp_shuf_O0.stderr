@@ -1,0 +1,36 @@
+FUNCTION usage (usage)
+FUNCTION emit_stdin_note (emit_stdin_note)
+FUNCTION emit_mandatory_arg_note (emit_mandatory_arg_note)
+FUNCTION oputs_ (oputs_)
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":645}]}
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":629}]}
+FUNCTION emit_ancillary_info (emit_ancillary_info)
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":870}]}
+FUNCTION main (main)
+{"function": "main", "function_demangled": "main", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":420}]}
+FUNCTION input_from_argv (input_from_argv)
+{"function": "input_from_argv", "function_demangled": "input_from_argv", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":130}]}
+{"function": "input_from_argv", "function_demangled": "input_from_argv", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":126}]}
+FUNCTION input_size (input_size)
+FUNCTION read_input (read_input)
+{"function": "read_input", "function_demangled": "read_input", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":294}]}
+{"function": "read_input", "function_demangled": "read_input", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":288}]}
+FUNCTION read_input_reservoir_sampling (read_input_reservoir_sampling)
+{"function": "read_input_reservoir_sampling", "function_demangled": "read_input_reservoir_sampling", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":219}]}
+{"function": "read_input_reservoir_sampling", "function_demangled": "read_input_reservoir_sampling", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":189}]}
+FUNCTION write_random_numbers (write_random_numbers)
+{"function": "write_random_numbers", "function_demangled": "write_random_numbers", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":358}]}
+FUNCTION write_random_lines (write_random_lines)
+{"function": "write_random_lines", "function_demangled": "write_random_lines", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":375}]}
+FUNCTION write_permuted_output_reservoir (write_permuted_output_reservoir)
+{"function": "write_permuted_output_reservoir", "function_demangled": "write_permuted_output_reservoir", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":244}]}
+FUNCTION write_permuted_numbers (write_permuted_numbers)
+{"function": "write_permuted_numbers", "function_demangled": "write_permuted_numbers", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":340}]}
+FUNCTION write_permuted_lines (write_permuted_lines)
+{"function": "write_permuted_lines", "function_demangled": "write_permuted_lines", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":308}]}
+FUNCTION write_error (write_error)
+FUNCTION usable_st_size (usable_st_size)
+FUNCTION next_line (next_line)
+FUNCTION randint_choose (randint_choose)
+FUNCTION print_number (print_number)
+{"function": "print_number", "function_demangled": "print_number", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/shuf.c","line":327}]}

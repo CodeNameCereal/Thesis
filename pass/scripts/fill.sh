@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
 #
-# generate_benchmarks.sh
+# fill.sh -- fill benchmarks/{c_cpp,rust}/<tool>/SOURCE.md with provenance
+# data (upstream repo, file path, commit hash/date, permalink, method).
 #
-# Creates benchmarks/{c_cpp,rust}/<tool>/{src,ir,SOURCE.md,NOTES.md} for the
-# 10-tool corpus, compiles LLVM IR at O0/O2 (C) and debug/release (Rust),
-# and copies everything into place.
+# Does NOT build or touch any IR -- that is benchmarks.sh's job. (An older
+# version of this file was a full copy of the IR generator and silently
+# overwrote correct IR with outdated IR; that part has been removed.)
 #
-# Safe to re-run: existing SOURCE.md/NOTES.md are never overwritten, only
-# created if missing. IR/src files ARE overwritten each run (that's the
-# point -- rerun after a toolchain change to regenerate).
+# Never overwrites manual edits:
+#   - a SOURCE.md that is still the empty template (blank "Commit hash:")
+#     is filled in completely;
+#   - in an already-filled SOURCE.md, only a "- Method:" line that was
+#     auto-written by the old script (mentions generate_benchmarks.sh) is
+#     updated to describe the current pipeline. Everything else is left alone.
 #
-# Requires: .build/coreutils and .build/uutils-coreutils to already exist
-# and be built (see README.md). This script does NOT bootstrap/configure/
-# clone for you on first use -- do that once manually, then run this.
+# Usage (from repo root):  ./pass/scripts/fill.sh
 
 set -euo pipefail
 
@@ -23,77 +25,26 @@ TOOLS=(sum expand echo fold tee mkdir comm paste nl shuf)
 
 C_BUILD_DIR="$REPO_ROOT/.build/coreutils"
 RUST_BUILD_DIR="$REPO_ROOT/.build/uutils-coreutils"
-C_BUILD_LOG="$C_BUILD_DIR/build_verbose.log"
 
-# ---------------------------------------------------------------------------
-# Sanity checks
-# ---------------------------------------------------------------------------
-if [ ! -d "$C_BUILD_DIR" ]; then
-  echo "ERROR: $C_BUILD_DIR not found. Clone+bootstrap+configure+make coreutils first (see README.md)." >&2
-  exit 1
-fi
-if [ ! -d "$RUST_BUILD_DIR" ]; then
-  echo "ERROR: $RUST_BUILD_DIR not found. Clone uutils/coreutils first (see README.md)." >&2
-  exit 1
-fi
-command -v clang-22 >/dev/null || { echo "ERROR: clang-22 not found in PATH" >&2; exit 1; }
-command -v cargo >/dev/null || { echo "ERROR: cargo not found in PATH" >&2; exit 1; }
+C_METHOD="full gnulib build flags from the verbose build log; clang-22 -O0 -Xclang -disable-O0-optnone -gline-tables-only -S -emit-llvm (see README.md, pass/scripts/benchmarks.sh)"
+RUST_METHOD="cargo rustc debug profile, --bin + --lib with --emit=llvm-ir -C debuginfo=line-tables-only -C codegen-units=1, merged with llvm-link-22 (see README.md, pass/scripts/benchmarks.sh)"
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
+for d in "$C_BUILD_DIR" "$RUST_BUILD_DIR"; do
+  [ -d "$d" ] || { echo "ERROR: $d not found (needed for commit hashes)" >&2; exit 1; }
+done
 
-# Create the folder skeleton + template docs for one tool/language, only if missing.
-scaffold_tool() {
-  local lang_dir="$1" tool="$2" lang_label="$3"
-  local base="$REPO_ROOT/benchmarks/$lang_dir/$tool"
-  mkdir -p "$base/src" "$base/ir"
-
-  if [ ! -f "$base/SOURCE.md" ]; then
-    cat > "$base/SOURCE.md" << EOF
-# SOURCE.md -- $tool ($lang_label)
-
-- Upstream repo:
-- File path:
-- Commit hash:
-- Commit date:
-- Permalink:
-- Retrieved:
-- Method:
-EOF
-  fi
-
-  if [ ! -f "$base/NOTES.md" ]; then
-    cat > "$base/NOTES.md" << EOF
-# NOTES.md -- $tool ($lang_label)
-
-No modifications.
-EOF
-  fi
-}
-
-# Capture a full verbose build log once, so per-tool compile flags can be
-# extracted from it instead of guessing a fixed -I set (different tools
-# pull in different gnulib headers/flags).
-ensure_c_build_log() {
-  if [ ! -f "$C_BUILD_LOG" ]; then
-    echo "Capturing verbose build log (one-time, may take a few minutes)..."
-    ( cd "$C_BUILD_DIR" && make clean && make V=1 > "$C_BUILD_LOG" 2>&1 ) || true
-    if [ ! -s "$C_BUILD_LOG" ]; then
-      echo "ERROR: build log capture failed or is empty. Check $C_BUILD_DIR builds cleanly." >&2
-      exit 1
-    fi
-  fi
-}
-
-# Fill in SOURCE.md with real data, but ONLY if it's still the untouched
-# template (detected by the empty "Commit hash:" line scaffold_tool wrote).
-# This means manual edits are never overwritten by a rerun.
+# fill_source_md <base> <tool> <lang_label> <repo_url> <file_path> <hash> <date> <permalink> <method>
 fill_source_md() {
   local base="$1" tool="$2" lang_label="$3" repo_url="$4" file_path="$5" \
         hash="$6" commit_date="$7" permalink="$8" method="$9"
   local f="$base/SOURCE.md"
-  if [ -f "$f" ] && grep -q '^- Commit hash:$' "$f" 2>/dev/null; then
+
+  if [ ! -f "$f" ]; then
+    echo "  [$lang_label/$tool] WARNING: $f missing -- run benchmarks.sh first" >&2
+    return
+  fi
+
+  if grep -q '^- Commit hash:$' "$f"; then
     cat > "$f" << EOF
 # SOURCE.md -- $tool ($lang_label)
 
@@ -105,142 +56,34 @@ fill_source_md() {
 - Retrieved: $(date -u +"%Y-%m-%d")
 - Method: $method
 EOF
-  fi
-}
-
-# ---------------------------------------------------------------------------
-# C side
-# ---------------------------------------------------------------------------
-build_c_tool() {
-  local tool="$1"
-  local src_file="$C_BUILD_DIR/src/${tool}.c"
-  local dest="$REPO_ROOT/benchmarks/c_cpp/$tool"
-
-  if [ ! -f "$src_file" ]; then
-    echo "  [c/$tool] WARNING: $src_file not found, skipping" >&2
-    return
-  fi
-
-  local raw_cmd
-  # Simple case: tool compiles to its own standalone object, src/<tool>.o
-  # NOTE: "|| true" is required on both lookups below -- with pipefail (set
-  # at the top of this script), a grep that finds nothing makes the whole
-  # pipeline "fail", which set -e would treat as fatal and silently kill
-  # the script right here. || true lets us fall through to the empty-check
-  # below instead, which is the actual intended handling.
-  raw_cmd=$(grep -E "\-c -o[[:space:]]*src/${tool}\.o[[:space:]]" "$C_BUILD_LOG" | head -1 || true)
-  if [ -z "$raw_cmd" ]; then
-    # Multicall/digest-family case (sum, cksum, md5sum, etc. share cksum.c's
-    # driver): object is named src/<tool>-<tool>.o, and the line must also
-    # end with src/<tool>.c -- this disambiguates from other multicall
-    # variants that also compile src/<tool>.c under a different -D flag
-    # (e.g. sum.c is compiled once for "sum" and once for "cksum").
-    raw_cmd=$(grep -E "\-o[[:space:]]*src/${tool}-${tool}\.o" "$C_BUILD_LOG" | grep "src/${tool}\.c\$" | head -1 || true)
-  fi
-  if [ -z "$raw_cmd" ]; then
-    echo "  [c/$tool] WARNING: could not find compile command in build log, skipping" >&2
-    return
-  fi
-
-  # Keep only the flags between "gcc" and the first "-MT" -- everything
-  # after -MT is dependency-tracking / object-target / source-file
-  # boilerplate we don't want, regardless of how it's shaped for this
-  # particular tool (simple or multicall).
-  local flags
-  flags=$(echo "$raw_cmd" | sed -E 's/^gcc[[:space:]]*//; s/-MT.*$//')
-
-  echo "  [c/$tool] compiling IR..."
-  ( cd "$C_BUILD_DIR" && clang-22 $flags -O0 -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O0.ll" ) \
-    || { echo "  [c/$tool] WARNING: O0 compile failed" >&2; }
-  ( cd "$C_BUILD_DIR" && clang-22 $flags -O2 -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O2.ll" ) \
-    || { echo "  [c/$tool] WARNING: O2 compile failed" >&2; }
-
-  cp "$src_file" "$dest/src/${tool}.c"
-
-  local hash commit_date
-  hash=$(git -C "$C_BUILD_DIR" log -1 --format="%H" -- "src/${tool}.c" 2>/dev/null || echo "unknown")
-  commit_date=$(git -C "$C_BUILD_DIR" log -1 --format="%cI" -- "src/${tool}.c" 2>/dev/null || echo "unknown")
-  fill_source_md "$dest" "$tool" "C" \
-    "https://github.com/coreutils/coreutils" "src/${tool}.c" \
-    "$hash" "$commit_date" \
-    "https://github.com/coreutils/coreutils/blob/${hash}/src/${tool}.c" \
-    "full gnulib build, clang-22 -O0/-O2 -S -emit-llvm (see README.md, generate_benchmarks.sh)"
-  echo "  [c/$tool] done. Commit hash for SOURCE.md: $hash"
-}
-
-# ---------------------------------------------------------------------------
-# Rust side
-# ---------------------------------------------------------------------------
-build_rust_tool() {
-  local tool="$1"
-  local pkg="uu_${tool}"
-  local dest="$REPO_ROOT/benchmarks/rust/$tool"
-  local src_dir="$RUST_BUILD_DIR/src/uu/$tool/src"
-
-  if [ ! -d "$src_dir" ]; then
-    echo "  [rust/$tool] WARNING: $src_dir not found, skipping" >&2
-    return
-  fi
-
-  echo "  [rust/$tool] compiling IR (debug)..."
-  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" -- --emit=llvm-ir) || {
-    echo "  [rust/$tool] WARNING: debug build failed, skipping IR for this tool" >&2
-    return
-  }
-  echo "  [rust/$tool] compiling IR (release)..."
-  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" --release -- --emit=llvm-ir) || {
-    echo "  [rust/$tool] WARNING: release build failed, skipping IR for this tool" >&2
-    return
-  }
-
-  local debug_ll release_ll
-  debug_ll=$(find "$RUST_BUILD_DIR/target/debug/deps" -maxdepth 1 -name "${tool}-*.ll" -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -1 | cut -d' ' -f2-)
-  release_ll=$(find "$RUST_BUILD_DIR/target/release/deps" -maxdepth 1 -name "${tool}-*.ll" -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -1 | cut -d' ' -f2-)
-
-  if [ -z "$debug_ll" ] || [ -z "$release_ll" ]; then
-    echo "  [rust/$tool] WARNING: could not locate generated .ll file(s) -- check target/{debug,release}/deps manually" >&2
+    echo "  [$lang_label/$tool] filled SOURCE.md"
+  elif grep -q '^- Method:.*generate_benchmarks\.sh' "$f"; then
+    local tmp
+    tmp=$(mktemp)
+    awk -v m="- Method: $method" '/^- Method:.*generate_benchmarks\.sh/ {print m; next} {print}' "$f" > "$tmp"
+    mv "$tmp" "$f"
+    echo "  [$lang_label/$tool] updated outdated Method line"
   else
-    cp "$debug_ll" "$dest/ir/${tool}_O0.ll"
-    cp "$release_ll" "$dest/ir/${tool}_O2.ll"
+    echo "  [$lang_label/$tool] already filled, left unchanged"
   fi
-
-  cp "$src_dir"/*.rs "$dest/src/" 2>/dev/null || true
-
-  local hash commit_date
-  hash=$(git -C "$RUST_BUILD_DIR" log -1 --format="%H" -- "src/uu/$tool" 2>/dev/null || echo "unknown")
-  commit_date=$(git -C "$RUST_BUILD_DIR" log -1 --format="%cI" -- "src/uu/$tool" 2>/dev/null || echo "unknown")
-  fill_source_md "$dest" "$tool" "Rust" \
-    "https://github.com/uutils/coreutils" "src/uu/$tool" \
-    "$hash" "$commit_date" \
-    "https://github.com/uutils/coreutils/blob/${hash}/src/uu/$tool" \
-    "cargo rustc --bin $tool -- --emit=llvm-ir, debug+release (see README.md, generate_benchmarks.sh)"
-  echo "  [rust/$tool] done. Commit hash for SOURCE.md: $hash"
 }
 
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
-echo "Scaffolding folders for ${#TOOLS[@]} tools (c_cpp + rust)..."
+echo "C tools..."
 for tool in "${TOOLS[@]}"; do
-  scaffold_tool "c_cpp" "$tool" "C"
-  scaffold_tool "rust" "$tool" "Rust"
+  hash=$(git -C "$C_BUILD_DIR" log -1 --format="%H" -- "src/${tool}.c" 2>/dev/null || echo "unknown")
+  date_=$(git -C "$C_BUILD_DIR" log -1 --format="%cI" -- "src/${tool}.c" 2>/dev/null || echo "unknown")
+  fill_source_md "$REPO_ROOT/benchmarks/c_cpp/$tool" "$tool" "C" \
+    "https://github.com/coreutils/coreutils" "src/${tool}.c" "$hash" "$date_" \
+    "https://github.com/coreutils/coreutils/blob/${hash}/src/${tool}.c" "$C_METHOD"
 done
 
-echo ""
-echo "Building C tools..."
-ensure_c_build_log
+echo "Rust tools..."
 for tool in "${TOOLS[@]}"; do
-  build_c_tool "$tool"
+  hash=$(git -C "$RUST_BUILD_DIR" log -1 --format="%H" -- "src/uu/$tool" 2>/dev/null || echo "unknown")
+  date_=$(git -C "$RUST_BUILD_DIR" log -1 --format="%cI" -- "src/uu/$tool" 2>/dev/null || echo "unknown")
+  fill_source_md "$REPO_ROOT/benchmarks/rust/$tool" "$tool" "Rust" \
+    "https://github.com/uutils/coreutils" "src/uu/$tool" "$hash" "$date_" \
+    "https://github.com/uutils/coreutils/blob/${hash}/src/uu/$tool" "$RUST_METHOD"
 done
 
-echo ""
-echo "Building Rust tools..."
-for tool in "${TOOLS[@]}"; do
-  build_rust_tool "$tool"
-done
-
-echo ""
-echo "Done. Remember to:"
-echo "  - Fill in SOURCE.md for any newly-created tool folders (commit hashes were printed above)"
-echo "  - Review NOTES.md for any tool where you made manual edits"
-echo "  - git add benchmarks/ && git commit"
+echo "Done."

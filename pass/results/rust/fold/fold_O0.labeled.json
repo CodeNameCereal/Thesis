@@ -1,0 +1,554 @@
+[
+ {
+  "function": "_RINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB6_3VecNtNtB8_6string6StringE16extend_desugaredINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters6cloned6ClonedINtNtNtNtCscGCs1NCPc8C_12clap_builder6parser7matches11arg_matches9ValuesRefBF_EEECs4Q9V24Ktib2_4fold",
+  "function_demangled": "<alloc::vec::Vec<alloc::string::String>>::extend_desugared::<core::iter::adapters::cloned::Cloned<clap_builder::parser::matches::arg_matches::ValuesRef<alloc::string::String>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 44,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 4045
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs4_NtNtCs6i54tJFfzR_5alloc3vec9into_iterINtB6_8IntoIterNtNtBa_6string6StringENtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator8try_foldINtNtB8_13in_place_drop11InPlaceDropNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENCINvNtNtB1o_8adapters3map12map_try_foldBW_B2W_B2m_INtNtB1q_6result6ResultB2m_zENCNvXs_CsfDOkK3ZKZlf_8clap_lexNtB54_7RawArgsINtNtB1q_7convert4FromBH_E4from0NCINvNtB8_16in_place_collect24write_in_place_with_dropB2W_E0E0B4u_ECs4Q9V24Ktib2_4fold",
+  "function_demangled": "<alloc::vec::into_iter::IntoIter<alloc::string::String> as core::iter::traits::iterator::Iterator>::try_fold::<alloc::vec::in_place_drop::InPlaceDrop<std::ffi::os_str::OsString>, core::iter::adapters::map::map_try_fold<alloc::string::String, std::ffi::os_str::OsString, alloc::vec::in_place_drop::InPlaceDrop<std::ffi::os_str::OsString>, core::result::Result<alloc::vec::in_place_drop::InPlaceDrop<std::ffi::os_str::OsString>, !>, <clap_lex::RawArgs as core::convert::From<alloc::vec::into_iter::IntoIter<alloc::string::String>>>::from::{closure#0}, alloc::vec::in_place_collect::write_in_place_with_drop<std::ffi::os_str::OsString>::{closure#0}>::{closure#0}, core::result::Result<alloc::vec::in_place_drop::InPlaceDrop<std::ffi::os_str::OsString>, !>>",
+  "header": "bb10",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/into_iter.rs",
+    "line": 395
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtBb_4iter6traits8iterator8Iterator4folduNCINvNtNtB1F_8adapters3map8map_foldRBQ_BQ_uNvYBQ_NtNtBb_5clone5Clone5cloneNCIB2n_BQ_NtNtCs6i54tJFfzR_5alloc6string6StringuNCNvYINtNtB2r_6cloned6ClonedBF_ENtCs2YF497ZVQEG_6uucore4Args13collect_lossy0NCINvNvB1z_8for_each4callB3G_NCINvMsj_NtB3K_3vecINtB68_3VecB3G_E14extend_trustedINtB2p_3MapB4n_B4i_EE0E0E0E0ECs4Q9V24Ktib2_4fold",
+  "function_demangled": "<core::slice::iter::Iter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::fold::<(), core::iter::adapters::map::map_fold<&std::ffi::os_str::OsString, std::ffi::os_str::OsString, (), <std::ffi::os_str::OsString as core::clone::Clone>::clone, core::iter::adapters::map::map_fold<std::ffi::os_str::OsString, alloc::string::String, (), <core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>> as uucore::Args>::collect_lossy::{closure#0}, core::iter::traits::iterator::Iterator::for_each::call<alloc::string::String, <alloc::vec::Vec<alloc::string::String>>::extend_trusted<core::iter::adapters::map::Map<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>, <core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>> as uucore::Args>::collect_lossy::{closure#0}>>::{closure#0}>::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCscGCs1NCPc8C_12clap_builder4util9any_value10AnyValueIdENtNtNtNtBa_4iter6traits8iterator8Iterator8try_folduNCINvNvXs_NtNtB1P_8adapters9enumerateINtB2I_9EnumeratepEB1J_8try_fold9enumerateRBJ_uINtNtNtBa_3ops12control_flow11ControlFlowjENCINvNvB1J_8find_map5checkTjB3P_EjNCINvMNtBN_8flat_mapINtB5f_7FlatMapBJ_NtBL_8AnyValueE12remove_entryBJ_E0E0E0B3U_ECs6n4asW6qPX7_7uu_fold",
+  "function_demangled": "<core::slice::iter::Iter<clap_builder::util::any_value::AnyValueId> as core::iter::traits::iterator::Iterator>::try_fold::<(), <core::iter::adapters::enumerate::Enumerate<_> as core::iter::traits::iterator::Iterator>::try_fold::enumerate<&clap_builder::util::any_value::AnyValueId, (), core::ops::control_flow::ControlFlow<usize>, core::iter::traits::iterator::Iterator::find_map::check<(usize, &clap_builder::util::any_value::AnyValueId), usize, <clap_builder::util::flat_map::FlatMap<clap_builder::util::any_value::AnyValueId, clap_builder::util::any_value::AnyValue>>::remove_entry<clap_builder::util::any_value::AnyValueId>::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCs9k3SxhrAWiO_3std2io18default_read_exactNtNtB4_2fs4FileECs6n4asW6qPX7_7uu_fold",
+  "function_demangled": "std::io::default_read_exact::<std::fs::File>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 560
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCs9k3SxhrAWiO_3std2io22default_read_buf_exactNtNtB4_2fs4FileECs6n4asW6qPX7_7uu_fold",
+  "function_demangled": "std::io::default_read_buf_exact::<std::fs::File>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 586
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs_NtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriterINtB4_9BufWriterNtNtB8_5stdio6StdoutE9flush_bufCs6n4asW6qPX7_7uu_fold",
+  "function_demangled": "<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>::flush_buf",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/buffered/bufwriter.rs",
+    "line": 247
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXNvMNtCs6i54tJFfzR_5alloc5sliceSp9to_vec_inNtNtB8_6string6StringNtB3_10ConvertVec6to_vecNtNtB8_5alloc6GlobalECs6n4asW6qPX7_7uu_fold",
+  "function_demangled": "<alloc::string::String as <[_]>::to_vec_in::ConvertVec>::to_vec::<alloc::alloc::Global>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/adapters/take.rs",
+    "line": 37
+   },
+   {
+    "col": 31,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/slice.rs",
+    "line": 430
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator3allNCNvNtB9_5ascii13is_ascii_sse20ECs6n4asW6qPX7_7uu_fold",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::all::<core::slice::ascii::is_ascii_sse2::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 314
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator3allNCNvNvNtB9_5ascii8is_ascii7runtime0ECs6n4asW6qPX7_7uu_fold",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::all::<core::slice::ascii::is_ascii::runtime::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 314
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator8positionNCINvCs6n4asW6qPX7_7uu_fold18fold_file_bytewiseQDNtNtCs9k3SxhrAWiO_3std2io4ReadEL_INtNtNtB2v_8buffered9bufwriter9BufWriterNtNtB2v_5stdio6StdoutEEs_0EB1L_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::position::<uu_fold::fold_file_bytewise<&mut dyn std::io::Read, std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>::{closure#1}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 383
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator9rpositionNCINvCs6n4asW6qPX7_7uu_fold18fold_file_bytewiseQDNtNtCs9k3SxhrAWiO_3std2io4ReadEL_INtNtNtB2w_8buffered9bufwriter9BufWriterNtNtB2w_5stdio6StdoutEEs1_0EB1M_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::rposition::<uu_fold::fold_file_bytewise<&mut dyn std::io::Read, std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>::{closure#3}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 405
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator9rpositionNCINvCs6n4asW6qPX7_7uu_fold18push_ascii_segmentINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtB2z_5stdio6StdoutEE0EB1M_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::rposition::<uu_fold::push_ascii_segment<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 405
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvCs6n4asW6qPX7_7uu_fold15handle_obsolete",
+  "function_demangled": "uu_fold::handle_obsolete",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 147
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvCs6n4asW6qPX7_7uu_fold4fold",
+  "function_demangled": "uu_fold::fold",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 167
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold18fold_file_bytewiseQDNtNtCs9k3SxhrAWiO_3std2io4ReadEL_INtNtNtBM_8buffered9bufwriter9BufWriterNtNtBM_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::fold_file_bytewise::<&mut dyn std::io::Read, std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 226
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold9fold_fileQDNtNtCs9k3SxhrAWiO_3std2io4ReadEL_INtNtNtBC_8buffered9bufwriter9BufWriterNtNtBC_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::fold_file::<&mut dyn std::io::Read, std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 706
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold21process_pending_chunkINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBS_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::process_pending_chunk::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 642
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold21process_non_utf8_lineINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBS_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::process_non_utf8_line::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 592
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvCs6n4asW6qPX7_7uu_fold17compute_col_count",
+  "function_demangled": "uu_fold::compute_col_count",
+  "header": "bb23",
+  "depth": 1,
+  "latch_count": 4,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 304
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvCs6n4asW6qPX7_7uu_fold17compute_col_count",
+  "function_demangled": "uu_fold::compute_col_count",
+  "header": "bb5",
+  "depth": 1,
+  "latch_count": 4,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 288
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold18process_utf8_charsINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBP_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::process_utf8_chars::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 5,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 508
+   }
+  ],
+  "loop_kind": "while-let"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold18process_utf8_charsINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBP_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::process_utf8_chars::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb7",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 515
+   }
+  ],
+  "loop_kind": "while-let"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold18process_utf8_charsINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBP_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::process_utf8_chars::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb43",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 551
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold18process_ascii_lineINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBP_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::process_ascii_line::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 6,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 390
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold18process_ascii_lineINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBP_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::process_ascii_line::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb32",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 410
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold18process_ascii_lineINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBP_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::process_ascii_line::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb75",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 443
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvCs6n4asW6qPX7_7uu_fold18push_ascii_segmentINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufwriter9BufWriterNtNtBP_5stdio6StdoutEEB2_",
+  "function_demangled": "uu_fold::push_ascii_segment::<std::io::buffered::bufwriter::BufWriter<std::io::stdio::Stdout>>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/fold/src/fold.rs",
+    "line": 466
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNvNtNtCsgxBkk5gSRhY_4core5slice5ascii8is_ascii7runtimeCs6n4asW6qPX7_7uu_fold",
+  "function_demangled": "core::slice::ascii::is_ascii::runtime",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/mod.rs",
+    "line": 2157
+   },
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter.rs",
+    "line": 1895
+   },
+   {
+    "col": 30,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/ascii.rs",
+    "line": 607
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvNtNtCsgxBkk5gSRhY_4core5slice5ascii13is_ascii_sse2Cs6n4asW6qPX7_7uu_fold",
+  "function_demangled": "core::slice::ascii::is_ascii_sse2",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 28,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 180
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/ascii.rs",
+    "line": 564
+   }
+  ],
+  "loop_kind": "library"
+ }
+]

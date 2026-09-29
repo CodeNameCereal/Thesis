@@ -1,0 +1,274 @@
+[
+ {
+  "function": "oputs_",
+  "function_demangled": "oputs_",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 645
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "oputs_",
+  "function_demangled": "oputs_",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 7,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 629
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "emit_ancillary_info",
+  "function_demangled": "emit_ancillary_info",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 870
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "main",
+  "function_demangled": "main",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 420
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "input_from_argv",
+  "function_demangled": "input_from_argv",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 130
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "input_from_argv",
+  "function_demangled": "input_from_argv",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 126
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "read_input",
+  "function_demangled": "read_input",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 294
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "read_input",
+  "function_demangled": "read_input",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 288
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "read_input_reservoir_sampling",
+  "function_demangled": "read_input_reservoir_sampling",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 7,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 219
+   }
+  ],
+  "loop_kind": "do-while"
+ },
+ {
+  "function": "read_input_reservoir_sampling",
+  "function_demangled": "read_input_reservoir_sampling",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 189
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "write_random_numbers",
+  "function_demangled": "write_random_numbers",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 358
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "write_random_lines",
+  "function_demangled": "write_random_lines",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 375
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "write_permuted_output_reservoir",
+  "function_demangled": "write_permuted_output_reservoir",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 244
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "write_permuted_numbers",
+  "function_demangled": "write_permuted_numbers",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 340
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "write_permuted_lines",
+  "function_demangled": "write_permuted_lines",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 308
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "print_number",
+  "function_demangled": "print_number",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/shuf.c",
+    "line": 327
+   }
+  ],
+  "loop_kind": "do-while"
+ }
+]

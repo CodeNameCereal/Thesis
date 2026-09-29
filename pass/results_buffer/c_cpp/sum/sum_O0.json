@@ -1,0 +1,50 @@
+[
+  {
+    "function": "bsd_sum_stream",
+    "function_demangled": "bsd_sum_stream",
+    "file": "/workspaces/Thesis/.build/coreutils/src/sum.c",
+    "line": 74,
+    "access_kind": "load",
+    "index_kind": "variable",
+    "index_name": "%64",
+    "origin": "heap",
+    "inside_loop": true,
+    "dominated_by_check": false
+  },
+  {
+    "function": "bsd_sum_stream",
+    "function_demangled": "bsd_sum_stream",
+    "file": "/workspaces/Thesis/.build/coreutils/src/sum.c",
+    "line": 89,
+    "access_kind": "load",
+    "index_kind": "variable",
+    "index_name": "%97",
+    "origin": "heap",
+    "inside_loop": true,
+    "dominated_by_check": false
+  },
+  {
+    "function": "sysv_sum_stream",
+    "function_demangled": "sysv_sum_stream",
+    "file": "/workspaces/Thesis/.build/coreutils/src/sum.c",
+    "line": 150,
+    "access_kind": "load",
+    "index_kind": "variable",
+    "index_name": "%60",
+    "origin": "heap",
+    "inside_loop": true,
+    "dominated_by_check": false
+  },
+  {
+    "function": "sysv_sum_stream",
+    "function_demangled": "sysv_sum_stream",
+    "file": "/workspaces/Thesis/.build/coreutils/src/sum.c",
+    "line": 162,
+    "access_kind": "load",
+    "index_kind": "variable",
+    "index_name": "%88",
+    "origin": "heap",
+    "inside_loop": true,
+    "dominated_by_check": false
+  }
+]

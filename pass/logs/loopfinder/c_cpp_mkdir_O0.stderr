@@ -1,0 +1,17 @@
+FUNCTION usage (usage)
+FUNCTION emit_mandatory_arg_note (emit_mandatory_arg_note)
+FUNCTION oputs_ (oputs_)
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":645}]}
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":629}]}
+FUNCTION emit_ancillary_info (emit_ancillary_info)
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":870}]}
+FUNCTION main (main)
+{"function": "main", "function_demangled": "main", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/mkdir.c","line":223}]}
+FUNCTION make_ancestor (make_ancestor)
+FUNCTION is_smack_enabled (is_smack_enabled)
+FUNCTION smack_set_label_for_self (smack_set_label_for_self)
+FUNCTION process_dir (process_dir)
+FUNCTION defaultcon (defaultcon)
+FUNCTION ignorable_ctx_err (ignorable_ctx_err)
+FUNCTION announce_mkdir (announce_mkdir)
+FUNCTION restorecon (restorecon)

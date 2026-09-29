@@ -3,12 +3,19 @@
 # generate_benchmarks.sh
 #
 # Creates benchmarks/{c_cpp,rust}/<tool>/{src,ir,SOURCE.md,NOTES.md} for the
-# 10-tool corpus, compiles LLVM IR at O0/O2 (C) and debug/release (Rust),
-# and copies everything into place.
+# 10-tool corpus, compiles LLVM IR at -O0 (C) / debug profile (Rust),
+# and copies everything into place. Output: ir/<tool>_O0.ll per tool.
 #
 # All IR is compiled with line tables (debug info mapping each instruction
 # to its source file/line/column). LoopFinderPass records these locations and
 # pass/scripts/label_loops.py uses them to label loops (for, while, ...).
+#
+# Rust: each uutils tool is two crates -- a tiny binary (main.rs) and a
+# library uu_<tool> (<tool>.rs) holding the real logic. IR is emitted for
+# BOTH and merged with llvm-link into one <tool>_O0.ll, so the file
+# contains the tool's whole code, like the single C translation unit.
+# (Bin-only IR only contains the lib's generic functions -- most of the
+# tool's code, and its loops, were missing.)
 #
 # Safe to re-run: existing SOURCE.md/NOTES.md are never overwritten, only
 # created if missing. IR/src files ARE overwritten each run (that's the
@@ -42,6 +49,7 @@ if [ ! -d "$RUST_BUILD_DIR" ]; then
 fi
 command -v clang-22 >/dev/null || { echo "ERROR: clang-22 not found in PATH" >&2; exit 1; }
 command -v cargo >/dev/null || { echo "ERROR: cargo not found in PATH" >&2; exit 1; }
+command -v llvm-link-22 >/dev/null || { echo "ERROR: llvm-link-22 not found in PATH" >&2; exit 1; }
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -147,10 +155,14 @@ build_c_tool() {
   # the build log's flags usually contain autotools' default "-g -O2", and
   # clang uses the LAST -g*/-O* option given, so ours win. Same setting as
   # the Rust side (-C debuginfo=line-tables-only), keeping both symmetric.
-  ( cd "$C_BUILD_DIR" && clang-22 $flags -O0 -Xclang -disable-O0-optnone -gline-tables-only -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O0.ll" ) \
+  #
+  # -Wno-c23-extensions -Wno-tautological-constant-out-of-range-compare:
+  # silence two harmless clang warnings from gnulib headers (mcel.h,
+  # argmatch.h, mbbuf.h), written for gcc. Warnings only -- no effect on IR.
+  ( cd "$C_BUILD_DIR" && clang-22 $flags -O0 -Xclang -disable-O0-optnone -gline-tables-only \
+      -Wno-c23-extensions -Wno-tautological-constant-out-of-range-compare \
+      -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O0.ll" ) \
     || { echo "  [c/$tool] WARNING: O0 compile failed" >&2; }
-  ( cd "$C_BUILD_DIR" && clang-22 $flags -O2 -gline-tables-only -S -emit-llvm "src/${tool}.c" -o "$dest/ir/${tool}_O2.ll" ) \
-    || { echo "  [c/$tool] WARNING: O2 compile failed" >&2; }
 
   cp "$src_file" "$dest/src/${tool}.c"
 
@@ -162,40 +174,63 @@ build_c_tool() {
 # ---------------------------------------------------------------------------
 # Rust side
 # ---------------------------------------------------------------------------
+
+# Newest <crate>-<hash>.ll in a target/<profile>/deps directory (empty if none).
+newest_ll() {
+  local dir="$1" crate="$2"
+  find "$dir" -maxdepth 1 -name "${crate}-*.ll" -printf '%T@ %p\n' 2>/dev/null \
+    | sort -rn | head -1 | cut -d' ' -f2-
+}
+
 build_rust_tool() {
   local tool="$1"
   local pkg="uu_${tool}"
   local dest="$REPO_ROOT/benchmarks/rust/$tool"
   local src_dir="$RUST_BUILD_DIR/src/uu/$tool/src"
+  local deps="$RUST_BUILD_DIR/target/debug/deps"
+  local out="$dest/ir/${tool}_O0.ll"
 
   if [ ! -d "$src_dir" ]; then
     echo "  [rust/$tool] WARNING: $src_dir not found, skipping" >&2
     return
   fi
 
-  # -C debuginfo=line-tables-only: source locations only, for both profiles.
-  # Debug builds default to full debuginfo and release builds to none;
-  # passing it explicitly makes both levels (and both languages) identical.
-  echo "  [rust/$tool] compiling IR (debug)..."
-  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" -- --emit=llvm-ir -C debuginfo=line-tables-only) || {
-    echo "  [rust/$tool] WARNING: debug build failed, skipping IR for this tool" >&2
-    return
-  }
-  echo "  [rust/$tool] compiling IR (release)..."
-  (cd "$RUST_BUILD_DIR" && cargo rustc -p "$pkg" --bin "$tool" --release -- --emit=llvm-ir -C debuginfo=line-tables-only) || {
-    echo "  [rust/$tool] WARNING: release build failed, skipping IR for this tool" >&2
-    return
-  }
+  # Debug profile (unoptimized) stands in for -O0.
+  #
+  # -C debuginfo=line-tables-only: source locations only, same setting as
+  # the C side (-gline-tables-only).
+  #
+  # -C codegen-units=1 (+ CARGO_INCREMENTAL=0): one .ll per crate. With
+  # several codegen units rustc splits the crate across several .ll files,
+  # and picking up only one of them would silently drop code.
+  local rflags=(--emit=llvm-ir -C debuginfo=line-tables-only -C codegen-units=1)
 
-  local debug_ll release_ll
-  debug_ll=$(find "$RUST_BUILD_DIR/target/debug/deps" -maxdepth 1 -name "${tool}-*.ll" -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -1 | cut -d' ' -f2-)
-  release_ll=$(find "$RUST_BUILD_DIR/target/release/deps" -maxdepth 1 -name "${tool}-*.ll" -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -1 | cut -d' ' -f2-)
+  echo "  [rust/$tool] compiling IR (bin + lib)..."
+  if ! ( cd "$RUST_BUILD_DIR" \
+         && CARGO_INCREMENTAL=0 cargo rustc -p "$pkg" --bin "$tool" -- "${rflags[@]}" \
+         && CARGO_INCREMENTAL=0 cargo rustc -p "$pkg" --lib          -- "${rflags[@]}" ); then
+    echo "  [rust/$tool] WARNING: build failed, skipping IR for this tool" >&2
+    return
+  fi
 
-  if [ -z "$debug_ll" ] || [ -z "$release_ll" ]; then
-    echo "  [rust/$tool] WARNING: could not locate generated .ll file(s) -- check target/{debug,release}/deps manually" >&2
-  else
-    cp "$debug_ll" "$dest/ir/${tool}_O0.ll"
-    cp "$release_ll" "$dest/ir/${tool}_O2.ll"
+  local bin_ll lib_ll
+  bin_ll=$(newest_ll "$deps" "$tool")
+  lib_ll=$(newest_ll "$deps" "$pkg")
+  if [ -z "$bin_ll" ] || [ -z "$lib_ll" ]; then
+    echo "  [rust/$tool] WARNING: could not locate .ll file(s) (bin='$bin_ll' lib='$lib_ll') -- check $deps" >&2
+    return
+  fi
+
+  # Merge bin + lib into the single file the passes run on. If both crates
+  # define the same global ("symbol multiply defined"), retry with
+  # --override, which keeps the lib's copy.
+  if ! llvm-link-22 -S "$bin_ll" "$lib_ll" -o "$out" 2>/dev/null; then
+    if llvm-link-22 -S "$bin_ll" --override "$lib_ll" -o "$out"; then
+      echo "  [rust/$tool] note: merged with --override (duplicate symbols)"
+    else
+      echo "  [rust/$tool] WARNING: llvm-link failed" >&2
+      return
+    fi
   fi
 
   cp "$src_dir"/*.rs "$dest/src/" 2>/dev/null || true

@@ -1,0 +1,463 @@
+[
+ {
+  "function": "_RINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB6_3VecNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringE16extend_desugaredINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters6cloned6ClonedINtNtNtNtCseButq5s8A0n_12clap_builder6parser7matches11arg_matches9ValuesRefBF_EEECsg7Yuaemwh9H_3tee",
+  "function_demangled": "<alloc::vec::Vec<std::ffi::os_str::OsString>>::extend_desugared::<core::iter::adapters::cloned::Cloned<clap_builder::parser::matches::arg_matches::ValuesRef<std::ffi::os_str::OsString>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 44,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 4045
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtBb_4iter6traits8iterator8Iterator4folduNCINvNtNtB1F_8adapters3map8map_foldRBQ_BQ_uNvYBQ_NtNtBb_5clone5Clone5cloneNCIB2n_BQ_BQ_uNCNvXs_CsfDOkK3ZKZlf_8clap_lexNtB3R_7RawArgsINtNtBb_7convert4FromINtNtB2r_6cloned6ClonedBF_EE4from0NCINvNvB1z_8for_each4callBQ_NCINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB5W_3VecBQ_E14extend_trustedINtB2p_3MapB4N_B3K_EE0E0E0E0ECsg7Yuaemwh9H_3tee",
+  "function_demangled": "<core::slice::iter::Iter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::fold::<(), core::iter::adapters::map::map_fold<&std::ffi::os_str::OsString, std::ffi::os_str::OsString, (), <std::ffi::os_str::OsString as core::clone::Clone>::clone, core::iter::adapters::map::map_fold<std::ffi::os_str::OsString, std::ffi::os_str::OsString, (), <clap_lex::RawArgs as core::convert::From<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>>::from::{closure#0}, core::iter::traits::iterator::Iterator::for_each::call<std::ffi::os_str::OsString, <alloc::vec::Vec<std::ffi::os_str::OsString>>::extend_trusted<core::iter::adapters::map::Map<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>, <clap_lex::RawArgs as core::convert::From<core::iter::adapters::cloned::Cloned<core::slice::iter::Iter<std::ffi::os_str::OsString>>>>::from::{closure#0}>>::{closure#0}>::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtCsgxBkk5gSRhY_4core5sliceSINtNtNtB5_3mem12maybe_uninit11MaybeUninithE9fill_withNCNvXsd_By_Bu_INtBy_8SpecFillhE9spec_fill0ECs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "<[core::mem::maybe_uninit::MaybeUninit<u8>]>::fill_with::<<[core::mem::maybe_uninit::MaybeUninit<u8>] as core::mem::maybe_uninit::SpecFill<u8>>::spec_fill::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/mod.rs",
+    "line": 4200
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCseButq5s8A0n_12clap_builder4util9any_value10AnyValueIdENtNtNtNtBa_4iter6traits8iterator8Iterator8try_folduNCINvNvXs_NtNtB1P_8adapters9enumerateINtB2I_9EnumeratepEB1J_8try_fold9enumerateRBJ_uINtNtNtBa_3ops12control_flow11ControlFlowjENCINvNvB1J_8find_map5checkTjB3P_EjNCINvMNtBN_8flat_mapINtB5f_7FlatMapBJ_NtBL_8AnyValueE12remove_entryBJ_E0E0E0B3U_ECs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "<core::slice::iter::Iter<clap_builder::util::any_value::AnyValueId> as core::iter::traits::iterator::Iterator>::try_fold::<(), <core::iter::adapters::enumerate::Enumerate<_> as core::iter::traits::iterator::Iterator>::try_fold::enumerate<&clap_builder::util::any_value::AnyValueId, (), core::ops::control_flow::ControlFlow<usize>, core::iter::traits::iterator::Iterator::find_map::check<(usize, &clap_builder::util::any_value::AnyValueId), usize, <clap_builder::util::flat_map::FlatMap<clap_builder::util::any_value::AnyValueId, clap_builder::util::any_value::AnyValue>>::remove_entry<clap_builder::util::any_value::AnyValueId>::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXNvMNtCs6i54tJFfzR_5alloc5sliceSp9to_vec_inNtNtNtCseButq5s8A0n_12clap_builder7builder14possible_value13PossibleValueNtB3_10ConvertVec6to_vecNtNtB8_5alloc6GlobalECs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "<clap_builder::builder::possible_value::PossibleValue as <[_]>::to_vec_in::ConvertVec>::to_vec::<alloc::alloc::Global>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/adapters/take.rs",
+    "line": 37
+   },
+   {
+    "col": 31,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/slice.rs",
+    "line": 430
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs_NtNtCsgxBkk5gSRhY_4core3ops11index_rangeNtB5_10IndexRangeNtNtNtNtB9_4iter6traits8iterator8Iterator8try_folduNCINvMs8_NtNtNtB9_5array4iter10iter_innerINtB1Y_15PolymorphicIterSINtNtNtB9_3mem12maybe_uninit11MaybeUninitNtNtNtCseButq5s8A0n_12clap_builder7builder14possible_value13PossibleValueEE8try_folduNCINvMNtB7_9try_traitINtB51_17NeverShortCircuituE10wrap_mut_2uB3y_NCINvNtNtB16_8adapters3map8map_foldB3y_B3y_uNvYB3y_INtNtB9_7convert4IntoB3y_E4intoNCINvNvB10_8for_each4callB3y_NCINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB7V_3VecB3y_E14extend_trustedINtB64_3MapINtB20_8IntoIterB3y_Kj4_EB6H_EE0E0E0E0B5g_E0B5g_ECs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "<core::ops::index_range::IndexRange as core::iter::traits::iterator::Iterator>::try_fold::<(), <core::array::iter::iter_inner::PolymorphicIter<[core::mem::maybe_uninit::MaybeUninit<clap_builder::builder::possible_value::PossibleValue>]>>::try_fold<(), <core::ops::try_trait::NeverShortCircuit<()>>::wrap_mut_2<(), clap_builder::builder::possible_value::PossibleValue, core::iter::adapters::map::map_fold<clap_builder::builder::possible_value::PossibleValue, clap_builder::builder::possible_value::PossibleValue, (), <clap_builder::builder::possible_value::PossibleValue as core::convert::Into<clap_builder::builder::possible_value::PossibleValue>>::into, core::iter::traits::iterator::Iterator::for_each::call<clap_builder::builder::possible_value::PossibleValue, <alloc::vec::Vec<clap_builder::builder::possible_value::PossibleValue>>::extend_trusted<core::iter::adapters::map::Map<core::array::iter::IntoIter<clap_builder::builder::possible_value::PossibleValue, 4>, <clap_builder::builder::possible_value::PossibleValue as core::convert::Into<clap_builder::builder::possible_value::PossibleValue>>::into>>::{closure#0}>::{closure#0}>::{closure#0}>::{closure#0}, core::ops::try_trait::NeverShortCircuit<()>>::{closure#0}, core::ops::try_trait::NeverShortCircuit<()>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ops/index_range.rs",
+    "line": 167
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecNtCs8UEsDZRFGwy_6uu_tee11NamedWriterE10retain_mutNCINvB2_6retainNCNvMBG_NtBG_11MultiWriter15copy_unbuffered0E0EBG_",
+  "function_demangled": "<alloc::vec::Vec<uu_tee::NamedWriter>>::retain_mut::<<alloc::vec::Vec<uu_tee::NamedWriter>>::retain<<uu_tee::MultiWriter>::copy_unbuffered::{closure#0}>::{closure#0}>",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 2581
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecNtCs8UEsDZRFGwy_6uu_tee11NamedWriterE10retain_mutNCINvB2_6retainNCNvMBG_NtBG_11MultiWriter15copy_unbuffered0E0EBG_",
+  "function_demangled": "<alloc::vec::Vec<uu_tee::NamedWriter>>::retain_mut::<<alloc::vec::Vec<uu_tee::NamedWriter>>::retain<<uu_tee::MultiWriter>::copy_unbuffered::{closure#0}>::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 35,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ub_checks.rs",
+    "line": 77
+   },
+   {
+    "col": 30,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/mod.rs",
+    "line": 693
+   },
+   {
+    "col": 37,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 2564
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecNtCs8UEsDZRFGwy_6uu_tee11NamedWriterE10retain_mutNCNvMBG_NtBG_11MultiWriter11write_flush0EBG_",
+  "function_demangled": "<alloc::vec::Vec<uu_tee::NamedWriter>>::retain_mut::<<uu_tee::MultiWriter>::write_flush::{closure#0}>",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 2581
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecNtCs8UEsDZRFGwy_6uu_tee11NamedWriterE10retain_mutNCNvMBG_NtBG_11MultiWriter11write_flush0EBG_",
+  "function_demangled": "<alloc::vec::Vec<uu_tee::NamedWriter>>::retain_mut::<<uu_tee::MultiWriter>::write_flush::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 35,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ub_checks.rs",
+    "line": 77
+   },
+   {
+    "col": 30,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/mod.rs",
+    "line": 693
+   },
+   {
+    "col": 37,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 2564
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYINtNtNtCs5eGzjanjXtC_6uucore4mods2io9RawWriterNtNtNtNtCs9k3SxhrAWiO_3std2os2fd5owned10BorrowedFdENtNtBU_2io5Write9write_allCs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "<uucore::mods::io::RawWriter<std::os::fd::owned::BorrowedFd> as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYNtNtCs9k3SxhrAWiO_3std2fs4FileNtNtB6_2io5Write9write_allCs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "<std::fs::File as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs_NtNtCsgxBkk5gSRhY_4core3ops11index_rangeNtB5_10IndexRangeNtNtNtNtB9_4iter6traits8iterator8Iterator8try_folduNCINvMs8_NtNtNtB9_5array4iter10iter_innerINtB1Y_15PolymorphicIterSINtNtNtB9_3mem12maybe_uninit11MaybeUninitNtNtNtCseButq5s8A0n_12clap_builder7builder6os_str5OsStrEE8try_folduNCINvMNtB7_9try_traitINtB4J_17NeverShortCircuituE10wrap_mut_2uB3y_NCINvNtNtB16_8adapters3map8map_foldB3y_B3y_uNCINvMs_NtB3C_3argNtB6x_3Arg25default_missing_values_osB3y_AB3y_j1_E0NCINvNvB10_8for_each4callB3y_NCINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB88_3VecB3y_E14extend_trustedINtB5M_3MapINtB20_8IntoIterB3y_KB7r_EB6p_EE0E0E0E0B4Y_E0B4Y_ECs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "<core::ops::index_range::IndexRange as core::iter::traits::iterator::Iterator>::try_fold::<(), <core::array::iter::iter_inner::PolymorphicIter<[core::mem::maybe_uninit::MaybeUninit<clap_builder::builder::os_str::OsStr>]>>::try_fold<(), <core::ops::try_trait::NeverShortCircuit<()>>::wrap_mut_2<(), clap_builder::builder::os_str::OsStr, core::iter::adapters::map::map_fold<clap_builder::builder::os_str::OsStr, clap_builder::builder::os_str::OsStr, (), <clap_builder::builder::arg::Arg>::default_missing_values_os<clap_builder::builder::os_str::OsStr, [clap_builder::builder::os_str::OsStr; 1]>::{closure#0}, core::iter::traits::iterator::Iterator::for_each::call<clap_builder::builder::os_str::OsStr, <alloc::vec::Vec<clap_builder::builder::os_str::OsStr>>::extend_trusted<core::iter::adapters::map::Map<core::array::iter::IntoIter<clap_builder::builder::os_str::OsStr, 1>, <clap_builder::builder::arg::Arg>::default_missing_values_os<clap_builder::builder::os_str::OsStr, [clap_builder::builder::os_str::OsStr; 1]>::{closure#0}>>::{closure#0}>::{closure#0}>::{closure#0}>::{closure#0}, core::ops::try_trait::NeverShortCircuit<()>>::{closure#0}, core::ops::try_trait::NeverShortCircuit<()>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ops/index_range.rs",
+    "line": 167
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB6_3VecNtCs8UEsDZRFGwy_6uu_tee11NamedWriterE16extend_desugaredINtNtNtCsgxBkk5gSRhY_4core4iter8adapters12GenericShuntINtNtB1B_10filter_map9FilterMapINtNtNtB1F_5slice4iter4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENCNvBH_3tees0_0EINtNtB1F_6result6ResultNtNtB1F_7convert10InfallibleNtNtNtB1F_2io5error5ErrorEEEBH_",
+  "function_demangled": "<alloc::vec::Vec<uu_tee::NamedWriter>>::extend_desugared::<core::iter::adapters::GenericShunt<core::iter::adapters::filter_map::FilterMap<core::slice::iter::Iter<std::ffi::os_str::OsString>, uu_tee::tee::{closure#2}>, core::result::Result<core::convert::Infallible, core::io::error::Error>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 44,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 4045
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtBa_4iter6traits8iterator8Iterator8try_folduNCINvNtNtB1y_8adapters10filter_map19filter_map_try_foldRBJ_INtNtBa_6result6ResultNtCs8UEsDZRFGwy_6uu_tee11NamedWriterNtNtNtBa_2io5error5ErrorEuINtNtNtBa_3ops12control_flow11ControlFlowIB4B_B3A_EENCNvB3C_3tees0_0NCINvXB2o_INtB2o_12GenericShuntINtB2m_9FilterMapB3_B5q_EIB3f_NtNtBa_7convert10InfallibleB4a_EEB1s_8try_folduNCINvNvB1s_12try_for_each4callB3A_B5f_NcNtB5f_5Break0E0B5f_E0E0B4A_EB3C_",
+  "function_demangled": "<core::slice::iter::Iter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::try_fold::<(), core::iter::adapters::filter_map::filter_map_try_fold<&std::ffi::os_str::OsString, core::result::Result<uu_tee::NamedWriter, core::io::error::Error>, (), core::ops::control_flow::ControlFlow<core::ops::control_flow::ControlFlow<uu_tee::NamedWriter>>, uu_tee::tee::{closure#2}, <core::iter::adapters::GenericShunt<core::iter::adapters::filter_map::FilterMap<core::slice::iter::Iter<std::ffi::os_str::OsString>, uu_tee::tee::{closure#2}>, core::result::Result<core::convert::Infallible, core::io::error::Error>> as core::iter::traits::iterator::Iterator>::try_fold<(), core::iter::traits::iterator::Iterator::try_for_each::call<uu_tee::NamedWriter, core::ops::control_flow::ControlFlow<uu_tee::NamedWriter>, core::ops::control_flow::ControlFlow<uu_tee::NamedWriter>::Break>::{closure#0}, core::ops::control_flow::ControlFlow<uu_tee::NamedWriter>>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<core::ops::control_flow::ControlFlow<uu_tee::NamedWriter>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCs9k3SxhrAWiO_3std2io19default_read_to_endINtNtNtCsgxBkk5gSRhY_4core2io4util4TakeRNtNtB2_4pipe10PipeReaderEECs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "std::io::default_read_to_end::<core::io::util::Take<&std::io::pipe::PipeReader>>",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 456
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCs9k3SxhrAWiO_3std2io19default_read_to_endINtNtNtCsgxBkk5gSRhY_4core2io4util4TakeRNtNtB2_4pipe10PipeReaderEECs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "std::io::default_read_to_end::<core::io::util::Take<&std::io::pipe::PipeReader>>",
+  "header": "bb21",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 482
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNvNtCs9k3SxhrAWiO_3std2io19default_read_to_end16small_probe_readINtNtNtCsgxBkk5gSRhY_4core2io4util4TakeRNtNtB4_4pipe10PipeReaderEECs8UEsDZRFGwy_6uu_tee",
+  "function_demangled": "std::io::default_read_to_end::small_probe_read::<core::io::util::Take<&std::io::pipe::PipeReader>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 433
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtCs8UEsDZRFGwy_6uu_tee11NamedWriterEBE_",
+  "function_demangled": "core::ptr::drop_glue::<[uu_tee::NamedWriter]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtCs8UEsDZRFGwy_6uu_tee11NamedWriterEBE_",
+  "function_demangled": "core::ptr::drop_glue::<[uu_tee::NamedWriter]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCs5eGzjanjXtC_6uucore8features5pipes10drain_pipeNtCs8UEsDZRFGwy_6uu_tee11NamedWriterEBU_",
+  "function_demangled": "uucore::features::pipes::drain_pipe::<uu_tee::NamedWriter>",
+  "header": "bb20",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uucore/src/lib/features/pipes.rs",
+    "line": 72
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvYINtNtNtCs5eGzjanjXtC_6uucore4mods2io9RawWriterRRNtCs8UEsDZRFGwy_6uu_tee11NamedWriterENtNtCs9k3SxhrAWiO_3std2io5Write9write_allBQ_",
+  "function_demangled": "<uucore::mods::io::RawWriter<&&uu_tee::NamedWriter> as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMCs8UEsDZRFGwy_6uu_teeNtB2_11MultiWriter15copy_unbuffered",
+  "function_demangled": "<uu_tee::MultiWriter>::copy_unbuffered",
+  "header": "bb50",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/tee/src/tee.rs",
+    "line": 212
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMCs8UEsDZRFGwy_6uu_teeNtB2_11MultiWriter15copy_unbuffered",
+  "function_demangled": "<uu_tee::MultiWriter>::copy_unbuffered",
+  "header": "bb11",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 31,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/tee/src/tee.rs",
+    "line": 177
+   }
+  ],
+  "loop_kind": "while-let"
+ },
+ {
+  "function": "_RNvMCs8UEsDZRFGwy_6uu_teeNtB2_11MultiWriter15copy_unbuffered",
+  "function_demangled": "<uu_tee::MultiWriter>::copy_unbuffered",
+  "header": "bb21",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 30,
+    "dir": "/workspaces/Thesis/.build/uutils-coreutils",
+    "file": "src/uu/tee/src/tee.rs",
+    "line": 185
+   }
+  ],
+  "loop_kind": "for"
+ }
+]

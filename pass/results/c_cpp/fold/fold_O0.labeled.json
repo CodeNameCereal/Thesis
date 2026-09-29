@@ -1,0 +1,155 @@
+[
+ {
+  "function": "oputs_",
+  "function_demangled": "oputs_",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 645
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "oputs_",
+  "function_demangled": "oputs_",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 7,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 629
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "emit_ancillary_info",
+  "function_demangled": "emit_ancillary_info",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 870
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "main",
+  "function_demangled": "main",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 7,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/fold.c",
+    "line": 352
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "main",
+  "function_demangled": "main",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/fold.c",
+    "line": 303
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "fold_file",
+  "function_demangled": "fold_file",
+  "header": "",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/fold.c",
+    "line": 187
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "fold_file",
+  "function_demangled": "fold_file",
+  "header": "",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/fold.c",
+    "line": 198
+   }
+  ],
+  "loop_kind": "goto"
+ },
+ {
+  "function": "fold_file",
+  "function_demangled": "fold_file",
+  "header": "",
+  "depth": 3,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/fold.c",
+    "line": 210
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "fold_file",
+  "function_demangled": "fold_file",
+  "header": "",
+  "depth": 3,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/fold.c",
+    "line": 233
+   }
+  ],
+  "loop_kind": "for"
+ }
+]

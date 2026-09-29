@@ -1,0 +1,155 @@
+[
+ {
+  "function": "oputs_",
+  "function_demangled": "oputs_",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 645
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "oputs_",
+  "function_demangled": "oputs_",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 7,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 629
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "emit_ancillary_info",
+  "function_demangled": "emit_ancillary_info",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/system.h",
+    "line": 870
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "main",
+  "function_demangled": "main",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/tee.c",
+    "line": 140
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "tee_files",
+  "function_demangled": "tee_files",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/tee.c",
+    "line": 331
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "tee_files",
+  "function_demangled": "tee_files",
+  "header": "",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/tee.c",
+    "line": 280
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "tee_files",
+  "function_demangled": "tee_files",
+  "header": "",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 7,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/tee.c",
+    "line": 312
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "tee_files",
+  "function_demangled": "tee_files",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/tee.c",
+    "line": 259
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "get_next_out",
+  "function_demangled": "get_next_out",
+  "header": "",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 3,
+    "dir": "/workspaces/Thesis/.build/coreutils",
+    "file": "src/tee.c",
+    "line": 199
+   }
+  ],
+  "loop_kind": "for"
+ }
+]

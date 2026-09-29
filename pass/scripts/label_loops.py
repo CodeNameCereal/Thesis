@@ -18,7 +18,9 @@ from collections import Counter
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 RS_TOOL = os.path.join(ROOT, "pass", "tools", "loop_ast_rs")
-LIBRARY = re.compile(r"/library/(core|alloc|std)/|/\.cargo/|^/usr/")
+# /rust/deps/: std's own dependencies (e.g. hashbrown, behind HashMap) -- rustc
+# records their paths under /rust/deps/<crate>-<version>/, not under /library/.
+LIBRARY = re.compile(r"/library/(core|alloc|std)/|/\.cargo/|^/usr/|/rust/deps/")
 cache = {}
 
 

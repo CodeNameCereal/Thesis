@@ -1,0 +1,17 @@
+FUNCTION usage (usage)
+FUNCTION oputs_ (oputs_)
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":645}]}
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":629}]}
+FUNCTION emit_ancillary_info (emit_ancillary_info)
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":870}]}
+FUNCTION main (main)
+{"function": "main", "function_demangled": "main", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/tee.c","line":140}]}
+FUNCTION tee_files (tee_files)
+{"function": "tee_files", "function_demangled": "tee_files", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/tee.c","line":331}]}
+{"function": "tee_files", "function_demangled": "tee_files", "header": "", "depth": 1, "latch_count": 3, "subloop_count": 1, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/tee.c","line":280}]}
+{"function": "tee_files", "function_demangled": "tee_files", "header": "", "depth": 2, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/tee.c","line":312}]}
+{"function": "tee_files", "function_demangled": "tee_files", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/tee.c","line":259}]}
+FUNCTION bad_cast (bad_cast)
+FUNCTION fail_output (fail_output)
+FUNCTION get_next_out (get_next_out)
+{"function": "get_next_out", "function_demangled": "get_next_out", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/tee.c","line":199}]}

@@ -1,0 +1,130 @@
+[
+  {
+    "function": "bsd_sum_stream",
+    "function_demangled": "bsd_sum_stream",
+    "header": "",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 3,
+        "dir": "/workspaces/Thesis/.build/coreutils",
+        "file": "src/sum.c",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "function": "bsd_sum_stream",
+    "function_demangled": "bsd_sum_stream",
+    "header": "",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 2,
+    "src_loc": [
+      {
+        "col": 3,
+        "dir": "/workspaces/Thesis/.build/coreutils",
+        "file": "src/sum.c",
+        "line": 47
+      }
+    ]
+  },
+  {
+    "function": "bsd_sum_stream",
+    "function_demangled": "bsd_sum_stream",
+    "header": "",
+    "depth": 2,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 5,
+        "dir": "/workspaces/Thesis/.build/coreutils",
+        "file": "src/sum.c",
+        "line": 52
+      }
+    ]
+  },
+  {
+    "function": "bsd_sum_stream",
+    "function_demangled": "bsd_sum_stream",
+    "header": "",
+    "depth": 2,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 5,
+        "dir": "/workspaces/Thesis/.build/coreutils",
+        "file": "src/sum.c",
+        "line": 71
+      }
+    ]
+  },
+  {
+    "function": "sysv_sum_stream",
+    "function_demangled": "sysv_sum_stream",
+    "header": "",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 3,
+        "dir": "/workspaces/Thesis/.build/coreutils",
+        "file": "src/sum.c",
+        "line": 161
+      }
+    ]
+  },
+  {
+    "function": "sysv_sum_stream",
+    "function_demangled": "sysv_sum_stream",
+    "header": "",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 2,
+    "src_loc": [
+      {
+        "col": 3,
+        "dir": "/workspaces/Thesis/.build/coreutils",
+        "file": "src/sum.c",
+        "line": 125
+      }
+    ]
+  },
+  {
+    "function": "sysv_sum_stream",
+    "function_demangled": "sysv_sum_stream",
+    "header": "",
+    "depth": 2,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 5,
+        "dir": "/workspaces/Thesis/.build/coreutils",
+        "file": "src/sum.c",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "function": "sysv_sum_stream",
+    "function_demangled": "sysv_sum_stream",
+    "header": "",
+    "depth": 2,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 5,
+        "dir": "/workspaces/Thesis/.build/coreutils",
+        "file": "src/sum.c",
+        "line": 149
+      }
+    ]
+  }
+]

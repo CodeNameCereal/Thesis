@@ -1,0 +1,24 @@
+FUNCTION usage (usage)
+FUNCTION emit_stdin_note (emit_stdin_note)
+FUNCTION emit_mandatory_arg_note (emit_mandatory_arg_note)
+FUNCTION oputs_ (oputs_)
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":645}]}
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":629}]}
+FUNCTION emit_ancillary_info (emit_ancillary_info)
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":870}]}
+FUNCTION main (main)
+{"function": "main", "function_demangled": "main", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":5,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/nl.c","line":645}]}
+{"function": "main", "function_demangled": "main", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 1, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/nl.c","line":512}]}
+{"function": "main", "function_demangled": "main", "header": "", "depth": 2, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":15,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/nl.c","line":588}]}
+FUNCTION build_type_arg (build_type_arg)
+FUNCTION nl_file (nl_file)
+FUNCTION process_file (process_file)
+{"function": "process_file", "function_demangled": "process_file", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/nl.c","line":431}]}
+FUNCTION check_section (check_section)
+FUNCTION proc_header (proc_header)
+FUNCTION proc_body (proc_body)
+FUNCTION proc_footer (proc_footer)
+FUNCTION proc_text (proc_text)
+FUNCTION write_error (write_error)
+FUNCTION reset_lineno (reset_lineno)
+FUNCTION print_lineno (print_lineno)

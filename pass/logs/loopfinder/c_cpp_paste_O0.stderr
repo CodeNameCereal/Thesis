@@ -1,0 +1,24 @@
+FUNCTION usage (usage)
+FUNCTION emit_stdin_note (emit_stdin_note)
+FUNCTION emit_mandatory_arg_note (emit_mandatory_arg_note)
+FUNCTION oputs_ (oputs_)
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":645}]}
+{"function": "oputs_", "function_demangled": "oputs_", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":629}]}
+FUNCTION emit_ancillary_info (emit_ancillary_info)
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/system.h","line":870}]}
+FUNCTION main (main)
+{"function": "main", "function_demangled": "main", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/paste.c","line":504}]}
+FUNCTION bad_cast (bad_cast)
+FUNCTION collapse_escapes (collapse_escapes)
+{"function": "collapse_escapes", "function_demangled": "collapse_escapes", "header": "", "depth": 1, "latch_count": 2, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/paste.c","line":104}]}
+FUNCTION paste_serial (paste_serial)
+{"function": "paste_serial", "function_demangled": "paste_serial", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 1, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/paste.c","line":370}]}
+{"function": "paste_serial", "function_demangled": "paste_serial", "header": "", "depth": 2, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":11,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/paste.c","line":404}]}
+FUNCTION paste_parallel (paste_parallel)
+{"function": "paste_parallel", "function_demangled": "paste_parallel", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 1, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/paste.c","line":233}]}
+{"function": "paste_parallel", "function_demangled": "paste_parallel", "header": "", "depth": 2, "latch_count": 1, "subloop_count": 1, "src_loc": [{"col":7,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/paste.c","line":241}]}
+{"function": "paste_parallel", "function_demangled": "paste_parallel", "header": "", "depth": 3, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":15,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/paste.c","line":258}]}
+{"function": "paste_parallel", "function_demangled": "paste_parallel", "header": "", "depth": 1, "latch_count": 1, "subloop_count": 0, "src_loc": [{"col":3,"dir":"/workspaces/Thesis/.build/coreutils","file":"src/paste.c","line":208}]}
+FUNCTION output_delim (output_delim)
+FUNCTION xputchar (xputchar)
+FUNCTION write_error (write_error)

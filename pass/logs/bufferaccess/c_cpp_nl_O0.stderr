@@ -1,0 +1,35 @@
+FUNCTION usage (usage)
+FUNCTION emit_stdin_note (emit_stdin_note)
+FUNCTION emit_mandatory_arg_note (emit_mandatory_arg_note)
+FUNCTION oputs_ (oputs_)
+{"function": "oputs_", "function_demangled": "oputs_", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 630, "access_kind": "load", "index_kind": "variable", "index_name": "%70", "origin": "unknown", "inside_loop": true, "dominated_by_check": false}
+{"function": "oputs_", "function_demangled": "oputs_", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 647, "access_kind": "load", "index_kind": "constant", "index_name": "", "origin": "alloca", "inside_loop": true, "dominated_by_check": false}
+{"function": "oputs_", "function_demangled": "oputs_", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 649, "access_kind": "load", "index_kind": "variable", "index_name": "%125", "origin": "unknown", "inside_loop": true, "dominated_by_check": false}
+{"function": "oputs_", "function_demangled": "oputs_", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 651, "access_kind": "load", "index_kind": "constant", "index_name": "", "origin": "alloca", "inside_loop": true, "dominated_by_check": false}
+{"function": "oputs_", "function_demangled": "oputs_", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 651, "access_kind": "load", "index_kind": "variable", "index_name": "%143", "origin": "unknown", "inside_loop": true, "dominated_by_check": false}
+{"function": "oputs_", "function_demangled": "oputs_", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 655, "access_kind": "load", "index_kind": "constant", "index_name": "", "origin": "alloca", "inside_loop": true, "dominated_by_check": false}
+FUNCTION emit_ancillary_info (emit_ancillary_info)
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 870, "access_kind": "load", "index_kind": "constant", "index_name": "", "origin": "alloca", "inside_loop": true, "dominated_by_check": false}
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 870, "access_kind": "load", "index_kind": "constant", "index_name": "", "origin": "alloca", "inside_loop": true, "dominated_by_check": false}
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 873, "access_kind": "load", "index_kind": "constant", "index_name": "", "origin": "alloca", "inside_loop": false, "dominated_by_check": false}
+{"function": "emit_ancillary_info", "function_demangled": "emit_ancillary_info", "file": "/workspaces/Thesis/.build/coreutils/src/system.h", "line": 874, "access_kind": "load", "index_kind": "constant", "index_name": "", "origin": "alloca", "inside_loop": false, "dominated_by_check": false}
+FUNCTION main (main)
+{"function": "main", "function_demangled": "main", "file": "/workspaces/Thesis/.build/coreutils/src/nl.c", "line": 505, "access_kind": "load", "index_kind": "constant", "index_name": "", "origin": "param", "inside_loop": false, "dominated_by_check": false}
+{"function": "main", "function_demangled": "main", "file": "/workspaces/Thesis/.build/coreutils/src/nl.c", "line": 589, "access_kind": "load", "index_kind": "constant", "index_name": "", "origin": "alloca", "inside_loop": true, "dominated_by_check": false}
+{"function": "main", "function_demangled": "main", "file": "/workspaces/Thesis/.build/coreutils/src/nl.c", "line": 634, "access_kind": "store", "index_kind": "variable", "index_name": "%194", "origin": "global", "inside_loop": false, "dominated_by_check": false}
+{"function": "main", "function_demangled": "main", "file": "/workspaces/Thesis/.build/coreutils/src/nl.c", "line": 646, "access_kind": "load", "index_kind": "variable", "index_name": "%212", "origin": "param", "inside_loop": true, "dominated_by_check": false}
+FUNCTION build_type_arg (build_type_arg)
+{"function": "build_type_arg", "function_demangled": "build_type_arg", "file": "/workspaces/Thesis/.build/coreutils/src/nl.c", "line": 279, "access_kind": "store", "index_kind": "constant", "index_name": "", "origin": "param", "inside_loop": false, "dominated_by_check": false}
+{"function": "build_type_arg", "function_demangled": "build_type_arg", "file": "/workspaces/Thesis/.build/coreutils/src/nl.c", "line": 280, "access_kind": "store", "index_kind": "constant", "index_name": "", "origin": "param", "inside_loop": false, "dominated_by_check": false}
+{"function": "build_type_arg", "function_demangled": "build_type_arg", "file": "/workspaces/Thesis/.build/coreutils/src/nl.c", "line": 281, "access_kind": "store", "index_kind": "constant", "index_name": "", "origin": "param", "inside_loop": false, "dominated_by_check": false}
+{"function": "build_type_arg", "function_demangled": "build_type_arg", "file": "/workspaces/Thesis/.build/coreutils/src/nl.c", "line": 282, "access_kind": "store", "index_kind": "constant", "index_name": "", "origin": "param", "inside_loop": false, "dominated_by_check": false}
+FUNCTION nl_file (nl_file)
+FUNCTION process_file (process_file)
+FUNCTION check_section (check_section)
+FUNCTION proc_header (proc_header)
+FUNCTION proc_body (proc_body)
+FUNCTION proc_footer (proc_footer)
+FUNCTION proc_text (proc_text)
+FUNCTION write_error (write_error)
+FUNCTION reset_lineno (reset_lineno)
+FUNCTION print_lineno (print_lineno)

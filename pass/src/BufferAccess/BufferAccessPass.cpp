@@ -1,5 +1,6 @@
 #include "llvm/Analysis/LoopInfo.h"
 #include "llvm/Demangle/Demangle.h"
+#include "llvm/IR/DebugInfoMetadata.h"
 #include "llvm/IR/Dominators.h"
 #include "llvm/IR/Function.h"
 #include "llvm/IR/InstIterator.h"
@@ -142,6 +143,34 @@ std::string valueDisplayName(Value *V) {
   return Tmp;
 }
 
+// Directory + filename from debug info -> one path. Rust std/core paths
+// and ~/.cargo paths are usually already absolute, so no directory prefix
+// for those.
+std::string joinPath(StringRef Dir, StringRef File) {
+  if (File.empty())
+    return "";
+  if (File.starts_with("/") || Dir.empty())
+    return File.str();
+  return (Dir + "/" + File).str();
+}
+
+// Source file the access comes from: the instruction's own debug location,
+// else the enclosing function's (DISubprogram). The fallback covers
+// compiler-generated instructions with no location (line 0). At -O0 there
+// is no inlining, so the function's file is the right one for every
+// instruction in it. Used downstream to split library vs. tool code, same
+// file-path rule as label_loops.py.
+std::string sourceFile(Instruction &I) {
+  if (const DebugLoc &DL = I.getDebugLoc()) {
+    std::string F = joinPath(DL->getDirectory(), DL->getFilename());
+    if (!F.empty())
+      return F;
+  }
+  if (DISubprogram *SP = I.getFunction()->getSubprogram())
+    return joinPath(SP->getDirectory(), SP->getFilename());
+  return "";
+}
+
 void printBufferAccess(Instruction &I, Value *PtrOperand,
                         StringRef AccessKind, LoopInfo &LI,
                         DominatorTree &DT, StringRef RawFuncName,
@@ -156,6 +185,7 @@ void printBufferAccess(Instruction &I, Value *PtrOperand,
   bool Variable = gepHasVariableIndex(GEP, &VarIndex);
 
   unsigned Line = I.getDebugLoc() ? I.getDebugLoc().getLine() : 0;
+  std::string File = sourceFile(I);
   std::string IndexKind = Variable ? "variable" : "constant";
   std::string IndexName = (Variable && VarIndex) ? valueDisplayName(VarIndex) : "";
   std::string Origin = classifyOrigin(GEP->getPointerOperand());
@@ -165,6 +195,7 @@ void printBufferAccess(Instruction &I, Value *PtrOperand,
   errs() << "{"
          << "\"function\": \"" << RawFuncName << "\", "
          << "\"function_demangled\": \"" << DemangledFuncName << "\", "
+         << "\"file\": \"" << File << "\", "
          << "\"line\": " << Line << ", "
          << "\"access_kind\": \"" << AccessKind << "\", "
          << "\"index_kind\": \"" << IndexKind << "\", "
