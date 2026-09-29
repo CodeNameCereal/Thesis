@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# generate_benchmarks.sh
+# benchmarks.sh
 #
 # Creates benchmarks/{c_cpp,rust}/<tool>/{src,ir,SOURCE.md,NOTES.md} for the
 # 10-tool corpus, compiles LLVM IR at -O0 (C) / debug profile (Rust),

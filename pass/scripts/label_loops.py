@@ -49,7 +49,8 @@ def source_loops(path):
     if path not in cache:
         loops = rust_loops(path) if path.endswith(".rs") else c_loops(path)
         for L in loops:  # nesting depth = number of loops containing this one (incl. itself)
-            L["depth"] = sum(M["start"] <= L["start"] <= M["end"] for M in loops)
+            if "depth" not in L:  # loop_ast_rs reports its own, per-function depth
+                L["depth"] = sum(M["start"] <= L["start"] <= M["end"] for M in loops)
         cache[path] = loops
     return cache[path]
 
@@ -69,7 +70,9 @@ def label(loop):
     for L in containing:
         if path.endswith(".c") and L["start"] == pos:  # clang: exact loop start
             return L["kind"]
-    for L in containing:
+    # innermost first: with per-function depth, a loop inside a closure and the
+    # loop around the closure can both have depth 1 -- the inner one is right
+    for L in sorted(containing, key=lambda L: L["start"], reverse=True):
         if L["depth"] == loop.get("depth"):
             return L["kind"]
     return "goto" if path.endswith(".c") else "unmatched"

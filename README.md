@@ -50,6 +50,10 @@ Output: `pass/results/` (loops), `pass/results_buffer/` (buffer accesses),
   in-loop, bounds-check heuristic, source file/line.
 - **Toy corpus** [DONE] -- revalidated with current scripts (`toy_check.sh`).
 - **Real corpus** [DONE] -- all 20 tools, zero `unmatched` / `no-debug-info`.
+- **Closure / let-chain fix** [DONE] -- `loop_ast_rs` counts depth per function
+  like LLVM (restarts at 0 in closures, async blocks, nested fns; a closure is
+  its own function in the IR) and labels `while let ... && ...` as while-let.
+  No change on the corpus (no such loops), verified.
 - **Validation** [DONE] (`run_checks.sh`) -- all 159 tool loops checked against
   their source (0 errors); 116/130 variable-index buffer accesses on an indexing
   line, the other 14 explained (C macro `XARGMATCH`, Rust match arm with the
@@ -98,11 +102,8 @@ inside std (see limitations).
 - **Loop counts are IR natural loops, not source statements.** Loops sharing a
   header merge: Rust fold `loop { while ... {} ... }` (while first in the body)
   -> 1 IR loop with 3 latches.
-- **Rust loop inside a closure inside a loop** may get the outer loop's kind
-  (IR depth != source depth). Not flagged as `unmatched`; `spot_check.py`
-  marks these `CLOSURE`. None found in fold/tee.
-- Loops in Rust `macro_rules!` bodies are invisible to syn; Rust 2024
-  `while let` chains are labeled `while`.
+- Loops in Rust `macro_rules!` bodies are invisible to syn (-> `unmatched`
+  or the enclosing loop's kind). None in the corpus (0 `unmatched`).
 - `#[inline(always)]` code is inlined even at -O0; labeling uses the innermost
   location (`src_loc[0]`).
 - A loop's IR location is often not its keyword line but a statement inside
