@@ -19,6 +19,7 @@ patterns** (casts, initializations, ...).
 ```bash
 ./pass/scripts/run_all_passes.sh --regen   # regenerate IR, run both passes + labeling
 python3 pass/scripts/summarize.py          # C vs Rust tables -> pass/results/summary.md
+./pass/scripts/run_checks.sh               # validation -> pass/results/checks.log
 ```
 
 | Script | What it does |
@@ -28,9 +29,14 @@ python3 pass/scripts/summarize.py          # C vs Rust tables -> pass/results/su
 | `label_loops.py` | Loop kind per loop (`for`/`while`/`do-while`/`goto`/`loop`/`while-let`/`library`) |
 | `label_buffers.py` | Buffer access origin: `tool` / `project` / `library` |
 | `summarize.py` | Final C vs Rust tables |
+| `run_checks.sh` | Runs all validation checks below; saves `pass/results/checks.log` (`--quick` skips the slow one) |
 | `toy_check.sh` | Regression test on the toy corpus |
-| `spot_check.py <lang> <tool>` | Each loop next to its source line, for manual checking |
+| `check_loops.py` | Every loop vs its source line, all tools |
+| `check_buffers.py` | Tool-code buffer accesses vs their source line |
+| `debuginfo_check.sh` | Loops identical with / without debug info (slow) |
+| `spot_check.py <lang> <tool>` | Each loop next to its source line, for a manual look at one tool |
 | `fill.sh` | Fills `SOURCE.md` provenance only (never builds IR) |
+| `dump_environment.sh` | Records toolchain versions in `ENVIRONMENT.md` |
 
 Output: `pass/results/` (loops), `pass/results_buffer/` (buffer accesses),
 `pass/logs/` (opt stderr).
@@ -44,7 +50,11 @@ Output: `pass/results/` (loops), `pass/results_buffer/` (buffer accesses),
   in-loop, bounds-check heuristic, source file/line.
 - **Toy corpus** [DONE] -- revalidated with current scripts (`toy_check.sh`).
 - **Real corpus** [DONE] -- all 20 tools, zero `unmatched` / `no-debug-info`.
-- **Spot-check** [DONE] -- Rust fold 15/15, C fold 9/9, Rust tee correct.
+- **Validation** [DONE] (`run_checks.sh`) -- all 159 tool loops checked against
+  their source (0 errors); 116/130 variable-index buffer accesses on an indexing
+  line, the other 14 explained (C macro `XARGMATCH`, Rust match arm with the
+  indexing on the next line); debug info verified not to change the loops
+  (SAME in all 20 tools). Manual spot-check: Rust fold 15/15, C fold 9/9, Rust tee 4/4.
 - **Phase 2 / 3** [NOT STARTED]
 
 ---
@@ -95,6 +105,10 @@ inside std (see limitations).
   `while let` chains are labeled `while`.
 - `#[inline(always)]` code is inlined even at -O0; labeling uses the innermost
   location (`src_loc[0]`).
+- A loop's IR location is often not its keyword line but a statement inside
+  the body (e.g. the first `if` after `let x = ...;` in a Rust `loop`); C `goto`
+  loops point at the first statement after the label. Checks look a few code
+  lines back for this reason.
 - **BufferAccess `dominated_by_check` is unreliable on C at -O0** (clang
   reloads variables from the stack per use -> no SSA link). Fix: compare by
   underlying `alloca`.
