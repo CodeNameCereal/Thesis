@@ -1,0 +1,190 @@
+===== c_cpp/comm
+[none] comm.c:229  (i - -, size 2)  if (!issued_disorder_warning[whatfile - 1])
+[none] comm.c:248  (i - -, size 2)  issued_disorder_warning[whatfile - 1] = true;
+[yes] comm.c:290  (i < 4, size 4)  all_line[i][j] = &lba[i][j];
+        check at 287: for (int j = 0; j < 4; j++)
+[unknown] comm.c:295  (i < 2, size 0)  streams[i] = (streq (infiles[i], "-") ? stdin : fopen (infiles[i], "r"));
+        check at 285: for (int i = 0; i < 2; i++)
+[yes] comm.c:295  (i < 2, size 2)  streams[i] = (streq (infiles[i], "-") ? stdin : fopen (infiles[i], "r"));
+        check at 285: for (int i = 0; i < 2; i++)
+[yes] comm.c:296  (i < 2, size 2)  if (!streams[i])
+        check at 285: for (int i = 0; i < 2; i++)
+[unknown] comm.c:297  (i < 2, size 0)  error (EXIT_FAILURE, errno, "%s", quotef (infiles[i]));
+        check at 285: for (int i = 0; i < 2; i++)
+[yes] comm.c:299  (i < 2, size 2)  fadvise (streams[i], FADVISE_SEQUENTIAL);
+        check at 285: for (int i = 0; i < 2; i++)
+[none] comm.c:301  (i - -, size 4)  thisline[i] = readlinebuffer_delim (all_line[i][alt[i][0]], streams[i],
+[yes] comm.c:301  (i < 2, size 2)  thisline[i] = readlinebuffer_delim (all_line[i][alt[i][0]], streams[i],
+        check at 285: for (int i = 0; i < 2; i++)
+[yes] comm.c:303  (i < 2, size 2)  if (ferror (streams[i]))
+        check at 285: for (int i = 0; i < 2; i++)
+[unknown] comm.c:304  (i < 2, size 0)  error (EXIT_FAILURE, errno, "%s", quotef (infiles[i]));
+        check at 285: for (int i = 0; i < 2; i++)
+[yes] comm.c:364  (i < 2, size 2)  if (fill_up[i])
+        check at 363: for (int i = 0; i < 2; i++)
+[none] comm.c:371  (i - -, size 4)  thisline[i] = readlinebuffer_delim (all_line[i][alt[i][0]],
+[yes] comm.c:371  (i < 2, size 2)  thisline[i] = readlinebuffer_delim (all_line[i][alt[i][0]],
+        check at 363: for (int i = 0; i < 2; i++)
+[yes] comm.c:372  (i < 2, size 2)  streams[i], delim);
+        check at 363: for (int i = 0; i < 2; i++)
+[yes] comm.c:374  (i < 2, size 2)  if (thisline[i])
+        check at 363: for (int i = 0; i < 2; i++)
+[none] comm.c:375  (i - -, size 4)  check_order (all_line[i][alt[i][1]], thisline[i], i + 1);
+[yes] comm.c:375  (i < 2, size 2)  check_order (all_line[i][alt[i][1]], thisline[i], i + 1);
+        check at 363: for (int i = 0; i < 2; i++)
+[none] comm.c:380  (i - -, size 4)  else if (all_line[i][alt[i][2]]->buffer)
+[none] comm.c:381  (i - -, size 4)  check_order (all_line[i][alt[i][2]],
+[none] comm.c:382  (i - -, size 4)  all_line[i][alt[i][1]], i + 1);
+[yes] comm.c:384  (i < 2, size 2)  if (ferror (streams[i]))
+        check at 363: for (int i = 0; i < 2; i++)
+[unknown] comm.c:385  (i < 2, size 0)  error (EXIT_FAILURE, errno, "%s", quotef (infiles[i]));
+        check at 363: for (int i = 0; i < 2; i++)
+[yes] comm.c:387  (i < 2, size 2)  fill_up[i] = false;
+        check at 363: for (int i = 0; i < 2; i++)
+[unknown] comm.c:394  (i < var, size 2)  if (fclose (streams[i]) != 0)
+        check at 393: for (int i = 0; i < n_streams; i++)
+[unknown] comm.c:395  (i < var, size 0)  error (EXIT_FAILURE, errno, "%s", quotef (infiles[i]));
+        check at 393: for (int i = 0; i < n_streams; i++)
+[none] comm.c:493  (i - -, size 0)  error (0, 0, _("missing operand after %s"), quote (argv[argc - 1]));
+[none] comm.c:499  (i - -, size 0)  error (0, 0, _("extra operand %s"), quote (argv[optind + 2]));
+===== c_cpp/echo
+[none] echo.c:170  (i - -, size 0)  for (i = 0; temp[i]; i++)
+[none] echo.c:171  (i - -, size 0)  switch (temp[i])
+===== c_cpp/fold
+[unknown] fold.c:353  (i < var, size 0)  ok &= fold_file (argv[i], width);
+        check at 352: for (int i = optind; i < argc; i++)
+===== c_cpp/nl
+[none] nl.c:634  (i - -, size 0)  print_no_line_fmt[lineno_width + len] = '\0';
+[none] nl.c:646  (i - -, size 0)  ok &= nl_file (argv[optind]);
+===== c_cpp/paste
+[none] paste.c:118  (i - -, size 0)  delim_lens[idx++] = 0;
+[none] paste.c:135  (i - -, size 0)  delim_lens[idx++] = 1;
+[none] paste.c:145  (i - -, size 0)  delim_lens[idx++] = g.len;
+[unknown] paste.c:210  (i < var, size 0)  if (streq (fnamptr[files_open], "-"))
+        check at 208: for (files_open = 0; files_open < nfiles; ++files_open)
+[unknown] paste.c:213  (i < var, size 0)  fileptr[files_open] = stdin;
+        check at 208: for (files_open = 0; files_open < nfiles; ++files_open)
+[unknown] paste.c:217  (i < var, size 0)  fileptr[files_open] = fopen (fnamptr[files_open], "r");
+        check at 208: for (files_open = 0; files_open < nfiles; ++files_open)
+[unknown] paste.c:218  (i < var, size 0)  if (fileptr[files_open] == NULL)
+        check at 208: for (files_open = 0; files_open < nfiles; ++files_open)
+[unknown] paste.c:219  (i < var, size 0)  error (EXIT_FAILURE, errno, "%s", quotef (fnamptr[files_open]));
+        check at 208: for (files_open = 0; files_open < nfiles; ++files_open)
+[unknown] paste.c:220  (i < var, size 0)  else if (fileno (fileptr[files_open]) == STDIN_FILENO)
+        check at 208: for (files_open = 0; files_open < nfiles; ++files_open)
+[unknown] paste.c:222  (i < var, size 0)  fadvise (fileptr[files_open], FADVISE_SEQUENTIAL);
+        check at 208: for (files_open = 0; files_open < nfiles; ++files_open)
+[none] paste.c:247  (i - -, size 0)  if (fileptr[i])
+[none] paste.c:249  (i - -, size 0)  chr = getc (fileptr[i]);
+[none] paste.c:264  (i - -, size 0)  chr = getc (fileptr[i]);
+[none] paste.c:273  (i - -, size 0)  if (fileptr[i])
+[none] paste.c:275  (i - -, size 0)  if (!ferror (fileptr[i]))
+[none] paste.c:277  (i - -, size 0)  if (fileptr[i] == stdin)
+[none] paste.c:278  (i - -, size 0)  clearerr (fileptr[i]); /* Also clear EOF. */
+[none] paste.c:279  (i - -, size 0)  else if (fclose (fileptr[i]) == EOF && !err)
+[none] paste.c:283  (i - -, size 0)  error (0, err, "%s", quotef (fnamptr[i]));
+[none] paste.c:287  (i - -, size 0)  fileptr[i] = NULL;
+[none] paste.c:312  (i - -, size 0)  size_t len = delim_lens[delimidx];
+[none] paste.c:336  (i - -, size 0)  output_delim (delims + delimoff, delim_lens[delimidx]);
+[none] paste.c:337  (i - -, size 0)  delimoff += delim_lens[delimidx];
+[none] paste.c:409  (i - -, size 0)  output_delim (delims + delimoff, delim_lens[delimidx]);
+[none] paste.c:410  (i - -, size 0)  delimoff += delim_lens[delimidx];
+[none] paste.c:533  (i - -, size 0)  argv[optind] = bad_cast ("-");
+===== c_cpp/shuf
+[unknown] shuf.c:127  (i < var, size 0)  size += strlen (operand[i]);
+        check at 126: for (i = 0; i < n_operands; i++)
+[unknown] shuf.c:132  (i < var, size 0)  char *p1 = stpcpy (p, operand[i]);
+        check at 130: for (i = 0; i < n_operands; i++)
+[unknown] shuf.c:133  (i < var, size 0)  operand[i] = p;
+        check at 130: for (i = 0; i < n_operands; i++)
+[unknown] shuf.c:138  (i <= var, size 0)  operand[n_operands] = p;
+        check at 126: for (i = 0; i < n_operands; i++)
+[unknown] shuf.c:246  (i < var, size 0)  const struct linebuffer *p = &lines[permutation[i]];
+        check at 244: for (size_t i = 0; i < n_lines; i++)
+[none] shuf.c:282  (i - -, size 0)  if (used && buf[used - 1] != eolbyte)
+[lower] shuf.c:283  (i != 0, size 0)  buf[used++] = eolbyte;
+        check at 282: if (used && buf[used - 1] != eolbyte)
+[unknown] shuf.c:295  (i <= var, size 0)  line[i] = p = next_line (p, eolbyte);
+        check at 294: for (size_t i = 1; i <= n_lines; i++)
+[unknown] shuf.c:310  (i < var, size 0)  char *const *p = line + permutation[i];
+        check at 308: for (size_t i = 0; i < n_lines; i++)
+[unknown] shuf.c:342  (i < var, size 0)  unsigned long int n = lo_input + permutation[i];
+        check at 340: for (size_t i = 0; i < n_lines; i++)
+[none] shuf.c:514  (i - -, size 0)  error (0, 0, _("extra operand %s"), quote (operand[!input_range]));
+===== c_cpp/sum
+[unknown] sum.c:150  (i < var, size 0)  s += buffer[i];
+        check at 149: for (size_t i = 0; i < sum; i++)
+[unknown] sum.c:162  (i < var, size 0)  s += buffer[i];
+        check at 161: for (size_t i = 0; i < sum; i++)
+[unknown] sum.c:74  (i < var, size 0)  checksum += buffer[i];
+        check at 71: for (size_t i = 0; i < sum; i++)
+[unknown] sum.c:89  (i < var, size 0)  checksum += buffer[i];
+        check at 86: for (idx_t i = 0; i < sum; i++)
+===== c_cpp/tee
+[none] tee.c:154  (i - -, size 4)  output_error = XARGMATCH ("--output-error", optarg,
+[unknown] tee.c:200  (i <= var, size 0)  if (0 <= descriptors[idx])
+        check at 199: for (idx++; idx <= nfiles; idx++)
+[none] tee.c:219  (i - -, size 0)  w_errno, "%s", quotef (files[i]));
+[none] tee.c:221  (i - -, size 0)  descriptors[i] = -1;
+[unknown] tee.c:262  (i <= var, size 0)  descriptors[i] = open (files[i], flags, MODE_RW_UGO);
+        check at 259: for (int i = 1; i <= nfiles; i++)
+[unknown] tee.c:263  (i <= var, size 0)  if (descriptors[i] < 0)
+        check at 259: for (int i = 1; i <= nfiles; i++)
+[unknown] tee.c:266  (i <= var, size 0)  out_pollable[i] = false;
+        check at 259: for (int i = 1; i <= nfiles; i++)
+[unknown] tee.c:269  (i <= var, size 0)  errno, "%s", quotef (files[i]));
+        check at 259: for (int i = 1; i <= nfiles; i++)
+[unknown] tee.c:275  (i <= var, size 0)  out_pollable[i] = iopoll_output_ok (descriptors[i]);
+        check at 259: for (int i = 1; i <= nfiles; i++)
+[none] tee.c:282  (i - -, size 0)  if (pipe_check && out_pollable[first_out])
+[none] tee.c:285  (i - -, size 0)  int err = iopoll (STDIN_FILENO, descriptors[first_out], true);
+[unknown] tee.c:313  (i <= var, size 0)  if (0 <= descriptors[i]
+        check at 312: for (int i = 0; i <= nfiles; i++)
+[unknown] tee.c:314  (i <= var, size 0)  && ! write_wait (descriptors[i], buffer, bytes_read))
+        check at 312: for (int i = 0; i <= nfiles; i++)
+[unknown] tee.c:332  (i <= var, size 0)  if (0 <= descriptors[i] && close (descriptors[i]) < 0)
+        check at 331: for (int i = 1; i <= nfiles; i++)
+[unknown] tee.c:334  (i <= var, size 0)  error (0, errno, "%s", quotef (files[i]));
+        check at 331: for (int i = 1; i <= nfiles; i++)
+===== rust/expand
+[yes] expand.rs:294  (i < var, size 0)  let step_size = tabstops[num_tabstops - 1];
+        check at 294: let step_size = tabstops[num_tabstops - 1];
+[yes] expand.rs:295  (i < var, size 0)  let last_fixed_tabstop = tabstops[num_tabstops - 2];
+        check at 295: let last_fixed_tabstop = tabstops[num_tabstops - 2];
+[yes] expand.rs:305  (i < var, size 0)  tabstops[num_tabstops - 1] - col % tabstops[num_tabstops - 1]
+        check at 305: tabstops[num_tabstops - 1] - col % tabstops[num_tabstops - 1]
+[yes] expand.rs:335  (i < var, size 0)  let b = buf[byte];
+        check at 335: let b = buf[byte];
+[yes] expand.rs:413  (i < var, size 0)  if buf[byte] != b' ' {
+        check at 413: if buf[byte] != b' ' {
+[yes] expand.rs:424  (i < var, size 0)  if buf[byte] != b' ' {
+        check at 424: if buf[byte] != b' ' {
+[yes] expand.rs:428  (i < var, size 0)  if buf[byte] == b'\n' {
+        check at 424: if buf[byte] != b' ' {
+[yes] expand.rs:87  (i < var, size 0)  match bytes[i] {
+        check at 87: match bytes[i] {
+===== rust/fold
+[yes] fold.rs:391  (i < var, size 0)  match line[idx] {
+        check at 391: match line[idx] {
+[yes] fold.rs:425  (i < var, size 0)  0x00..=0x07 | 0x0B..=0x0C | 0x0E..=0x1F | 0x7F => {
+        check at 391: match line[idx] {
+[yes] fold.rs:426  (i < var, size 0)  push_byte(ctx, line[idx])?;
+        check at 391: match line[idx] {
+[yes] fold.rs:427  (i < var, size 0)  if ctx.spaces && line[idx].is_ascii_whitespace() && line[idx] != CR {
+        check at 391: match line[idx] {
+[yes] fold.rs:444  (i < var, size 0)  && !matches!(
+        check at 391: match line[idx] {
+[yes] fold.rs:446  (i < var, size 0)  NL | CR | TAB | 0x08 | 0x00..=0x07 | 0x0B..=0x0C | 0x0E..=0x1F | 0x7F
+        check at 391: match line[idx] {
+===== rust/paste
+[yes] paste.rs:217  (i < 8192, size 0)  last_byte = buffer[bytes_read - 1];
+        check at 217: last_byte = buffer[bytes_read - 1];
+[yes] paste.rs:235  (i < var, size 0)  if bytes[i] == b'\\' {
+        check at 235: if bytes[i] == b'\\' {
+[yes] paste.rs:243  (i < var, size 0)  match bytes[i] {
+        check at 235: if bytes[i] == b'\\' {
+===== rust/shuf
+[yes] compat_random_source.rs:108  (i < var, size 0)  Ok(vals[idx])
+        check at 108: Ok(vals[idx])
+[yes] random_seed.rs:103  (i < var, size 0)  vals[idx]
+        check at 103: vals[idx]

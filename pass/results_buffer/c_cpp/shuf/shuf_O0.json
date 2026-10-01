@@ -9,7 +9,14 @@
     "index_name": "%70",
     "origin": "unknown",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -21,7 +28,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -33,7 +47,14 @@
     "index_name": "%125",
     "origin": "unknown",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -45,7 +66,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -57,7 +85,14 @@
     "index_name": "%143",
     "origin": "unknown",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -69,7 +104,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -81,7 +123,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -93,7 +142,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -105,7 +161,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -117,7 +180,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -129,7 +199,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -141,7 +218,14 @@
     "index_name": "%199",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "computed",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -153,7 +237,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -165,7 +256,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -177,7 +275,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "input_from_argv",
@@ -189,7 +294,14 @@
     "index_name": "%20",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 126,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "input_from_argv",
@@ -201,7 +313,14 @@
     "index_name": "%40",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 130,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "input_from_argv",
@@ -213,7 +332,14 @@
     "index_name": "%47",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 130,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "input_from_argv",
@@ -225,7 +351,14 @@
     "index_name": "%60",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 126,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "input_size",
@@ -237,7 +370,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "read_input",
@@ -249,7 +389,14 @@
     "index_name": "%27",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "computed",
+    "check_signed": false
   },
   {
     "function": "read_input",
@@ -261,7 +408,14 @@
     "index_name": "%37",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 282,
+    "check_op": "!=",
+    "check_bound": "0",
+    "buffer_size": 0,
+    "bound_ok": "lower",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "read_input",
@@ -273,7 +427,14 @@
     "index_name": "",
     "origin": "heap",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "read_input",
@@ -285,7 +446,14 @@
     "index_name": "%73",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 294,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "write_random_lines",
@@ -297,7 +465,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "write_random_lines",
@@ -309,7 +484,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "write_random_lines",
@@ -321,7 +503,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "write_permuted_output_reservoir",
@@ -333,7 +522,14 @@
     "index_name": "%17",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 244,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "write_permuted_output_reservoir",
@@ -345,7 +541,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "write_permuted_output_reservoir",
@@ -357,7 +560,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "write_permuted_output_reservoir",
@@ -369,7 +579,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "write_permuted_numbers",
@@ -381,7 +598,14 @@
     "index_name": "%19",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 340,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "write_permuted_lines",
@@ -393,7 +617,14 @@
     "index_name": "%18",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 308,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "write_permuted_lines",
@@ -405,7 +636,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "write_permuted_lines",
@@ -417,7 +655,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "write_permuted_lines",
@@ -429,7 +674,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "usable_st_size",
@@ -441,7 +693,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "usable_st_size",
@@ -453,7 +712,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "usable_st_size",
@@ -465,7 +731,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "usable_st_size",
@@ -477,7 +750,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "print_number",
@@ -489,6 +769,13 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   }
 ]

@@ -9,7 +9,14 @@
     "index_name": "%64",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 71,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -22,7 +29,14 @@
     "index_name": "%97",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 86,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true,
     "code_origin": "tool"
   },
   {
@@ -35,7 +49,14 @@
     "index_name": "%60",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 149,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -48,7 +69,14 @@
     "index_name": "%88",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 161,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   }
 ]

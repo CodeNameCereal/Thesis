@@ -10,6 +10,13 @@
     "origin": "unknown",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -23,6 +30,13 @@
     "origin": "alloca",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -36,6 +50,13 @@
     "origin": "unknown",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -49,6 +70,13 @@
     "origin": "alloca",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -62,6 +90,13 @@
     "origin": "unknown",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -75,6 +110,13 @@
     "origin": "alloca",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -88,6 +130,13 @@
     "origin": "alloca",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -101,6 +150,13 @@
     "origin": "alloca",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -114,6 +170,13 @@
     "origin": "alloca",
     "inside_loop": false,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -127,6 +190,13 @@
     "origin": "alloca",
     "inside_loop": false,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "project"
   },
   {
@@ -140,6 +210,13 @@
     "origin": "param",
     "inside_loop": false,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -153,6 +230,13 @@
     "origin": "global",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -166,6 +250,13 @@
     "origin": "param",
     "inside_loop": false,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -179,6 +270,13 @@
     "origin": "global",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -192,6 +290,13 @@
     "origin": "global",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -205,6 +310,13 @@
     "origin": "alloca",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -218,6 +330,13 @@
     "origin": "alloca",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -231,6 +350,13 @@
     "origin": "alloca",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -244,6 +370,13 @@
     "origin": "global",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -257,6 +390,13 @@
     "origin": "global",
     "inside_loop": false,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -270,6 +410,13 @@
     "origin": "global",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -283,6 +430,13 @@
     "origin": "global",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -295,7 +449,14 @@
     "index_name": "%35",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 208,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -308,7 +469,14 @@
     "index_name": "%42",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 208,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -321,7 +489,14 @@
     "index_name": "%46",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 208,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -334,7 +509,14 @@
     "index_name": "%51",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 208,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -347,7 +529,14 @@
     "index_name": "%54",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 208,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -360,7 +549,14 @@
     "index_name": "%62",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 208,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -373,7 +569,14 @@
     "index_name": "%68",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 208,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -386,7 +589,14 @@
     "index_name": "%77",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 208,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -399,7 +609,14 @@
     "index_name": "%108",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -412,7 +629,14 @@
     "index_name": "%114",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -425,7 +649,14 @@
     "index_name": "%148",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -438,7 +669,14 @@
     "index_name": "%160",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -451,7 +689,14 @@
     "index_name": "%166",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -464,7 +709,14 @@
     "index_name": "%174",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -477,7 +729,14 @@
     "index_name": "%181",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -490,7 +749,14 @@
     "index_name": "%186",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -503,7 +769,14 @@
     "index_name": "%204",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -516,7 +789,14 @@
     "index_name": "%210",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false,
+    "dominated_by_check": true,
+    "check_line": 241,
+    "check_op": "<",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -530,6 +810,13 @@
     "origin": "global",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -543,6 +830,13 @@
     "origin": "global",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   },
   {
@@ -556,6 +850,13 @@
     "origin": "global",
     "inside_loop": true,
     "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false,
     "code_origin": "tool"
   }
 ]

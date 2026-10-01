@@ -9,7 +9,14 @@
     "index_name": "%70",
     "origin": "unknown",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -21,7 +28,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -33,7 +47,14 @@
     "index_name": "%125",
     "origin": "unknown",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -45,7 +66,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -57,7 +85,14 @@
     "index_name": "%143",
     "origin": "unknown",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -69,7 +104,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -81,7 +123,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -93,7 +142,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -105,7 +161,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -117,7 +180,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -129,7 +199,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -141,7 +218,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -153,7 +237,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -165,7 +256,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -177,7 +275,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -189,7 +294,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -201,7 +313,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -213,7 +332,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -225,7 +351,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -237,7 +370,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -249,7 +389,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -261,7 +408,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -273,7 +427,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -285,7 +446,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -297,7 +465,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -309,7 +484,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "make_ancestor",
@@ -321,7 +503,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "make_ancestor",
@@ -333,7 +522,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "make_ancestor",
@@ -345,7 +541,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "make_ancestor",
@@ -357,7 +560,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "make_ancestor",
@@ -369,7 +579,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "make_ancestor",
@@ -381,7 +598,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "make_ancestor",
@@ -393,7 +617,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "make_ancestor",
@@ -405,7 +636,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "make_ancestor",
@@ -417,7 +655,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "process_dir",
@@ -429,7 +674,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "process_dir",
@@ -441,7 +693,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "process_dir",
@@ -453,7 +712,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "process_dir",
@@ -465,7 +731,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "process_dir",
@@ -477,7 +750,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "process_dir",
@@ -489,7 +769,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "process_dir",
@@ -501,7 +788,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "process_dir",
@@ -513,7 +807,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "process_dir",
@@ -525,7 +826,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "announce_mkdir",
@@ -537,7 +845,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "announce_mkdir",
@@ -549,6 +864,13 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   }
 ]

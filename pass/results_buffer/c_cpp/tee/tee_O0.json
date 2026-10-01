@@ -9,7 +9,14 @@
     "index_name": "%70",
     "origin": "unknown",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -21,7 +28,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -33,7 +47,14 @@
     "index_name": "%125",
     "origin": "unknown",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -45,7 +66,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -57,7 +85,14 @@
     "index_name": "%143",
     "origin": "unknown",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "memory",
+    "check_signed": false
   },
   {
     "function": "oputs_",
@@ -69,7 +104,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -81,7 +123,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -93,7 +142,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -105,7 +161,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "emit_ancillary_info",
@@ -117,7 +180,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -129,7 +199,14 @@
     "index_name": "",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "main",
@@ -141,7 +218,14 @@
     "index_name": "%31",
     "origin": "global",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 4,
+    "bound_ok": "none",
+    "index_expr": "other",
+    "check_signed": false
   },
   {
     "function": "tee_files",
@@ -153,7 +237,14 @@
     "index_name": "",
     "origin": "heap",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "tee_files",
@@ -165,7 +256,14 @@
     "index_name": "",
     "origin": "heap",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "tee_files",
@@ -177,7 +275,14 @@
     "index_name": "",
     "origin": "heap",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "tee_files",
@@ -189,7 +294,14 @@
     "index_name": "",
     "origin": "alloca",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "",
+    "check_signed": false
   },
   {
     "function": "tee_files",
@@ -201,7 +313,14 @@
     "index_name": "%67",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 259,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -213,7 +332,14 @@
     "index_name": "%74",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 259,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -225,7 +351,14 @@
     "index_name": "%78",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 259,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -237,7 +370,14 @@
     "index_name": "%88",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 259,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -249,7 +389,14 @@
     "index_name": "%113",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 259,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -261,7 +408,14 @@
     "index_name": "%144",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 259,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -273,7 +427,14 @@
     "index_name": "%161",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 259,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -285,7 +446,14 @@
     "index_name": "%167",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 259,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -297,7 +465,14 @@
     "index_name": "%187",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "tee_files",
@@ -309,7 +484,14 @@
     "index_name": "%194",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "tee_files",
@@ -321,7 +503,14 @@
     "index_name": "%245",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 312,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -333,7 +522,14 @@
     "index_name": "%252",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 312,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -345,7 +541,14 @@
     "index_name": "%296",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 331,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -357,7 +560,14 @@
     "index_name": "%303",
     "origin": "heap",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 331,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "tee_files",
@@ -369,7 +579,14 @@
     "index_name": "%313",
     "origin": "alloca",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 331,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   },
   {
     "function": "fail_output",
@@ -381,7 +598,14 @@
     "index_name": "%48",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "fail_output",
@@ -393,7 +617,14 @@
     "index_name": "%78",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "fail_output",
@@ -405,7 +636,14 @@
     "index_name": "%92",
     "origin": "param",
     "inside_loop": false,
-    "dominated_by_check": false
+    "dominated_by_check": false,
+    "check_line": 0,
+    "check_op": "",
+    "check_bound": "",
+    "buffer_size": 0,
+    "bound_ok": "none",
+    "index_expr": "variable",
+    "check_signed": false
   },
   {
     "function": "get_next_out",
@@ -417,6 +655,13 @@
     "index_name": "%17",
     "origin": "param",
     "inside_loop": true,
-    "dominated_by_check": false
+    "dominated_by_check": true,
+    "check_line": 199,
+    "check_op": "<=",
+    "check_bound": "var",
+    "buffer_size": 0,
+    "bound_ok": "unknown",
+    "index_expr": "variable",
+    "check_signed": true
   }
 ]
