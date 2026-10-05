@@ -35,22 +35,22 @@ variable index = real buffer indexing; constant = mostly struct field accesses.
 
 | tool | C variable | Rust variable | C constant | Rust constant |
 |---|---|---|---|---|
-| comm | 31 | 0 | 78 | 175 |
+| comm | 31 | 0 | 78 | 177 |
 | echo | 2 | 0 | 8 | 114 |
 | expand | 0 | 9 | 11 | 180 |
 | fold | 1 | 16 | 19 | 411 |
 | mkdir | 0 | 0 | 36 | 169 |
 | nl | 2 | 0 | 6 | 290 |
-| paste | 27 | 3 | 6 | 188 |
+| paste | 27 | 5 | 6 | 188 |
 | shuf | 11 | 4 | 16 | 420 |
-| sum | 4 | 0 | 0 | 104 |
-| tee | 20 | 0 | 5 | 150 |
-| **total** | **98** | **32** | **185** | **2201** |
+| sum | 4 | 0 | 0 | 105 |
+| tee | 20 | 0 | 5 | 151 |
+| **total** | **98** | **34** | **185** | **2205** |
 
 ## 4. Buffer accesses by code origin (all tools, all index kinds)
 
 | language | tool | project | library | unknown |
 |---|---|---|---|---|
 | c_cpp | 283 | 94 | 0 | 0 |
-| rust | 2233 | 377 | 9181 | 0 |
+| rust | 2239 | 377 | 9208 | 0 |
 
