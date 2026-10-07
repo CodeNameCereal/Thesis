@@ -5,4 +5,4 @@ edition = "2021"
 
 [dependencies]
 syn = { version = "3", features = ["full", "visit"] }
-proc-macro2 = { version = "1", features = ["span-locations"] }  # line/col outside macros
+proc-macro2 = { version = "1", features = ["span-locations"] }  # needed for line/col of each loop

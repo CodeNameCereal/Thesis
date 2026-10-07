@@ -1,27 +1,27 @@
 #!/usr/bin/env bash
-# run_all_passes.sh -- run LoopFinderPass + BufferAccessPass over every real
-# tool in the corpus (C + Rust, -O0), then label loop kinds and buffer
-# access origins.
-#
-# Place in: pass/scripts/run_all_passes.sh
+# run_all_passes.sh -- runs LoopFinderPass and BufferAccessPass on every tool
+# (C and Rust, -O0), then labels the loop kinds and the buffer access origins.
 #
 # Usage:
-#   ./pass/scripts/run_all_passes.sh                 # run on existing IR
-#   ./pass/scripts/run_all_passes.sh --build         # (re)build both pass plugins first
-#   ./pass/scripts/run_all_passes.sh --regen         # regenerate IR first (benchmarks.sh)
-#   ./pass/scripts/run_all_passes.sh --tools sum,echo   # only these tools
+#   ./pass/scripts/run_all_passes.sh                    use the existing IR
+#   ./pass/scripts/run_all_passes.sh --build            rebuild both plugins first
+#   ./pass/scripts/run_all_passes.sh --regen            rebuild the IR first (benchmarks.sh)
+#   ./pass/scripts/run_all_passes.sh --tools sum,echo   only these tools
 #
-# Outputs:
-#   pass/results/<lang>/<tool>/<tool>_O0.json               LoopFinder (raw)
-#   pass/results/<lang>/<tool>/<tool>_O0.labeled.json       + loop_kind (label_loops.py)
-#   pass/results/loop_kinds.tsv                             loop-kind summary
-#   pass/results_buffer/<lang>/<tool>/<tool>_O0.json        BufferAccess (raw)
-#   pass/results_buffer/<lang>/<tool>/<tool>_O0.labeled.json + code_origin (label_buffers.py)
-#   pass/results_buffer/buffer_summary.tsv                  buffer-access summary
-#   pass/results/pass_counts.tsv                            per-file counts of both passes
-#   pass/logs/<pass>/<lang>_<tool>_<lvl>.stderr             full opt stderr, for debugging
+# Output:
+#   pass/results/<lang>/<tool>/<tool>_O0.json                LoopFinder output
+#   pass/results/<lang>/<tool>/<tool>_O0.labeled.json        + loop_kind
+#   pass/results/loop_kinds.tsv                              loop kinds per tool
+#   pass/results_buffer/<lang>/<tool>/<tool>_O0.json         BufferAccess output
+#   pass/results_buffer/<lang>/<tool>/<tool>_O0.labeled.json + code_origin
+#   pass/results_buffer/buffer_summary.tsv                   buffer accesses per tool
+#   pass/results/pass_counts.tsv                             entries per file, both passes
+#   pass/logs/<pass>/<lang>_<tool>_<lvl>.stderr              full opt output
 #
-# Overridable via env vars: OPT, LOOP_PLUGIN, BUFFER_PLUGIN, LOOP_PASS_NAME, BUFFER_PASS_NAME
+# Env vars that override the defaults:
+#   OPT, LOOP_PLUGIN, BUFFER_PLUGIN, LOOP_PASS_NAME, BUFFER_PASS_NAME
+#
+# (-h prints lines 2-26 of this file, i.e. this header.)
 
 set -uo pipefail
 
@@ -30,10 +30,10 @@ BENCH="$ROOT/benchmarks"
 SRC_DIR="$ROOT/pass/src"
 BUILD_DIR="$SRC_DIR/build"
 LOOP_OUT="$ROOT/pass/results"
-BUF_OUT="$ROOT/pass/results_buffer"   # separate tree so label_loops.py never sees it
+BUF_OUT="$ROOT/pass/results_buffer"   # kept apart so label_loops.py doesn't read it
 LOG_DIR="$ROOT/pass/logs"
 SCRIPTS="$ROOT/pass/scripts"
-LEVELS=(O0)   # optimization levels to run; use (O0 O2) to also run -O2
+LEVELS=(O0)   # (O0 O2) would also run -O2
 
 DO_BUILD=0; DO_REGEN=0; TOOLS_FILTER=""
 while [[ $# -gt 0 ]]; do
@@ -52,17 +52,15 @@ yellow(){ printf '\033[33m%s\033[0m\n' "$*"; }
 green() { printf '\033[32m%s\033[0m\n' "$*"; }
 die()   { red "ERROR: $*" >&2; exit 1; }
 
-# ---------------------------------------------------------------- deps
+# --- tools needed ---------------------------------------------------------------
 OPT="${OPT:-$(command -v opt-22 || command -v opt || true)}"
 [[ -n "$OPT" ]] || die "opt-22 not found"
 "$OPT" --version | grep -q 'version 22\.' || yellow "WARNING: $OPT is not LLVM 22 -- plugins may fail to load"
 for dep in jq python3 cargo; do command -v "$dep" >/dev/null || die "$dep not found"; done
 
-# ---------------------------------------------------------------- optional regen / build
+# --- optional: rebuild IR / plugins -----------------------------------------------
 if (( DO_REGEN )); then
-  # benchmarks.sh only -- NOT fill.sh: fill.sh is an old copy of the IR
-  # generator (no optnone fix, no line tables, Rust bin-only) and would
-  # overwrite the correct IR.
+  # the IR comes from benchmarks.sh (fill.sh only fills in SOURCE.md)
   echo "==> Regenerating corpus IR (benchmarks.sh)"
   "$SCRIPTS/benchmarks.sh" || die "benchmarks.sh failed"
 fi
@@ -73,14 +71,14 @@ if (( DO_BUILD )); then
   cmake --build "$BUILD_DIR" -j"$(nproc)"                         || die "cmake build failed"
 fi
 
-# ---------------------------------------------------------------- locate plugins + pass names
+# --- find the plugins and their pass names --------------------------------------
 find_plugin() { find "$BUILD_DIR" -name "*$1*.so" -type f 2>/dev/null | head -n1; }
 LOOP_PLUGIN="${LOOP_PLUGIN:-$(find_plugin LoopFinder)}"
 BUFFER_PLUGIN="${BUFFER_PLUGIN:-$(find_plugin BufferAccess)}"
 [[ -f "$LOOP_PLUGIN"   ]] || die "LoopFinder plugin not found under $BUILD_DIR (try --build)"
 [[ -f "$BUFFER_PLUGIN" ]] || die "BufferAccess plugin not found under $BUILD_DIR (try --build)"
 
-# Read the pipeline name each pass registers (the `Name == "..."` in its PassBuilder callback)
+# pass name = the string in `Name == "..."` in the plugin's source
 pass_name() { grep -oP 'Name\s*==\s*"\K[^"]+' "$1" 2>/dev/null | head -n1; }
 LOOP_PASS_NAME="${LOOP_PASS_NAME:-$(pass_name "$SRC_DIR/LoopFinder/LoopFinderPass.cpp")}"
 BUFFER_PASS_NAME="${BUFFER_PASS_NAME:-$(pass_name "$SRC_DIR/BufferAccess/BufferAccessPass.cpp")}"
@@ -92,14 +90,14 @@ echo "LoopFinder:   $LOOP_PLUGIN  (-passes=$LOOP_PASS_NAME)"
 echo "BufferAccess: $BUFFER_PLUGIN  (-passes=$BUFFER_PASS_NAME)"
 echo
 
-# A leftover toy_loops folder would pollute loop_kinds.tsv
+# leftover toy results (from toy_check.sh) would end up in loop_kinds.tsv
 for d in "$LOOP_OUT"/*/toy_loops; do
   [[ -d "$d" ]] && yellow "WARNING: $d exists -- its rows will end up in loop_kinds.tsv (delete it?)"
 done
 
-# ---------------------------------------------------------------- run one pass on one file
+# --- run one pass on one file -----------------------------------------------------
 # run_pass <plugin> <pass-name> <ll> <out.json> <log>
-# Pass output = JSON lines on stderr; keep only lines starting with '{', slurp into an array.
+# The pass prints JSON lines to stderr; keep the lines starting with '{' as one array.
 run_pass() {
   local plugin="$1" name="$2" ll="$3" out="$4" log="$5"
   mkdir -p "$(dirname "$out")" "$(dirname "$log")"
@@ -112,7 +110,7 @@ run_pass() {
   return 0
 }
 
-# ---------------------------------------------------------------- main loop
+# --- all tools --------------------------------------------------------------------
 declare -a FAILED=()
 COUNTS="$LOOP_OUT/pass_counts.tsv"
 mkdir -p "$LOOP_OUT"
@@ -133,7 +131,7 @@ for lang_dir in "$BENCH"/c_cpp "$BENCH"/rust; do
       fi
       echo "[$lang/$tool/$lvl]"
 
-      # Sanity checks on the IR itself (the two silent-failure gotchas)
+      # two IR problems that otherwise fail silently
       grep -q '!DILocation' "$ll" \
         || yellow "  WARN  no line tables in IR -> loops will be 'no-debug-info' (rerun with --regen)"
       if [[ "$lvl" == O0 ]] && grep -qE '^attributes #[0-9]+ = \{.*\boptnone\b' "$ll"; then
@@ -162,7 +160,7 @@ for lang_dir in "$BENCH"/c_cpp "$BENCH"/rust; do
   done
 done
 
-# ---------------------------------------------------------------- loop kind labeling (-O0)
+# --- loop kinds -------------------------------------------------------------------
 echo
 echo "==> Labeling loop kinds (label_loops.py)"
 if python3 "$SCRIPTS/label_loops.py"; then
@@ -175,7 +173,7 @@ else
   red "  label_loops.py failed"; FAILED+=("label_loops.py")
 fi
 
-# ---------------------------------------------------------------- buffer access origin labeling
+# --- buffer access origin ---------------------------------------------------------
 echo
 echo "==> Labeling buffer access origin (label_buffers.py)"
 if python3 "$SCRIPTS/label_buffers.py"; then
@@ -184,7 +182,7 @@ else
   red "  label_buffers.py failed"; FAILED+=("label_buffers.py")
 fi
 
-# ---------------------------------------------------------------- summary
+# --- summary ----------------------------------------------------------------------
 echo
 echo "==> Per-file counts ($COUNTS)"
 column -t -s$'\t' "$COUNTS"

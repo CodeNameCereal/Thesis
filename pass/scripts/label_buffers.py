@@ -1,25 +1,24 @@
 #!/usr/bin/env python3
 """
-label_buffers.py -- tag every BufferAccessPass entry with where its code comes from.
+label_buffers.py -- adds "code_origin" to every BufferAccessPass entry.
 
 Reads   pass/results_buffer/<lang>/<tool>/<tool>_<lvl>.json
-Writes  pass/results_buffer/<lang>/<tool>/<tool>_<lvl>.labeled.json   (+ "code_origin")
+Writes  pass/results_buffer/<lang>/<tool>/<tool>_<lvl>.labeled.json
         pass/results_buffer/buffer_summary.tsv
-            one row per lang / tool / level / code_origin / index_kind, with a count
+            (count per lang / tool / level / code_origin / index_kind)
 
-code_origin is decided ONLY by the entry's "file" field (source path from debug info):
-  tool     -- the tool's own source
-              C:    .build/coreutils/src/<something>.c
-              Rust: .build/uutils-coreutils/src/uu/<tool>/...
-  project  -- shared code of the same project, not the tool itself
-              C:    rest of .build/coreutils/ (gnulib lib/, src/*.h such as system.h)
-              Rust: .build/uutils-coreutils/src/uucore/...
-  library  -- everything outside the project: Rust std/core/alloc (/rustc/...),
-              third-party crates (cargo registry), system headers (/usr/...)
-  unknown  -- empty "file" (IR built without line tables)
+code_origin comes only from the entry's "file" (source path in the debug info):
+  tool     the tool's own source
+             C:    .build/coreutils/src/<name>.c
+             Rust: .build/uutils-coreutils/src/uu/<tool>/...
+  project  other code of the same project
+             C:    the rest of .build/coreutils/ (gnulib lib/, src/*.h e.g. system.h)
+             Rust: .build/uutils-coreutils/src/uucore/...
+  library  everything else: Rust std/core/alloc (/rustc/...), crates from the
+           cargo registry, system headers (/usr/...)
+  unknown  empty "file" (IR without line tables)
 
-To count uucore/gnulib as the tool's own code instead, merge "project" into "tool"
-when reading the TSV -- the labels keep the two apart so both views are possible.
+project and tool are kept apart; add them up from the TSV if needed.
 
 Usage (from repo root):  python3 pass/scripts/label_buffers.py
 """

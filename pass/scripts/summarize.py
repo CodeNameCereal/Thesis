@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
-"""summarize.py -- build the C vs Rust summary tables from the labeled results.
+"""summarize.py -- C vs Rust summary tables from the labeled results.
 
 Usage (from repo root):  python3 pass/scripts/summarize.py
-Prints the tables and writes them to pass/results/summary.md.
+Prints the tables and saves them in pass/results/summary.md.
 
-Reads:
-  pass/results/<lang>/<tool>/<tool>_O0.labeled.json  (label_loops.py)
-  pass/results_buffer/buffer_summary.tsv  (label_buffers.py)
+Input:
+  pass/results/<lang>/<tool>/<tool>_O0.labeled.json  (from label_loops.py)
+  pass/results_buffer/buffer_summary.tsv              (from label_buffers.py)
 
 Tables:
-  1. Loops per tool, split by where the loop's code lives (same rule as
-     label_buffers.py): tool (the tool's own source), project (shared code of
-     the same project: coreutils src/*.h such as system.h + gnulib in C,
-     uucore in Rust), library (label_loops.py's "library").
-  2. Loop kinds per language (tool code only).
-  3. Buffer accesses in the tool's own code, split by index kind.
-     variable index = real array/buffer indexing (arr[i]);
-     constant index = mostly struct field accesses (compiler-generated at -O0).
+  1. Loops per tool by where the code is: tool (the tool's own source),
+     project (C: coreutils src/*.h like system.h and gnulib; Rust: uucore),
+     library (loop_kind "library"). Same rule as label_buffers.py.
+  2. Loop kinds per language, tool code only.
+  3. Buffer accesses in tool code by index kind. Variable index = real
+     indexing (arr[i]); constant index = mostly struct fields at -O0.
   4. Buffer accesses by code origin (tool / project / library), all index kinds.
 """
 import csv, glob, json, os, sys
@@ -36,7 +34,7 @@ def read_tsv(path):
 
 
 def code_origin(path, lang, tool):
-    """Same rule as label_buffers.py: tool / project / library."""
+    # same rule as label_buffers.py
     if lang == "c_cpp" and "/coreutils/" in path and "/uutils-coreutils/" not in path:
         return "tool" if "/coreutils/src/" in path and path.endswith(".c") else "project"
     if lang == "rust" and "/uutils-coreutils/" in path:
@@ -45,7 +43,7 @@ def code_origin(path, lang, tool):
 
 
 def read_loops():
-    """(lang, tool, origin, kind) for every loop in the labeled -O0 results."""
+    # (lang, tool, origin, kind) for each loop in the labeled -O0 files
     files = sorted(glob.glob(f"{RESULTS}/*/*/*_O0.labeled.json"))
     if not files:
         sys.exit("no *_O0.labeled.json files -- run run_all_passes.sh first")
@@ -79,7 +77,7 @@ def main():
     bufs = read_tsv(BUFS)
     md = ["# C vs Rust -- summary (-O0)", ""]
 
-    # 1. loops per tool, by origin
+    # 1. loops per tool and origin
     n = defaultdict(int)
     kinds = defaultdict(lambda: defaultdict(int))
     for lang, tool, origin, kind in loops:
@@ -99,13 +97,13 @@ def main():
     if other:
         md += [f"Unmatched / no-debug-info loops (not counted above): {other}", ""]
 
-    # 2. loop kinds, tool code only
+    # 2. loop kinds (tool code)
     all_kinds = sorted({k for lang in kinds for k in kinds[lang]})
     rows = [(k, kinds["c_cpp"].get(k, 0), kinds["rust"].get(k, 0)) for k in all_kinds]
     md += ["## 2. Loop kinds (tool code only, all tools)", "",
            table(("kind", "C", "Rust"), rows), ""]
 
-    # 3. buffer accesses, tool code, by index kind
+    # 3. buffer accesses in tool code, by index kind
     b = defaultdict(int)
     for r in bufs:
         b[(r["lang"], r["tool"], r["code_origin"], r["index_kind"])] += int(r["count"])
