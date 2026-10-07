@@ -1,133 +1,105 @@
-# Thesis: LLVM Loop Analysis & Security-Related Statistics Passes
+# Thesis: C vs Rust at the LLVM IR level
 
-Compares C (GNU coreutils) and Rust (uutils/coreutils) implementations of the
-same tools at the LLVM IR level. Phases (per advisor): **1. loops** ->
-**2. bounds checks + buffer accesses** (current) -> **3. broader security
-patterns** (casts, initializations, ...).
+Compares the same 10 Unix tools written in C (GNU coreutils) and Rust
+(uutils/coreutils) by analysing their LLVM IR with two custom LLVM passes.
 
-- **Toolchain:** clang-22 + rustc 1.98.1, both on LLVM 22.1.8 (re-verify after
-  any toolchain update; no `rust-toolchain.toml`).
-- **Corpus:** `sum, expand, echo, fold, tee, mkdir, comm, paste, nl, shuf` in C
-  and Rust -- `benchmarks/<c_cpp|rust>/<tool>/{src, ir/<tool>_O0.ll, SOURCE.md, NOTES.md}`.
-- **-O0 only.** C `-O0`, Rust debug profile (`opt-level=0`). Not identical in
-  every compiler detail, but both mean "no optimization".
+Phases (per advisor): **1. loops** -> **2. buffer accesses + bounds checks**
+-> **3. other security patterns** (casts, initialization, ...).
+
+| | |
+|---|---|
+| Tools | `sum expand echo fold tee mkdir comm paste nl shuf` |
+| Toolchain | clang-22 + rustc 1.98.1, both LLVM 22.1.8 (re-check after updates) |
+| Optimization | **-O0 only** (C `-O0`, Rust debug profile) |
+| Corpus layout | `benchmarks/<c_cpp\|rust>/<tool>/{src/, ir/<tool>_O0.ll, SOURCE.md, NOTES.md}` |
 
 ---
 
-## Run
+## 1. Quick start
 
 ```bash
-./pass/scripts/run_all_passes.sh --regen   # regenerate IR, run both passes + labeling
-python3 pass/scripts/summarize.py          # C vs Rust tables -> pass/results/summary.md
-./pass/scripts/run_checks.sh               # validation -> pass/results/checks.log
+./pass/scripts/run_all_passes.sh --build --regen  # build passes, regenerate IR, run passes + labeling
+python3 pass/scripts/summarize.py                 # C vs Rust tables -> pass/results/summary.md
+./pass/scripts/run_checks.sh                      # all validation -> pass/results/checks.log
+python3 pass/scripts/compare_tool.py fold         # one-tool report -> pass/results/compare_fold.md
 ```
 
-| Script | What it does |
+`--build` only after changing a pass; `--regen` only after changing the IR build.
+`run_checks.sh` must end with `OK` in all 4 checks.
+
+---
+
+## 2. What is where
+
+**Passes** (`pass/src/`, built with CMake into `pass/src/build/`):
+
+| Pass | Finds | Main fields per entry (JSON line) |
+|---|---|---|
+| `LoopFinder/LoopFinderPass.cpp` | every natural loop | function, `depth`, `latch_count` (back edges), `src_loc` (file/line) |
+| `BufferAccess/BufferAccessPass.cpp` | every element read/write: `a[i]`, Rust `s[i]`, Rust `Vec` `v[i]` (std call), `get_unchecked` | `access_kind`, `index_kind` (variable/constant), `origin` (alloca/global/heap/param/unknown), `inside_loop`, file/line + bounds-check fields (section 5) |
+
+**Scripts** (`pass/scripts/`):
+
+| Script | Role |
 |---|---|
-| `benchmarks.sh` | Builds -O0 IR for all tools. C: real build flags + `-disable-O0-optnone -gline-tables-only`. Rust: `--bin` + `--lib` IR merged with `llvm-link-22` |
-| `run_all_passes.sh` | Both passes on all tools, then both labeling scripts. `--build`, `--regen`, `--tools a,b` |
-| `label_loops.py` | Loop kind per loop (`for`/`while`/`do-while`/`goto`/`loop`/`while-let`/`library`) |
-| `label_buffers.py` | Buffer access origin: `tool` / `project` / `library` |
-| `summarize.py` | Final C vs Rust tables |
-| `run_checks.sh` | Runs all validation checks below; saves `pass/results/checks.log` (`--quick` skips the slow one) |
-| `toy_check.sh` | Regression test on the toy corpus, plus 33 bounds-check cases with known `bound_ok`, `index_expr`, `check_signed` (C + Rust); fails if any case is wrong or reports != 1 access |
-| `check_loops.py` | Every loop vs its source line, all tools |
-| `check_buffers.py` | Tool-code buffer accesses vs their source line |
-| `debuginfo_check.sh` | Loops identical with / without debug info (slow) |
-| `spot_check.py <lang> <tool>` | Each loop next to its source line, for a manual look at one tool |
-| `fill.sh` | Fills `SOURCE.md` provenance only (never builds IR) |
-| `dump_environment.sh` | Records toolchain versions in `ENVIRONMENT.md` |
+| `benchmarks.sh` | builds -O0 IR for all tools (C: real build flags; Rust: bin + lib merged) |
+| `run_all_passes.sh` | runs both passes + both labeling scripts (`--build`, `--regen`, `--tools a,b`) |
+| `label_loops.py` | adds `loop_kind` (for/while/do-while/goto/loop/while-let/library) |
+| `label_buffers.py` | adds `code_origin` (tool/project/library) to buffer accesses |
+| `summarize.py` | the C vs Rust tables (`summary.md`) -- the file sent to the advisor |
+| `compare_tool.py <tool>` | one-tool report: every loop with its source line, buffer accesses by origin and in/out of loops |
+| `run_checks.sh` | runs the 4 checks below, saves `checks.log` (`--quick` skips the slow one) |
+| `toy_check.sh` | toy corpus + 33 known-answer bounds-check cases (fails on any mismatch) |
+| `check_loops.py` | every loop vs its source line, all tools |
+| `check_buffers.py` | buffer accesses vs their source line |
+| `debuginfo_check.sh` | results identical with / without debug info |
+| `spot_check.py <lang> <tool>` | one tool's loops next to their source lines |
+| `fill.sh` | fills `SOURCE.md` (upstream commit) -- never builds IR |
+| `dump_environment.sh` | records tool versions in `ENVIRONMENT.md` |
 
-Output: `pass/results/` (loops), `pass/results_buffer/` (buffer accesses),
-`pass/logs/` (opt stderr).
+`pass/tools/loop_ast_rs/` -- small Rust parser (syn) used by `label_loops.py`.
 
----
-
-## Status
-
-- **LoopFinderPass** [DONE] -- per loop: header, depth, latches, subloops, source location.
-- **BufferAccessPass** [DONE] -- GEP-mediated load/store: index kind, buffer origin,
-  in-loop, bounds-check heuristic (+ `check_line`), source file/line.
-- **Toy corpus** [DONE] -- revalidated with current scripts (`toy_check.sh`).
-- **Real corpus** [DONE] -- all 20 tools, zero `unmatched` / `no-debug-info`.
-- **Closure / let-chain fix** [DONE] -- `loop_ast_rs` counts depth per function
-  like LLVM (restarts at 0 in closures, async blocks, nested fns; a closure is
-  its own function in the IR) and labels `while let ... && ...` as while-let.
-  No change on the corpus (no such loops), verified.
-- **Validation** [DONE] (`run_checks.sh`) -- all 159 tool loops checked against
-  their source (0 errors); 116/130 variable-index buffer accesses on an indexing
-  line, the other 14 explained (C macro `XARGMATCH`, Rust match arm with the
-  indexing on the next line); debug info verified not to change the loops
-  (SAME in all 20 tools). Manual spot-check: Rust fold 15/15, C fold 9/9, Rust tee 4/4.
-- **`dominated_by_check` fix** [DONE] -- three bugs fixed:
-  1. C at -O0: the check and the index were different SSA values (a new
-     `load` of `i` per use, plus `sext`), so C was never "checked". Now both
-     sides are compared by their underlying variable (`alloca`).
-  2. Rust's own bounds check is `br (llvm.expect(icmp ...))`, not `br (icmp)`,
-     so it was never found. Now looks through `llvm.expect`.
-  3. "Checked" used to mean "the compare's block dominates the access". That
-     also counted `if (i < n) x = 1; a[i];` (both paths reach `a[i]`) and a
-     compare in the same block as the access (the branch runs *after* it).
-     Now one branch *edge* must dominate the access.
-  Verified on a toy (C: for / if / early return / `&&` / do-while / unchecked,
-  Rust: array index / if) -- all as expected. Corpus re-run: C 0/98 -> 57/98.
-  4. Loop conditions with `&&` / `||` (`for (i = 0; i < n && go; i++)`):
-     clang -O0 merges the parts into one i1 value (phi) and branches on
-     that, so `i < n` never directly decided the body. The check is now
-     derived from the merged value (compare first or last, `&&` and `||`;
-     a dominance condition keeps it safe). C 57/98 -> 67/98 (paste's
-     `fileptr[i]` loop).
-  Spot-check C comm: every `true` is a real guarding check (0 false positives);
-  every `false` is a computed or memory-read index (see limitations).
-- **Check quality** [DONE] -- for each guarded access the
-  pass now also reports the comparison as seen on the way to the access
-  (`check_op`: `<` `<=` `>` `>=` `==` `!=`, direction already applied), what it
-  compares against (`check_bound`: a constant or `var`), the static buffer
-  size from the IR type (`buffer_size`, 0 = unknown: pointers, heap, slices)
-  and a verdict `bound_ok`:
-  - `yes`: rustc's `panic_bounds_check`, or a constant bound that fits the
-    size (`i < 4` / `i <= 3` on `[4 x T]`);
-  - `no`: provably wrong -- a constant bound past the size (`i <= 4` on
-    `[4 x T]`, off-by-one), or the wrong direction with every index that
-    gets through out of bounds (`if (i >= 4) a[i]` on `[4 x T]`);
-  - `unknown`: upper bound against a variable or a buffer of unknown size;
-  - `lower`: only a lower-bound / non-zero test on the way (`if (i > 0)`,
-    `if (used != 0)`) -- no upper bound, nothing provably wrong;
-  - `none`: no check.
-  With several checks on one access, the best is reported. Verified on a
-  toy: C (correct / off-by-one / too big / wrong direction / early return /
-  `<=` / `==` / `!=` / `> 0` / pointer / 2-D) and Rust (slice, array, `if` +
-  slice, `&&`/`||` loops) -- kept as an automatic test in `toy_check.sh`
-  (25 cases, all PASS; confirmed to FAIL when the direction or `&&`/`||`
-  logic is broken). Corpus: the one
-  first `no` (shuf.c:283, `if (used && ...)
-  buf[used++]`) was a non-zero test, not a wrong check -> led to `lower`.
-- **Pattern fields** [DONE] -- three additions, aimed at C vs Rust patterns
-  (new JSON fields go at the end of each line; old fields unchanged):
-  - **Rust element indexing through std** (`v[i]` on a `Vec` / `VecDeque`:
-    a call to std's `Index<usize>` / `IndexMut<usize>`, whose GEP is inside
-    std) is now the tool's access: `access_kind` `index`, `bound_ok` `yes`,
-    `check_bound` `len` (std always checks). `get_unchecked` (any form) is
-    `index_unchecked`, `bound_ok` `none`. Slicing (`s[a..b]`, `v[a..b]`) is
-    **not** an access -- it makes a view; its elements are counted when read.
-    (rustc 1.98 inlines slice ranges completely, so this also keeps results
-    stable across rustc versions.) Needs v0 symbol names (rustc 1.98 default).
-  - **`index_expr`**: what the index is -- `variable` (local / parameter,
-    incl. a field of a local struct such as rustc's `Range`), `computed`
-    (arithmetic, incl. Rust's checked arithmetic), `memory` (read from another
-    buffer / struct), `other`.
-  - **`check_signed`**: whether the check is a signed compare (C `int`:
-    `i < n` does not exclude `i < 0`).
-  33 known-answer cases in `toy_check.sh`, mutation-tested (ignoring index
-  calls, breaking `index_expr`, counting slicing again -> FAIL).
-- **Phase 2** [IN PROGRESS] / **Phase 3** [NOT STARTED]
+**Outputs:** `pass/results/` (loops, `summary.md`, `checks.log`, `compare_<tool>.md`,
+`bounds_review.txt`), `pass/results_buffer/` (buffer accesses), `pass/logs/` (opt stderr).
 
 ---
 
-## Results (-O0)
+## 3. Method -- choices that affect every number
 
-**Loops by where their code lives** (tool = the tool's own source; project =
-shared project code: `system.h`/gnulib in C, uucore in Rust; library = std & deps):
+1. **Rust IR = binary + library merged.** Each uutils tool is a tiny binary
+   (`main.rs`) plus a library crate (`<tool>.rs`) with the real code. IR from
+   `--bin` alone has the library functions only as declarations (expand: 1 loop
+   instead of 26). `benchmarks.sh` emits IR for both and merges them with `llvm-link-22`.
+2. **-O0 / debug only.** The IR stays close to the source (no inlining, loop
+   merging or check removal), which loop labeling needs. Numbers describe code
+   as written, not a release build (e.g. Rust drops many checks at -O2).
+3. **tool / project / library** is decided by the source file path in the debug info:
+   `coreutils/src/*.c`, `uutils-coreutils/src/uu/<tool>/` -> **tool**; any other
+   file of the same repo (`system.h`, gnulib `lib/`, uucore) -> **project**;
+   everything else (Rust std `/rustc/...`, std deps `/rust/deps/...`, crates
+   `/usr/local/cargo/registry/...`, `/usr/...`) -> **library**.
+4. **Library code is visible only in Rust.** Rust's generic std code
+   (iterators, `Vec`, `HashMap`) is compiled into each program; libc's code is
+   not (only declarations). C's 0 library loops reflect compilation, not usage.
+5. **Project code is only partly visible** in both languages (only inline /
+   generic parts of gnulib and uucore end up in each tool's IR).
+6. **Loops are IR natural loops**, not source statements: two source loops
+   sharing a start merge into one (Rust fold `loop { while ... }`); a `goto`
+   loop counts as a loop.
+7. **A buffer access is an indexed element read/write.** Slicing (`s[a..b]`)
+   is not one (it makes a view). **Bulk copies (`memcpy`, `memmove`, `fwrite`)
+   and pointer walking (`*p++`, `p += len`) are not counted** -- C code that
+   moves data this way shows few accesses (e.g. C fold).
+8. **Counts are per IR instruction**, not per source line. Rust's many
+   constant-index accesses are mostly struct fields rustc creates at -O0; only
+   the variable-index numbers compare like with like.
+9. Measured code = the upstream commits recorded in each `SOURCE.md`.
+
+---
+
+## 4. Results (-O0) -- sent to the advisor (`summary.md` / PDF)
+
+**Loops by where their code lives**
 
 | tool | C tool | C project | Rust tool | Rust project | Rust library |
 |---|---|---|---|---|---|
@@ -143,152 +115,158 @@ shared project code: `system.h`/gnulib in C, uucore in Rust; library = std & dep
 | tee | 6 | 3 | 3 | 1 | 21 |
 | **total** | **63** | **27** | **66** | **3** | **134** |
 
-- Own loops are about equal (63 vs 66). C's 27 project loops are the same 3
-  `system.h` help/usage loops in every tool (not sum: no own `main()`).
-- Style differs: C mostly `for` (31) / `while` (28); Rust `for` (35), `while`
-  (13), `loop` (11), `while-let` (7).
-- Rust's 134 library loops = looping inside iterators/std (`.map()`,
-  `.collect()`, `HashMap`) instead of in the tool's code. C has none (libc
-  bodies are not in the IR).
+**Loop kinds (tool code):** C for 31, while 28, do-while 3, goto 1;
+Rust for 35, while 13, loop 11, while-let 7.
 
-**Buffer accesses, tool code:** variable index (real indexing) C 98 vs Rust 34
-(32 direct slice / array indexing + 2 `Vec` `v[i]` through std); constant
-index (mostly struct fields) C 185 vs Rust ~2200. No `get_unchecked` in the
-tools' own code.
+**Buffer accesses (tool code):** variable index C 98 vs Rust 34 (6 Rust tools
+have none -- iterators instead of indexing); constant index C 185 vs Rust 2,205.
+All origins, all index kinds: C tool 283 / project 94 / library 0;
+Rust 2,239 / 377 / 9,208.
 
-**Bounds-checked (`dominated_by_check`), variable index, tool code:** C 67 / 98
-(68%), Rust 34 / 34 (100%: rustc's / std's automatic bounds checks). Heuristic
--- see limitations; an unchecked C access is not necessarily unsafe, so C's 68%
-is a lower bound.
+Observations: own-code loops are about equal; Rust's extra 134 loops run
+inside std (iterators); C's 27 project loops are the same 3 `system.h`
+help-text loops in every tool (sum has none: no own `main()`).
 
-**Check quality (`bound_ok`), variable index, tool code:**
+---
 
-| `bound_ok` | C | Rust |
+## 5. Bounds checks (done -- not yet presented to the advisor)
+
+For every variable-index access BufferAccessPass also reports:
+
+| Field | Meaning |
+|---|---|
+| `dominated_by_check`, `check_line` | a compare on the index decides whether the access runs (one branch edge dominates it) |
+| `check_op`, `check_bound` | the compare on the way to the access, direction applied (`i < 4`, `i < n`, `len`) |
+| `buffer_size` | static size from the IR type (`int a[4]` -> 4), 0 = unknown |
+| `bound_ok` | `yes` provably within size (or rustc/std check) / `no` provably wrong / `unknown` bound is a variable / `lower` only a lower-bound or `!=` test / `none` no check |
+| `index_expr` | index is `variable` / `computed` (`i - 1`) / `memory` (`alt[i][0]`) / `other` |
+| `check_signed` | signed compare (C `int`: does not exclude `i < 0`) |
+
+Detection handles: C stack reloads (compare via the variable's `alloca`),
+rustc's `br (llvm.expect(icmp))`, `&&` / `||` loop conditions (clang -O0
+merges them into a phi), several checks per access (best one reported).
+
+**Results, variable index, tool code**
+
+| | C | Rust |
 |---|---|---|
-| yes (proven against the size) | 14 | 34 |
-| unknown (bound is a variable: 47; constant but size unknown: 5) | 52 | 0 |
-| lower (only a lower-bound / non-zero test) | 1 | 0 |
-| no (provably wrong) | 0 | 0 |
-| none (no check) | 31 | 0 |
-| **total** | **98** | **34** |
+| accesses | 98 | 34 (32 direct + 2 `Vec` `v[i]`) |
+| `yes` | 14 | 34 |
+| `unknown` (variable bound 47, unknown size 5) | 52 | 0 |
+| `lower` | 1 | 0 |
+| `no` | 0 | 0 |
+| `none` (index: variable 15, memory 8, computed 7, other 1) | 31 | 0 |
+| signed checks | 41 / 67 | 0 / 34 |
+| `get_unchecked` | -- | 0 |
 
-- Rust: every index is checked against its length -- by rustc
-  (`panic_bounds_check`, 32) or inside std's `Index` (2) -- 34/34 provable.
-- C: 67 of 98 have a check, but only 14 can be proven statically; most C
-  checks compare against a variable (`i < n_streams`) or index a pointer,
-  whose size is not in the IR. No provably wrong check found.
-
-**C vs Rust patterns, variable index, tool code:**
-
-| Pattern | C | Rust |
-|---|---|---|
-| index checked against the length by the compiler / std | 0 | 34 / 34 |
-| programmer-written check found | 67 / 98 | -- (in addition, not needed) |
-| check is a **signed** compare (`int i`: `i < n` lets `i < 0` through) | 41 / 67 | 0 / 34 |
-| no visible check (`none`), index is a plain variable | 15 | 0 |
-| no visible check, index **computed** (`a[i - 1]`, `argv[argc - 1]`) | 7 | 0 |
-| no visible check, index **read from memory** (`all_line[i][alt[i][0]]`) | 8 | 0 |
-| no visible check, other | 1 | 0 |
-| unchecked indexing (`get_unchecked`) | -- | 0 |
-
-- C relies on checks the programmer writes -- most against a runtime
-  variable, most signed; Rust gets a check on every index from the compiler,
-  always unsigned (`usize`), also on computed indices (the check is on the
-  final value right before the access).
-- C's 31 unchecked accesses are mostly safe by an invariant the IR does not
-  show (computed / memory-read indices, `'\0'`-terminated string loops,
-  checks in a caller) -- `index_expr` shows which.
+C relies on programmer-written checks (mostly against runtime variables,
+mostly signed); Rust checks every index automatically (unsigned, also on
+computed indices). No provably wrong check in either. C's `none` accesses are
+mostly safe by invariants the IR does not show.
 
 ---
 
-## Known limitations
+## 6. Current task (approved by the advisor): fold, loop by loop
 
-- **Loop counts are IR natural loops, not source statements.** Loops sharing a
-  header merge: Rust fold `loop { while ... {} ... }` (while first in the body)
-  -> 1 IR loop with 3 latches.
-- Loops in Rust `macro_rules!` bodies are invisible to syn (-> `unmatched`
-  or the enclosing loop's kind). None in the corpus (0 `unmatched`).
-- `#[inline(always)]` code is inlined even at -O0; labeling uses the innermost
-  location (`src_loc[0]`).
-- A loop's IR location is often not its keyword line but a statement inside
-  the body (e.g. the first `if` after `let x = ...;` in a Rust `loop`); C `goto`
-  loops point at the first statement after the label. Checks look a few code
-  lines back for this reason.
-- **`dominated_by_check` is a heuristic.** It means "some compare on the index
-  variable decides whether the access runs"; `bound_ok` then judges that
-  compare. Still not covered:
-  - a bound that is a variable (`i < n`): `bound_ok` is `unknown` unless it
-    is rustc's own check -- matching `n` to the buffer's length is not done;
-  - signedness: `i < 4` on a signed `i` counts as `yes` although a negative
-    `i` would pass (no lower-bound check is required);
-  - whether the variable changes between check and access
-    (`if (i < n) { i++; a[i]; }` still counts);
-  - computed indices: `a[i + 1]` is not matched to `i < n` or `i + 1 < n`
-    (only casts and stack reloads are looked through);
-  - indices read from memory: in `all_line[i][alt[i][0]]` the index
-    `alt[i][0]` is never compared at all -- kept in range by an invariant
-    (comm), so it counts as unchecked even though it is safe;
-  - string loops `for (i = 0; s[i]; i++)` (echo) stop at the `'\0'`, not at
-    a compare on `i` -> `none`; `switch` on the index is not treated as a check;
-  - any compare that involves the index variable is matched, also where the
-    variable is the *bound*: shuf.c:138 `operand[n_operands]` gets the loop
-    `i < n_operands` as its check (`unknown`, but `check_line` is misleading);
-  - with several equally good checks the first one found is reported (Rust
-    fold 425-446 show rustc's check at 391, not the one on their own line);
-  - newer rustc (1.98) no longer keeps the array type in index GEPs, so Rust
-    arrays get `buffer_size` 0; their `yes` comes from `panic_bounds_check`.
-- **BufferAccess sees one function only:** a check done in a calling / helper
-  function is not seen. Rust's std indexing is the exception it handles: calls
-  to `Index<usize>` / `IndexMut<usize>` (`Vec`, `VecDeque`) and
-  `get_unchecked` are recognised by name. Other containers' indexing and
-  user-written `Index` impls are not counted. Slicing is not an access by
-  design.
-- The Rust index-call matching uses v0 demangled names (rustc 1.98 default);
-  legacy-mangled IR would not match.
-- `check_signed` only reports signedness; the verdict does not require a
-  separate `i >= 0` check, so a signed `yes` assumes a non-negative index.
-- Project code is only partially in the IR in both languages (only uucore's
-  generic/inline code; only gnulib's header inlines).
+Pair every C loop with its Rust counterpart by role (1:1, 1:N, only in one
+language), and for buffer accesses check where the memory lives and whether
+they are inside loops. Data: `compare_tool.py fold`. **Draft below -- verify
+rows 4 and 8 and the two `Iter<u8>::all` library loops against the source.**
+
+| # | Role | C `fold.c` | Rust `fold.rs` | Match |
+|---|---|---|---|---|
+| 1 | parse options | 303 `getopt_long` | 147 `handle_obsolete` (rest: clap, library) | 1:1 partial |
+| 2 | loop over input files | 352 | 167 | 1:1 |
+| 3 | main character loop | 187 `mbbuf_get_char` | 390 ASCII, 508 UTF-8, 592 invalid UTF-8, 226 bytes `-b` | 1:4 |
+| 4 | retry char after a line break | 198 `goto rescan` | 410, 551 (TAB only) | 1:2 |
+| 5 | recount columns of carried text | 233 | 288 UTF-8, 304 other | 1:2 |
+| 6 | find last blank (`-s`) | 210 | -- (tracked in `last_space`; std `rposition`) | only C |
+| 7 | read input chunks | -- (inside gnulib `mbbuf`) | 706 `fill_buf` | only Rust |
+| 8 | batch plain-ASCII runs | -- | 443, 466 | only Rust |
+| 9 | merge zero-width chars | -- | 515 | only Rust |
+| 10 | split input into UTF-8 parts | -- | 642 | only Rust |
+
+Difference +9 = main loop split (+3) + TAB retry (+1) + column recount (+1)
++ reading (+1) + ASCII batching (+2) + zero-width (+1) + UTF-8 split (+1)
+- blank search (-1). C: one big function, nesting depth 3; Rust: ~10 small
+functions, depth <= 2. Rust library loops: byte searches 7, argument handling
+5 (incl. clap), I/O 3.
+
+Buffer accesses: C's data buffers are **static fixed-size arrays**
+(`line_in`, `line_out`), moved with `memcpy`/`memmove`/`fwrite`/gnulib -> only
+1 indexed access (`argv[i]`, in the file loop). Rust uses **heap `Vec`s**
+(`output`, `pending`) -> 16 indexed accesses, all `line[idx]` inside the ASCII
+loop (shown as `param`; really a slice of the `pending` Vec). Constant-index
+accesses (C 19, Rust 411) are mostly struct fields.
+
+Conclusions: (1) same job, different design -- one general loop + gnulib (C)
+vs specialised loops per input kind (Rust); (2) different memory model --
+static buffers + copy functions (C) vs heap `Vec` + indexing (Rust).
+Caveat: copies and pointer walking are not counted (method 7).
 
 ---
 
-## Gotchas
+## 7. Validation
 
-- **optnone:** clang marks all functions `optnone` at -O0 -> every pass silently
-  skipped. Fix: `-Xclang -disable-O0-optnone`. `run_all_passes.sh` warns.
-- **Rust bin + lib:** `--bin` IR alone lacks all non-generic tool functions
-  (expand: 1 loop instead of 26). IR is built for `--lib` too and merged.
-  Check: `grep '^declare' <tool>_O0.ll | grep uu_<tool>` should list no tool functions.
-- **`-C codegen-units=1` + `CARGO_INCREMENTAL=0`:** one `.ll` per crate;
-  otherwise code can be split across files and lost.
-- **Line tables** (`-gline-tables-only` / `-C debuginfo=line-tables-only`) are
-  required, otherwise every loop is `no-debug-info`.
-- **Library paths:** Rust std `/rustc/.../library/`, std's own deps
-  `/rust/deps/` (e.g. hashbrown), cargo crates `/usr/local/cargo/registry/`.
-- **Old `fill.sh` rebuilt IR** with outdated flags and overwrote correct IR.
-  Now `SOURCE.md` only.
-- **-O0 C keeps variables on the stack:** every use of `i` is a fresh `load`
-  from `alloca %i`, so "same variable" must be compared via the `alloca`, not
-  the SSA value.
-- **rustc bounds checks use `llvm.expect`:** `br (llvm.expect(cmp, true))`,
-  not `br cmp`.
-- **clang -O0 loop conditions with `&&` / `||`** branch on a merged phi value,
-  not on the compare (if-statements branch directly).
-- Header is `llvm/Plugins/PassPlugin.h` on this LLVM-22 build.
-- coreutils needs `./configure --disable-gcc-warnings`.
-- `sum` is built from shared `cksum.c` (no own `main()`); build script handles it.
-- `label_loops.py` needs `pip3 install libclang` (unpinned) and
-  `pass/tools/loop_ast_rs` (needs `proc-macro2`'s `span-locations` feature).
+`run_checks.sh` (all must be `OK`): toy corpus (loops + 33 known-answer
+bounds-check cases, mutation-tested), all 159 tool loops vs source (0
+flagged), buffer accesses vs source (118/132 on an indexing line, the rest
+explained: macro `XARGMATCH`, Rust match arm), debug info does not change any
+loop count (all 20 `SAME`). Manual: every tool's bounds-check rows reviewed
+(`bounds_review.txt`); fold/tee loops checked line by line.
 
 ---
 
-## Next steps
+## 8. Known limitations
 
-1. **Spot-check done:** every tool reviewed against the source
-   (`pass/results/bounds_review.txt`); one gap found (`&&`/`||` loops), fixed.
-2. **Advisor:** confirm counting project code (`system.h`/gnulib, uucore)
-   separately, as in the Results table.
-3. **Advisor:** confirm the access definition -- element reads/writes only
-   (incl. Rust `Vec` `v[i]` through std), slicing not counted.
-4. **Phase 2, next (optional):** decide `unknown` checks against a variable
-   (`i < n`) by tracing `n` to the buffer's allocation size.
+- Loop labeling: loops inside Rust `macro_rules!` are invisible (none in the
+  corpus); a loop's IR line is often the first statement of its body.
+- One function at a time: checks in callers are not seen; other Rust
+  containers' indexing and user `Index` impls are not counted.
+- Bounds checks: a variable bound (`i < n`) is never matched to the buffer's
+  size; signed `yes` assumes `i >= 0`; the index changing after the check is
+  not detected; computed / memory-read indices and `'\0'` string loops show
+  as `none`; `switch` is not a check; a compare where the variable is the
+  *bound* can be picked as the check (shuf.c:138); rustc 1.98 gives Rust
+  arrays `buffer_size` 0 (verdict still `yes` via `panic_bounds_check`).
+- `origin`: `param` / `unknown` need a manual look (a Rust `Vec` is on the heap).
+- Rust index-call matching needs v0 symbol names (rustc 1.98 default).
+
+---
+
+## 9. Gotchas
+
+- **optnone:** clang marks -O0 functions `optnone` -> passes silently skip
+  them. Fix: `-Xclang -disable-O0-optnone` (in `benchmarks.sh`; `run_all_passes.sh` warns).
+- **Rust bin + lib:** check with `grep '^declare' <tool>_O0.ll | grep uu_<tool>` (must be empty).
+- **`-C codegen-units=1` + `CARGO_INCREMENTAL=0`:** one `.ll` per crate.
+- **Line tables** (`-gline-tables-only` / `-C debuginfo=line-tables-only`) required.
+- **Old `fill.sh`** used to rebuild IR with wrong flags; now `SOURCE.md` only.
+- **`run_all_passes.sh` finds a pass's name** by grepping `Name == "..."` in its `.cpp` -- keep that form.
+- **When copying downloaded files**, check the first lines name the file (a
+  script was once overwritten by another): `head -3 pass/scripts/*`.
+- Plugin header is `llvm/Plugins/PassPlugin.h` on this LLVM 22 build.
+- coreutils: `./configure --disable-gcc-warnings`; `sum` is built from `cksum.c` (no own `main()`).
+- `label_loops.py` needs `pip3 install libclang` and `pass/tools/loop_ast_rs`
+  (`proc-macro2` with `span-locations`).
+
+---
+
+## 10. Status and next steps
+
+**Advisor communication**
+- Sent: loop + buffer-access statistics per tool (`summary.md` as PDF), with
+  the tool / project / library split explained.
+- Approved next task: section 6 (fold, loop by loop + buffer-access origin /
+  in-loop). Promised: a short write-up with the results.
+- Bounds checks (section 5): already implemented and validated; the advisor
+  sees it as future work -- asked whether to do it next.
+
+**Next**
+1. Verify the fold table (section 6) against the source; write the short
+   Greek write-up for the advisor.
+2. Optionally the same for tee (`compare_tool.py tee`).
+3. Open questions for the advisor: count project code separately (as now) or
+   with the tool? Is "element reads/writes only, no slicing" the right access definition?
+4. Later: phase 3 (casts / integer overflow checks, initialization);
+   optionally decide `unknown` checks by tracing `n` to the allocation size.
