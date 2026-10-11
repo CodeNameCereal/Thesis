@@ -27,6 +27,19 @@ python3 pass/scripts/compare_tool.py fold         # one-tool report -> pass/resu
 `--build` only after changing a pass; `--regen` only after changing the IR build.
 `run_checks.sh` must end with `OK` in all 4 checks.
 
+**`--regen` needs the two upstream projects in `.build/`** (gitignored;
+`benchmarks.sh` does not clone or build them). One-time setup, with the
+commits the corpus was built from (`git -C .build/<project> rev-parse HEAD`
+in the current checkout -- write them here):
+
+```bash
+mkdir -p .build && cd .build
+git clone https://github.com/coreutils/coreutils.git && cd coreutils
+git checkout <C_HASH> && ./bootstrap && ./configure --disable-gcc-warnings && make -j"$(nproc)"
+cd .. && git clone https://github.com/uutils/coreutils.git uutils-coreutils
+git -C uutils-coreutils checkout <RUST_HASH>
+```
+
 ---
 
 ## 2. What is where
@@ -257,16 +270,48 @@ loop count (all 20 `SAME`). Manual: every tool's bounds-check rows reviewed
 **Advisor communication**
 - Sent: loop + buffer-access statistics per tool (`summary.md` as PDF), with
   the tool / project / library split explained.
-- Approved next task: section 6 (fold, loop by loop + buffer-access origin /
-  in-loop). Promised: a short write-up with the results.
+- Approved task: section 6 (fold, loop by loop + buffer-access origin /
+  in-loop). Greek write-up made: `fold_C_vs_Rust.docx` (also a Claude doc,
+  "fold: C vs Rust ανά loop"). **Not sent yet** -- rows 4 and 8 still to verify.
 - Bounds checks (section 5): already implemented and validated; the advisor
-  sees it as future work -- asked whether to do it next.
+  sees it as future work -- asked whether to do it next. Keep it out of
+  anything the advisor sees (write-ups and the advisor repo, section 11).
 
 **Next**
-1. Verify the fold table (section 6) against the source; write the short
-   Greek write-up for the advisor.
-2. Optionally the same for tee (`compare_tool.py tee`).
-3. Open questions for the advisor: count project code separately (as now) or
+1. Verify fold table rows 4 and 8 and the two `Iter<u8>::all` library loops
+   against `fold.c` / `fold.rs`; fix the docx if needed; send it.
+2. Fix the advisor repo (section 11, "To fix").
+3. Optionally the same analysis for tee (`compare_tool.py tee`).
+4. Open questions for the advisor: count project code separately (as now) or
    with the tool? Is "element reads/writes only, no slicing" the right access definition?
-4. Later: phase 3 (casts / integer overflow checks, initialization);
+5. Later: phase 3 (casts / integer overflow checks, initialization);
    optionally decide `unknown` checks by tracing `n` to the allocation size.
+
+---
+
+## 11. Advisor repo (Bitbucket `srecgrp/rust-c-coding-patterns`)
+
+The advisor sees this repo, not this one. Clone/push from the Ubuntu (WSL)
+app: the SSH key for Bitbucket is there, not in the dev container.
+
+Layout: `code/` (both passes, `CMakeLists.txt`, the scripts flat, `tools/loop_ast_rs/`)
+and `paper/`; short README for that layout.
+
+What differs from this repo:
+- `BufferAccessPass.cpp` **without bounds checks**: same accesses and fields
+  (`file`, `origin`, `inside_loop`, `index_kind`, Rust `v[i]` / `get_unchecked`),
+  none of the section-5 fields. Same numbers as section 4.
+- `LoopFinderPass.cpp` identical to this repo.
+- Scripts there (`benchmarks.sh`, `run_all_passes.sh`, `label_loops.py`,
+  `label_buffers.py`, `summarize.py`, `loop_ast_rs`) have shorter, plainer
+  comments; code unchanged. `toy_check.sh` there (if added) must be the
+  version without the 33 verdict tests.
+- No results, logs, `bounds_review.txt` or git history copied from here.
+
+To fix:
+- `code/tools/loop_ast_rs/main.rs` must be `code/tools/loop_ast_rs/src/main.rs`
+  (Cargo builds only from `src/`); add `Cargo.lock`.
+- Check `grep add_library code/CMakeLists.txt` names the `.cpp` files without
+  `LoopFinder/` / `BufferAccess/` (they sit directly in `code/`).
+- The scripts expect this repo's layout (`pass/src/...`, `pass/tools`,
+  `benchmarks/`), so in `code/` they document the method but cannot run as is.
