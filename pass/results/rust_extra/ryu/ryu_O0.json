@@ -1,0 +1,306 @@
+[
+  {
+    "function": "_RNvCshWnkk6Mzibb_10driver_ryu4main",
+    "function_demangled": "driver_ryu::main",
+    "header": "bb8",
+    "depth": 1,
+    "latch_count": 2,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 17,
+        "dir": "/workspaces/Thesis/benchmarks/rust_extra/ryu/driver",
+        "file": "src/main.rs",
+        "line": 19
+      }
+    ]
+  },
+  {
+    "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core3str4iter5SplitNtB8_12IsWhitespaceENtNtNtNtBa_4iter6traits8iterator8Iterator8try_folduNCINvNvB12_4find5checkReQNtB8_10IsNotEmptyE0INtNtNtBa_3ops12control_flow11ControlFlowB2d_EECshWnkk6Mzibb_10driver_ryu",
+    "function_demangled": "<core::str::iter::Split<core::str::IsWhitespace> as core::iter::traits::iterator::Iterator>::try_fold::<(), core::iter::traits::iterator::Iterator::find::check<&str, &mut core::str::IsNotEmpty>::{closure#0}, core::ops::control_flow::ControlFlow<&str>>",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 34,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/iter/traits/iterator.rs",
+        "line": 2493
+      }
+    ]
+  },
+  {
+    "function": "_RNvYINtNtNtCsgxBkk5gSRhY_4core3str7pattern19MultiCharEqSearcherNtB7_12IsWhitespaceENtB5_8Searcher10next_matchCshWnkk6Mzibb_10driver_ryu",
+    "function_demangled": "<core::str::pattern::MultiCharEqSearcher<core::str::IsWhitespace> as core::str::pattern::Searcher>::next_match",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 13,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/str/pattern.rs",
+        "line": 251
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECshWnkk6Mzibb_10driver_ryu",
+    "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+    "header": "bb4",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 1,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/ptr/mod.rs",
+        "line": 823
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECshWnkk6Mzibb_10driver_ryu",
+    "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+    "header": "bb6",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 1,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/ptr/mod.rs",
+        "line": 823
+      }
+    ]
+  },
+  {
+    "function": "_RINvYNtNtCs9k3SxhrAWiO_3std3env4ArgsNtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator8try_foldINtNtNtBG_3num7nonzero7NonZerojENCNvXs_NvBy_10advance_byB3_NtB2f_13SpecAdvanceBy15spec_advance_by0INtNtBG_6option6OptionB1C_EECshWnkk6Mzibb_10driver_ryu",
+    "function_demangled": "<std::env::Args as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, <std::env::Args as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 34,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/iter/traits/iterator.rs",
+        "line": 2493
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu6pretty8format32",
+    "function_demangled": "ryu::pretty::format32",
+    "header": "bb30",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 18,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/pretty/mod.rs",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu6pretty8format32",
+    "function_demangled": "ryu::pretty::format32",
+    "header": "bb67",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 18,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/pretty/mod.rs",
+        "line": 203
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu3f2s3f2d",
+    "function_demangled": "ryu::f2s::f2d",
+    "header": "bb107",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 19,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/f2s.rs",
+        "line": 142
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu3f2s3f2d",
+    "function_demangled": "ryu::f2s::f2d",
+    "header": "bb94",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/f2s.rs",
+        "line": 132
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu3f2s3f2d",
+    "function_demangled": "ryu::f2s::f2d",
+    "header": "bb126",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/f2s.rs",
+        "line": 161
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtNtCsaG9MkZH5FQM_3ryu6pretty8mantissa14write_mantissa",
+    "function_demangled": "ryu::pretty::mantissa::write_mantissa",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 11,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/pretty/mantissa.rs",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu14f2s_intrinsics13pow5factor_32",
+    "function_demangled": "ryu::f2s_intrinsics::pow5factor_32",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 23,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/f2s_intrinsics.rs",
+        "line": 30
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu6pretty8format64",
+    "function_demangled": "ryu::pretty::format64",
+    "header": "bb30",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 18,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/pretty/mod.rs",
+        "line": 80
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu6pretty8format64",
+    "function_demangled": "ryu::pretty::format64",
+    "header": "bb67",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 18,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/pretty/mod.rs",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu3d2s3d2d",
+    "function_demangled": "ryu::d2s::d2d",
+    "header": "bb88",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 20,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/d2s.rs",
+        "line": 239
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu3d2s3d2d",
+    "function_demangled": "ryu::d2s::d2d",
+    "header": "bb77",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 16,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/d2s.rs",
+        "line": 221
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu3d2s3d2d",
+    "function_demangled": "ryu::d2s::d2d",
+    "header": "bb118",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 16,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/d2s.rs",
+        "line": 282
+      }
+    ]
+  },
+  {
+    "function": "_RNvNtCsaG9MkZH5FQM_3ryu14d2s_intrinsics11pow5_factor",
+    "function_demangled": "ryu::d2s_intrinsics::pow5_factor",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 23,
+        "dir": "/workspaces/Thesis/.build/rust-extra/ryu",
+        "file": "src/d2s_intrinsics.rs",
+        "line": 44
+      }
+    ]
+  }
+]

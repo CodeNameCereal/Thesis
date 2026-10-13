@@ -3,12 +3,14 @@
 # loop labeling) gives exactly the same loops as compiling WITHOUT debug info.
 #
 # Usage (from repo root):
-#   ./pass/scripts/debuginfo_check.sh              # all 10 tools, C + Rust
-#   ./pass/scripts/debuginfo_check.sh echo fold    # only these tools
+#   ./pass/scripts/debuginfo_check.sh              # all 10 tools (C + Rust) + the extra Rust projects
+#   ./pass/scripts/debuginfo_check.sh echo fold    # only these tools / projects (e.g. qoi sha2)
 #
 # For each tool/language it recompiles the IR twice into a temp dir (with and
 # without debug info, otherwise identical flags), runs LoopFinderPass on both
 # and compares the number of loops per function. Expected: SAME everywhere.
+# The extra Rust projects are built by build_rust_extra_ir.sh itself
+# (--debuginfo / --out-dir), so the flags are exactly the corpus ones.
 # Does not touch benchmarks/ or pass/results/.
 
 set -uo pipefail
@@ -24,7 +26,9 @@ TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
 TOOLS=("$@")
-[[ ${#TOOLS[@]} -eq 0 ]] && TOOLS=(sum expand echo fold tee mkdir comm paste nl shuf)
+ALL=0
+[[ ${#TOOLS[@]} -eq 0 ]] && { ALL=1; TOOLS=(sum expand echo fold tee mkdir comm paste nl shuf); }
+COREUTILS=" sum expand echo fold tee mkdir comm paste nl shuf "
 
 [[ -f "$PLUGIN" ]]      || { echo "missing $PLUGIN -- build the passes first" >&2; exit 1; }
 [[ -f "$C_BUILD_LOG" ]] || { echo "missing $C_BUILD_LOG -- run benchmarks.sh once first" >&2; exit 1; }
@@ -38,7 +42,7 @@ loops_per_fn() {
 compare() {  # compare <label> <with.ll> <without.ll>
   local label="$1" a="$2" b="$3"
   if [[ ! -s "$a" || ! -s "$b" ]]; then
-    printf '%-14s SKIPPED (compile failed)\n' "$label"; FAIL=1; return
+    printf '%-20s SKIPPED (compile failed)\n' "$label"; FAIL=1; return
   fi
   loops_per_fn "$a" > "$TMP/a.txt"
   loops_per_fn "$b" > "$TMP/b.txt"
@@ -46,9 +50,9 @@ compare() {  # compare <label> <with.ll> <without.ll>
   na=$(awk '{s+=$2} END {print s+0}' "$TMP/a.txt")
   nb=$(awk '{s+=$2} END {print s+0}' "$TMP/b.txt")
   if diff -q "$TMP/a.txt" "$TMP/b.txt" >/dev/null; then
-    printf '%-14s SAME   (%s loops)\n' "$label" "$na"
+    printf '%-20s SAME   (%s loops)\n' "$label" "$na"
   else
-    printf '%-14s DIFF   (with debug info: %s, without: %s)\n' "$label" "$na" "$nb"
+    printf '%-20s DIFF   (with debug info: %s, without: %s)\n' "$label" "$na" "$nb"
     diff "$TMP/a.txt" "$TMP/b.txt" | sed 's/^/    /' | head -20
     FAIL=1
   fi
@@ -71,8 +75,9 @@ QUIET_W="-Wno-c23-extensions -Wno-tautological-constant-out-of-range-compare"
 
 echo "==> C"
 for tool in "${TOOLS[@]}"; do
+  [[ $COREUTILS == *" $tool "* ]] || continue
   flags=$(c_flags "$tool")
-  [[ -z "$flags" ]] && { printf '%-14s SKIPPED (no compile line)\n' "c/$tool"; continue; }
+  [[ -z "$flags" ]] && { printf '%-20s SKIPPED (no compile line)\n' "c/$tool"; continue; }
   # -g0 must come last so it wins over the build log's -g
   ( cd "$C_BUILD_DIR" && clang-22 $flags -O0 -Xclang -disable-O0-optnone -gline-tables-only $QUIET_W \
       -S -emit-llvm "src/$tool.c" -o "$TMP/c_with.ll" ) 2>/dev/null
@@ -84,6 +89,7 @@ done
 echo
 echo "==> Rust"
 for tool in "${TOOLS[@]}"; do
+  [[ $COREUTILS == *" $tool "* ]] || continue
   pkg="uu_$tool"; deps="$RUST_BUILD_DIR/target/debug/deps"
   for mode in with without; do
     di="line-tables-only"; [[ $mode == without ]] && di="0"
@@ -97,6 +103,25 @@ for tool in "${TOOLS[@]}"; do
   done
   compare "rust/$tool" "$TMP/rs_with.ll" "$TMP/rs_without.ll"
 done
+
+# --- extra Rust projects (benchmarks/rust_extra/) ---------------------------------
+EXTRA_SCRIPT="$ROOT/pass/scripts/build_rust_extra_ir.sh"
+if [[ -d "$ROOT/benchmarks/rust_extra" && -x "$EXTRA_SCRIPT" ]]; then
+  # shellcheck source=rust_extra_projects.conf
+  source "$ROOT/pass/scripts/rust_extra_projects.conf"
+  echo
+  echo "==> Rust extra"
+  for line in "${PROJECTS[@]}"; do
+    read_project "$line"
+    if (( ! ALL )) && [[ " ${TOOLS[*]} " != *" $P_NAME "* ]]; then continue; fi
+    for mode in with without; do
+      di="line-tables-only"; [[ $mode == without ]] && di="0"
+      rm -rf "$TMP/x_$mode"
+      "$EXTRA_SCRIPT" --projects "$P_NAME" --debuginfo "$di" --out-dir "$TMP/x_$mode" >/dev/null 2>&1
+    done
+    compare "extra/$P_NAME" "$TMP/x_with/${P_NAME}_O0.ll" "$TMP/x_without/${P_NAME}_O0.ll"
+  done
+fi
 
 echo
 if (( FAIL )); then

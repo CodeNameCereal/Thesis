@@ -3,15 +3,21 @@
 
     python3 pass/scripts/label_loops.py   ->  X_O0.labeled.json per result file + loop_kinds.tsv
 
-Only -O0 results: nothing is inlined there, so each loop's src_loc has one entry
-pointing at the loop in the source.
+Only -O0 results: nothing is inlined there (except Rust #[inline(always)] functions,
+which rustc inlines even at -O0 -- none in coreutils, some in rust_extra), so each
+loop's src_loc has one entry pointing at the loop in the source.
 
 For each loop we take its debug location (src_loc, from LoopFinderPass), find the
 source loops around it (libclang for C, syn for Rust) and pick the one with the same
 nesting depth as the IR loop. Kinds: for / while / do-while / while-let / loop, and
   goto       C loop made with a backward goto
   library    code from std/core/alloc or a dependency (not counted as tool code)
-  unmatched  needs a manual look;   no-debug-info: IR without line tables
+  driver     rust_extra only: our driver program (benchmarks/rust_extra/<project>/driver/),
+             written to instantiate a library -- not the project's code, not counted
+  unmatched  needs a manual look (rust_extra: loops in macro_rules! or in inlined
+             #[inline(always)] functions -- check_loops.py confirms which)
+  no-debug-info  no source line: IR without line tables, or (rust_extra) rustc's
+             own loops for array initializers [x; N]
 """
 import glob, json, os, re, subprocess
 from collections import Counter
@@ -20,6 +26,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 RS_TOOL = os.path.join(ROOT, "pass", "tools", "loop_ast_rs")
 # /rust/deps/ = std's own dependencies (e.g. hashbrown behind HashMap)
 LIBRARY = re.compile(r"/library/(core|alloc|std)/|/\.cargo/|^/usr/|/rust/deps/")
+DRIVER = re.compile(r"/benchmarks/rust_extra/[^/]+/driver/")
 cache = {}
 
 
@@ -60,6 +67,8 @@ def label(loop):
         return "no-debug-info"
     loc = chain[0]
     path = os.path.normpath(os.path.join(loc["dir"], loc["file"]))
+    if DRIVER.search(path):
+        return "driver"
     if LIBRARY.search(path):
         return "library"
     if not os.path.exists(path):

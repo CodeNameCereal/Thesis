@@ -1,0 +1,2048 @@
+[
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECs59IUpSHdfvs_18driver_miniz_oxide",
+  "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECs59IUpSHdfvs_18driver_miniz_oxide",
+  "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYNtNtCs9k3SxhrAWiO_3std3env4ArgsNtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator8try_foldINtNtNtBG_3num7nonzero7NonZerojENCNvXs_NvBy_10advance_byB3_NtB2f_13SpecAdvanceBy15spec_advance_by0INtNtBG_6option6OptionB1C_EECs59IUpSHdfvs_18driver_miniz_oxide",
+  "function_demangled": "<std::env::Args as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, <std::env::Args as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs5_NtNtCsgxBkk5gSRhY_4core3fmt8buildersNtB6_9DebugList7entriesRhINtNtNtBa_5slice4iter4IterhEECs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "<core::fmt::builders::DebugList>::entries::<&u8, core::slice::iter::Iter<u8>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/fmt/builders.rs",
+    "line": 787
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs5_NtNtCsgxBkk5gSRhY_4core3fmt8buildersNtB6_9DebugList7entriesRtINtNtNtBa_5slice4iter4ItertEECs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "<core::fmt::builders::DebugList>::entries::<&u16, core::slice::iter::Iter<u16>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/fmt/builders.rs",
+    "line": 787
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VectE11extend_withCs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "<alloc::vec::Vec<u16>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNvNtCsgxBkk5gSRhY_4core3ptr25swap_nonoverlapping_bytes26swap_nonoverlapping_chunksKj8_ECs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "core::ptr::swap_nonoverlapping_bytes::swap_nonoverlapping_chunks::<8>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 1463
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterhENtNtNtNtBa_4iter6traits12double_ended19DoubleEndedIterator9try_rfoldjNCINvNvXs0_NtNtBR_8adapters10take_whileINtB23_9TakeWhileppENtNtBP_8iterator8Iterator8try_fold5checkRhjINtNtNtBa_3ops9try_trait17NeverShortCircuitjENCNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB4n_12HuffmanOxide19start_dynamic_block0NCINvMB3z_B3w_10wrap_mut_2jB3t_NCNvYIB2w_INtNtB25_3rev3RevB3_EB4f_EB2P_5count0E0E0INtNtB3B_12control_flow11ControlFlowB3w_jEEB4r_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::double_ended::DoubleEndedIterator>::try_rfold::<usize, <core::iter::adapters::take_while::TakeWhile<_, _> as core::iter::traits::iterator::Iterator>::try_fold::check<&u8, usize, core::ops::try_trait::NeverShortCircuit<usize>, <miniz_oxide::deflate::core::HuffmanOxide>::start_dynamic_block::{closure#0}, <core::ops::try_trait::NeverShortCircuit<usize>>::wrap_mut_2<usize, &u8, <core::iter::adapters::take_while::TakeWhile<core::iter::adapters::rev::Rev<core::slice::iter::Iter<u8>>, <miniz_oxide::deflate::core::HuffmanOxide>::start_dynamic_block::{closure#0}> as core::iter::traits::iterator::Iterator>::count::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<core::ops::try_trait::NeverShortCircuit<usize>, usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/double_ended.rs",
+    "line": 289
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterhENtNtNtNtBa_4iter6traits12double_ended19DoubleEndedIterator9try_rfoldjNCINvNvXs0_NtNtBR_8adapters10take_whileINtB23_9TakeWhileppENtNtBP_8iterator8Iterator8try_fold5checkRhjINtNtNtBa_3ops9try_trait17NeverShortCircuitjENCNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB4n_12HuffmanOxide19start_dynamic_blocks0_0NCINvMB3z_B3w_10wrap_mut_2jB3t_NCNvYIB2w_INtNtB25_3rev3RevB3_EB4f_EB2P_5count0E0E0INtNtB3B_12control_flow11ControlFlowB3w_jEEB4r_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::double_ended::DoubleEndedIterator>::try_rfold::<usize, <core::iter::adapters::take_while::TakeWhile<_, _> as core::iter::traits::iterator::Iterator>::try_fold::check<&u8, usize, core::ops::try_trait::NeverShortCircuit<usize>, <miniz_oxide::deflate::core::HuffmanOxide>::start_dynamic_block::{closure#2}, <core::ops::try_trait::NeverShortCircuit<usize>>::wrap_mut_2<usize, &u8, <core::iter::adapters::take_while::TakeWhile<core::iter::adapters::rev::Rev<core::slice::iter::Iter<u8>>, <miniz_oxide::deflate::core::HuffmanOxide>::start_dynamic_block::{closure#2}> as core::iter::traits::iterator::Iterator>::count::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<core::ops::try_trait::NeverShortCircuit<usize>, usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/double_ended.rs",
+    "line": 289
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterhENtNtNtNtBa_4iter6traits12double_ended19DoubleEndedIterator9try_rfoldjNCINvNvXs0_NtNtBR_8adapters10take_whileINtB23_9TakeWhileppENtNtBP_8iterator8Iterator8try_fold5checkRhjINtNtNtBa_3ops9try_trait17NeverShortCircuitjENCNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB4n_12HuffmanOxide19start_dynamic_blocks_0NCINvMB3z_B3w_10wrap_mut_2jB3t_NCNvYIB2w_INtNtB25_3rev3RevB3_EB4f_EB2P_5count0E0E0INtNtB3B_12control_flow11ControlFlowB3w_jEEB4r_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::double_ended::DoubleEndedIterator>::try_rfold::<usize, <core::iter::adapters::take_while::TakeWhile<_, _> as core::iter::traits::iterator::Iterator>::try_fold::check<&u8, usize, core::ops::try_trait::NeverShortCircuit<usize>, <miniz_oxide::deflate::core::HuffmanOxide>::start_dynamic_block::{closure#1}, <core::ops::try_trait::NeverShortCircuit<usize>>::wrap_mut_2<usize, &u8, <core::iter::adapters::take_while::TakeWhile<core::iter::adapters::rev::Rev<core::slice::iter::Iter<u8>>, <miniz_oxide::deflate::core::HuffmanOxide>::start_dynamic_block::{closure#1}> as core::iter::traits::iterator::Iterator>::count::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<core::ops::try_trait::NeverShortCircuit<usize>, usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/double_ended.rs",
+    "line": 289
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterhENtNtNtNtBa_4iter6traits8iterator8Iterator8try_foldjNCINvNvXs0_NtNtBR_8adapters10take_whileINtB1L_9TakeWhileppEBL_8try_fold5checkRhjINtNtNtBa_3ops9try_trait17NeverShortCircuitjENCNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core15compress_normal0NCINvMB2V_B2S_10wrap_mut_2jB2P_NCNvYIB2e_B3_B3B_EBL_5count0E0E0INtNtB2X_12control_flow11ControlFlowB2S_jEEB3J_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::try_fold::<usize, <core::iter::adapters::take_while::TakeWhile<_, _> as core::iter::traits::iterator::Iterator>::try_fold::check<&u8, usize, core::ops::try_trait::NeverShortCircuit<usize>, miniz_oxide::deflate::core::compress_normal::{closure#0}, <core::ops::try_trait::NeverShortCircuit<usize>>::wrap_mut_2<usize, &u8, <core::iter::adapters::take_while::TakeWhile<core::slice::iter::Iter<u8>, miniz_oxide::deflate::core::compress_normal::{closure#0}> as core::iter::traits::iterator::Iterator>::count::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<core::ops::try_trait::NeverShortCircuit<usize>, usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterlENtNtNtNtBb_4iter6traits8iterator8Iterator4foldlNCINvXsc_NtBW_5accumlINtB1M_3SumRlE3sumBF_E0ECs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "<core::slice::iter::Iter<i32> as core::iter::traits::iterator::Iterator>::fold::<i32, <i32 as core::iter::traits::accum::Sum<&i32>>::sum<core::slice::iter::Iter<i32>>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterlENtNtNtNtBa_4iter6traits12double_ended19DoubleEndedIterator5rfoldmNCINvNvXs_NtNtBR_8adapters9enumerateINtB1Y_9EnumeratepENtNtBP_8iterator8Iterator4fold9enumerateRlmNCNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB3w_12HuffmanOxide21enforce_max_code_size0E0EB3A_",
+  "function_demangled": "<core::slice::iter::Iter<i32> as core::iter::traits::double_ended::DoubleEndedIterator>::rfold::<u32, <core::iter::adapters::enumerate::Enumerate<_> as core::iter::traits::iterator::Iterator>::fold::enumerate<&i32, u32, <miniz_oxide::deflate::core::HuffmanOxide>::enforce_max_code_size::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/double_ended.rs",
+    "line": 359
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs3_NtNtCsgxBkk5gSRhY_4core5slice10specializeSsINtB5_8SpecFillsE9spec_fillCs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "<[i16] as core::slice::specialize::SpecFill<i16>>::spec_fill",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 28,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 180
+   },
+   {
+    "col": 29,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/specialize.rs",
+    "line": 65
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs2_NtNtCsgxBkk5gSRhY_4core5slice10specializeStINtB5_8SpecFilltE9spec_fillCs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "<[u16] as core::slice::specialize::SpecFill<u16>>::spec_fill",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 28,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 180
+   },
+   {
+    "col": 29,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/specialize.rs",
+    "line": 65
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3zipINtB2_3ZipINtNtNtB8_5slice4iter4ItertEINtBW_7IterMutmEE9super_nthCs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "<core::iter::adapters::zip::Zip<core::slice::iter::Iter<u16>, core::slice::iter::IterMut<u32>>>::super_nth",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/adapters/zip.rs",
+    "line": 25
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VechE11extend_withCs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "<alloc::vec::Vec<u8>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXsa_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxideNtNtCsgxBkk5gSRhY_4core7default7Default7default",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide as core::default::Default>::default",
+  "header": "repeat_loop_header4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvXsa_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxideNtNtCsgxBkk5gSRhY_4core7default7Default7default",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide as core::default::Default>::default",
+  "header": "repeat_loop_header1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvXsa_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxideNtNtCsgxBkk5gSRhY_4core7default7Default7default",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide as core::default::Default>::default",
+  "header": "repeat_loop_header",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvNtCs6teJ5U9Bpp9_11miniz_oxide7deflate21compress_to_vec_inner",
+  "function_demangled": "miniz_oxide::deflate::compress_to_vec_inner",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/mod.rs",
+    "line": 159
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate6stored15compress_stored",
+  "function_demangled": "miniz_oxide::deflate::stored::compress_stored",
+  "header": "bb12",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/stored.rs",
+    "line": 77
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core15compress_normal",
+  "function_demangled": "miniz_oxide::deflate::core::compress_normal",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1980
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core15compress_normal",
+  "function_demangled": "miniz_oxide::deflate::core::compress_normal",
+  "header": "bb47",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 2019
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core15compress_normal",
+  "function_demangled": "miniz_oxide::deflate::core::compress_normal",
+  "header": "bb28",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 2000
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core13compress_fast",
+  "function_demangled": "miniz_oxide::deflate::core::compress_fast",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 3,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 2178
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core13compress_fast",
+  "function_demangled": "miniz_oxide::deflate::core::compress_fast",
+  "header": "bb16",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 2186
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core13compress_fast",
+  "function_demangled": "miniz_oxide::deflate::core::compress_fast",
+  "header": "bb45",
+  "depth": 2,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 2206
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core13compress_fast",
+  "function_demangled": "miniz_oxide::deflate::core::compress_fast",
+  "header": "bb138",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 2323
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core11flush_block",
+  "function_demangled": "miniz_oxide::deflate::core::flush_block",
+  "header": "bb75",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 30,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1878
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs7_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_17OutputBufferOxide8put_bits",
+  "function_demangled": "<miniz_oxide::deflate::core::OutputBufferOxide>::put_bits",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 752
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide19start_dynamic_block",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::start_dynamic_block",
+  "header": "bb106",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1263
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide19start_dynamic_block",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::start_dynamic_block",
+  "header": "bb99",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1255
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide19start_dynamic_block",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::start_dynamic_block",
+  "header": "bb33",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1209
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core17compress_lz_codes",
+  "function_demangled": "miniz_oxide::deflate::core::compress_lz_codes",
+  "header": "bb90",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1746
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core17compress_lz_codes",
+  "function_demangled": "miniz_oxide::deflate::core::compress_lz_codes",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1673
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core17compress_lz_codes",
+  "function_demangled": "miniz_oxide::deflate::core::compress_lz_codes",
+  "header": "bb66",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1724
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide14optimize_table",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::optimize_table",
+  "header": "bb80",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 40,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1136
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide14optimize_table",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::optimize_table",
+  "header": "bb63",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1131
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide14optimize_table",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::optimize_table",
+  "header": "bb5",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 31,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1075
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide14optimize_table",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::optimize_table",
+  "header": "bb47",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 35,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1115
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide14optimize_table",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::optimize_table",
+  "header": "bb53",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 31,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1122
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide14optimize_table",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::optimize_table",
+  "header": "bb30",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1105
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide14optimize_table",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::optimize_table",
+  "header": "bb13",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1089
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide14optimize_table",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::optimize_table",
+  "header": "repeat_loop_header7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide14optimize_table",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::optimize_table",
+  "header": "repeat_loop_header",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide18radix_sort_symbols",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::radix_sort_symbols",
+  "header": "bb24",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 964
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide18radix_sort_symbols",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::radix_sort_symbols",
+  "header": "bb29",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 967
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide18radix_sort_symbols",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::radix_sort_symbols",
+  "header": "bb38",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 972
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide18radix_sort_symbols",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::radix_sort_symbols",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 951
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide18radix_sort_symbols",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::radix_sort_symbols",
+  "header": "repeat_loop_header",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide28calculate_minimum_redundancy",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::calculate_minimum_redundancy",
+  "header": "bb59",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1022
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide28calculate_minimum_redundancy",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::calculate_minimum_redundancy",
+  "header": "bb60",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1023
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide28calculate_minimum_redundancy",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::calculate_minimum_redundancy",
+  "header": "bb66",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1027
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide28calculate_minimum_redundancy",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::calculate_minimum_redundancy",
+  "header": "bb49",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1013
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide28calculate_minimum_redundancy",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::calculate_minimum_redundancy",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 992
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide21enforce_max_code_size",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::enforce_max_code_size",
+  "header": "bb16",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsb_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_12HuffmanOxide21enforce_max_code_size",
+  "function_demangled": "<miniz_oxide::deflate::core::HuffmanOxide>::enforce_max_code_size",
+  "header": "bb24",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1054
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNCNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4core13compress_fast0B7_",
+  "function_demangled": "miniz_oxide::deflate::core::compress_fast::{closure#0}",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 2228
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMsc_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_9DictOxide10find_match",
+  "function_demangled": "<miniz_oxide::deflate::core::DictOxide>::find_match",
+  "header": "bb13",
+  "depth": 1,
+  "latch_count": 4,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 17,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1402
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMsc_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_9DictOxide10find_match",
+  "function_demangled": "<miniz_oxide::deflate::core::DictOxide>::find_match",
+  "header": "bb18",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 26,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1409
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMsc_NtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate4coreNtB5_9DictOxide10find_match",
+  "function_demangled": "<miniz_oxide::deflate::core::DictOxide>::find_match",
+  "header": "bb40",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/core.rs",
+    "line": 1460
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate6stored12copy_to_dict",
+  "function_demangled": "miniz_oxide::deflate::stored::copy_to_dict",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/stored.rs",
+    "line": 11
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtCs6teJ5U9Bpp9_11miniz_oxide7inflate23decompress_to_vec_inner",
+  "function_demangled": "miniz_oxide::inflate::decompress_to_vec_inner",
+  "header": "bb5",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 44,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/mod.rs",
+    "line": 221
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb10",
+  "depth": 1,
+  "latch_count": 24,
+  "subloop_count": 24,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1461
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb309",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1996
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb242",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1900
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb213",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1831
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb288",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1965
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb269",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1941
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb65",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1574
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb61",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb237",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb233",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb228",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb203",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1817
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb170",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1740
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb165",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb125",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 32,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1671
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb115",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1654
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb102",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1625
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb86",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1602
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb77",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1592
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb36",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1524
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb32",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb28",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb24",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb20",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1052
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core21decompress_with_limit",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_with_limit",
+  "header": "bb13",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1472
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCNvB2_21decompress_with_limits0_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::decompress_with_limit::{closure#2}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCNvB2_21decompress_with_limits8_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::decompress_with_limit::{closure#10}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCNvB2_21decompress_with_limitsa_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::decompress_with_limit::{closure#12}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core19decode_huffman_codeNCNvB2_21decompress_with_limitsb_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::decode_huffman_code::<miniz_oxide::inflate::core::decompress_with_limit::{closure#13}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 42,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 660
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core19decode_huffman_codeNCNvB2_21decompress_with_limitsb_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::decode_huffman_code::<miniz_oxide::inflate::core::decompress_with_limit::{closure#13}>",
+  "header": "bb13",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 671
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCNvB2_21decompress_with_limitsc_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::decompress_with_limit::{closure#14}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCNvB2_21decompress_with_limits4_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::decompress_with_limit::{closure#6}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCNvB2_21decompress_with_limits2_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::decompress_with_limit::{closure#4}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCNvB2_21decompress_with_limits5_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::decompress_with_limit::{closure#7}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9init_tree",
+  "function_demangled": "miniz_oxide::inflate::core::init_tree",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 3,
+  "src_loc": [
+   {
+    "col": 26,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 874
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9init_tree",
+  "function_demangled": "miniz_oxide::inflate::core::init_tree",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 907
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9init_tree",
+  "function_demangled": "miniz_oxide::inflate::core::init_tree",
+  "header": "bb33",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 37,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 924
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9init_tree",
+  "function_demangled": "miniz_oxide::inflate::core::init_tree",
+  "header": "bb51",
+  "depth": 2,
+  "latch_count": 3,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 963
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9init_tree",
+  "function_demangled": "miniz_oxide::inflate::core::init_tree",
+  "header": "bb87",
+  "depth": 3,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1004
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9init_tree",
+  "function_demangled": "miniz_oxide::inflate::core::init_tree",
+  "header": "bb70",
+  "depth": 3,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 989
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCNvB2_21decompress_with_limits6_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::decompress_with_limit::{closure#8}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core19decode_huffman_codeNCNvB2_21decompress_with_limits7_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::decode_huffman_code::<miniz_oxide::inflate::core::decompress_with_limit::{closure#9}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 42,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 660
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core19decode_huffman_codeNCNvB2_21decompress_with_limits7_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::decode_huffman_code::<miniz_oxide::inflate::core::decompress_with_limit::{closure#9}>",
+  "header": "bb13",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 671
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core19decode_huffman_codeNCNvB2_21decompress_with_limits9_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::decode_huffman_code::<miniz_oxide::inflate::core::decompress_with_limit::{closure#11}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 42,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 660
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core19decode_huffman_codeNCNvB2_21decompress_with_limits9_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::decode_huffman_code::<miniz_oxide::inflate::core::decompress_with_limit::{closure#11}>",
+  "header": "bb13",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 671
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core15decompress_fast",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_fast",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1236
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core15decompress_fast",
+  "function_demangled": "miniz_oxide::inflate::core::decompress_fast",
+  "header": "bb2",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1243
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core8transferB5_",
+  "function_demangled": "miniz_oxide::inflate::core::transfer",
+  "header": "bb31",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1109
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core8transferB5_",
+  "function_demangled": "miniz_oxide::inflate::core::transfer",
+  "header": "bb40",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 1116
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCNvB2_21decompress_with_limitse_0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::decompress_with_limit::{closure#16}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCINvB2_12pad_to_bytesNCNvB2_21decompress_with_limitsd_0E0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::pad_to_bytes<miniz_oxide::inflate::core::decompress_with_limit::{closure#15}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4coreNtB2_12HuffmanTable11tree_lookupB6_",
+  "function_demangled": "<miniz_oxide::inflate::core::HuffmanTable>::tree_lookup",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 42,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 87
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvXs3_NtNtNtCsgxBkk5gSRhY_4core4iter8adapters3zipINtB5_3ZipINtNtNtBb_5slice4iter4ItertEINtBZ_7IterMutmEEINtB5_7ZipImplBW_B1o_E3nthCs6teJ5U9Bpp9_11miniz_oxide",
+  "function_demangled": "<core::iter::adapters::zip::Zip<core::slice::iter::Iter<u16>, core::slice::iter::IterMut<u32>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::Iter<u16>, core::slice::iter::IterMut<u32>>>::nth",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/adapters/zip.rs",
+    "line": 324
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate4core9read_bitsNCINvB2_12pad_to_bytesNCNvB2_21decompress_with_limits1_0E0EB6_",
+  "function_demangled": "miniz_oxide::inflate::core::read_bits::<miniz_oxide::inflate::core::pad_to_bytes<miniz_oxide::inflate::core::decompress_with_limit::{closure#3}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/core.rs",
+    "line": 768
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7deflate6stream7deflate",
+  "function_demangled": "miniz_oxide::deflate::stream::deflate",
+  "header": "bb11",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/deflate/stream.rs",
+    "line": 62
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCs6teJ5U9Bpp9_11miniz_oxide7inflate6stream12inflate_loop",
+  "function_demangled": "miniz_oxide::inflate::stream::inflate_loop",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/miniz_oxide/miniz_oxide",
+    "file": "src/inflate/stream.rs",
+    "line": 323
+   }
+  ],
+  "loop_kind": "loop"
+ }
+]

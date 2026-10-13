@@ -1,0 +1,12 @@
+# Driver for the IR build of ryu -- not part of the measured project.
+# Own workspace on purpose: the project's [profile.dev] settings must not apply.
+[package]
+name = "driver-ryu"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+ryu = { path = "../../../../.build/rust-extra/ryu" }
+
+[workspace]

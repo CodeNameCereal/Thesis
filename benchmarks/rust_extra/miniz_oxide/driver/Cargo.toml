@@ -1,0 +1,12 @@
+# Driver for the IR build of miniz_oxide -- not part of the measured project.
+# Own workspace on purpose: the project's [profile.dev] settings must not apply.
+[package]
+name = "driver-miniz_oxide"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+miniz_oxide = { path = "../../../../.build/rust-extra/miniz_oxide/miniz_oxide" }
+
+[workspace]

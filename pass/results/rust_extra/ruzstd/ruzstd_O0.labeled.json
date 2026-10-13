@@ -1,0 +1,4725 @@
+[
+ {
+  "function": "_RNvXsy_NtNtNtCs6i54tJFfzR_5alloc11collections5btree3mapINtB5_8IntoItermNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryENtNtNtCsgxBkk5gSRhY_4core3ops4drop4Drop4dropCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<alloc::collections::btree::map::IntoIter<u32, ruzstd::decoding::dictionary::Dictionary> as core::ops::drop::Drop>::drop",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/map.rs",
+    "line": 1920
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXNvXsy_NtNtNtCs6i54tJFfzR_5alloc11collections5btree3mapINtB8_8IntoIterpppENtNtNtCsgxBkk5gSRhY_4core3ops4drop4Drop4dropINtB2_9DropGuardmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtNtBe_5alloc6GlobalEB1d_4dropCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<<alloc::collections::btree::map::IntoIter<_, _, _> as core::ops::drop::Drop>::drop::DropGuard<u32, ruzstd::decoding::dictionary::Dictionary, alloc::alloc::Global> as core::ops::drop::Drop>::drop",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/map.rs",
+    "line": 1913
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMsc_NtNtNtCs6i54tJFfzR_5alloc11collections5btree8navigateINtB5_13LazyLeafRangeNtNtNtB7_4node6marker5DyingmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryE10init_frontCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<alloc::collections::btree::navigate::LazyLeafRange<alloc::collections::btree::node::marker::Dying, u32, ruzstd::decoding::dictionary::Dictionary>>::init_front",
+  "header": "bb10",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/node.rs",
+    "line": 731
+   },
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/navigate.rs",
+    "line": 635
+   },
+   {
+    "col": 79,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/navigate.rs",
+    "line": 225
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMsj_NtNtNtCs6i54tJFfzR_5alloc11collections5btree8navigateINtNtB8_4node6HandleINtB10_7NodeRefNtNtB10_6marker5DyingmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB1y_4LeafENtB1y_4EdgeE17deallocating_nextNtNtBc_5alloc6GlobalECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::Leaf>, alloc::collections::btree::node::marker::Edge>>::deallocating_next::<alloc::alloc::Global>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/node.rs",
+    "line": 896
+   },
+   {
+    "col": 31,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/navigate.rs",
+    "line": 466
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMsp_NtNtNtCs6i54tJFfzR_5alloc11collections5btree8navigateINtNtB7_4node6HandleINtBZ_7NodeRefNtNtBZ_6marker5DyingmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB1w_14LeafOrInternalENtB1w_2KVE14next_leaf_edgeCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::LeafOrInternal>, alloc::collections::btree::node::marker::KV>>::next_leaf_edge",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/node.rs",
+    "line": 731
+   },
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/navigate.rs",
+    "line": 635
+   },
+   {
+    "col": 46,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/navigate.rs",
+    "line": 722
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMsb_NtNtNtCs6i54tJFfzR_5alloc11collections5btree8navigateINtB5_13LazyLeafRangeNtNtNtB7_4node6marker5DyingmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryE10take_frontCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<alloc::collections::btree::navigate::LazyLeafRange<alloc::collections::btree::node::marker::Dying, u32, ruzstd::decoding::dictionary::Dictionary>>::take_front",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/node.rs",
+    "line": 731
+   },
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/navigate.rs",
+    "line": 635
+   },
+   {
+    "col": 53,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/navigate.rs",
+    "line": 187
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMsj_NtNtNtCs6i54tJFfzR_5alloc11collections5btree8navigateINtNtB8_4node6HandleINtB10_7NodeRefNtNtB10_6marker5DyingmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB1y_4LeafENtB1y_4EdgeE16deallocating_endNtNtBc_5alloc6GlobalECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::Leaf>, alloc::collections::btree::node::marker::Edge>>::deallocating_end::<alloc::alloc::Global>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 67,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/navigate.rs",
+    "line": 519
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCs9k3SxhrAWiO_3std2io4copy17stack_buffer_copyINtNtNtCsju7VyPzhvwj_6ruzstd8decoding17streaming_decoder16StreamingDecoderINtNtCsjAA4jvcohGz_10ruzstd_cli8progress15ProgressMonitorINtNtNtB4_8buffered9bufreader9BufReaderNtNtB6_2fs4FileEENtNtBU_13frame_decoder12FrameDecoderEB3z_EB26_",
+  "function_demangled": "std::io::copy::stack_buffer_copy::<ruzstd::decoding::streaming_decoder::StreamingDecoder<ruzstd_cli::progress::ProgressMonitor<std::io::buffered::bufreader::BufReader<std::fs::File>>, ruzstd::decoding::frame_decoder::FrameDecoder>, std::fs::File>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/copy.rs",
+    "line": 280
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYNtNtCs9k3SxhrAWiO_3std2fs4FileNtNtB6_2io5Write9write_allCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<std::fs::File as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs1_NtNtCsju7VyPzhvwj_6ruzstd8decoding17streaming_decoderINtB5_16StreamingDecoderINtNtCsjAA4jvcohGz_10ruzstd_cli8progress15ProgressMonitorINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufreader9BufReaderNtNtB2o_2fs4FileEENtNtB7_13frame_decoder12FrameDecoderENtB2m_4Read4readB1p_",
+  "function_demangled": "<ruzstd::decoding::streaming_decoder::StreamingDecoder<ruzstd_cli::progress::ProgressMonitor<std::io::buffered::bufreader::BufReader<std::fs::File>>, ruzstd::decoding::frame_decoder::FrameDecoder> as std::io::Read>::read",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/streaming_decoder.rs",
+    "line": 128
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding13frame_decoderNtB6_12FrameDecoder13decode_blocksQINtNtCsjAA4jvcohGz_10ruzstd_cli8progress15ProgressMonitorINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufreader9BufReaderNtNtB2w_2fs4FileEEEB1x_",
+  "function_demangled": "<ruzstd::decoding::frame_decoder::FrameDecoder>::decode_blocks::<&mut ruzstd_cli::progress::ProgressMonitor<std::io::buffered::bufreader::BufReader<std::fs::File>>>",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/frame_decoder.rs",
+    "line": 326
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtCs9k3SxhrAWiO_3std2io18default_read_exactINtNtCsjAA4jvcohGz_10ruzstd_cli8progress15ProgressMonitorINtNtNtB2_8buffered9bufreader9BufReaderNtNtB4_2fs4FileEEEBO_",
+  "function_demangled": "std::io::default_read_exact::<ruzstd_cli::progress::ProgressMonitor<std::io::buffered::bufreader::BufReader<std::fs::File>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 560
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd8decoding5frame17read_frame_headerQINtNtCsjAA4jvcohGz_10ruzstd_cli8progress15ProgressMonitorINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufreader9BufReaderNtNtB24_2fs4FileEEEB15_",
+  "function_demangled": "ruzstd::decoding::frame::read_frame_header::<&mut ruzstd_cli::progress::ProgressMonitor<std::io::buffered::bufreader::BufReader<std::fs::File>>>",
+  "header": "bb74",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/frame.rs",
+    "line": 75
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd8decoding5frame17read_frame_headerQINtNtCsjAA4jvcohGz_10ruzstd_cli8progress15ProgressMonitorINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufreader9BufReaderNtNtB24_2fs4FileEEEB15_",
+  "function_demangled": "ruzstd::decoding::frame::read_frame_header::<&mut ruzstd_cli::progress::ProgressMonitor<std::io::buffered::bufreader::BufReader<std::fs::File>>>",
+  "header": "bb51",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/frame.rs",
+    "line": 57
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8encoding16frame_compressorINtB5_15FrameCompressorINtNtCsjAA4jvcohGz_10ruzstd_cli8progress15ProgressMonitorINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufreader9BufReaderNtNtB2m_2fs4FileEERB3a_NtNtB7_15match_generator20MatchGeneratorDriverE8compressB1n_",
+  "function_demangled": "<ruzstd::encoding::frame_compressor::FrameCompressor<ruzstd_cli::progress::ProgressMonitor<std::io::buffered::bufreader::BufReader<std::fs::File>>, &std::fs::File, ruzstd::encoding::match_generator::MatchGeneratorDriver>>::compress",
+  "header": "bb12",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 60,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/frame_compressor.rs",
+    "line": 155
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8encoding16frame_compressorINtB5_15FrameCompressorINtNtCsjAA4jvcohGz_10ruzstd_cli8progress15ProgressMonitorINtNtNtNtCs9k3SxhrAWiO_3std2io8buffered9bufreader9BufReaderNtNtB2m_2fs4FileEERB3a_NtNtB7_15match_generator20MatchGeneratorDriverE8compressB1n_",
+  "function_demangled": "<ruzstd::encoding::frame_compressor::FrameCompressor<ruzstd_cli::progress::ProgressMonitor<std::io::buffered::bufreader::BufReader<std::fs::File>>, &std::fs::File, ruzstd::encoding::match_generator::MatchGeneratorDriver>>::compress",
+  "header": "bb14",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 67,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/frame_compressor.rs",
+    "line": 159
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvYRNtNtCs9k3SxhrAWiO_3std2fs4FileNtNtB7_2io5Write9write_allCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<&std::fs::File as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs4_NtCs4q8JsP7GHSJ_9twox_hash8xxhash64NtB5_6Hasher11finish_withCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<twox_hash::xxhash64::Hasher>::finish_with",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash64.rs",
+    "line": 317
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs4_NtCs4q8JsP7GHSJ_9twox_hash8xxhash64NtB5_6Hasher11finish_withCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<twox_hash::xxhash64::Hasher>::finish_with",
+  "header": "bb15",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash64.rs",
+    "line": 307
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs4_NtCs4q8JsP7GHSJ_9twox_hash8xxhash64NtB5_6Hasher11finish_withCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<twox_hash::xxhash64::Hasher>::finish_with",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash64.rs",
+    "line": 298
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator3allNCINvNtNtNtCsju7VyPzhvwj_6ruzstd8encoding6levels7fastest16compress_fastestNtNtB1K_15match_generator20MatchGeneratorDriverE0ECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::all::<ruzstd::encoding::levels::fastest::compress_fastest<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 314
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs_NtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generatorNtB5_20MatchGeneratorDriverNtB7_7Matcher14start_matchingNCINvNtNtB7_6blocks10compressed14compress_blockBU_E0ECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<ruzstd::encoding::match_generator::MatchGeneratorDriver as ruzstd::encoding::Matcher>::start_matching::<ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 36,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/match_generator.rs",
+    "line": 94
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder21build_table_from_dataINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3map3MapINtNtNtB1e_5slice4iter4IterNtNtNtB6_6blocks16sequence_section8SequenceENCINvNtNtNtB6_8encoding6blocks10compressed14compress_blockNtNtB3b_15match_generator20MatchGeneratorDriverEs1_0EECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_data::<core::iter::adapters::map::Map<core::slice::iter::Iter<ruzstd::blocks::sequence_section::Sequence>, ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#3}>>",
+  "header": "bb14",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 236
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder21build_table_from_dataINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3map3MapINtNtNtB1e_5slice4iter4IterNtNtNtB6_6blocks16sequence_section8SequenceENCINvNtNtNtB6_8encoding6blocks10compressed14compress_blockNtNtB3b_15match_generator20MatchGeneratorDriverEs1_0EECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_data::<core::iter::adapters::map::Map<core::slice::iter::Iter<ruzstd::blocks::sequence_section::Sequence>, ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#3}>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 233
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder21build_table_from_dataINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3map3MapINtNtNtB1e_5slice4iter4IterNtNtNtB6_6blocks16sequence_section8SequenceENCINvNtNtNtB6_8encoding6blocks10compressed14compress_blockNtNtB3b_15match_generator20MatchGeneratorDriverEs0_0EECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_data::<core::iter::adapters::map::Map<core::slice::iter::Iter<ruzstd::blocks::sequence_section::Sequence>, ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#2}>>",
+  "header": "bb14",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 236
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder21build_table_from_dataINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3map3MapINtNtNtB1e_5slice4iter4IterNtNtNtB6_6blocks16sequence_section8SequenceENCINvNtNtNtB6_8encoding6blocks10compressed14compress_blockNtNtB3b_15match_generator20MatchGeneratorDriverEs0_0EECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_data::<core::iter::adapters::map::Map<core::slice::iter::Iter<ruzstd::blocks::sequence_section::Sequence>, ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#2}>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 233
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder21build_table_from_dataINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3map3MapINtNtNtB1e_5slice4iter4IterNtNtNtB6_6blocks16sequence_section8SequenceENCINvNtNtNtB6_8encoding6blocks10compressed14compress_blockNtNtB3b_15match_generator20MatchGeneratorDriverEs_0EECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_data::<core::iter::adapters::map::Map<core::slice::iter::Iter<ruzstd::blocks::sequence_section::Sequence>, ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#1}>>",
+  "header": "bb14",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 236
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder21build_table_from_dataINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3map3MapINtNtNtB1e_5slice4iter4IterNtNtNtB6_6blocks16sequence_section8SequenceENCINvNtNtNtB6_8encoding6blocks10compressed14compress_blockNtNtB3b_15match_generator20MatchGeneratorDriverEs_0EECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_data::<core::iter::adapters::map::Map<core::slice::iter::Iter<ruzstd::blocks::sequence_section::Sequence>, ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#1}>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 233
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvMs1_NtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generatorNtB6_14MatchGenerator13next_sequenceQNCINvNtNtB8_6blocks10compressed14compress_blockNtB6_20MatchGeneratorDriverE0ECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<ruzstd::encoding::match_generator::MatchGenerator>::next_sequence::<&mut ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#0}>",
+  "header": "bb10.i",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 33,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/match_generator.rs",
+    "line": 341
+   },
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/match_generator.rs",
+    "line": 288
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvMs1_NtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generatorNtB6_14MatchGenerator13next_sequenceQNCINvNtNtB8_6blocks10compressed14compress_blockNtB6_20MatchGeneratorDriverE0ECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<ruzstd::encoding::match_generator::MatchGenerator>::next_sequence::<&mut ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 30,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/match_generator.rs",
+    "line": 214
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvMs1_NtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generatorNtB6_14MatchGenerator13next_sequenceQNCINvNtNtB8_6blocks10compressed14compress_blockNtB6_20MatchGeneratorDriverE0ECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<ruzstd::encoding::match_generator::MatchGenerator>::next_sequence::<&mut ruzstd::encoding::blocks::compressed::compress_block<ruzstd::encoding::match_generator::MatchGeneratorDriver>::{closure#0}>",
+  "header": "bb24",
+  "depth": 2,
+  "latch_count": 6,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 51,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/match_generator.rs",
+    "line": 246
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvYINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3zip3ZipINtNtNtBc_5slice4iter4IterhEBR_ENtNtNtBa_6traits8iterator8Iterator8try_foldjNCINvNvXs0_NtB8_10take_whileINtB2g_9TakeWhileppEB1n_8try_fold5checkTRhB3b_EjINtNtNtBc_3ops9try_trait17NeverShortCircuitjENCINvMs1_NtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generatorNtB4b_14MatchGenerator15mismatch_chunksKj8_Es_0NCINvMB3m_B3j_10wrap_mut_2jB3a_NCNvYIB2y_B3_B42_EB1n_5count0E0E0INtNtB3o_12control_flow11ControlFlowB3j_jEECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<core::iter::adapters::zip::Zip<core::slice::iter::Iter<u8>, core::slice::iter::Iter<u8>> as core::iter::traits::iterator::Iterator>::try_fold::<usize, <core::iter::adapters::take_while::TakeWhile<_, _> as core::iter::traits::iterator::Iterator>::try_fold::check<(&u8, &u8), usize, core::ops::try_trait::NeverShortCircuit<usize>, <ruzstd::encoding::match_generator::MatchGenerator>::mismatch_chunks<8>::{closure#1}, <core::ops::try_trait::NeverShortCircuit<usize>>::wrap_mut_2<usize, (&u8, &u8), <core::iter::adapters::take_while::TakeWhile<core::iter::adapters::zip::Zip<core::slice::iter::Iter<u8>, core::slice::iter::Iter<u8>>, <ruzstd::encoding::match_generator::MatchGenerator>::mismatch_chunks<8>::{closure#1}> as core::iter::traits::iterator::Iterator>::count::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<core::ops::try_trait::NeverShortCircuit<usize>, usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3zip3ZipINtNtNtBc_5slice4iter11ChunksExacthEBR_ENtNtNtBa_6traits8iterator8Iterator8try_foldjNCINvNvXs0_NtB8_10take_whileINtB2o_9TakeWhileppEB1v_8try_fold5checkTRShB3j_EjINtNtNtBc_3ops9try_trait17NeverShortCircuitjENCINvMs1_NtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generatorNtB4k_14MatchGenerator15mismatch_chunksKj8_E0NCINvMB3v_B3s_10wrap_mut_2jB3i_NCNvYIB2G_B3_B4b_EB1v_5count0E0E0INtNtB3x_12control_flow11ControlFlowB3s_jEECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<u8>, core::slice::iter::ChunksExact<u8>> as core::iter::traits::iterator::Iterator>::try_fold::<usize, <core::iter::adapters::take_while::TakeWhile<_, _> as core::iter::traits::iterator::Iterator>::try_fold::check<(&[u8], &[u8]), usize, core::ops::try_trait::NeverShortCircuit<usize>, <ruzstd::encoding::match_generator::MatchGenerator>::mismatch_chunks<8>::{closure#0}, <core::ops::try_trait::NeverShortCircuit<usize>>::wrap_mut_2<usize, (&[u8], &[u8]), <core::iter::adapters::take_while::TakeWhile<core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<u8>, core::slice::iter::ChunksExact<u8>>, <ruzstd::encoding::match_generator::MatchGenerator>::mismatch_chunks<8>::{closure#0}> as core::iter::traits::iterator::Iterator>::count::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<core::ops::try_trait::NeverShortCircuit<usize>, usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs1_NtCs4q8JsP7GHSJ_9twox_hash8xxhash64NtB5_12Accumulators10write_manyCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<twox_hash::xxhash64::Accumulators>::write_many",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash64.rs",
+    "line": 157
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs_NtCseWM0xlbei98_17tracing_indicatif10pb_managerNtB5_18ProgressBarManager19finish_progress_barINtNtNtCshkvMqo0TJaJ_18tracing_subscriber5layer7layered7LayeredINtNtNtB1H_3fmt9fmt_layer5LayerNtNtNtB1H_8registry7sharded8RegistryNtNtB2G_6format13DefaultFieldsINtB3I_6FormatNtB3I_4FulluENtNtB7_6writer15IndicatifWriterEB36_EECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<tracing_indicatif::pb_manager::ProgressBarManager>::finish_progress_bar::<tracing_subscriber::layer::layered::Layered<tracing_subscriber::fmt::fmt_layer::Layer<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields, tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()>, tracing_indicatif::writer::IndicatifWriter>, tracing_subscriber::registry::sharded::Registry>>",
+  "header": "bb12",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 52,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-indicatif-0.3.14",
+    "file": "src/pb_manager.rs",
+    "line": 280
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs4_NtNtCshkvMqo0TJaJ_18tracing_subscriber3fmt6formatINtB5_6FormatNtB5_4FulluEINtB5_11FormatEventNtNtNtB9_8registry7sharded8RegistryNtB5_13DefaultFieldsE12format_eventCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()> as tracing_subscriber::fmt::format::FormatEvent<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields>>::format_event",
+  "header": "bb59",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-subscriber-0.3.23",
+    "file": "src/fmt/format/mod.rs",
+    "line": 990
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtCshkvMqo0TJaJ_18tracing_subscriber8registry5ScopeINtNtNtB8_5layer7layered7LayeredINtNtNtB8_3fmt9fmt_layer5LayerNtNtB6_7sharded8RegistryNtNtB1w_6format13DefaultFieldsINtB2l_6FormatNtB2l_4FulluENtNtCseWM0xlbei98_17tracing_indicatif6writer15IndicatifWriterEB1V_EENtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator8try_folduNCINvNvB4k_4find5checkINtB6_7SpanRefBV_ENCNCNvXs8_B3i_INtB3i_14IndicatifLayerBV_EINtB10_5LayerBV_E11on_new_span00E0INtNtNtB4s_3ops12control_flow11ControlFlowB5L_EECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<tracing_subscriber::registry::Scope<tracing_subscriber::layer::layered::Layered<tracing_subscriber::fmt::fmt_layer::Layer<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields, tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()>, tracing_indicatif::writer::IndicatifWriter>, tracing_subscriber::registry::sharded::Registry>> as core::iter::traits::iterator::Iterator>::try_fold::<(), core::iter::traits::iterator::Iterator::find::check<tracing_subscriber::registry::SpanRef<tracing_subscriber::layer::layered::Layered<tracing_subscriber::fmt::fmt_layer::Layer<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields, tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()>, tracing_indicatif::writer::IndicatifWriter>, tracing_subscriber::registry::sharded::Registry>>, <tracing_indicatif::IndicatifLayer<tracing_subscriber::layer::layered::Layered<tracing_subscriber::fmt::fmt_layer::Layer<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields, tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()>, tracing_indicatif::writer::IndicatifWriter>, tracing_subscriber::registry::sharded::Registry>> as tracing_subscriber::layer::Layer<tracing_subscriber::layer::layered::Layered<tracing_subscriber::fmt::fmt_layer::Layer<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields, tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()>, tracing_indicatif::writer::IndicatifWriter>, tracing_subscriber::registry::sharded::Registry>>>::on_new_span::{closure#0}::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<tracing_subscriber::registry::SpanRef<tracing_subscriber::layer::layered::Layered<tracing_subscriber::fmt::fmt_layer::Layer<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields, tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()>, tracing_indicatif::writer::IndicatifWriter>, tracing_subscriber::registry::sharded::Registry>>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXNtCshkvMqo0TJaJ_18tracing_subscriber8registryINtB2_5ScopeINtNtNtB4_5layer7layered7LayeredINtNtNtB4_3fmt9fmt_layer5LayerNtNtB2_7sharded8RegistryNtNtB1y_6format13DefaultFieldsINtB2n_6FormatNtB2n_4FulluENtNtCseWM0xlbei98_17tracing_indicatif6writer15IndicatifWriterEB1X_EENtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator4nextCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<tracing_subscriber::registry::Scope<tracing_subscriber::layer::layered::Layered<tracing_subscriber::fmt::fmt_layer::Layer<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields, tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()>, tracing_indicatif::writer::IndicatifWriter>, tracing_subscriber::registry::sharded::Registry>> as core::iter::traits::iterator::Iterator>::next",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 43,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-subscriber-0.3.23",
+    "file": "src/registry/mod.rs",
+    "line": 313
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtCshkvMqo0TJaJ_18tracing_subscriber8registry5ScopeINtNtNtB8_5layer7layered7LayeredINtNtNtB8_3fmt9fmt_layer5LayerNtNtB6_7sharded8RegistryNtNtB1w_6format13DefaultFieldsINtB2l_6FormatNtB2l_4FulluENtNtCseWM0xlbei98_17tracing_indicatif6writer15IndicatifWriterEB1V_EENtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator8try_foldINtNtNtB4s_3num7nonzero7NonZerojENCNvXs_NvB4k_10advance_byB3_NtB62_13SpecAdvanceBy15spec_advance_by0INtNtB4s_6option6OptionB5o_EECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<tracing_subscriber::registry::Scope<tracing_subscriber::layer::layered::Layered<tracing_subscriber::fmt::fmt_layer::Layer<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields, tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()>, tracing_indicatif::writer::IndicatifWriter>, tracing_subscriber::registry::sharded::Registry>> as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, <tracing_subscriber::registry::Scope<tracing_subscriber::layer::layered::Layered<tracing_subscriber::fmt::fmt_layer::Layer<tracing_subscriber::registry::sharded::Registry, tracing_subscriber::fmt::format::DefaultFields, tracing_subscriber::fmt::format::Format<tracing_subscriber::fmt::format::Full, ()>, tracing_indicatif::writer::IndicatifWriter>, tracing_subscriber::registry::sharded::Registry>> as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXsi_NtNtNtCsgxBkk5gSRhY_4core4iter8adapters7flattenINtB5_13FlattenCompatINtNtNtCs6i54tJFfzR_5alloc3vec9into_iter8IntoIterINtB1g_3VecNtNtNtCskD1XT6HdotZ_12clap_builder4util9any_value8AnyValueEEIB1c_B29_EENtNtNtB9_6traits8iterator8Iterator4nextCsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<core::iter::adapters::flatten::FlattenCompat<alloc::vec::into_iter::IntoIter<alloc::vec::Vec<clap_builder::util::any_value::AnyValue>>, alloc::vec::into_iter::IntoIter<clap_builder::util::any_value::AnyValue>> as core::iter::traits::iterator::Iterator>::next",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/adapters/flatten.rs",
+    "line": 523
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtCskD1XT6HdotZ_12clap_builder7builder9arg_groupNtB3_8ArgGroup4argsNtNtNtB7_4util2id2IdAB1a_j0_ECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<clap_builder::builder::arg_group::ArgGroup>::args::<clap_builder::util::id::Id, [clap_builder::util::id::Id; 0]>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7",
+    "file": "src/builder/arg_group.rs",
+    "line": 171
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtCskD1XT6HdotZ_12clap_builder7builder9arg_groupNtB3_8ArgGroup4argsNtNtNtB7_4util2id2IdAB1a_j3_ECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<clap_builder::builder::arg_group::ArgGroup>::args::<clap_builder::util::id::Id, [clap_builder::util::id::Id; 3]>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7",
+    "file": "src/builder/arg_group.rs",
+    "line": 171
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtCskD1XT6HdotZ_12clap_builder7builder9arg_groupNtB3_8ArgGroup4argsNtNtNtB7_4util2id2IdAB1a_j2_ECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<clap_builder::builder::arg_group::ArgGroup>::args::<clap_builder::util::id::Id, [clap_builder::util::id::Id; 2]>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7",
+    "file": "src/builder/arg_group.rs",
+    "line": 171
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs_NtNtCsgxBkk5gSRhY_4core3ops11index_rangeNtB5_10IndexRangeNtNtNtNtB9_4iter6traits8iterator8Iterator8try_folduNCINvMs8_NtNtNtB9_5array4iter10iter_innerINtB1Y_15PolymorphicIterSINtNtNtB9_3mem12maybe_uninit11MaybeUninitNtNtNtCskD1XT6HdotZ_12clap_builder7builder6os_str5OsStrEE8try_folduNCINvMNtB7_9try_traitINtB4J_17NeverShortCircuituE10wrap_mut_2uB3y_NCINvNtNtB16_8adapters3map8map_foldB3y_B3y_uNCINvMs_NtB3C_3argNtB6x_3Arg14default_valuesB3y_AB3y_j1_E0NCINvNvB10_8for_each4callB3y_NCINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB7X_3VecB3y_E14extend_trustedINtB5M_3MapINtB20_8IntoIterB3y_KB7g_EB6p_EE0E0E0E0B4Y_E0B4Y_ECsjAA4jvcohGz_10ruzstd_cli",
+  "function_demangled": "<core::ops::index_range::IndexRange as core::iter::traits::iterator::Iterator>::try_fold::<(), <core::array::iter::iter_inner::PolymorphicIter<[core::mem::maybe_uninit::MaybeUninit<clap_builder::builder::os_str::OsStr>]>>::try_fold<(), <core::ops::try_trait::NeverShortCircuit<()>>::wrap_mut_2<(), clap_builder::builder::os_str::OsStr, core::iter::adapters::map::map_fold<clap_builder::builder::os_str::OsStr, clap_builder::builder::os_str::OsStr, (), <clap_builder::builder::arg::Arg>::default_values<clap_builder::builder::os_str::OsStr, [clap_builder::builder::os_str::OsStr; 1]>::{closure#0}, core::iter::traits::iterator::Iterator::for_each::call<clap_builder::builder::os_str::OsStr, <alloc::vec::Vec<clap_builder::builder::os_str::OsStr>>::extend_trusted<core::iter::adapters::map::Map<core::array::iter::IntoIter<clap_builder::builder::os_str::OsStr, 1>, <clap_builder::builder::arg::Arg>::default_values<clap_builder::builder::os_str::OsStr, [clap_builder::builder::os_str::OsStr; 1]>::{closure#0}>>::{closure#0}>::{closure#0}>::{closure#0}>::{closure#0}, core::ops::try_trait::NeverShortCircuit<()>>::{closure#0}, core::ops::try_trait::NeverShortCircuit<()>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ops/index_range.rs",
+    "line": 167
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort25insertion_sort_shift_leftNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1m_11sort_by_keyjNCNvB1o_30build_table_from_probabilitiess0_0E0EB1s_",
+  "function_demangled": "core::slice::sort::shared::smallsort::insertion_sort_shift_left::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 593
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort11insert_tailNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB18_11sort_by_keyjNCNvB1a_30build_table_from_probabilitiess0_0E0EB1e_",
+  "function_demangled": "core::slice::sort::shared::smallsort::insert_tail::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 35,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ub_checks.rs",
+    "line": 77
+   },
+   {
+    "col": 13,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 557
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift4sortNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSBW_11sort_by_keyjNCNvBY_30build_table_from_probabilitiess0_0E0EB12_",
+  "function_demangled": "core::slice::sort::stable::drift::sort::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 62
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift4sortNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSBW_11sort_by_keyjNCNvBY_30build_table_from_probabilitiess0_0E0EB12_",
+  "function_demangled": "core::slice::sort::stable::drift::sort::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb11",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 87
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift10create_runNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB13_11sort_by_keyjNCNvB15_30build_table_from_probabilitiess0_0E0EB19_",
+  "function_demangled": "core::slice::sort::stable::drift::create_run::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb4.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/mod.rs",
+    "line": 36
+   },
+   {
+    "col": 39,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 235
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift10create_runNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB13_11sort_by_keyjNCNvB15_30build_table_from_probabilitiess0_0E0EB19_",
+  "function_demangled": "core::slice::sort::stable::drift::create_run::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb11.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/mod.rs",
+    "line": 40
+   },
+   {
+    "col": 39,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 235
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5mergeINtB3_10MergeStateNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateE10merge_downNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1a_11sort_by_keyjNCNvB1c_30build_table_from_probabilitiess0_0E0EB1g_",
+  "function_demangled": "<core::slice::sort::stable::merge::MergeState<ruzstd::fse::fse_encoder::State>>::merge_down::<<[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mut_ptr.rs",
+    "line": 1047
+   },
+   {
+    "col": 37,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/merge.rs",
+    "line": 118
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5mergeINtB3_10MergeStateNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateE8merge_upNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1a_11sort_by_keyjNCNvB1c_30build_table_from_probabilitiess0_0E0EB1g_",
+  "function_demangled": "<core::slice::sort::stable::merge::MergeState<ruzstd::fse::fse_encoder::State>>::merge_up::<<[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/merge.rs",
+    "line": 89
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort9quicksortNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB15_11sort_by_keyjNCNvB17_30build_table_from_probabilitiess0_0E0EB1b_",
+  "function_demangled": "core::slice::sort::stable::quicksort::quicksort::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 26
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort31small_sort_general_with_scratchNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1s_11sort_by_keyjNCNvB1u_30build_table_from_probabilitiess0_0E0EB1y_",
+  "function_demangled": "core::slice::sort::shared::smallsort::small_sort_general_with_scratch::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb16",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/iter.rs",
+    "line": 243
+   },
+   {
+    "col": 23,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 265
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort31small_sort_general_with_scratchNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1s_11sort_by_keyjNCNvB1u_30build_table_from_probabilitiess0_0E0EB1y_",
+  "function_demangled": "core::slice::sort::shared::smallsort::small_sort_general_with_scratch::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb23",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 272
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess0_0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 172
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess0_0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 128
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess0_0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 140
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess0_0E0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, core::slice::sort::stable::quicksort::quicksort<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>::{closure#0}>",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 172
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess0_0E0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, core::slice::sort::stable::quicksort::quicksort<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 128
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess0_0E0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, core::slice::sort::stable::quicksort::quicksort<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>::{closure#0}>",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 140
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort19bidirectional_mergeNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1g_11sort_by_keyjNCNvB1i_30build_table_from_probabilitiess0_0E0EB1m_",
+  "function_demangled": "core::slice::sort::shared::smallsort::bidirectional_merge::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#2}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 811
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNvMNtCsgxBkk5gSRhY_4core5sliceSp7reverse7revswapNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateEBU_",
+  "function_demangled": "<[_]>::reverse::revswap::<ruzstd::fse::fse_encoder::State>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/mod.rs",
+    "line": 1017
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort25insertion_sort_shift_leftNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1m_11sort_by_keyjNCNvB1o_30build_table_from_probabilitiess1_0E0EB1s_",
+  "function_demangled": "core::slice::sort::shared::smallsort::insertion_sort_shift_left::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 593
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort11insert_tailNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB18_11sort_by_keyjNCNvB1a_30build_table_from_probabilitiess1_0E0EB1e_",
+  "function_demangled": "core::slice::sort::shared::smallsort::insert_tail::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 35,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ub_checks.rs",
+    "line": 77
+   },
+   {
+    "col": 13,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 557
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift4sortNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSBW_11sort_by_keyjNCNvBY_30build_table_from_probabilitiess1_0E0EB12_",
+  "function_demangled": "core::slice::sort::stable::drift::sort::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 62
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift4sortNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSBW_11sort_by_keyjNCNvBY_30build_table_from_probabilitiess1_0E0EB12_",
+  "function_demangled": "core::slice::sort::stable::drift::sort::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb11",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 87
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift10create_runNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB13_11sort_by_keyjNCNvB15_30build_table_from_probabilitiess1_0E0EB19_",
+  "function_demangled": "core::slice::sort::stable::drift::create_run::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb4.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/mod.rs",
+    "line": 36
+   },
+   {
+    "col": 39,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 235
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift10create_runNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB13_11sort_by_keyjNCNvB15_30build_table_from_probabilitiess1_0E0EB19_",
+  "function_demangled": "core::slice::sort::stable::drift::create_run::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb11.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/mod.rs",
+    "line": 40
+   },
+   {
+    "col": 39,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 235
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5mergeINtB3_10MergeStateNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateE10merge_downNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1a_11sort_by_keyjNCNvB1c_30build_table_from_probabilitiess1_0E0EB1g_",
+  "function_demangled": "<core::slice::sort::stable::merge::MergeState<ruzstd::fse::fse_encoder::State>>::merge_down::<<[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mut_ptr.rs",
+    "line": 1047
+   },
+   {
+    "col": 37,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/merge.rs",
+    "line": 118
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5mergeINtB3_10MergeStateNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateE8merge_upNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1a_11sort_by_keyjNCNvB1c_30build_table_from_probabilitiess1_0E0EB1g_",
+  "function_demangled": "<core::slice::sort::stable::merge::MergeState<ruzstd::fse::fse_encoder::State>>::merge_up::<<[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/merge.rs",
+    "line": 89
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort9quicksortNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB15_11sort_by_keyjNCNvB17_30build_table_from_probabilitiess1_0E0EB1b_",
+  "function_demangled": "core::slice::sort::stable::quicksort::quicksort::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 26
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort31small_sort_general_with_scratchNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1s_11sort_by_keyjNCNvB1u_30build_table_from_probabilitiess1_0E0EB1y_",
+  "function_demangled": "core::slice::sort::shared::smallsort::small_sort_general_with_scratch::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb16",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/iter.rs",
+    "line": 243
+   },
+   {
+    "col": 23,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 265
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort31small_sort_general_with_scratchNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1s_11sort_by_keyjNCNvB1u_30build_table_from_probabilitiess1_0E0EB1y_",
+  "function_demangled": "core::slice::sort::shared::smallsort::small_sort_general_with_scratch::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb23",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 272
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess1_0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 172
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess1_0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 128
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess1_0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 140
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess1_0E0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, core::slice::sort::stable::quicksort::quicksort<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>::{closure#0}>",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 172
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess1_0E0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, core::slice::sort::stable::quicksort::quicksort<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 128
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyjNCNvB1f_30build_table_from_probabilitiess1_0E0E0EB1j_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<ruzstd::fse::fse_encoder::State, core::slice::sort::stable::quicksort::quicksort<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>::{closure#0}>",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 140
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort19bidirectional_mergeNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1g_11sort_by_keyjNCNvB1i_30build_table_from_probabilitiess1_0E0EB1m_",
+  "function_demangled": "core::slice::sort::shared::smallsort::bidirectional_merge::<ruzstd::fse::fse_encoder::State, <[ruzstd::fse::fse_encoder::State]>::sort_by_key<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#3}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 811
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort25insertion_sort_shift_leftNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1t_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1m_7sort_byNCB1o_0E0EB1x_",
+  "function_demangled": "core::slice::sort::shared::smallsort::insertion_sort_shift_left::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 593
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort11insert_tailNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1f_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB18_7sort_byNCB1a_0E0EB1j_",
+  "function_demangled": "core::slice::sort::shared::smallsort::insert_tail::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 35,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ub_checks.rs",
+    "line": 77
+   },
+   {
+    "col": 13,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 557
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift4sortNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB13_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSBW_7sort_byNCBY_0E0EB17_",
+  "function_demangled": "core::slice::sort::stable::drift::sort::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 62
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift4sortNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB13_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSBW_7sort_byNCBY_0E0EB17_",
+  "function_demangled": "core::slice::sort::stable::drift::sort::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb11",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 87
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift10create_runNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1a_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB13_7sort_byNCB15_0E0EB1e_",
+  "function_demangled": "core::slice::sort::stable::drift::create_run::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb4.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/mod.rs",
+    "line": 36
+   },
+   {
+    "col": 39,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 235
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift10create_runNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1a_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB13_7sort_byNCB15_0E0EB1e_",
+  "function_demangled": "core::slice::sort::stable::drift::create_run::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb11.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/mod.rs",
+    "line": 40
+   },
+   {
+    "col": 39,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 235
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5mergeINtB3_10MergeStateNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1h_12HuffmanTable18build_from_weights9SortEntryE10merge_downNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1a_7sort_byNCB1c_0E0EB1l_",
+  "function_demangled": "<core::slice::sort::stable::merge::MergeState<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry>>::merge_down::<<[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mut_ptr.rs",
+    "line": 1047
+   },
+   {
+    "col": 37,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/merge.rs",
+    "line": 118
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5mergeINtB3_10MergeStateNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1h_12HuffmanTable18build_from_weights9SortEntryE8merge_upNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1a_7sort_byNCB1c_0E0EB1l_",
+  "function_demangled": "<core::slice::sort::stable::merge::MergeState<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry>>::merge_up::<<[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/merge.rs",
+    "line": 89
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort9quicksortNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1c_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB15_7sort_byNCB17_0E0EB1g_",
+  "function_demangled": "core::slice::sort::stable::quicksort::quicksort::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 26
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort31small_sort_general_with_scratchNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1z_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1s_7sort_byNCB1u_0E0EB1D_",
+  "function_demangled": "core::slice::sort::shared::smallsort::small_sort_general_with_scratch::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb16",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/iter.rs",
+    "line": 243
+   },
+   {
+    "col": 23,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 265
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort31small_sort_general_with_scratchNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1z_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1s_7sort_byNCB1u_0E0EB1D_",
+  "function_demangled": "core::slice::sort::shared::smallsort::small_sort_general_with_scratch::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb23",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 272
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1k_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_7sort_byNCB1f_0E0EB1o_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 172
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1k_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_7sort_byNCB1f_0E0EB1o_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 128
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1k_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_7sort_byNCB1f_0E0EB1o_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb5",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 131
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1k_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_7sort_byNCB1f_0E0EB1o_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 140
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1k_12HuffmanTable18build_from_weights9SortEntryNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_7sort_byNCB1f_0E0E0EB1o_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, core::slice::sort::stable::quicksort::quicksort<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 172
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1k_12HuffmanTable18build_from_weights9SortEntryNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_7sort_byNCB1f_0E0E0EB1o_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, core::slice::sort::stable::quicksort::quicksort<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 128
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1k_12HuffmanTable18build_from_weights9SortEntryNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_7sort_byNCB1f_0E0E0EB1o_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, core::slice::sort::stable::quicksort::quicksort<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb5",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 131
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1k_12HuffmanTable18build_from_weights9SortEntryNCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_7sort_byNCB1f_0E0E0EB1o_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, core::slice::sort::stable::quicksort::quicksort<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 140
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort19bidirectional_mergeNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1n_12HuffmanTable18build_from_weights9SortEntryNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1g_7sort_byNCB1i_0E0EB1r_",
+  "function_demangled": "core::slice::sort::shared::smallsort::bidirectional_merge::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, <[<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry]>::sort_by<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 811
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNvMNtCsgxBkk5gSRhY_4core5sliceSp7reverse7revswapNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtBV_12HuffmanTable18build_from_weights9SortEntryEBZ_",
+  "function_demangled": "<[_]>::reverse::revswap::<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/mod.rs",
+    "line": 1017
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort25insertion_sort_shift_leftTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB1m_11sort_by_keyB1o_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2r_12HuffmanTable17build_from_countss_0E0EB2v_",
+  "function_demangled": "core::slice::sort::shared::smallsort::insertion_sort_shift_left::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 593
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort11insert_tailTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB18_11sort_by_keyB1a_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2d_12HuffmanTable17build_from_countss_0E0EB2h_",
+  "function_demangled": "core::slice::sort::shared::smallsort::insert_tail::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 35,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ub_checks.rs",
+    "line": 77
+   },
+   {
+    "col": 13,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 557
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift4sortTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSBW_11sort_by_keyBY_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1Z_12HuffmanTable17build_from_countss_0E0EB23_",
+  "function_demangled": "core::slice::sort::stable::drift::sort::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 62
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift4sortTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSBW_11sort_by_keyBY_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB1Z_12HuffmanTable17build_from_countss_0E0EB23_",
+  "function_demangled": "core::slice::sort::stable::drift::sort::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb11",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 87
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift10create_runTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB13_11sort_by_keyB15_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB28_12HuffmanTable17build_from_countss_0E0EB2c_",
+  "function_demangled": "core::slice::sort::stable::drift::create_run::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb4.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/mod.rs",
+    "line": 36
+   },
+   {
+    "col": 39,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 235
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5drift10create_runTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB13_11sort_by_keyB15_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB28_12HuffmanTable17build_from_countss_0E0EB2c_",
+  "function_demangled": "core::slice::sort::stable::drift::create_run::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb11.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/mod.rs",
+    "line": 40
+   },
+   {
+    "col": 39,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/drift.rs",
+    "line": 235
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5mergeINtB3_10MergeStateTjRjEE10merge_downNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1a_11sort_by_keyB1c_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2s_12HuffmanTable17build_from_countss_0E0EB2w_",
+  "function_demangled": "<core::slice::sort::stable::merge::MergeState<(usize, &usize)>>::merge_down::<<[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mut_ptr.rs",
+    "line": 1047
+   },
+   {
+    "col": 37,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/merge.rs",
+    "line": 118
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable5mergeINtB3_10MergeStateTjRjEE8merge_upNCINvMNtCs6i54tJFfzR_5alloc5sliceSB1a_11sort_by_keyB1c_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2p_12HuffmanTable17build_from_countss_0E0EB2t_",
+  "function_demangled": "<core::slice::sort::stable::merge::MergeState<(usize, &usize)>>::merge_up::<<[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/merge.rs",
+    "line": 89
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort9quicksortTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB15_11sort_by_keyB17_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2a_12HuffmanTable17build_from_countss_0E0EB2e_",
+  "function_demangled": "core::slice::sort::stable::quicksort::quicksort::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 26
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort31small_sort_general_with_scratchTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB1s_11sort_by_keyB1u_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2x_12HuffmanTable17build_from_countss_0E0EB2B_",
+  "function_demangled": "core::slice::sort::shared::smallsort::small_sort_general_with_scratch::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb16",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/iter.rs",
+    "line": 243
+   },
+   {
+    "col": 23,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 265
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort31small_sort_general_with_scratchTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB1s_11sort_by_keyB1u_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2x_12HuffmanTable17build_from_countss_0E0EB2B_",
+  "function_demangled": "core::slice::sort::shared::smallsort::small_sort_general_with_scratch::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb23",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 272
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyB1f_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2i_12HuffmanTable17build_from_countss_0E0EB2m_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 172
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyB1f_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2i_12HuffmanTable17build_from_countss_0E0EB2m_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 128
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyB1f_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2i_12HuffmanTable17build_from_countss_0E0EB2m_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb5",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 131
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyB1f_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2i_12HuffmanTable17build_from_countss_0E0EB2m_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 140
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionTjRjENCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyB1f_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2E_12HuffmanTable17build_from_countss_0E0E0EB2I_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<(usize, &usize), core::slice::sort::stable::quicksort::quicksort<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>::{closure#0}>",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 172
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionTjRjENCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyB1f_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2E_12HuffmanTable17build_from_countss_0E0E0EB2I_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<(usize, &usize), core::slice::sort::stable::quicksort::quicksort<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>::{closure#0}>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 128
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionTjRjENCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyB1f_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2E_12HuffmanTable17build_from_countss_0E0E0EB2I_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<(usize, &usize), core::slice::sort::stable::quicksort::quicksort<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>::{closure#0}>",
+  "header": "bb5",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 131
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6stable9quicksort16stable_partitionTjRjENCINvB2_9quicksortB1d_NCINvMNtCs6i54tJFfzR_5alloc5sliceSB1d_11sort_by_keyB1f_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2E_12HuffmanTable17build_from_countss_0E0E0EB2I_",
+  "function_demangled": "core::slice::sort::stable::quicksort::stable_partition::<(usize, &usize), core::slice::sort::stable::quicksort::quicksort<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>::{closure#0}>",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/stable/quicksort.rs",
+    "line": 140
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtNtNtCsgxBkk5gSRhY_4core5slice4sort6shared9smallsort19bidirectional_mergeTjRjENCINvMNtCs6i54tJFfzR_5alloc5sliceSB1g_11sort_by_keyB1i_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB2l_12HuffmanTable17build_from_countss_0E0EB2p_",
+  "function_demangled": "core::slice::sort::shared::smallsort::bidirectional_merge::<(usize, &usize), <[(usize, &usize)]>::sort_by_key<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#1}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/sort/shared/smallsort.rs",
+    "line": 811
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNvMNtCsgxBkk5gSRhY_4core5sliceSp7reverse7revswapTjRjEECsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<[_]>::reverse::revswap::<(usize, &usize)>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/mod.rs",
+    "line": 1017
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VechE11extend_withCsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<alloc::vec::Vec<u8>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecINtNtCsgxBkk5gSRhY_4core6option6OptionINtNtNtBJ_3num7nonzero7NonZerojEEE11extend_withCsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<alloc::vec::Vec<core::option::Option<core::num::nonzero::NonZero<usize>>>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs5_NtNtCsgxBkk5gSRhY_4core3fmt8buildersNtB6_9DebugList7entriesRlINtNtNtBa_5slice4iter4IterlEECsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<core::fmt::builders::DebugList>::entries::<&i32, core::slice::iter::Iter<i32>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/fmt/builders.rs",
+    "line": 787
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd8decoding24sequence_section_decoder16decode_sequences",
+  "function_demangled": "ruzstd::decoding::sequence_section_decoder::decode_sequences",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/bit_io/bit_reader_reverse.rs",
+    "line": 93
+   },
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/sequence_section_decoder.rs",
+    "line": 31
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd8decoding18sequence_execution17execute_sequences",
+  "function_demangled": "ruzstd::decoding::sequence_execution::execute_sequences",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/sequence_execution.rs",
+    "line": 13
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding10ringbufferNtB5_10RingBuffer28extend_from_within_unchecked",
+  "function_demangled": "<ruzstd::decoding::ringbuffer::RingBuffer>::extend_from_within_unchecked",
+  "header": "bb13.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 640
+   },
+   {
+    "col": 26,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 359
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding10ringbufferNtB5_10RingBuffer28extend_from_within_unchecked",
+  "function_demangled": "<ruzstd::decoding::ringbuffer::RingBuffer>::extend_from_within_unchecked",
+  "header": "bb13.i49",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 640
+   },
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 329
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding10ringbufferNtB5_10RingBuffer28extend_from_within_unchecked",
+  "function_demangled": "<ruzstd::decoding::ringbuffer::RingBuffer>::extend_from_within_unchecked",
+  "header": "bb13.i82",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 640
+   },
+   {
+    "col": 26,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 395
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding10ringbufferNtB5_10RingBuffer28extend_from_within_unchecked",
+  "function_demangled": "<ruzstd::decoding::ringbuffer::RingBuffer>::extend_from_within_unchecked",
+  "header": "bb13.i115",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 640
+   },
+   {
+    "col": 30,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 459
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding10ringbufferNtB5_10RingBuffer28extend_from_within_unchecked",
+  "function_demangled": "<ruzstd::decoding::ringbuffer::RingBuffer>::extend_from_within_unchecked",
+  "header": "bb13.i148",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 640
+   },
+   {
+    "col": 26,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/ringbuffer.rs",
+    "line": 428
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd8decoding13decode_bufferNtB4_12DecodeBuffer16repeat_in_chunks",
+  "function_demangled": "<ruzstd::decoding::decode_buffer::DecodeBuffer>::repeat_in_chunks",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/decode_buffer.rs",
+    "line": 119
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd8decoding24sequence_section_decoder25decode_sequences_with_rle",
+  "function_demangled": "ruzstd::decoding::sequence_section_decoder::decode_sequences_with_rle",
+  "header": "bb26",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/sequence_section_decoder.rs",
+    "line": 72
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd8decoding24sequence_section_decoder28decode_sequences_without_rle",
+  "function_demangled": "ruzstd::decoding::sequence_section_decoder::decode_sequences_without_rle",
+  "header": "bb20",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/sequence_section_decoder.rs",
+    "line": 171
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd3fse11fse_decoderNtB4_8FSETable20build_decoding_table",
+  "function_demangled": "<ruzstd::fse::fse_decoder::FSETable>::build_decoding_table",
+  "header": "bb47",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_decoder.rs",
+    "line": 203
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd3fse11fse_decoderNtB4_8FSETable20build_decoding_table",
+  "function_demangled": "<ruzstd::fse::fse_decoder::FSETable>::build_decoding_table",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_decoder.rs",
+    "line": 179
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd3fse11fse_decoderNtB4_8FSETable20build_decoding_table",
+  "function_demangled": "<ruzstd::fse::fse_decoder::FSETable>::build_decoding_table",
+  "header": "bb35",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_decoder.rs",
+    "line": 187
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd3fse11fse_decoderNtB4_8FSETable20build_decoding_table",
+  "function_demangled": "<ruzstd::fse::fse_decoder::FSETable>::build_decoding_table",
+  "header": "bb40",
+  "depth": 3,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_decoder.rs",
+    "line": 192
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd3fse11fse_decoderNtB4_8FSETable20build_decoding_table",
+  "function_demangled": "<ruzstd::fse::fse_decoder::FSETable>::build_decoding_table",
+  "header": "bb16",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_decoder.rs",
+    "line": 167
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecmE11extend_withCsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<alloc::vec::Vec<u32>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_decoder5EntryE11extend_withBK_",
+  "function_demangled": "<alloc::vec::Vec<ruzstd::fse::fse_decoder::Entry>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd3fse11fse_decoderNtB4_8FSETable18read_probabilities",
+  "function_demangled": "<ruzstd::fse::fse_decoder::FSETable>::read_probabilities",
+  "header": "bb14",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_decoder.rs",
+    "line": 242
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd3fse11fse_decoderNtB4_8FSETable18read_probabilities",
+  "function_demangled": "<ruzstd::fse::fse_decoder::FSETable>::read_probabilities",
+  "header": "bb45",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 39,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_decoder.rs",
+    "line": 276
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMNtNtCsju7VyPzhvwj_6ruzstd6bit_io10bit_readerNtB2_9BitReader8get_bits",
+  "function_demangled": "<ruzstd::bit_io::bit_reader::BitReader>::get_bits",
+  "header": "bb34",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/bit_io/bit_reader.rs",
+    "line": 72
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VeclE11extend_withCsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<alloc::vec::Vec<i32>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd8decoding24literals_section_decoder19decompress_literals",
+  "function_demangled": "ruzstd::decoding::literals_section_decoder::decompress_literals",
+  "header": "bb48",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 2,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/literals_section_decoder.rs",
+    "line": 94
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd8decoding24literals_section_decoder19decompress_literals",
+  "function_demangled": "ruzstd::decoding::literals_section_decoder::decompress_literals",
+  "header": "bb54",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/bit_io/bit_reader_reverse.rs",
+    "line": 93
+   },
+   {
+    "col": 30,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/literals_section_decoder.rs",
+    "line": 100
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd8decoding24literals_section_decoder19decompress_literals",
+  "function_demangled": "ruzstd::decoding::literals_section_decoder::decompress_literals",
+  "header": "bb61",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 41,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/literals_section_decoder.rs",
+    "line": 112
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd8decoding24literals_section_decoder19decompress_literals",
+  "function_demangled": "ruzstd::decoding::literals_section_decoder::decompress_literals",
+  "header": "bb86",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 37,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/literals_section_decoder.rs",
+    "line": 143
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd8decoding24literals_section_decoder19decompress_literals",
+  "function_demangled": "ruzstd::decoding::literals_section_decoder::decompress_literals",
+  "header": "bb79",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/bit_io/bit_reader_reverse.rs",
+    "line": 93
+   },
+   {
+    "col": 26,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/literals_section_decoder.rs",
+    "line": 132
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoderNtB4_12HuffmanTable12read_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_decoder::HuffmanTable>::read_weights",
+  "header": "bb44",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_decoder.rs",
+    "line": 213
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoderNtB4_12HuffmanTable12read_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_decoder::HuffmanTable>::read_weights",
+  "header": "bb29",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/bit_io/bit_reader_reverse.rs",
+    "line": 93
+   },
+   {
+    "col": 34,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_decoder.rs",
+    "line": 191
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoderNtB4_12HuffmanTable12read_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_decoder::HuffmanTable>::read_weights",
+  "header": "bb75",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 28,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_decoder.rs",
+    "line": 261
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoderNtB4_12HuffmanTable24build_table_from_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_decoder::HuffmanTable>::build_table_from_weights",
+  "header": "bb90",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_decoder.rs",
+    "line": 360
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoderNtB4_12HuffmanTable24build_table_from_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_decoder::HuffmanTable>::build_table_from_weights",
+  "header": "bb102",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 28,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_decoder.rs",
+    "line": 369
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoderNtB4_12HuffmanTable24build_table_from_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_decoder::HuffmanTable>::build_table_from_weights",
+  "header": "bb67",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_decoder.rs",
+    "line": 348
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoderNtB4_12HuffmanTable24build_table_from_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_decoder::HuffmanTable>::build_table_from_weights",
+  "header": "bb52",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_decoder.rs",
+    "line": 330
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoderNtB4_12HuffmanTable24build_table_from_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_decoder::HuffmanTable>::build_table_from_weights",
+  "header": "bb30",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_decoder.rs",
+    "line": 312
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoderNtB4_12HuffmanTable24build_table_from_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_decoder::HuffmanTable>::build_table_from_weights",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_decoder.rs",
+    "line": 291
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecjE11extend_withCsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<alloc::vec::Vec<usize>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecNtNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_decoder5EntryE11extend_withBK_",
+  "function_demangled": "<alloc::vec::Vec<ruzstd::huff0::huff0_decoder::Entry>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd8decoding5frame17read_frame_headerQRShEB6_",
+  "function_demangled": "ruzstd::decoding::frame::read_frame_header::<&mut &[u8]>",
+  "header": "bb74",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/frame.rs",
+    "line": 75
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd8decoding5frame17read_frame_headerQRShEB6_",
+  "function_demangled": "ruzstd::decoding::frame::read_frame_header::<&mut &[u8]>",
+  "header": "bb51",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/frame.rs",
+    "line": 57
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding13frame_decoderNtB6_12FrameDecoder13decode_blocksQRShEBa_",
+  "function_demangled": "<ruzstd::decoding::frame_decoder::FrameDecoder>::decode_blocks::<&mut &[u8]>",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/frame_decoder.rs",
+    "line": 326
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvMs_NtNtNtCs6i54tJFfzR_5alloc11collections5btree6searchINtNtB7_4node7NodeRefNtNtBX_6marker5ImmutmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB1h_14LeafOrInternalE11search_treemEB1G_",
+  "function_demangled": "<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::LeafOrInternal>>::search_tree::<u32>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/search.rs",
+    "line": 203
+   },
+   {
+    "col": 31,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/search.rs",
+    "line": 58
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs0_NtNtNtCs6i54tJFfzR_5alloc11collections5btree6searchINtNtB8_4node7NodeRefNtNtBY_6marker5ImmutmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB1i_14LeafOrInternalE14find_key_indexmEB1H_",
+  "function_demangled": "<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Immut, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<u32>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 28,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/search.rs",
+    "line": 225
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs0_NtNtNtCs6i54tJFfzR_5alloc11collections5btree6searchINtNtB8_4node7NodeRefNtNtBY_6marker3MutmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB1i_14LeafOrInternalE14find_key_indexmEB1F_",
+  "function_demangled": "<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::LeafOrInternal>>::find_key_index::<u32>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 28,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/search.rs",
+    "line": 225
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMsp_NtNtNtCs6i54tJFfzR_5alloc11collections5btree4nodeINtB6_7NodeRefNtNtB6_6marker3MutmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB19_8InternalE30correct_childrens_parent_linksINtNtNtCsgxBkk5gSRhY_4core3ops5range14RangeInclusivejEEB1w_",
+  "function_demangled": "<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::Internal>>::correct_childrens_parent_links::<core::ops::range::RangeInclusive<usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/node.rs",
+    "line": 558
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMsp_NtNtNtCs6i54tJFfzR_5alloc11collections5btree4nodeINtB6_7NodeRefNtNtB6_6marker3MutmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB19_8InternalE30correct_childrens_parent_linksINtNtNtCsgxBkk5gSRhY_4core3ops5range5RangejEEB1w_",
+  "function_demangled": "<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::Internal>>::correct_childrens_parent_links::<core::ops::range::Range<usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/node.rs",
+    "line": 558
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMsN_NtNtNtCs6i54tJFfzR_5alloc11collections5btree4nodeINtB6_6HandleINtB6_7NodeRefNtNtB6_6marker3MutmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB1m_4LeafENtB1m_4EdgeE16insert_recursingNtNtBc_5alloc6GlobalNCNvMs4_NtNtB8_3map5entryINtB3J_11VacantEntrymB1D_E12insert_entry0EB1J_",
+  "function_demangled": "<alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::Leaf>, alloc::collections::btree::node::marker::Edge>>::insert_recursing::<alloc::alloc::Global, <alloc::collections::btree::map::entry::VacantEntry<u32, ruzstd::decoding::dictionary::Dictionary>>::insert_entry::{closure#0}>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 38,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/node.rs",
+    "line": 1073
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd6bit_io10bit_writerINtB4_9BitWriterINtNtCs6i54tJFfzR_5alloc3vec3VechEE18write_bits_64_coldB8_",
+  "function_demangled": "<ruzstd::bit_io::bit_writer::BitWriter<alloc::vec::Vec<u8>>>::write_bits_64_cold",
+  "header": "bb13",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/bit_io/bit_writer.rs",
+    "line": 152
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd6bit_io10bit_writerINtB4_9BitWriterQINtNtCs6i54tJFfzR_5alloc3vec3VechEE18write_bits_64_coldB8_",
+  "function_demangled": "<ruzstd::bit_io::bit_writer::BitWriter<&mut alloc::vec::Vec<u8>>>::write_bits_64_cold",
+  "header": "bb13",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/bit_io/bit_writer.rs",
+    "line": 152
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs1_NtCs4q8JsP7GHSJ_9twox_hash8xxhash64NtB5_12Accumulators10write_manyCsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<twox_hash::xxhash64::Accumulators>::write_many",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash64.rs",
+    "line": 157
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs_NtNtNtCs6i54tJFfzR_5alloc11collections5btree6searchINtNtB7_4node7NodeRefNtNtBX_6marker3MutmNtNtNtCsju7VyPzhvwj_6ruzstd8decoding10dictionary10DictionaryNtB1h_14LeafOrInternalE11search_treemEB1E_",
+  "function_demangled": "<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut, u32, ruzstd::decoding::dictionary::Dictionary, alloc::collections::btree::node::marker::LeafOrInternal>>::search_tree::<u32>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/search.rs",
+    "line": 203
+   },
+   {
+    "col": 31,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/collections/btree/search.rs",
+    "line": 58
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterjENtNtNtNtBb_4iter6traits8iterator8Iterator4folduNCINvNvXs_NtNtBY_8adapters9enumerateINtB1N_9EnumeratepEBS_4fold9enumerateRjuNCINvNvBS_8for_each4callTjB2O_ENCINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB3v_3VecB3f_E14extend_trustedIB2e_BF_EE0E0E0ECsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<core::slice::iter::Iter<usize> as core::iter::traits::iterator::Iterator>::fold::<(), <core::iter::adapters::enumerate::Enumerate<_> as core::iter::traits::iterator::Iterator>::fold::enumerate<&usize, (), core::iter::traits::iterator::Iterator::for_each::call<(usize, &usize), <alloc::vec::Vec<(usize, &usize)>>::extend_trusted<core::iter::adapters::enumerate::Enumerate<core::slice::iter::Iter<usize>>>::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterTmhEENtNtNtNtBb_4iter6traits8iterator8Iterator4folduNCINvNtNtB11_8adapters6copied9copy_foldBQ_uNCINvNtB1N_3map8map_foldBQ_huNCNvMNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderINtB2V_14HuffmanEncoderQINtNtCs6i54tJFfzR_5alloc3vec3VechEE7weightss_0NCINvNvBV_8for_each4callhNCINvMsj_B46_B43_14extend_trustedINtB2s_3MapINtB1L_6CopiedBF_EB2Q_EE0E0E0E0EB2Z_",
+  "function_demangled": "<core::slice::iter::Iter<(u32, u8)> as core::iter::traits::iterator::Iterator>::fold::<(), core::iter::adapters::copied::copy_fold<(u32, u8), (), core::iter::adapters::map::map_fold<(u32, u8), u8, (), <ruzstd::huff0::huff0_encoder::HuffmanEncoder<&mut alloc::vec::Vec<u8>>>::weights::{closure#1}, core::iter::traits::iterator::Iterator::for_each::call<u8, <alloc::vec::Vec<u8>>::extend_trusted<core::iter::adapters::map::Map<core::iter::adapters::copied::Copied<core::slice::iter::Iter<(u32, u8)>>, <ruzstd::huff0::huff0_encoder::HuffmanEncoder<&mut alloc::vec::Vec<u8>>>::weights::{closure#1}>>::{closure#0}>::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNvNtCsgxBkk5gSRhY_4core3ptr25swap_nonoverlapping_bytes26swap_nonoverlapping_chunksKj8_ECsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "core::ptr::swap_nonoverlapping_bytes::swap_nonoverlapping_chunks::<8>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 18,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 1463
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder12SymbolStatesEBI_",
+  "function_demangled": "core::ptr::drop_glue::<[ruzstd::fse::fse_encoder::SymbolStates]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder12SymbolStatesEBI_",
+  "function_demangled": "core::ptr::drop_glue::<[ruzstd::fse::fse_encoder::SymbolStates]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSINtNtCs6i54tJFfzR_5alloc3vec3VechEECsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "core::ptr::drop_glue::<[alloc::vec::Vec<u8>]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSINtNtCs6i54tJFfzR_5alloc3vec3VechEECsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "core::ptr::drop_glue::<[alloc::vec::Vec<u8>]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generator11SuffixStoreEBI_",
+  "function_demangled": "core::ptr::drop_glue::<[ruzstd::encoding::match_generator::SuffixStore]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generator11SuffixStoreEBI_",
+  "function_demangled": "core::ptr::drop_glue::<[ruzstd::encoding::match_generator::SuffixStore]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generator11WindowEntryEBI_",
+  "function_demangled": "core::ptr::drop_glue::<[ruzstd::encoding::match_generator::WindowEntry]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generator11WindowEntryEBI_",
+  "function_demangled": "core::ptr::drop_glue::<[ruzstd::encoding::match_generator::WindowEntry]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core5array18try_from_fn_erasedINtNtNtB4_3ops9try_trait17NeverShortCircuitNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder12SymbolStatesENCINvMBQ_BN_10wrap_mut_1jNCNvB1w_30build_table_from_probabilities0E0EB1A_",
+  "function_demangled": "core::array::try_from_fn_erased::<core::ops::try_trait::NeverShortCircuit<ruzstd::fse::fse_encoder::SymbolStates>, <core::ops::try_trait::NeverShortCircuit<ruzstd::fse::fse_encoder::SymbolStates>>::wrap_mut_1<usize, ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/mod.rs",
+    "line": 912
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder21build_table_from_dataINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters6copied6CopiedINtNtNtB1e_5slice4iter4IterhEEEB6_",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_data::<core::iter::adapters::copied::Copied<core::slice::iter::Iter<u8>>>",
+  "header": "bb14",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 236
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder21build_table_from_dataINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters6copied6CopiedINtNtNtB1e_5slice4iter4IterhEEEB6_",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_data::<core::iter::adapters::copied::Copied<core::slice::iter::Iter<u8>>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 233
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder23build_table_from_counts",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_counts",
+  "header": "bb59",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 290
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder23build_table_from_counts",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_counts",
+  "header": "bb32",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 267
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder23build_table_from_counts",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_counts",
+  "header": "bb18",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 17,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 258
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder23build_table_from_counts",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_counts",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 248
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder30build_table_from_probabilities",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_probabilities",
+  "header": "bb49",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 364
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder30build_table_from_probabilities",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_probabilities",
+  "header": "bb75",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 386
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder30build_table_from_probabilities",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_probabilities",
+  "header": "bb24",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 341
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder30build_table_from_probabilities",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_probabilities",
+  "header": "bb32",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 347
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder30build_table_from_probabilities",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_probabilities",
+  "header": "bb39",
+  "depth": 3,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 356
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder30build_table_from_probabilities",
+  "function_demangled": "ruzstd::fse::fse_encoder::build_table_from_probabilities",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 28,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 321
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvXs2Q_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_7IterMutlENtNtNtNtBb_4iter6traits8iterator8Iterator4findNCNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder23build_table_from_countss0_0EB1N_",
+  "function_demangled": "<core::slice::iter::IterMut<i32> as core::iter::traits::iterator::Iterator>::find::<ruzstd::fse::fse_encoder::build_table_from_counts::{closure#2}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 348
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2Q_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_7IterMutlENtNtNtNtBb_4iter6traits8iterator8Iterator4foldQlNCINvNtNtB11_8adapters6filter11filter_foldB1F_B1F_NCNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder23build_table_from_countss_0NCINvNvBV_6max_by4foldB1F_NvYB1F_NtNtBb_3cmp3Ord3cmpE0E0EB2D_",
+  "function_demangled": "<core::slice::iter::IterMut<i32> as core::iter::traits::iterator::Iterator>::fold::<&mut i32, core::iter::adapters::filter::filter_fold<&mut i32, &mut i32, ruzstd::fse::fse_encoder::build_table_from_counts::{closure#1}, core::iter::traits::iterator::Iterator::max_by::fold<&mut i32, <&mut i32 as core::cmp::Ord>::cmp>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2Q_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_7IterMutlENtNtNtNtBb_4iter6traits8iterator8Iterator4findQNCNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder23build_table_from_countss_0EB1O_",
+  "function_demangled": "<core::slice::iter::IterMut<i32> as core::iter::traits::iterator::Iterator>::find::<&mut ruzstd::fse::fse_encoder::build_table_from_counts::{closure#1}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 348
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterlENtNtNtNtBa_4iter6traits8iterator8Iterator8try_folduNCINvNtNtBR_8adapters6copied13copy_try_foldluINtNtNtBa_3ops12control_flow11ControlFlowTjlEENCINvNvXs_NtB1H_9enumerateINtB3d_9EnumeratepEBL_8try_fold9enumerateluB2j_NCINvNvBL_4find5checkB2Y_QNCNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder30build_table_from_probabilitiess_0E0E0E0B2j_EB4M_",
+  "function_demangled": "<core::slice::iter::Iter<i32> as core::iter::traits::iterator::Iterator>::try_fold::<(), core::iter::adapters::copied::copy_try_fold<i32, (), core::ops::control_flow::ControlFlow<(usize, i32)>, <core::iter::adapters::enumerate::Enumerate<_> as core::iter::traits::iterator::Iterator>::try_fold::enumerate<i32, (), core::ops::control_flow::ControlFlow<(usize, i32)>, core::iter::traits::iterator::Iterator::find::check<(usize, i32), &mut ruzstd::fse::fse_encoder::build_table_from_probabilities::{closure#1}>::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<(usize, i32)>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2Q_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_7IterMutlENtNtNtNtBb_4iter6traits8iterator8Iterator4foldQlNCINvNtNtB11_8adapters6filter11filter_foldB1F_B1F_NCNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder23build_table_from_counts0NCINvNvBV_6min_by4foldB1F_NvYB1F_NtNtBb_3cmp3Ord3cmpE0E0EB2D_",
+  "function_demangled": "<core::slice::iter::IterMut<i32> as core::iter::traits::iterator::Iterator>::fold::<&mut i32, core::iter::adapters::filter::filter_fold<&mut i32, &mut i32, ruzstd::fse::fse_encoder::build_table_from_counts::{closure#0}, core::iter::traits::iterator::Iterator::min_by::fold<&mut i32, <&mut i32 as core::cmp::Ord>::cmp>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2Q_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_7IterMutlENtNtNtNtBb_4iter6traits8iterator8Iterator4findQNCNvNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder23build_table_from_counts0EB1O_",
+  "function_demangled": "<core::slice::iter::IterMut<i32> as core::iter::traits::iterator::Iterator>::find::<&mut ruzstd::fse::fse_encoder::build_table_from_counts::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 348
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2Q_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_7IterMutlENtNtNtNtBb_4iter6traits8iterator8Iterator4foldQlNCINvNvBV_6max_by4foldB1F_NvYB1F_NtNtBb_3cmp3Ord3cmpE0ECsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<core::slice::iter::IterMut<i32> as core::iter::traits::iterator::Iterator>::fold::<&mut i32, core::iter::traits::iterator::Iterator::max_by::fold<&mut i32, <&mut i32 as core::cmp::Ord>::cmp>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterlENtNtNtNtBb_4iter6traits8iterator8Iterator4foldlNCINvXsc_NtBW_5accumlINtB1M_3SumRlE3sumBF_E0ECsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<core::slice::iter::Iter<i32> as core::iter::traits::iterator::Iterator>::fold::<i32, <i32 as core::iter::traits::accum::Sum<&i32>>::sum<core::slice::iter::Iter<i32>>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNvMNtCsgxBkk5gSRhY_4core5sliceSp7reverse7revswapjECsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<[_]>::reverse::revswap::<usize>",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/mod.rs",
+    "line": 1017
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterjENtNtNtNtBb_4iter6traits8iterator8Iterator4foldjNCINvNtNtBY_8adapters6copied9copy_foldjjNCINvNtB1K_3map8map_foldjjjNCNvNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoder20redistribute_weights0NCINvXsK_NtBW_5accumjNtB42_3Sum3sumINtB2m_3MapINtB1I_6CopiedBF_EB2I_EE0E0E0EB2Q_",
+  "function_demangled": "<core::slice::iter::Iter<usize> as core::iter::traits::iterator::Iterator>::fold::<usize, core::iter::adapters::copied::copy_fold<usize, usize, core::iter::adapters::map::map_fold<usize, usize, usize, ruzstd::huff0::huff0_encoder::redistribute_weights::{closure#0}, <usize as core::iter::traits::accum::Sum>::sum<core::iter::adapters::map::Map<core::iter::adapters::copied::Copied<core::slice::iter::Iter<usize>>, ruzstd::huff0::huff0_encoder::redistribute_weights::{closure#0}>>::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterNtNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtBX_12HuffmanTable18build_from_weights9SortEntryENtNtNtNtBb_4iter6traits8iterator8Iterator4foldjNCINvNtNtB2B_8adapters3map8map_foldRBQ_jjNCBS_s_0NCINvXsK_NtB2z_5accumjNtB4c_3Sum3sumINtB3l_3MapBF_B3V_EE0E0EB11_",
+  "function_demangled": "<core::slice::iter::Iter<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry> as core::iter::traits::iterator::Iterator>::fold::<usize, core::iter::adapters::map::map_fold<&<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry, usize, usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#1}, <usize as core::iter::traits::accum::Sum>::sum<core::iter::adapters::map::Map<core::slice::iter::Iter<<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::SortEntry>, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights::{closure#1}>>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterTmhEENtNtNtNtBb_4iter6traits8iterator8Iterator4foldRhNCINvNtNtB11_8adapters3map8map_foldRBQ_B1F_B1F_NCNvMNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderINtB2x_14HuffmanEncoderQINtNtCs6i54tJFfzR_5alloc3vec3VechEE7weights0NCINvNvBV_6max_by4foldB1F_NvYB1F_NtNtBb_3cmp3Ord3cmpE0E0EB2B_",
+  "function_demangled": "<core::slice::iter::Iter<(u32, u8)> as core::iter::traits::iterator::Iterator>::fold::<&u8, core::iter::adapters::map::map_fold<&(u32, u8), &u8, &u8, <ruzstd::huff0::huff0_encoder::HuffmanEncoder<&mut alloc::vec::Vec<u8>>>::weights::{closure#0}, core::iter::traits::iterator::Iterator::max_by::fold<&u8, <&u8 as core::cmp::Ord>::cmp>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterNtNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoder5StateENtNtNtNtBb_4iter6traits8iterator8Iterator4findNCNvMs0_BS_NtBS_12SymbolStates3get0EBW_",
+  "function_demangled": "<core::slice::iter::Iter<ruzstd::fse::fse_encoder::State> as core::iter::traits::iterator::Iterator>::find::<<ruzstd::fse::fse_encoder::SymbolStates>::get::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 166
+   },
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 348
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterjENtNtNtNtBb_4iter6traits8iterator8Iterator4foldjNCINvNtNtBY_8adapters3map8map_foldRjjjNCINvNvXs1_NtB1K_6filterINtB2q_6FilterppEBS_5count8to_usizeB2b_NCNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB3n_12HuffmanTable17build_from_counts0E0NCINvXsK_NtBW_5accumjNtB4W_3Sum3sumINtB1I_3MapBF_B2f_EE0E0EB3r_",
+  "function_demangled": "<core::slice::iter::Iter<usize> as core::iter::traits::iterator::Iterator>::fold::<usize, core::iter::adapters::map::map_fold<&usize, usize, usize, <core::iter::adapters::filter::Filter<_, _> as core::iter::traits::iterator::Iterator>::count::to_usize<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#0}>::{closure#0}, <usize as core::iter::traits::accum::Sum>::sum<core::iter::adapters::map::Map<core::slice::iter::Iter<usize>, <core::iter::adapters::filter::Filter<_, _> as core::iter::traits::iterator::Iterator>::count::to_usize<&usize, <ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts::{closure#0}>::{closure#0}>>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCsgxBkk5gSRhY_4core5slice4iter4IterNtNtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generator11SuffixStoreENtNtNtNtBa_4iter6traits8iterator8Iterator8try_folduNCINvNvXs_NtNtB1U_8adapters9enumerateINtB2N_9EnumeratepEB1O_8try_fold9enumerateRBJ_uINtNtNtBa_3ops12control_flow11ControlFlowTjB3U_EENCINvNvB1O_4find5checkB4E_NCNvXs_BL_NtBL_20MatchGeneratorDriverNtBN_7Matcher12commit_space0E0E0B3Z_EBP_",
+  "function_demangled": "<core::slice::iter::Iter<ruzstd::encoding::match_generator::SuffixStore> as core::iter::traits::iterator::Iterator>::try_fold::<(), <core::iter::adapters::enumerate::Enumerate<_> as core::iter::traits::iterator::Iterator>::try_fold::enumerate<&ruzstd::encoding::match_generator::SuffixStore, (), core::ops::control_flow::ControlFlow<(usize, &ruzstd::encoding::match_generator::SuffixStore)>, core::iter::traits::iterator::Iterator::find::check<(usize, &ruzstd::encoding::match_generator::SuffixStore), <ruzstd::encoding::match_generator::MatchGeneratorDriver as ruzstd::encoding::Matcher>::commit_space::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<(usize, &ruzstd::encoding::match_generator::SuffixStore)>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYINtNtNtCs6i54tJFfzR_5alloc3vec5drain5DrainNtNtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generator11WindowEntryENtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator4folduNCINvNvB1O_8for_each4callBJ_NCINvMs1_BL_NtBL_14MatchGenerator5resetNCNvXs_BL_NtBL_20MatchGeneratorDriverNtBN_7Matcher5reset0E0E0EBP_",
+  "function_demangled": "<alloc::vec::drain::Drain<ruzstd::encoding::match_generator::WindowEntry> as core::iter::traits::iterator::Iterator>::fold::<(), core::iter::traits::iterator::Iterator::for_each::call<ruzstd::encoding::match_generator::WindowEntry, <ruzstd::encoding::match_generator::MatchGenerator>::reset<<ruzstd::encoding::match_generator::MatchGeneratorDriver as ruzstd::encoding::Matcher>::reset::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2670
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding13frame_decoderNtB5_12FrameDecoder10decode_all",
+  "function_demangled": "<ruzstd::decoding::frame_decoder::FrameDecoder>::decode_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/frame_decoder.rs",
+    "line": 547
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding13frame_decoderNtB5_12FrameDecoder10decode_all",
+  "function_demangled": "<ruzstd::decoding::frame_decoder::FrameDecoder>::decode_all",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 81,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/frame_decoder.rs",
+    "line": 561
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsju7VyPzhvwj_6ruzstd8decoding13frame_decoderNtB5_12FrameDecoder14decode_from_to",
+  "function_demangled": "<ruzstd::decoding::frame_decoder::FrameDecoder>::decode_from_to",
+  "header": "bb30",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/decoding/frame_decoder.rs",
+    "line": 481
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMs4_NtCs4q8JsP7GHSJ_9twox_hash8xxhash64NtB5_6Hasher11finish_withCsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<twox_hash::xxhash64::Hasher>::finish_with",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash64.rs",
+    "line": 317
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs4_NtCs4q8JsP7GHSJ_9twox_hash8xxhash64NtB5_6Hasher11finish_withCsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<twox_hash::xxhash64::Hasher>::finish_with",
+  "header": "bb15",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash64.rs",
+    "line": 307
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs4_NtCs4q8JsP7GHSJ_9twox_hash8xxhash64NtB5_6Hasher11finish_withCsju7VyPzhvwj_6ruzstd",
+  "function_demangled": "<twox_hash::xxhash64::Hasher>::finish_with",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash64.rs",
+    "line": 298
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs_NtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoderNtB5_8FSETable11write_tableQINtNtCs6i54tJFfzR_5alloc3vec3VechEEB9_",
+  "function_demangled": "<ruzstd::fse::fse_encoder::FSETable>::write_table::<&mut alloc::vec::Vec<u8>>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 153
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvMs_NtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoderNtB5_8FSETable11write_tableQINtNtCs6i54tJFfzR_5alloc3vec3VechEEB9_",
+  "function_demangled": "<ruzstd::fse::fse_encoder::FSETable>::write_table::<&mut alloc::vec::Vec<u8>>",
+  "header": "bb34",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 176
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtNtCsju7VyPzhvwj_6ruzstd8encoding6blocks10compressed16encode_sequences",
+  "function_demangled": "ruzstd::encoding::blocks::compressed::encode_sequences",
+  "header": "bb17",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/blocks/compressed.rs",
+    "line": 181
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB4_12HuffmanTable15build_from_data",
+  "function_demangled": "<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_data",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 165
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB4_12HuffmanTable10can_encode",
+  "function_demangled": "<ruzstd::huff0::huff0_encoder::HuffmanTable>::can_encode",
+  "header": "bb11",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 58,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 260
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd6bit_io10bit_writerINtB4_9BitWriterQINtNtCs6i54tJFfzR_5alloc3vec3VechEE14change_bits_64B8_",
+  "function_demangled": "<ruzstd::bit_io::bit_writer::BitWriter<&mut alloc::vec::Vec<u8>>>::change_bits_64",
+  "header": "bb34",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/bit_io/bit_writer.rs",
+    "line": 90
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvMNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderINtB3_14HuffmanEncoderQINtNtCs6i54tJFfzR_5alloc3vec3VechEE13encode_streamB19_EB7_",
+  "function_demangled": "<ruzstd::huff0::huff0_encoder::HuffmanEncoder<&mut alloc::vec::Vec<u8>>>::encode_stream::<&mut alloc::vec::Vec<u8>>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 92
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderINtB2_14HuffmanEncoderQINtNtCs6i54tJFfzR_5alloc3vec3VechEE11write_tableB6_",
+  "function_demangled": "<ruzstd::huff0::huff0_encoder::HuffmanEncoder<&mut alloc::vec::Vec<u8>>>::write_table",
+  "header": "bb27",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 25,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 139
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMNtNtCsju7VyPzhvwj_6ruzstd3fse11fse_encoderINtB2_10FSEEncoderQINtNtCs6i54tJFfzR_5alloc3vec3VechEE18encode_interleavedB6_",
+  "function_demangled": "<ruzstd::fse::fse_encoder::FSEEncoder<&mut alloc::vec::Vec<u8>>>::encode_interleaved",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 30,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/fse/fse_encoder.rs",
+    "line": 65
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB4_12HuffmanTable17build_from_counts",
+  "function_demangled": "<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_counts",
+  "header": "bb22",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 185
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoder18distribute_weights",
+  "function_demangled": "ruzstd::huff0::huff0_encoder::distribute_weights",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 317
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoder18distribute_weights",
+  "function_demangled": "ruzstd::huff0::huff0_encoder::distribute_weights",
+  "header": "bb18",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 331
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoder20redistribute_weights",
+  "function_demangled": "ruzstd::huff0::huff0_encoder::redistribute_weights",
+  "header": "bb49",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 23,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 395
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoder20redistribute_weights",
+  "function_demangled": "ruzstd::huff0::huff0_encoder::redistribute_weights",
+  "header": "bb23",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 373
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoder20redistribute_weights",
+  "function_demangled": "ruzstd::huff0::huff0_encoder::redistribute_weights",
+  "header": "bb29",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 30,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 377
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoder20redistribute_weights",
+  "function_demangled": "ruzstd::huff0::huff0_encoder::redistribute_weights",
+  "header": "bb11",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 363
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoder20redistribute_weights",
+  "function_demangled": "ruzstd::huff0::huff0_encoder::redistribute_weights",
+  "header": "bb17",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 365
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB4_12HuffmanTable18build_from_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights",
+  "header": "bb32",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 238
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB4_12HuffmanTable18build_from_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights",
+  "header": "bb16",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 223
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs_NtNtCsju7VyPzhvwj_6ruzstd5huff013huff0_encoderNtB4_12HuffmanTable18build_from_weights",
+  "function_demangled": "<ruzstd::huff0::huff0_encoder::HuffmanTable>::build_from_weights",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 33,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/huff0/huff0_encoder.rs",
+    "line": 205
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvMs1_NtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generatorNtB6_14MatchGenerator8add_dataNCNvXs_B6_NtB6_20MatchGeneratorDriverNtB8_7Matcher12commit_spaces2_0EBa_",
+  "function_demangled": "<ruzstd::encoding::match_generator::MatchGenerator>::add_data::<<ruzstd::encoding::match_generator::MatchGeneratorDriver as ruzstd::encoding::Matcher>::commit_space::{closure#4}>",
+  "header": "bb20",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 26,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/match_generator.rs",
+    "line": 372
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvMs1_NtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generatorNtB6_14MatchGenerator7reserveNCNvXs_B6_NtB6_20MatchGeneratorDriverNtB8_7Matcher12commit_spaces2_0EBa_",
+  "function_demangled": "<ruzstd::encoding::match_generator::MatchGenerator>::reserve::<<ruzstd::encoding::match_generator::MatchGeneratorDriver as ruzstd::encoding::Matcher>::commit_space::{closure#4}>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/match_generator.rs",
+    "line": 392
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMs1_NtNtCsju7VyPzhvwj_6ruzstd8encoding15match_generatorNtB5_14MatchGenerator13skip_matching",
+  "function_demangled": "<ruzstd::encoding::match_generator::MatchGenerator>::skip_matching",
+  "header": "bb10.i",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 33,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/match_generator.rs",
+    "line": 341
+   },
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/zstd-rs",
+    "file": "ruzstd/src/encoding/match_generator.rs",
+    "line": 351
+   }
+  ],
+  "loop_kind": "for"
+ }
+]

@@ -1,0 +1,453 @@
+[
+ {
+  "function": "_RNvCsiYRlQlkcJU1_15driver_httparse4main",
+  "function_demangled": "driver_httparse::main",
+  "header": "repeat_loop_header11",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvCsiYRlQlkcJU1_15driver_httparse4main",
+  "function_demangled": "driver_httparse::main",
+  "header": "repeat_loop_header",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECsiYRlQlkcJU1_15driver_httparse",
+  "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECsiYRlQlkcJU1_15driver_httparse",
+  "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYNtNtCs9k3SxhrAWiO_3std3env4ArgsNtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator8try_foldINtNtNtBG_3num7nonzero7NonZerojENCNvXs_NvBy_10advance_byB3_NtB2f_13SpecAdvanceBy15spec_advance_by0INtNtBG_6option6OptionB1C_EECsiYRlQlkcJU1_15driver_httparse",
+  "function_demangled": "<std::env::Args as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, <std::env::Args as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator9rpositionNCNvCsZENMnHbWbg_8httparse25parse_headers_iter_uninit0EB1L_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::rposition::<httparse::parse_headers_iter_uninit::{closure#0}>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 42,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 405
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse25parse_headers_iter_uninit",
+  "function_demangled": "httparse::parse_headers_iter_uninit",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 5,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/macros.rs",
+    "line": 5
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse25parse_headers_iter_uninit",
+  "function_demangled": "httparse::parse_headers_iter_uninit",
+  "header": "bb29",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 50,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/lib.rs",
+    "line": 1098
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse25parse_headers_iter_uninit",
+  "function_demangled": "httparse::parse_headers_iter_uninit",
+  "header": "bb47",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/lib.rs",
+    "line": 1129
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse25parse_headers_iter_uninit",
+  "function_demangled": "httparse::parse_headers_iter_uninit",
+  "header": "bb57",
+  "depth": 2,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/macros.rs",
+    "line": 5
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse25parse_headers_iter_uninit",
+  "function_demangled": "httparse::parse_headers_iter_uninit",
+  "header": "bb82",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 21,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/lib.rs",
+    "line": 1173
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse25parse_headers_iter_uninit",
+  "function_demangled": "httparse::parse_headers_iter_uninit",
+  "header": "bb117",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/lib.rs",
+    "line": 1229
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCsZENMnHbWbg_8httparse4simd4swar27match_header_value_vectoredB5_",
+  "function_demangled": "httparse::simd::swar::match_header_value_vectored",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/swar.rs",
+    "line": 40
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCsZENMnHbWbg_8httparse4simd4avx227match_header_value_vectored",
+  "function_demangled": "httparse::simd::avx2::match_header_value_vectored",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/avx2.rs",
+    "line": 83
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsZENMnHbWbg_8httparse4simd5sse4227match_header_value_vectored",
+  "function_demangled": "httparse::simd::sse42::match_header_value_vectored",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/sse42.rs",
+    "line": 45
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsZENMnHbWbg_8httparse4simd4swar8offsetnzB5_",
+  "function_demangled": "httparse::simd::swar::offsetnz",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/swar.rs",
+    "line": 169
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCsZENMnHbWbg_8httparse4simd4swar26match_header_name_vectoredB5_",
+  "function_demangled": "httparse::simd::swar::match_header_name_vectored",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/swar.rs",
+    "line": 67
+   }
+  ],
+  "loop_kind": "while-let"
+ },
+ {
+  "function": "_RNvNtNtCsZENMnHbWbg_8httparse4simd4swar26match_header_name_vectoredB5_",
+  "function_demangled": "httparse::simd::swar::match_header_name_vectored",
+  "header": "bb4.i",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/swar.rs",
+    "line": 98
+   },
+   {
+    "col": 17,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/swar.rs",
+    "line": 68
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RINvNtNtCsZENMnHbWbg_8httparse4simd4swar10match_tailNvB6_20is_header_name_tokenEB6_",
+  "function_demangled": "httparse::simd::swar::match_tail::<httparse::is_header_name_token>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 20,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/swar.rs",
+    "line": 87
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse16parse_chunk_size",
+  "function_demangled": "httparse::parse_chunk_size",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 7,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/macros.rs",
+    "line": 5
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse16skip_empty_linesB1_",
+  "function_demangled": "httparse::skip_empty_lines",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/lib.rs",
+    "line": 564
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse11skip_spacesB1_",
+  "function_demangled": "httparse::skip_spaces",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/lib.rs",
+    "line": 589
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCsZENMnHbWbg_8httparse4simd4swar18match_uri_vectoredB5_",
+  "function_demangled": "httparse::simd::swar::match_uri_vectored",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/swar.rs",
+    "line": 12
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCsZENMnHbWbg_8httparse4simd4avx218match_uri_vectoredB5_",
+  "function_demangled": "httparse::simd::avx2::match_uri_vectored",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/avx2.rs",
+    "line": 6
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsZENMnHbWbg_8httparse4simd5sse4218match_uri_vectored",
+  "function_demangled": "httparse::simd::sse42::match_uri_vectored",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/simd/sse42.rs",
+    "line": 5
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse11parse_tokenB1_",
+  "function_demangled": "httparse::parse_token",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/macros.rs",
+    "line": 5
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvCsZENMnHbWbg_8httparse12parse_reasonB1_",
+  "function_demangled": "httparse::parse_reason",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/httparse",
+    "file": "src/macros.rs",
+    "line": 5
+   }
+  ],
+  "loop_kind": "unmatched"
+ }
+]

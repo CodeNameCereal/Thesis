@@ -1,0 +1,615 @@
+[
+ {
+  "function": "_RNvCsaPtleMPnIHW_11driver_sha24main",
+  "function_demangled": "driver_sha2::main",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/benchmarks/rust_extra/sha2/driver",
+    "file": "src/main.rs",
+    "line": 25
+   }
+  ],
+  "loop_kind": "driver"
+ },
+ {
+  "function": "_RNvXsd_NtCse5i6hZ9rzJE_4sha29block_apiNtB5_13Sha512VarCoreNtNtCs2r9Gh10bOF3_6digest9block_api18VariableOutputCore22finalize_variable_coreCsaPtleMPnIHW_11driver_sha2",
+  "function_demangled": "<sha2::block_api::Sha512VarCore as digest::block_api::VariableOutputCore>::finalize_variable_core",
+  "header": "bb15",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/block_api.rs",
+    "line": 197
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterhENtNtNtNtBb_4iter6traits8iterator8Iterator4folduNCINvNtNtBY_8adapters3map8map_foldRhNtNtCs6i54tJFfzR_5alloc6string6StringuNCNvCsaPtleMPnIHW_11driver_sha23hex0NCINvNvBS_8for_each4callB2d_NCINvXsk_B2f_B2d_INtNtBW_7collect6ExtendB2d_E6extendINtB1I_3MapBF_B2P_EE0E0E0EB2T_",
+  "function_demangled": "<core::slice::iter::Iter<u8> as core::iter::traits::iterator::Iterator>::fold::<(), core::iter::adapters::map::map_fold<&u8, alloc::string::String, (), driver_sha2::hex::{closure#0}, core::iter::traits::iterator::Iterator::for_each::call<alloc::string::String, <alloc::string::String as core::iter::traits::collect::Extend<alloc::string::String>>::extend<core::iter::adapters::map::Map<core::slice::iter::Iter<u8>, driver_sha2::hex::{closure#0}>>::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs3_NtCse5i6hZ9rzJE_4sha29block_apiNtB5_13Sha256VarCoreNtNtCs2r9Gh10bOF3_6digest9block_api18VariableOutputCore22finalize_variable_coreCsaPtleMPnIHW_11driver_sha2",
+  "function_demangled": "<sha2::block_api::Sha256VarCore as digest::block_api::VariableOutputCore>::finalize_variable_core",
+  "header": "bb15",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/block_api.rs",
+    "line": 72
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECsaPtleMPnIHW_11driver_sha2",
+  "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECsaPtleMPnIHW_11driver_sha2",
+  "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvYNtNtCs9k3SxhrAWiO_3std3env4ArgsNtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator8try_foldINtNtNtBG_3num7nonzero7NonZerojENCNvXs_NvBy_10advance_byB3_NtB2f_13SpecAdvanceBy15spec_advance_by0INtNtBG_6option6OptionB1C_EECsaPtleMPnIHW_11driver_sha2",
+  "function_demangled": "<std::env::Args as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, <std::env::Args as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCs4npiG71oB4e_12hybrid_array7from_fn18try_from_fn_erasedhNtNtCsgxBkk5gSRhY_4core7convert10InfallibleNCINvMB2_INtB4_5ArrayhINtNtCs8quiTKO4yUp_7typenum4uint4UIntIB23_IB23_IB23_IB23_IB23_IB23_NtB25_5UTermNtNtB27_3bit2B1ENtB3l_2B0EB3j_EB3z_EB3z_EB3z_EB3z_EE7from_fnNCNvXsg_B4_B1P_NtNtB13_7default7Default7default0E0ECse5i6hZ9rzJE_4sha2",
+  "function_demangled": "hybrid_array::from_fn::try_from_fn_erased::<u8, core::convert::Infallible, <hybrid_array::Array<u8, typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B0>, typenum::bit::B1>, typenum::bit::B0>, typenum::bit::B0>, typenum::bit::B0>, typenum::bit::B0>>>::from_fn<<hybrid_array::Array<u8, typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B0>, typenum::bit::B1>, typenum::bit::B0>, typenum::bit::B0>, typenum::bit::B0>, typenum::bit::B0>> as core::default::Default>::default::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hybrid-array-0.4.15",
+    "file": "src/from_fn.rs",
+    "line": 49
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core5array18try_from_fn_erasedINtNtNtB4_3ops9try_trait17NeverShortCircuitNtNtNtB4_9core_arch3x867___m128iENCINvMBQ_BN_10wrap_mut_1jNCNvNtNtCse5i6hZ9rzJE_4sha26sha2567x86_sha10load_state0E0EB2y_",
+  "function_demangled": "core::array::try_from_fn_erased::<core::ops::try_trait::NeverShortCircuit<core::core_arch::x86::__m128i>, <core::ops::try_trait::NeverShortCircuit<core::core_arch::x86::__m128i>>::wrap_mut_1<usize, sha2::sha256::x86_sha::load_state::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/mod.rs",
+    "line": 912
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core5array18try_from_fn_erasedINtNtNtB4_3ops9try_trait17NeverShortCircuitNtNtNtB4_9core_arch3x867___m128iENCINvMBQ_BN_10wrap_mut_1jNCNvNtNtCse5i6hZ9rzJE_4sha26sha2567x86_sha10load_block0E0EB2y_",
+  "function_demangled": "core::array::try_from_fn_erased::<core::ops::try_trait::NeverShortCircuit<core::core_arch::x86::__m128i>, <core::ops::try_trait::NeverShortCircuit<core::core_arch::x86::__m128i>>::wrap_mut_1<usize, sha2::sha256::x86_sha::load_block::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/mod.rs",
+    "line": 912
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core5array18try_from_fn_erasedINtNtNtB4_3ops9try_trait17NeverShortCircuitmENCINvMBQ_BN_10wrap_mut_1jNCNvNtNtCse5i6hZ9rzJE_4sha26sha2564soft7to_u32s0E0EB23_",
+  "function_demangled": "core::array::try_from_fn_erased::<core::ops::try_trait::NeverShortCircuit<u32>, <core::ops::try_trait::NeverShortCircuit<u32>>::wrap_mut_1<usize, sha2::sha256::soft::to_u32s::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/mod.rs",
+    "line": 912
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core5array18try_from_fn_erasedINtNtNtB4_3ops9try_trait17NeverShortCircuitmENCINvMBQ_BN_10wrap_mut_1jNCNvXs7_NtCse5i6hZ9rzJE_4sha29block_apiNtB23_13Sha256VarCoreNtNtCs7rdtUna1LuR_13crypto_common6hazmat17SerializableState11deserialize0E0EB25_",
+  "function_demangled": "core::array::try_from_fn_erased::<core::ops::try_trait::NeverShortCircuit<u32>, <core::ops::try_trait::NeverShortCircuit<u32>>::wrap_mut_1<usize, <sha2::block_api::Sha256VarCore as crypto_common::hazmat::SerializableState>::deserialize::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/mod.rs",
+    "line": 912
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core5array18try_from_fn_erasedINtNtNtB4_3ops9try_trait17NeverShortCircuityENCINvMBQ_BN_10wrap_mut_1jNCNvNtNtCse5i6hZ9rzJE_4sha26sha5124soft7to_u64s0E0EB23_",
+  "function_demangled": "core::array::try_from_fn_erased::<core::ops::try_trait::NeverShortCircuit<u64>, <core::ops::try_trait::NeverShortCircuit<u64>>::wrap_mut_1<usize, sha2::sha512::soft::to_u64s::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/mod.rs",
+    "line": 912
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core5array18try_from_fn_erasedINtNtNtB4_3ops9try_trait17NeverShortCircuityENCINvMBQ_BN_10wrap_mut_1jNCNvXsh_NtCse5i6hZ9rzJE_4sha29block_apiNtB23_13Sha512VarCoreNtNtCs7rdtUna1LuR_13crypto_common6hazmat17SerializableState11deserialize0E0EB25_",
+  "function_demangled": "core::array::try_from_fn_erased::<core::ops::try_trait::NeverShortCircuit<u64>, <core::ops::try_trait::NeverShortCircuit<u64>>::wrap_mut_1<usize, <sha2::block_api::Sha512VarCore as crypto_common::hazmat::SerializableState>::deserialize::{closure#0}>::{closure#0}>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/array/mod.rs",
+    "line": 912
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvNtNtNtCse5i6hZ9rzJE_4sha26sha2564soft6unroll8compress",
+  "function_demangled": "sha2::sha256::soft::unroll::compress",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha256/soft/unroll.rs",
+    "line": 97
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha2567x86_sha8compress",
+  "function_demangled": "sha2::sha256::x86_sha::compress",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha256/x86_sha.rs",
+    "line": 83
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha2567x86_sha17schedule_rounds16B5_",
+  "function_demangled": "sha2::sha256::x86_sha::schedule_rounds16",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha256/x86_sha.rs",
+    "line": 30
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtNtCse5i6hZ9rzJE_4sha26sha5124soft6unroll8compress",
+  "function_demangled": "sha2::sha512::soft::unroll::compress",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/soft/unroll.rs",
+    "line": 91
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx28compress",
+  "function_demangled": "sha2::sha512::x86_avx2::compress",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 4,
+  "src_loc": [
+   {
+    "col": 24,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 23
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx28compress",
+  "function_demangled": "sha2::sha512::x86_avx2::compress",
+  "header": "bb3.i",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 164
+   },
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 29
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx28compress",
+  "function_demangled": "sha2::sha512::x86_avx2::compress",
+  "header": "bb2.i16",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 228
+   },
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 30
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx28compress",
+  "function_demangled": "sha2::sha512::x86_avx2::compress",
+  "header": "bb4.i",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 171
+   },
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 34
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx28compress",
+  "function_demangled": "sha2::sha512::x86_avx2::compress",
+  "header": "bb2.i",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 228
+   },
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 35
+   }
+  ],
+  "loop_kind": "unmatched"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx28compress",
+  "function_demangled": "sha2::sha512::x86_avx2::compress",
+  "header": "repeat_loop_header4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx28compress",
+  "function_demangled": "sha2::sha512::x86_avx2::compress",
+  "header": "repeat_loop_header1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx28compress",
+  "function_demangled": "sha2::sha512::x86_avx2::compress",
+  "header": "repeat_loop_header",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx226sha512_compress_x86_64_avxB5_",
+  "function_demangled": "sha2::sha512::x86_avx2::sha512_compress_x86_64_avx",
+  "header": "bb2.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 228
+   },
+   {
+    "col": 5,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 50
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx226sha512_compress_x86_64_avxB5_",
+  "function_demangled": "sha2::sha512::x86_avx2::sha512_compress_x86_64_avx",
+  "header": "bb3.i",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 164
+   },
+   {
+    "col": 5,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 49
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx226sha512_compress_x86_64_avxB5_",
+  "function_demangled": "sha2::sha512::x86_avx2::sha512_compress_x86_64_avx",
+  "header": "repeat_loop_header1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx226sha512_compress_x86_64_avxB5_",
+  "function_demangled": "sha2::sha512::x86_avx2::sha512_compress_x86_64_avx",
+  "header": "repeat_loop_header",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [],
+  "loop_kind": "no-debug-info"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx216rounds_0_63_avx2B5_",
+  "function_demangled": "sha2::sha512::x86_avx2::rounds_0_63_avx2",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 142
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx216rounds_0_63_avx2B5_",
+  "function_demangled": "sha2::sha512::x86_avx2::rounds_0_63_avx2",
+  "header": "bb8",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 143
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx215rounds_0_63_avxB5_",
+  "function_demangled": "sha2::sha512::x86_avx2::rounds_0_63_avx",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 14,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 116
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvNtNtCse5i6hZ9rzJE_4sha26sha5128x86_avx215rounds_0_63_avxB5_",
+  "function_demangled": "sha2::sha512::x86_avx2::rounds_0_63_avx",
+  "header": "bb8",
+  "depth": 2,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/sha512/x86_avx2.rs",
+    "line": 117
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvXs7_NtCse5i6hZ9rzJE_4sha29block_apiNtB5_13Sha256VarCoreNtNtCs7rdtUna1LuR_13crypto_common6hazmat17SerializableState9serialize",
+  "function_demangled": "<sha2::block_api::Sha256VarCore as crypto_common::hazmat::SerializableState>::serialize",
+  "header": "bb12",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/block_api.rs",
+    "line": 115
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvXsh_NtCse5i6hZ9rzJE_4sha29block_apiNtB5_13Sha512VarCoreNtNtCs7rdtUna1LuR_13crypto_common6hazmat17SerializableState9serialize",
+  "function_demangled": "<sha2::block_api::Sha512VarCore as crypto_common::hazmat::SerializableState>::serialize",
+  "header": "bb12",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/hashes/sha2",
+    "file": "src/block_api.rs",
+    "line": 239
+   }
+  ],
+  "loop_kind": "for"
+ }
+]

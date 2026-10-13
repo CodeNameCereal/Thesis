@@ -1,0 +1,12 @@
+# Driver for the IR build of httparse -- not part of the measured project.
+# Own workspace on purpose: the project's [profile.dev] settings must not apply.
+[package]
+name = "driver-httparse"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+httparse = { path = "../../../../.build/rust-extra/httparse" }
+
+[workspace]

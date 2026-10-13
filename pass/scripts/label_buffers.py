@@ -11,9 +11,13 @@ code_origin comes only from the entry's "file" (source path in the debug info):
   tool     the tool's own source
              C:    .build/coreutils/src/<name>.c
              Rust: .build/uutils-coreutils/src/uu/<tool>/...
+             rust_extra: the project's clone, .build/rust-extra/<repo>/...
   project  other code of the same project
              C:    the rest of .build/coreutils/ (gnulib lib/, src/*.h e.g. system.h)
              Rust: .build/uutils-coreutils/src/uucore/...
+             rust_extra: none (each project is one repository = tool)
+  driver   rust_extra only: our driver program, benchmarks/rust_extra/<project>/driver/
+           (written to instantiate a library; not the project's code, not counted)
   library  everything else: Rust std/core/alloc (/rustc/...), crates from the
            cargo registry, system headers (/usr/...)
   unknown  empty "file" (IR without line tables)
@@ -44,6 +48,11 @@ def code_origin(path: str, lang: str, tool: str) -> str:
         if f"/src/uu/{tool}/" in path:
             return "tool"
         return "project"
+    if lang == "rust_extra":
+        if "/benchmarks/rust_extra/" in path and "/driver/" in path:
+            return "driver"
+        if "/.build/rust-extra/" in path:
+            return "tool"
     return "library"
 
 

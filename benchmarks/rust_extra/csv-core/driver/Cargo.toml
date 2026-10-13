@@ -1,0 +1,12 @@
+# Driver for the IR build of csv-core -- not part of the measured project.
+# Own workspace on purpose: the project's [profile.dev] settings must not apply.
+[package]
+name = "driver-csv-core"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+csv-core = { path = "../../../../.build/rust-extra/rust-csv/csv-core" }
+
+[workspace]

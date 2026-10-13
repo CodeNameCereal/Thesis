@@ -1,0 +1,368 @@
+[
+  {
+    "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VechE11extend_withCskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<alloc::vec::Vec<u8>>::extend_with",
+    "header": "bb2",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 12,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/iter/range.rs",
+        "line": 900
+      },
+      {
+        "col": 14,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/iter/range.rs",
+        "line": 985
+      },
+      {
+        "col": 22,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/alloc/src/vec/mod.rs",
+        "line": 3669
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6encode11encode_implNtNtB4_5utils8BytesMutKj3_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::encode::encode_impl::<qoi::utils::BytesMut, 3>",
+    "header": "bb12",
+    "depth": 1,
+    "latch_count": 3,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 23,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/encode.rs",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6encode11encode_implNtNtB4_5utils8BytesMutKj3_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::encode::encode_impl::<qoi::utils::BytesMut, 3>",
+    "header": "repeat_loop_header",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": []
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6encode11encode_implNtNtB4_5utils8BytesMutKj4_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::encode::encode_impl::<qoi::utils::BytesMut, 4>",
+    "header": "bb12",
+    "depth": 1,
+    "latch_count": 3,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 23,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/encode.rs",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6encode11encode_implNtNtB4_5utils8BytesMutKj4_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::encode::encode_impl::<qoi::utils::BytesMut, 4>",
+    "header": "repeat_loop_header",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": []
+  },
+  {
+    "function": "_RNvMNtCs9JexJDbYG3P_3qoi5pixelINtB2_5PixelKj4_E4readCskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<qoi::pixel::Pixel<4>>::read",
+    "header": "bb2",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 19,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/pixel.rs",
+        "line": 20
+      }
+    ]
+  },
+  {
+    "function": "_RNvMNtCs9JexJDbYG3P_3qoi5pixelINtB2_5PixelKj4_E7as_rgbaCskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<qoi::pixel::Pixel<4>>::as_rgba",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/pixel.rs",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "function": "_RNvMNtCs9JexJDbYG3P_3qoi5pixelINtB2_5PixelKj3_E4readCskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<qoi::pixel::Pixel<3>>::read",
+    "header": "bb2",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 19,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/pixel.rs",
+        "line": 20
+      }
+    ]
+  },
+  {
+    "function": "_RNvMNtCs9JexJDbYG3P_3qoi5pixelINtB2_5PixelKj3_E7as_rgbaCskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<qoi::pixel::Pixel<3>>::as_rgba",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/pixel.rs",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6decode17decode_impl_sliceKj3_Kb0_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::decode::decode_impl_slice::<3, false>",
+    "header": "bb14",
+    "depth": 1,
+    "latch_count": 3,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/decode.rs",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6decode17decode_impl_sliceKj3_Kb0_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::decode::decode_impl_slice::<3, false>",
+    "header": "repeat_loop_header",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": []
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6decode17decode_impl_sliceKj3_Kb1_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::decode::decode_impl_slice::<3, true>",
+    "header": "bb14",
+    "depth": 1,
+    "latch_count": 3,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/decode.rs",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6decode17decode_impl_sliceKj3_Kb1_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::decode::decode_impl_slice::<3, true>",
+    "header": "repeat_loop_header",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": []
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6decode17decode_impl_sliceKj4_Kb0_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::decode::decode_impl_slice::<4, false>",
+    "header": "bb14",
+    "depth": 1,
+    "latch_count": 3,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/decode.rs",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6decode17decode_impl_sliceKj4_Kb0_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::decode::decode_impl_slice::<4, false>",
+    "header": "repeat_loop_header",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": []
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6decode17decode_impl_sliceKj4_Kb1_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::decode::decode_impl_slice::<4, true>",
+    "header": "bb14",
+    "depth": 1,
+    "latch_count": 3,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/decode.rs",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCs9JexJDbYG3P_3qoi6decode17decode_impl_sliceKj4_Kb1_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "qoi::decode::decode_impl_slice::<4, true>",
+    "header": "repeat_loop_header",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": []
+  },
+  {
+    "function": "_RINvMNtCs9JexJDbYG3P_3qoi5pixelINtB3_5PixelKj4_E6updateKBG_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<qoi::pixel::Pixel<4>>::update::<4>",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/pixel.rs",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "function": "_RNvXs_NtNtCsgxBkk5gSRhY_4core5slice10specializeSAhj4_INtB4_8SpecFillBK_E9spec_fillCskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<[[u8; 4]] as core::slice::specialize::SpecFill<[u8; 4]>>::spec_fill",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 24,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/slice/iter/macros.rs",
+        "line": 166
+      },
+      {
+        "col": 21,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/slice/specialize.rs",
+        "line": 22
+      }
+    ]
+  },
+  {
+    "function": "_RINvMNtCs9JexJDbYG3P_3qoi5pixelINtB3_5PixelKj3_E6updateKj4_ECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<qoi::pixel::Pixel<3>>::update::<4>",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 15,
+        "dir": "/workspaces/Thesis/.build/rust-extra/qoi-rust",
+        "file": "src/pixel.rs",
+        "line": 32
+      }
+    ]
+  },
+  {
+    "function": "_RNvXs_NtNtCsgxBkk5gSRhY_4core5slice10specializeSAhj3_INtB4_8SpecFillBK_E9spec_fillCskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<[[u8; 3]] as core::slice::specialize::SpecFill<[u8; 3]>>::spec_fill",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 24,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/slice/iter/macros.rs",
+        "line": 166
+      },
+      {
+        "col": 21,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/slice/specialize.rs",
+        "line": 22
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+    "header": "bb4",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 1,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/ptr/mod.rs",
+        "line": 823
+      }
+    ]
+  },
+  {
+    "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+    "header": "bb6",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 1,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/ptr/mod.rs",
+        "line": 823
+      }
+    ]
+  },
+  {
+    "function": "_RINvYNtNtCs9k3SxhrAWiO_3std3env4ArgsNtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator8try_foldINtNtNtBG_3num7nonzero7NonZerojENCNvXs_NvBy_10advance_byB3_NtB2f_13SpecAdvanceBy15spec_advance_by0INtNtBG_6option6OptionB1C_EECskmfiGaEvFQP_10driver_qoi",
+    "function_demangled": "<std::env::Args as core::iter::traits::iterator::Iterator>::try_fold::<core::num::nonzero::NonZero<usize>, <std::env::Args as core::iter::traits::iterator::Iterator::advance_by::SpecAdvanceBy>::spec_advance_by::{closure#0}, core::option::Option<core::num::nonzero::NonZero<usize>>>",
+    "header": "bb1",
+    "depth": 1,
+    "latch_count": 1,
+    "subloop_count": 0,
+    "src_loc": [
+      {
+        "col": 34,
+        "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+        "file": "library/core/src/iter/traits/iterator.rs",
+        "line": 2493
+      }
+    ]
+  }
+]

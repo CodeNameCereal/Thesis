@@ -1,0 +1,1030 @@
+[
+ {
+  "function": "_RINvNtNtCs9k3SxhrAWiO_3std2io4copy17stack_buffer_copyINtNtNtCsbyoesFQpzha_8lz4_flex5frame10decompress12FrameDecoderQNtNtB4_5stdio9StdinLockENtNtB6_2fs4FileECserOWQAL27kQ_3lz4",
+  "function_demangled": "std::io::copy::stack_buffer_copy::<lz4_flex::frame::decompress::FrameDecoder<&mut std::io::stdio::StdinLock>, std::fs::File>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/copy.rs",
+    "line": 280
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYNtNtCs9k3SxhrAWiO_3std2fs4FileNtNtB6_2io5Write9write_allCserOWQAL27kQ_3lz4",
+  "function_demangled": "<std::fs::File as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs_NtNtCsbyoesFQpzha_8lz4_flex5frame10decompressINtB4_12FrameDecoderQNtNtNtCs9k3SxhrAWiO_3std2io5stdio9StdinLockENtB1c_4Read4readCserOWQAL27kQ_3lz4",
+  "function_demangled": "<lz4_flex::frame::decompress::FrameDecoder<&mut std::io::stdio::StdinLock> as std::io::Read>::read",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/frame/decompress.rs",
+    "line": 356
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block15decompress_safe19decompress_internalKb0_NtNtB6_4sink9SliceSinkECserOWQAL27kQ_3lz4",
+  "function_demangled": "lz4_flex::block::decompress_safe::decompress_internal::<false, lz4_flex::sink::SliceSink>",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/decompress_safe.rs",
+    "line": 124
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block15decompress_safe19decompress_internalKb1_NtNtB6_4sink9SliceSinkECserOWQAL27kQ_3lz4",
+  "function_demangled": "lz4_flex::block::decompress_safe::decompress_internal::<true, lz4_flex::sink::SliceSink>",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 5,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/decompress_safe.rs",
+    "line": 124
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvMs4_NtCs2DE1vFnhoJD_9twox_hash8xxhash32NtB5_6Hasher11finish_withCserOWQAL27kQ_3lz4",
+  "function_demangled": "<twox_hash::xxhash32::Hasher>::finish_with",
+  "header": "bb17",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash32.rs",
+    "line": 310
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs4_NtCs2DE1vFnhoJD_9twox_hash8xxhash32NtB5_6Hasher11finish_withCserOWQAL27kQ_3lz4",
+  "function_demangled": "<twox_hash::xxhash32::Hasher>::finish_with",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash32.rs",
+    "line": 301
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs1_NtCs2DE1vFnhoJD_9twox_hash8xxhash32NtB5_12Accumulators10write_manyCserOWQAL27kQ_3lz4",
+  "function_demangled": "<twox_hash::xxhash32::Accumulators>::write_many",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash32.rs",
+    "line": 157
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvNtNtCsbyoesFQpzha_8lz4_flex5block15decompress_safe12read_integerCserOWQAL27kQ_3lz4",
+  "function_demangled": "lz4_flex::block::decompress_safe::read_integer",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 26,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/decompress_safe.rs",
+    "line": 37
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvXs_NtCsbyoesFQpzha_8lz4_flex4sinkNtB4_9SliceSinkNtB4_4Sink30extend_from_within_overlappingCserOWQAL27kQ_3lz4",
+  "function_demangled": "<lz4_flex::sink::SliceSink as lz4_flex::sink::Sink>::extend_from_within_overlapping",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/sink.rs",
+    "line": 195
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VechE11extend_withCserOWQAL27kQ_3lz4",
+  "function_demangled": "<alloc::vec::Vec<u8>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCs9k3SxhrAWiO_3std2io4copy17stack_buffer_copyINtNtNtCsbyoesFQpzha_8lz4_flex5frame10decompress12FrameDecoderQNtNtB4_5stdio9StdinLockENtB1S_10StdoutLockECserOWQAL27kQ_3lz4",
+  "function_demangled": "std::io::copy::stack_buffer_copy::<lz4_flex::frame::decompress::FrameDecoder<&mut std::io::stdio::StdinLock>, std::io::stdio::StdoutLock>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/copy.rs",
+    "line": 280
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCs9k3SxhrAWiO_3std2io4copy17stack_buffer_copyNtNtB4_5stdio9StdinLockINtNtNtCsbyoesFQpzha_8lz4_flex5frame8compress12FrameEncoderQNtBR_10StdoutLockEECserOWQAL27kQ_3lz4",
+  "function_demangled": "std::io::copy::stack_buffer_copy::<std::io::stdio::StdinLock, lz4_flex::frame::compress::FrameEncoder<&mut std::io::stdio::StdoutLock>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/copy.rs",
+    "line": 280
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYINtNtNtCsbyoesFQpzha_8lz4_flex5frame8compress12FrameEncoderQNtNtNtCs9k3SxhrAWiO_3std2io5stdio10StdoutLockENtB14_5Write9write_allCserOWQAL27kQ_3lz4",
+  "function_demangled": "<lz4_flex::frame::compress::FrameEncoder<&mut std::io::stdio::StdoutLock> as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs_NtNtCsbyoesFQpzha_8lz4_flex5frame8compressINtB4_12FrameEncoderQNtNtNtCs9k3SxhrAWiO_3std2io5stdio10StdoutLockENtB19_5Write5writeCserOWQAL27kQ_3lz4",
+  "function_demangled": "<lz4_flex::frame::compress::FrameEncoder<&mut std::io::stdio::StdoutLock> as std::io::Write>::write",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/frame/compress.rs",
+    "line": 380
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block8compress17compress_internalNtNtB4_9hashtable11HashTable4KKb1_NtNtB6_4sink9SliceSinkECserOWQAL27kQ_3lz4",
+  "function_demangled": "lz4_flex::block::compress::compress_internal::<lz4_flex::block::hashtable::HashTable4K, true, lz4_flex::sink::SliceSink>",
+  "header": "bb36",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 375
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block8compress17compress_internalNtNtB4_9hashtable11HashTable4KKb1_NtNtB6_4sink9SliceSinkECserOWQAL27kQ_3lz4",
+  "function_demangled": "lz4_flex::block::compress::compress_internal::<lz4_flex::block::hashtable::HashTable4K, true, lz4_flex::sink::SliceSink>",
+  "header": "bb38",
+  "depth": 2,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 377
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCsbyoesFQpzha_8lz4_flex5block8compress15backtrack_matchCserOWQAL27kQ_3lz4",
+  "function_demangled": "lz4_flex::block::compress::backtrack_match",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 265
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsbyoesFQpzha_8lz4_flex5block8compress16count_same_bytesCserOWQAL27kQ_3lz4",
+  "function_demangled": "lz4_flex::block::compress::count_same_bytes",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 115
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvXs4_NtNtCsgxBkk5gSRhY_4core5slice10specializeSmINtB5_8SpecFillmE9spec_fillCserOWQAL27kQ_3lz4",
+  "function_demangled": "<[u32] as core::slice::specialize::SpecFill<u32>>::spec_fill",
+  "header": "bb7",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 28,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 180
+   },
+   {
+    "col": 29,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/specialize.rs",
+    "line": 65
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCs9k3SxhrAWiO_3std2io4copy17stack_buffer_copyNtNtB4_5stdio9StdinLockINtNtNtCsbyoesFQpzha_8lz4_flex5frame8compress12FrameEncoderQNtNtB6_2fs4FileEECserOWQAL27kQ_3lz4",
+  "function_demangled": "std::io::copy::stack_buffer_copy::<std::io::stdio::StdinLock, lz4_flex::frame::compress::FrameEncoder<&mut std::fs::File>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/copy.rs",
+    "line": 280
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYINtNtNtCsbyoesFQpzha_8lz4_flex5frame8compress12FrameEncoderQNtNtCs9k3SxhrAWiO_3std2fs4FileENtNtB14_2io5Write9write_allCserOWQAL27kQ_3lz4",
+  "function_demangled": "<lz4_flex::frame::compress::FrameEncoder<&mut std::fs::File> as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs_NtNtCsbyoesFQpzha_8lz4_flex5frame8compressINtB4_12FrameEncoderQNtNtCs9k3SxhrAWiO_3std2fs4FileENtNtB19_2io5Write5writeCserOWQAL27kQ_3lz4",
+  "function_demangled": "<lz4_flex::frame::compress::FrameEncoder<&mut std::fs::File> as std::io::Write>::write",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/frame/compress.rs",
+    "line": 380
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvYNtNtNtNtCs9k3SxhrAWiO_3std3sys5stdio4unix6StderrNtNtBa_2io5Write9write_allCserOWQAL27kQ_3lz4",
+  "function_demangled": "<std::sys::stdio::unix::Stderr as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCs9k3SxhrAWiO_3std2io4copy17stack_buffer_copyINtNtNtCsbyoesFQpzha_8lz4_flex5frame10decompress12FrameDecoderNtNtB6_2fs4FileEB1P_ECserOWQAL27kQ_3lz4",
+  "function_demangled": "std::io::copy::stack_buffer_copy::<lz4_flex::frame::decompress::FrameDecoder<std::fs::File>, std::fs::File>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/copy.rs",
+    "line": 280
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs_NtNtCsbyoesFQpzha_8lz4_flex5frame10decompressINtB4_12FrameDecoderNtNtCs9k3SxhrAWiO_3std2fs4FileENtNtB1b_2io4Read4readCserOWQAL27kQ_3lz4",
+  "function_demangled": "<lz4_flex::frame::decompress::FrameDecoder<std::fs::File> as std::io::Read>::read",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/frame/decompress.rs",
+    "line": 356
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtCs9k3SxhrAWiO_3std2io18default_read_exactNtNtB4_2fs4FileECserOWQAL27kQ_3lz4",
+  "function_demangled": "std::io::default_read_exact::<std::fs::File>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 560
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYINtCserOWQAL27kQ_3lz414TrackWriteSizeNtNtCs9k3SxhrAWiO_3std2fs4FileENtNtBH_2io5Write9write_allB5_",
+  "function_demangled": "<lz4::TrackWriteSize<std::fs::File> as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCs9k3SxhrAWiO_3std2io4copy17stack_buffer_copyNtNtB6_2fs4FileINtNtNtCsbyoesFQpzha_8lz4_flex5frame8compress12FrameEncoderINtCserOWQAL27kQ_3lz414TrackWriteSizeBP_EEEB24_",
+  "function_demangled": "std::io::copy::stack_buffer_copy::<std::fs::File, lz4_flex::frame::compress::FrameEncoder<lz4::TrackWriteSize<std::fs::File>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/copy.rs",
+    "line": 280
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvYINtNtNtCsbyoesFQpzha_8lz4_flex5frame8compress12FrameEncoderINtCserOWQAL27kQ_3lz414TrackWriteSizeNtNtCs9k3SxhrAWiO_3std2fs4FileEENtNtB1E_2io5Write9write_allB12_",
+  "function_demangled": "<lz4_flex::frame::compress::FrameEncoder<lz4::TrackWriteSize<std::fs::File>> as std::io::Write>::write_all",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/std/src/io/mod.rs",
+    "line": 1612
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs_NtNtCsbyoesFQpzha_8lz4_flex5frame8compressINtB4_12FrameEncoderINtCserOWQAL27kQ_3lz414TrackWriteSizeNtNtCs9k3SxhrAWiO_3std2fs4FileEENtNtB1J_2io5Write5writeB17_",
+  "function_demangled": "<lz4_flex::frame::compress::FrameEncoder<lz4::TrackWriteSize<std::fs::File>> as std::io::Write>::write",
+  "header": "bb9",
+  "depth": 1,
+  "latch_count": 2,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 16,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/frame/compress.rs",
+    "line": 380
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvXs2J_NtNtCsgxBkk5gSRhY_4core5slice4iterINtB7_4IterNtNtCs6i54tJFfzR_5alloc6string6StringENtNtNtNtBb_4iter6traits8iterator8Iterator4folduNCINvNtNtB1y_8adapters3map8map_foldRBQ_ReuNCINvCs5C8Vv6mnOXN_4argh8from_envNtCserOWQAL27kQ_3lz47OptionsEs0_0NCINvNvB1s_8for_each4callB2Q_NCINvMsj_NtBU_3vecINtB4z_3VecB2Q_E14extend_trustedINtB2i_3MapBF_B2T_EE0E0E0EB3s_",
+  "function_demangled": "<core::slice::iter::Iter<alloc::string::String> as core::iter::traits::iterator::Iterator>::fold::<(), core::iter::adapters::map::map_fold<&alloc::string::String, &str, (), argh::from_env<lz4::Options>::{closure#2}, core::iter::traits::iterator::Iterator::for_each::call<&str, <alloc::vec::Vec<&str>>::extend_trusted<core::iter::adapters::map::Map<core::slice::iter::Iter<alloc::string::String>, argh::from_env<lz4::Options>::{closure#2}>>::{closure#0}>::{closure#0}>::{closure#0}>",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 27,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/slice/iter/macros.rs",
+    "line": 279
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtCs6i54tJFfzR_5alloc6string6StringECserOWQAL27kQ_3lz4",
+  "function_demangled": "core::ptr::drop_glue::<[alloc::string::String]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtCs6i54tJFfzR_5alloc6string6StringECserOWQAL27kQ_3lz4",
+  "function_demangled": "core::ptr::drop_glue::<[alloc::string::String]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMsj_NtCs6i54tJFfzR_5alloc3vecINtB6_3VecNtNtB8_6string6StringE16extend_desugaredINtNtNtCsgxBkk5gSRhY_4core4iter8adapters12GenericShuntINtNtB1m_3map3MapNtNtCs9k3SxhrAWiO_3std3env6ArgsOsNCINvCs5C8Vv6mnOXN_4argh8from_envNtCserOWQAL27kQ_3lz47OptionsE0EINtNtB1q_6result6ResultNtNtB1q_7convert10InfallibleNtNtNtB2w_3ffi6os_str8OsStringEEEB3y_",
+  "function_demangled": "<alloc::vec::Vec<alloc::string::String>>::extend_desugared::<core::iter::adapters::GenericShunt<core::iter::adapters::map::Map<std::env::ArgsOs, argh::from_env<lz4::Options>::{closure#0}>, core::result::Result<core::convert::Infallible, std::ffi::os_str::OsString>>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 44,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 4045
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECserOWQAL27kQ_3lz4",
+  "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+  "header": "bb4",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtCsgxBkk5gSRhY_4core3ptr9drop_glueSNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringECserOWQAL27kQ_3lz4",
+  "function_demangled": "core::ptr::drop_glue::<[std::ffi::os_str::OsString]>",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 1,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/ptr/mod.rs",
+    "line": 823
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvXs4_NtNtCs6i54tJFfzR_5alloc3vec9into_iterINtB6_8IntoIterNtNtNtCs9k3SxhrAWiO_3std3ffi6os_str8OsStringENtNtNtNtCsgxBkk5gSRhY_4core4iter6traits8iterator8Iterator8try_folduNCINvNtNtB1L_8adapters3map12map_try_foldBW_INtNtB1N_6result6ResultNtNtBa_6string6StringBW_EuINtNtNtB1N_3ops12control_flow11ControlFlowIB4f_B3O_EENCINvCs5C8Vv6mnOXN_4argh8from_envNtCserOWQAL27kQ_3lz47OptionsE0NCINvXB2R_INtB2R_12GenericShuntINtB2P_3MapNtNtB12_3env6ArgsOsB55_EIB3s_NtNtB1N_7convert10InfallibleBW_EEB1F_8try_folduNCINvNvB1F_12try_for_each4callB3O_B4U_NcNtB4U_5Break0E0B4U_E0E0B4e_EB5E_",
+  "function_demangled": "<alloc::vec::into_iter::IntoIter<std::ffi::os_str::OsString> as core::iter::traits::iterator::Iterator>::try_fold::<(), core::iter::adapters::map::map_try_fold<std::ffi::os_str::OsString, core::result::Result<alloc::string::String, std::ffi::os_str::OsString>, (), core::ops::control_flow::ControlFlow<core::ops::control_flow::ControlFlow<alloc::string::String>>, argh::from_env<lz4::Options>::{closure#0}, <core::iter::adapters::GenericShunt<core::iter::adapters::map::Map<std::env::ArgsOs, argh::from_env<lz4::Options>::{closure#0}>, core::result::Result<core::convert::Infallible, std::ffi::os_str::OsString>> as core::iter::traits::iterator::Iterator>::try_fold<(), core::iter::traits::iterator::Iterator::try_for_each::call<alloc::string::String, core::ops::control_flow::ControlFlow<alloc::string::String>, core::ops::control_flow::ControlFlow<alloc::string::String>::Break>::{closure#0}, core::ops::control_flow::ControlFlow<alloc::string::String>>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<core::ops::control_flow::ControlFlow<alloc::string::String>>>",
+  "header": "bb10",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/into_iter.rs",
+    "line": 395
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvMs5_NtNtCsgxBkk5gSRhY_4core3fmt8buildersNtB6_9DebugList7entriesRtINtNtNtBa_5slice4iter4ItertEECsbyoesFQpzha_8lz4_flex",
+  "function_demangled": "<core::fmt::builders::DebugList>::entries::<&u16, core::slice::iter::Iter<u16>>",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/fmt/builders.rs",
+    "line": 787
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VecmE11extend_withCsbyoesFQpzha_8lz4_flex",
+  "function_demangled": "<alloc::vec::Vec<u32>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs3_NtCs6i54tJFfzR_5alloc3vecINtB5_3VectE11extend_withCsbyoesFQpzha_8lz4_flex",
+  "function_demangled": "<alloc::vec::Vec<u16>>::extend_with",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 12,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 900
+   },
+   {
+    "col": 14,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/range.rs",
+    "line": 985
+   },
+   {
+    "col": 22,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/alloc/src/vec/mod.rs",
+    "line": 3669
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block8compress13write_integerNtNtB6_4sink9SliceSinkEB6_",
+  "function_demangled": "lz4_flex::block::compress::write_integer::<lz4_flex::sink::SliceSink>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 230
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block8compress17compress_internalNtNtB4_9hashtable11HashTable4KKb0_NtNtB6_4sink9SliceSinkEB6_",
+  "function_demangled": "lz4_flex::block::compress::compress_internal::<lz4_flex::block::hashtable::HashTable4K, false, lz4_flex::sink::SliceSink>",
+  "header": "bb36",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 375
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block8compress17compress_internalNtNtB4_9hashtable11HashTable4KKb0_NtNtB6_4sink9SliceSinkEB6_",
+  "function_demangled": "lz4_flex::block::compress::compress_internal::<lz4_flex::block::hashtable::HashTable4K, false, lz4_flex::sink::SliceSink>",
+  "header": "bb38",
+  "depth": 2,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 377
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RNvNtNtCsbyoesFQpzha_8lz4_flex5block8compress15backtrack_matchB5_",
+  "function_demangled": "lz4_flex::block::compress::backtrack_match",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 265
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvNtNtCsbyoesFQpzha_8lz4_flex5block8compress16count_same_bytesB5_",
+  "function_demangled": "lz4_flex::block::compress::count_same_bytes",
+  "header": "bb8",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 29,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 115
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RINvYINtNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3zip3ZipINtNtNtBc_5slice4iter4IterhEBR_ENtNtNtBa_6traits8iterator8Iterator8try_foldjNCINvNvXs0_NtB8_10take_whileINtB2g_9TakeWhileppEB1n_8try_fold5checkTRhB3b_EjINtNtNtBc_3ops9try_trait17NeverShortCircuitjENCNvNvNtNtCsbyoesFQpzha_8lz4_flex5block8compress16count_same_bytes21count_same_bytes_tail0NCINvMB3m_B3j_10wrap_mut_2jB3a_NCNvYIB2y_INtNtB8_4skip4SkipB3_EB42_EB1n_5count0E0E0INtNtB3o_12control_flow11ControlFlowB3j_jEEB4c_",
+  "function_demangled": "<core::iter::adapters::zip::Zip<core::slice::iter::Iter<u8>, core::slice::iter::Iter<u8>> as core::iter::traits::iterator::Iterator>::try_fold::<usize, <core::iter::adapters::take_while::TakeWhile<_, _> as core::iter::traits::iterator::Iterator>::try_fold::check<(&u8, &u8), usize, core::ops::try_trait::NeverShortCircuit<usize>, lz4_flex::block::compress::count_same_bytes::count_same_bytes_tail::{closure#0}, <core::ops::try_trait::NeverShortCircuit<usize>>::wrap_mut_2<usize, (&u8, &u8), <core::iter::adapters::take_while::TakeWhile<core::iter::adapters::skip::Skip<core::iter::adapters::zip::Zip<core::slice::iter::Iter<u8>, core::slice::iter::Iter<u8>>>, lz4_flex::block::compress::count_same_bytes::count_same_bytes_tail::{closure#0}> as core::iter::traits::iterator::Iterator>::count::{closure#0}>::{closure#0}>::{closure#0}, core::ops::control_flow::ControlFlow<core::ops::try_trait::NeverShortCircuit<usize>, usize>>",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 34,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/traits/iterator.rs",
+    "line": 2493
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvXs3_NtNtNtCsgxBkk5gSRhY_4core4iter8adapters3zipINtB5_3ZipINtNtNtBb_5slice4iter4IterhEBW_EINtB5_7ZipImplBW_BW_E3nthCsbyoesFQpzha_8lz4_flex",
+  "function_demangled": "<core::iter::adapters::zip::Zip<core::slice::iter::Iter<u8>, core::slice::iter::Iter<u8>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::Iter<u8>, core::slice::iter::Iter<u8>>>::nth",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 15,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/adapters/zip.rs",
+    "line": 324
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMNtNtNtCsgxBkk5gSRhY_4core4iter8adapters3zipINtB2_3ZipINtNtNtB8_5slice4iter4IterhEBT_E9super_nthCsbyoesFQpzha_8lz4_flex",
+  "function_demangled": "<core::iter::adapters::zip::Zip<core::slice::iter::Iter<u8>, core::slice::iter::Iter<u8>>>::super_nth",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/rustc/48a229ceaefd4985c50990b14116b6d856af0985",
+    "file": "library/core/src/iter/adapters/zip.rs",
+    "line": 25
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block8compress17compress_internalNtNtB4_9hashtable14HashTable4KU16Kb0_NtNtB6_4sink9SliceSinkEB6_",
+  "function_demangled": "lz4_flex::block::compress::compress_internal::<lz4_flex::block::hashtable::HashTable4KU16, false, lz4_flex::sink::SliceSink>",
+  "header": "bb36",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 1,
+  "src_loc": [
+   {
+    "col": 9,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 375
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block8compress17compress_internalNtNtB4_9hashtable14HashTable4KU16Kb0_NtNtB6_4sink9SliceSinkEB6_",
+  "function_demangled": "lz4_flex::block::compress::compress_internal::<lz4_flex::block::hashtable::HashTable4KU16, false, lz4_flex::sink::SliceSink>",
+  "header": "bb38",
+  "depth": 2,
+  "latch_count": 3,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 13,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 377
+   }
+  ],
+  "loop_kind": "loop"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block8compress9init_dictNtNtB4_9hashtable11HashTable4KEB6_",
+  "function_demangled": "lz4_flex::block::compress::init_dict::<lz4_flex::block::hashtable::HashTable4K>",
+  "header": "bb5",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 593
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RINvNtNtCsbyoesFQpzha_8lz4_flex5block8compress9init_dictNtNtB4_9hashtable14HashTable4KU16EB6_",
+  "function_demangled": "lz4_flex::block::compress::init_dict::<lz4_flex::block::hashtable::HashTable4KU16>",
+  "header": "bb5",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 11,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/compress.rs",
+    "line": 593
+   }
+  ],
+  "loop_kind": "while"
+ },
+ {
+  "function": "_RNvMNtNtCsbyoesFQpzha_8lz4_flex5frame6headerNtB2_9BlockSize15from_buf_length",
+  "function_demangled": "<lz4_flex::frame::header::BlockSize>::from_buf_length",
+  "header": "bb2",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 26,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/frame/header.rs",
+    "line": 69
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs0_NtNtCsbyoesFQpzha_8lz4_flex5block9hashtableNtB5_11HashTable4K10reposition",
+  "function_demangled": "<lz4_flex::block::hashtable::HashTable4K>::reposition",
+  "header": "bb3",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 18,
+    "dir": "/workspaces/Thesis/.build/rust-extra/lz4_flex",
+    "file": "src/block/hashtable.rs",
+    "line": 141
+   }
+  ],
+  "loop_kind": "for"
+ },
+ {
+  "function": "_RNvMs4_NtCs2DE1vFnhoJD_9twox_hash8xxhash32NtB5_6Hasher11finish_withCsbyoesFQpzha_8lz4_flex",
+  "function_demangled": "<twox_hash::xxhash32::Hasher>::finish_with",
+  "header": "bb17",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 22,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash32.rs",
+    "line": 310
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs4_NtCs2DE1vFnhoJD_9twox_hash8xxhash32NtB5_6Hasher11finish_withCsbyoesFQpzha_8lz4_flex",
+  "function_demangled": "<twox_hash::xxhash32::Hasher>::finish_with",
+  "header": "bb6",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash32.rs",
+    "line": 301
+   }
+  ],
+  "loop_kind": "library"
+ },
+ {
+  "function": "_RNvMs1_NtCs2DE1vFnhoJD_9twox_hash8xxhash32NtB5_12Accumulators10write_manyCsbyoesFQpzha_8lz4_flex",
+  "function_demangled": "<twox_hash::xxhash32::Accumulators>::write_many",
+  "header": "bb1",
+  "depth": 1,
+  "latch_count": 1,
+  "subloop_count": 0,
+  "src_loc": [
+   {
+    "col": 19,
+    "dir": "/usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/twox-hash-2.1.5",
+    "file": "src/xxhash32.rs",
+    "line": 157
+   }
+  ],
+  "loop_kind": "library"
+ }
+]

@@ -19,3 +19,13 @@ rust	paste	O0	17	1017
 rust	shuf	O0	47	2337
 rust	sum	O0	8	607
 rust	tee	O0	25	1200
+rust_extra	base64	O0	20	791
+rust_extra	csv-core	O0	23	862
+rust_extra	httparse	O0	27	681
+rust_extra	lz4_flex	O0	58	2754
+rust_extra	miniz_oxide	O0	120	2813
+rust_extra	pulldown-cmark	O0	279	8065
+rust_extra	qoi	O0	24	865
+rust_extra	ruzstd	O0	245	6607
+rust_extra	ryu	O0	19	258
+rust_extra	sha2	O0	36	2149

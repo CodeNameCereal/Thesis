@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 # run_all_passes.sh -- runs LoopFinderPass and BufferAccessPass on every tool
-# (C and Rust, -O0), then labels the loop kinds and the buffer access origins.
+# (C and Rust, -O0) and on the extra Rust projects (benchmarks/rust_extra/),
+# then labels the loop kinds and the buffer access origins.
 #
 # Usage:
 #   ./pass/scripts/run_all_passes.sh                    use the existing IR
 #   ./pass/scripts/run_all_passes.sh --build            rebuild both plugins first
-#   ./pass/scripts/run_all_passes.sh --regen            rebuild the IR first (benchmarks.sh)
-#   ./pass/scripts/run_all_passes.sh --tools sum,echo   only these tools
+#   ./pass/scripts/run_all_passes.sh --regen            rebuild the IR first (benchmarks.sh
+#                                                        + build_rust_extra_ir.sh)
+#   ./pass/scripts/run_all_passes.sh --tools sum,echo   only these tools / projects
 #
 # Output:
 #   pass/results/<lang>/<tool>/<tool>_O0.json                LoopFinder output
@@ -21,7 +23,8 @@
 # Env vars that override the defaults:
 #   OPT, LOOP_PLUGIN, BUFFER_PLUGIN, LOOP_PASS_NAME, BUFFER_PASS_NAME
 #
-# (-h prints lines 2-26 of this file, i.e. this header.)
+# <lang> = c_cpp, rust or rust_extra.
+# (-h prints lines 2-29 of this file, i.e. this header.)
 
 set -uo pipefail
 
@@ -41,7 +44,7 @@ while [[ $# -gt 0 ]]; do
     --build) DO_BUILD=1 ;;
     --regen) DO_REGEN=1 ;;
     --tools) TOOLS_FILTER="$2"; shift ;;
-    -h|--help) sed -n '2,26p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,29p' "$0"; exit 0 ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
   shift
@@ -63,6 +66,10 @@ if (( DO_REGEN )); then
   # the IR comes from benchmarks.sh (fill.sh only fills in SOURCE.md)
   echo "==> Regenerating corpus IR (benchmarks.sh)"
   "$SCRIPTS/benchmarks.sh" || die "benchmarks.sh failed"
+  if [[ -d "$BENCH/rust_extra" ]]; then
+    echo "==> Regenerating extra Rust projects IR (build_rust_extra_ir.sh)"
+    "$SCRIPTS/build_rust_extra_ir.sh" || die "build_rust_extra_ir.sh failed"
+  fi
 fi
 
 if (( DO_BUILD )); then
@@ -117,7 +124,7 @@ mkdir -p "$LOOP_OUT"
 printf 'lang\ttool\tlevel\tloops\tbuffer_accesses\n' >"$COUNTS"
 
 shopt -s nullglob
-for lang_dir in "$BENCH"/c_cpp "$BENCH"/rust; do
+for lang_dir in "$BENCH"/c_cpp "$BENCH"/rust "$BENCH"/rust_extra; do
   lang="$(basename "$lang_dir")"
   for tool_dir in "$lang_dir"/*/; do
     tool="$(basename "$tool_dir")"
